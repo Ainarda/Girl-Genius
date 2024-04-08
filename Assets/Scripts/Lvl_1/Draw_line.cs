@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class Draw_line : MonoBehaviour
 {
-    public GameObject linePrefab;
-    public GameObject currentLine;
+    [SerializeField]
+    private GameObject linePrefab;
+    [SerializeField]
+    private GameObject currentLine;
 
-    public LineRenderer lineRenderer;
-    public EdgeCollider2D edgeCollider;
-    public List<Vector2> fingerPosition;
+    [SerializeField]
+    private LineRenderer lineRenderer;
+    [SerializeField]
+    private EdgeCollider2D edgeCollider;
+    [SerializeField]
+    private List<Vector2> fingerPosition;
 
+    [SerializeField]
+    private bool IsLoop = false;
+
+    [SerializeField]
+    private List<GameObject> activatePoint;
     private Observer observer;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +33,9 @@ public class Draw_line : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
+            if (activatePoint != null)
+                foreach (var pair in activatePoint)
+                    pair.GetComponent<TargetPoint>().CanActivate();
             CreateLine();
         }
         if (Input.GetMouseButton(0))
@@ -35,7 +48,16 @@ public class Draw_line : MonoBehaviour
         }
         if(Input.GetMouseButtonUp(0))
         {
-            StartCoroutine(WaitForCheck());     
+            if (IsLoop)
+            {
+                Debug.Log("Yahy");
+                if (Vector2.Distance(lineRenderer.GetPosition(0), lineRenderer.GetPosition(lineRenderer.positionCount-1))<1.0f)
+                {
+                    Debug.LogWarning("RightCoord");
+                }
+            }
+            else
+                StartCoroutine(WaitForCheck());     
         }
     }
 

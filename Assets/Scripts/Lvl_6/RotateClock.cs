@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RotateClock : MonoBehaviour
 {
+    [SerializeField]
+    private float rightAngle;
     bool canRotate = true;
     // Start is called before the first frame update
     void Start()
@@ -24,5 +26,13 @@ public class RotateClock : MonoBehaviour
         if (transform.rotation.z >= 0.7071068)
             canRotate = false;
 
+    }
+
+    private void OnMouseUp()
+    {
+        if(Mathf.Abs(transform.rotation.z - Quaternion.AngleAxis(rightAngle, Vector3.forward).z) <= 0.7f)
+        {
+            Debug.Log("Complete");
+        }
     }
 }

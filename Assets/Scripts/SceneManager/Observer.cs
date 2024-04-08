@@ -5,12 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Observer : MonoBehaviour
 {
-
     List<CheckComplete> checkList;
     DoAction action;
     public void AddCheck(CheckComplete check)
     {
-        if(checkList == null)
+        if (checkList == null)
             checkList = new List<CheckComplete>();
         checkList.Add(check);
     }
@@ -22,12 +21,15 @@ public class Observer : MonoBehaviour
 
     public void ActivateAction()
     {
-        action();
+        if(action != null)
+            action();
+        else
+            CompleteScene();
     }
 
     public void CompleteScene()
     {
-        foreach(CheckComplete check in checkList)
+        foreach (CheckComplete check in checkList)
         {
             if (!check())
                 Debug.Log("Reload");
