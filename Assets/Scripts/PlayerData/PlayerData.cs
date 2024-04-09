@@ -7,9 +7,16 @@ public class PlayerData : MonoBehaviour
 {
     public static string PlayerName;
     public static int PlayerCoin = 0;
-    public static int CurrentLvl = 1;
+    public static int CurrentLvl = 51;
     public static void LoadNextLevel()
     {
-        SceneManager.LoadScene("Level_" + CurrentLvl++);
+        CurrentLvl++;
+        PlayerCoin += 20;
+        SceneManager.LoadScene("Level_" + CurrentLvl);
+    }
+
+    public static void ReloadScene()
+    {
+        SceneManager.LoadScene("Level_" + CurrentLvl);
     }
 }

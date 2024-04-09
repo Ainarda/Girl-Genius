@@ -17,8 +17,10 @@ public class DragObject : MonoBehaviour//, IPointerDownHandler, IPointerUpHandle
     private Vector3 offset;
     private bool moveObject = false;
 
+    GameObject obserever;
     private void Awake()
     {
+        obserever = GameObject.FindGameObjectWithTag("Observer");
         transform.position = startPosition;
     }
 
@@ -65,6 +67,7 @@ public class DragObject : MonoBehaviour//, IPointerDownHandler, IPointerUpHandle
         if(Vector2.Distance(offset+Camera.main.ScreenToWorldPoint(Input.mousePosition),endPosition.transform.position)<0.5f)
         {
             transform.position = endPosition.transform.position;
+            obserever.GetComponent<Observer>().CompleteSceneWithoutCheck();
         }
         else
         {

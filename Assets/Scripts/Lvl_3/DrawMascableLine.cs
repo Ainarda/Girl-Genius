@@ -11,6 +11,10 @@ public class DrawMascableLine : MonoBehaviour
     public LineRenderer lineRenderer;
     public EdgeCollider2D edgeCollider;
     public List<Vector2> fingerPosition;
+
+    [SerializeField]
+    private bool IsEraser;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,12 +34,17 @@ public class DrawMascableLine : MonoBehaviour
             if (Vector2.Distance(tmpFingerPos, fingerPosition[fingerPosition.Count - 1]) > 0.5f)
             {
                 UpdateLine(tmpFingerPos);
+                if(IsEraser)
+                {
+
+                }
             }
         }
     }
 
     private void CreateLine()
     {
+       
         currentLine = Instantiate(linePrefab, Vector3.zero, Quaternion.identity);
         lineRenderer = currentLine.GetComponent<LineRenderer>();
         edgeCollider = currentLine.GetComponent<EdgeCollider2D>();
@@ -46,6 +55,35 @@ public class DrawMascableLine : MonoBehaviour
         lineRenderer.SetPosition(1, fingerPosition[1]);
         Instantiate(mask, fingerPosition[1], Quaternion.identity);
         edgeCollider.points = fingerPosition.ToArray();
+        if (IsEraser)
+        {
+            //Todo targetPos
+            Vector2 targetPos = new Vector2();
+            Vector2 pointOnTargetCoord = fingerPosition[1] - targetPos;
+            if (pointOnTargetCoord.x < 0)
+            {
+                if (pointOnTargetCoord.y < 0)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+                if(pointOnTargetCoord.y < 0)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+
+        }
     }
 
     private void UpdateLine(Vector2 newFingerPos)

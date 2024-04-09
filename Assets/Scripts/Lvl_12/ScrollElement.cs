@@ -17,9 +17,11 @@ public class ScrollElement : MonoBehaviour
     private bool complete = false;
 
     private Vector2 moveVector;
-
+    private Observer observer;
     private void Awake()
     {
+        observer = GameObject.FindGameObjectWithTag("Observer").GetComponent<Observer>();
+        observer.AddElement(this.gameObject);
         startPos = transform.position;
     }
     // Start is called before the first frame update
@@ -51,11 +53,11 @@ public class ScrollElement : MonoBehaviour
     private void OnMouseUp()
     {
         canDrag = false;
-        if(transform.position.y-rightRange<0.1f)
+        if(Mathf.Abs(transform.position.y-rightRange)<0.05f)
         {
-
             complete = true;
             rightChecker.SetActive(true);
+            observer.RemoveElement(this.gameObject);
         }
     }
 }

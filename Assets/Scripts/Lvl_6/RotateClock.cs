@@ -6,7 +6,12 @@ public class RotateClock : MonoBehaviour
 {
     [SerializeField]
     private float rightAngle;
-    bool canRotate = true;
+    bool canRotate = false;
+    private GameObject observer;
+    private void Awake()
+    {
+        observer = GameObject.FindGameObjectWithTag("Observer");
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +29,16 @@ public class RotateClock : MonoBehaviour
         }
         Debug.Log(transform.rotation.z);
         if (transform.rotation.z >= 0.7071068)
+        {
             canRotate = false;
+            observer.GetComponent<Observer>().CompleteSceneWithoutCheck();
+        }
 
+    }
+
+    private void OnMouseDown()
+    {
+        canRotate = true;
     }
 
     private void OnMouseUp()

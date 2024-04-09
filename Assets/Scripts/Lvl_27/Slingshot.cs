@@ -15,10 +15,12 @@ public class Slingshot : MonoBehaviour
 
     [SerializeField]
     private Vector2 rightAngle;
+
+    private Observer observer;
     // Start is called before the first frame update
     void Start()
     {
-        
+        observer = GameObject.FindGameObjectWithTag("Observer").GetComponent<Observer>();
     }
 
     // Update is called once per frame
@@ -38,11 +40,12 @@ public class Slingshot : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             Debug.Log("+");
-            if(currentAngle <= rightAngle.y && currentAngle >= rightAngle.x)
-            {
-                Debug.Log("Right");
-                angleGrow = 0;
-            }
+            angleGrow = 0;
+            if (currentAngle <= rightAngle.y && currentAngle >= rightAngle.x)
+                observer.CompleteSceneWithoutCheck();
+            else
+                observer.ReloadScene();
+
         }
     }
 

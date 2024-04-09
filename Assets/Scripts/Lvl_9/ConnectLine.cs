@@ -9,11 +9,14 @@ public class ConnectLine : MonoBehaviour
     [SerializeField]
     private GameObject endPoint;
 
+    private Observer observer;
     private Vector3 offset;
     // Start is called before the first frame update
     private void Awake()
     {
         lineRenderer = transform.GetChild(0).GetComponent<LineRenderer>();
+        observer = GameObject.FindGameObjectWithTag("Observer").GetComponent<Observer>();
+        observer.AddElement(gameObject);
     }
 
     void Start()
@@ -37,6 +40,7 @@ public class ConnectLine : MonoBehaviour
         Debug.Log("Down");
         canDrag = true;
         offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        lineRenderer.SetPosition(0, transform.position);
     }
 
     private void OnMouseUp()
@@ -49,6 +53,7 @@ public class ConnectLine : MonoBehaviour
         else
         {
             lineRenderer.SetPosition(1, endPoint.transform.position);
+            observer.RemoveElement(gameObject);
         }
     }
 }

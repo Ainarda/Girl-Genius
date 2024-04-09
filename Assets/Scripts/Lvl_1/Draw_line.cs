@@ -21,6 +21,9 @@ public class Draw_line : MonoBehaviour
 
     [SerializeField]
     private List<GameObject> activatePoint;
+
+    [SerializeField]
+    private float lineSize = 0.25f;
     private Observer observer;
     // Start is called before the first frame update
     void Start()
@@ -50,7 +53,6 @@ public class Draw_line : MonoBehaviour
         {
             if (IsLoop)
             {
-                Debug.Log("Yahy");
                 if (Vector2.Distance(lineRenderer.GetPosition(0), lineRenderer.GetPosition(lineRenderer.positionCount-1))<1.0f)
                 {
                     Debug.LogWarning("RightCoord");
@@ -65,6 +67,7 @@ public class Draw_line : MonoBehaviour
     {
         currentLine = Instantiate(linePrefab, Vector3.zero, Quaternion.identity);
         lineRenderer = currentLine.GetComponent<LineRenderer>();
+        lineRenderer.SetWidth(lineSize, lineSize);
         edgeCollider = currentLine.GetComponent<EdgeCollider2D>();
         fingerPosition.Clear();
         fingerPosition.Add(Camera.main.ScreenToWorldPoint(Input.mousePosition));
