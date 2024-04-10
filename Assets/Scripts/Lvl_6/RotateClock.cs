@@ -18,22 +18,16 @@ public class RotateClock : MonoBehaviour
         
     }
 
+    float angle;
     // Update is called once per frame
     void Update()
     {
         if (canRotate) {
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 direction = mousePos - transform.position;
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
-        Debug.Log(transform.rotation.z);
-        if (transform.rotation.z >= 0.7071068)
-        {
-            canRotate = false;
-            observer.GetComponent<Observer>().CompleteSceneWithoutCheck();
-        }
-
     }
 
     private void OnMouseDown()
@@ -43,8 +37,11 @@ public class RotateClock : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if(Mathf.Abs(transform.rotation.z - Quaternion.AngleAxis(rightAngle, Vector3.forward).z) <= 0.7f)
+        canRotate = false;
+        Debug.Log(angle);
+        if(Mathf.Abs(transform.rotation.z - Quaternion.AngleAxis(rightAngle, Vector3.forward).z) <= 2.5f)
         {
+            observer.GetComponent<Observer>().CompleteSceneWithoutCheck();
             Debug.Log("Complete");
         }
     }

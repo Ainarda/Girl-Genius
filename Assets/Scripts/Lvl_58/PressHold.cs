@@ -7,11 +7,12 @@ public class PressHold : MonoBehaviour
     [SerializeField]
     private int targetValue = 5;
 
+    private Observer observer;
     private int currentValue = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        observer = GameObject.FindGameObjectWithTag("Observer").GetComponent<Observer>();
     }
 
     // Update is called once per frame
@@ -39,5 +40,6 @@ public class PressHold : MonoBehaviour
             currentValue++;
         }
         Debug.Log("ActionComplete");
+        observer.CompleteSceneWithoutCheck();
     }
 }

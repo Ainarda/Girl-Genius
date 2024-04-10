@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3962c0d3a12d2a49a624a6a28bbd036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unCompletedElement: []
 --- !u!114 &8199434535094193655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,3 +59,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainUI: {fileID: 8378327858941464756, guid: 3304abdee5dfcc94599f3d04c90d38d4, type: 3}
+  loseUI: {fileID: 5503865727811800749, guid: 0bb5ab7fc56815e45982b338f8cf94b7, type: 3}

@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class Observer : MonoBehaviour
 {
     List<CheckComplete> checkList;
-    List<GameObject> unCompletedElement;
+    public List<GameObject> unCompletedElement;
+    int elementMaxCount;
     DoAction action;
     public void AddCheck(CheckComplete check)
     {
@@ -20,6 +21,7 @@ public class Observer : MonoBehaviour
         if(unCompletedElement == null)
             unCompletedElement = new List<GameObject>();
         unCompletedElement.Add(element);
+        elementMaxCount = unCompletedElement.Count;
     }
 
 
@@ -27,6 +29,13 @@ public class Observer : MonoBehaviour
     {
         unCompletedElement.Remove(element);
         if(unCompletedElement.Count == 0)
+            CompleteSceneWithoutCheck();
+    }
+
+    public void RemoveElementWithEraser(GameObject element)
+    {
+        unCompletedElement.Remove(element);
+        if (unCompletedElement.Count < elementMaxCount/8)
             CompleteSceneWithoutCheck();
     }
 
@@ -45,13 +54,20 @@ public class Observer : MonoBehaviour
 
     public void CompleteScene()
     {
+        bool isComplete = true;
         foreach (CheckComplete check in checkList)
         {
             if (!check())
-                Debug.Log("Reload");
+            {
+                isComplete = false;
+                break;
+            }
 
         }
-        PlayerData.LoadNextLevel();
+        if (isComplete)
+            PlayerData.LoadNextLevel();
+        else
+            ReloadScene();
     }
 
     public void CompleteSceneWithoutCheck()

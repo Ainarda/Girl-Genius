@@ -27,7 +27,10 @@ public class CollisionCheck : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.tag == "DroppedObject")
+        {
+            Debug.Log("+");
             missionTask = false;
+        }
         //some time wait and restart lvlv
     }
 

@@ -56,6 +56,12 @@ public class Draw_line : MonoBehaviour
                 if (Vector2.Distance(lineRenderer.GetPosition(0), lineRenderer.GetPosition(lineRenderer.positionCount-1))<1.0f)
                 {
                     Debug.LogWarning("RightCoord");
+                    observer.CompleteSceneWithoutCheck();
+                }
+                else
+                {
+                    //TMP
+                    observer.gameObject.GetComponent<LoadSceneUI>().LoadLoseUI();
                 }
             }
             else
