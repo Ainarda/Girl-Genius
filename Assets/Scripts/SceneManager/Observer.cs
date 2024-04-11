@@ -9,6 +9,15 @@ public class Observer : MonoBehaviour
     public List<GameObject> unCompletedElement;
     int elementMaxCount;
     DoAction action;
+    GameObject winScreen;
+    GameObject loseScren;
+
+    public void AddScreens(GameObject addedWinScreen, GameObject addedLoseScreen)
+    {
+        winScreen = addedWinScreen;
+        loseScren = addedLoseScreen;
+    }
+
     public void AddCheck(CheckComplete check)
     {
         if (checkList == null)
@@ -29,14 +38,14 @@ public class Observer : MonoBehaviour
     {
         unCompletedElement.Remove(element);
         if(unCompletedElement.Count == 0)
-            CompleteSceneWithoutCheck();
+            OpenWinScreen();// CompleteSceneWithoutCheck();
     }
 
     public void RemoveElementWithEraser(GameObject element)
     {
         unCompletedElement.Remove(element);
-        if (unCompletedElement.Count < elementMaxCount/8)
-            CompleteSceneWithoutCheck();
+        if (unCompletedElement.Count < elementMaxCount / 8)
+            OpenWinScreen();//CompleteSceneWithoutCheck();
     }
 
     public void AddAction(DoAction inuputAction)
@@ -65,9 +74,21 @@ public class Observer : MonoBehaviour
 
         }
         if (isComplete)
-            PlayerData.LoadNextLevel();
+            OpenWinScreen();
+        //PlayerData.LoadNextLevel();
         else
-            ReloadScene();
+            OpenLoseScreen();
+            //ReloadScene();
+    }
+
+    public void OpenWinScreen()
+    {
+        winScreen.SetActive(true);
+    }
+
+    public void OpenLoseScreen()
+    {
+        loseScren.SetActive(true);
     }
 
     public void CompleteSceneWithoutCheck()
@@ -84,3 +105,4 @@ public class Observer : MonoBehaviour
 //TODO tmp
 public delegate bool CheckComplete();
 public delegate void DoAction();
+public delegate void DoActionWithId(int id);

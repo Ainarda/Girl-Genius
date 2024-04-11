@@ -25,6 +25,8 @@ public class Draw_line : MonoBehaviour
     [SerializeField]
     private float lineSize = 0.25f;
     private Observer observer;
+
+    private bool canDraw = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,14 +36,14 @@ public class Draw_line : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && canDraw)
         {
             if (activatePoint != null)
                 foreach (var pair in activatePoint)
                     pair.GetComponent<TargetPoint>().CanActivate();
             CreateLine();
         }
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && canDraw)
         {
             Vector2 tmpFingerPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             if(Vector2.Distance(tmpFingerPos, fingerPosition[fingerPosition.Count-1])>0.1f)
@@ -53,6 +55,7 @@ public class Draw_line : MonoBehaviour
         {
             if (IsLoop)
             {
+                canDraw = false;
                 if (Vector2.Distance(lineRenderer.GetPosition(0), lineRenderer.GetPosition(lineRenderer.positionCount-1))<1.0f)
                 {
                     Debug.LogWarning("RightCoord");
@@ -97,5 +100,6 @@ public class Draw_line : MonoBehaviour
         observer.ActivateAction();
         yield return new WaitForSeconds(5);
         observer.CompleteScene();
+        canDraw = false;
     }
 }

@@ -7,7 +7,7 @@ public class PlayerData : MonoBehaviour
 {
     public static string PlayerName;
     public static int PlayerCoin = 0;
-    public static int CurrentLvl = 55;
+    public static int CurrentLvl = 1;
     public static List<Dress> dress;
     private static List<int> unlockId;
     public static void LoadNextLevel()

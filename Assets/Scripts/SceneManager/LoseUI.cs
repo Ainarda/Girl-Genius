@@ -13,7 +13,11 @@ public class LoseUI : MonoBehaviour
     void Awake()
     {
         observer = GameObject.FindGameObjectWithTag("Observer").GetComponent<Observer>();
-        retryButton.onClick.AddListener(observer.ReloadScene);
+    }
+
+    public void SetRetryButton(DoAction action)
+    {
+        retryButton.onClick.AddListener(action.Invoke);
     }
 
     // Update is called once per frame

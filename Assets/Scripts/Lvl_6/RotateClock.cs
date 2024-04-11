@@ -7,15 +7,15 @@ public class RotateClock : MonoBehaviour
     [SerializeField]
     private float rightAngle;
     bool canRotate = false;
-    private GameObject observer;
+    private Observer observer;
     private void Awake()
     {
-        observer = GameObject.FindGameObjectWithTag("Observer");
+        observer = GameObject.FindGameObjectWithTag("Observer").GetComponent<Observer>();
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+        observer.AddElement(this.gameObject);
     }
 
     float angle;
@@ -41,7 +41,7 @@ public class RotateClock : MonoBehaviour
         Debug.Log(angle);
         if(Mathf.Abs(transform.rotation.z - Quaternion.AngleAxis(rightAngle, Vector3.forward).z) <= 2.5f)
         {
-            observer.GetComponent<Observer>().CompleteSceneWithoutCheck();
+            observer.RemoveElement(this.gameObject);
             Debug.Log("Complete");
         }
     }

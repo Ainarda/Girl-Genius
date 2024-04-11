@@ -12,17 +12,40 @@ public class LoadSceneUI : MonoBehaviour
     private GameObject mainUI;
     [SerializeField]
     private GameObject loseUI;
+    [SerializeField]
+    private GameObject winUI;
+    [SerializeField]
+    private GameObject eventSystem;
+
+    private Observer observer;
     private void Awake()
     {
-        mainUI = Instantiate(mainUI);
-        loseUI = Instantiate(loseUI);
-        loseUI.SetActive(false);
+        if (!GameObject.Find("EventSystem"))
+            eventSystem = Instantiate(eventSystem);
+        observer = GameObject.FindGameObjectWithTag("Observer").GetComponent<Observer>();
+        InitUI();
+        observer.AddScreens(winUI, loseUI);
         lvlText = GameObject.FindGameObjectWithTag("LevelUI").GetComponent<Text>();
         coinText = GameObject.FindGameObjectWithTag("CoinUI").GetComponent<Text>();
         string[] sceneNameText = SceneManager.GetActiveScene().name.Split('_', System.StringSplitOptions.RemoveEmptyEntries);
         lvlText.text = sceneNameText[0] + " " + sceneNameText[1];
-        coinText.text = "Coin: " + PlayerData.PlayerCoin;
+        coinText.text = PlayerData.PlayerCoin.ToString();
     }
+
+    private void InitUI()
+    {
+        mainUI = Instantiate(mainUI);
+        loseUI = Instantiate(loseUI);
+        winUI = Instantiate(winUI);
+        loseUI.SetActive(false);
+        winUI.SetActive(false);
+
+        winUI.GetComponent<WinUI>().SetButtonAction(3, observer.CompleteSceneWithoutCheck);
+        winUI.GetComponent<WinUI>().SetButtonAction(2, observer.ReloadScene);
+
+        loseUI.GetComponent<LoseUI>().SetRetryButton(observer.ReloadScene);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +58,7 @@ public class LoadSceneUI : MonoBehaviour
         
     }
 
+    //TODO delete from this
     public void LoadLoseUI()
     {
         loseUI.SetActive(true);

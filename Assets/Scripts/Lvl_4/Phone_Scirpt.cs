@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -37,6 +38,7 @@ public class Phone_Scirpt : MonoBehaviour
     void Awake()
     {
         observer = GameObject.FindGameObjectWithTag("Observer").GetComponent<Observer>();
+        observer.AddElement(this.gameObject);
         allText = new List<GameObject>();
         agree.onClick.AddListener(AgreeButton);
         degree.onClick.AddListener(DegreeButton);
@@ -100,24 +102,34 @@ public class Phone_Scirpt : MonoBehaviour
         allText.Add(newMessage);
         newMessage.transform.GetChild(0).GetComponent<Text>().text = "...";
         yield return new WaitForSeconds(4);
-        newMessage.transform.GetChild(0).GetComponent<Text>().text = answerType ? goodSenderText[currentMessageSender] : badSenderText[currentMessageSender];
-        currentMessageSender++;
-        
-        if (!(currentMessageAnswering >= blueAnsweringText.Count))
+        if (answerType)
         {
-            yield return new WaitForSeconds(2);
-            //TODO change text on agree and degree button
-            ActivateButton();
-            NextPlayerMessage();
-            /*agree.gameObject.SetActive(true);
-            agree.transform.GetChild(0).GetComponent<Text>().text = blueAnsweringText[currentMessageAnswering];
-            degree.gameObject.SetActive(true);
-            degree.transform.GetChild(0).GetComponent<Text>().text = redAnsweringText[currentMessageAnswering];*/
+            newMessage.transform.GetChild(0).GetComponent<Text>().text = goodSenderText[currentMessageSender];
+            currentMessageSender++;
+
+            if (!(currentMessageAnswering >= blueAnsweringText.Count))
+            {
+                yield return new WaitForSeconds(2);
+                //TODO change text on agree and degree button
+                ActivateButton();
+                NextPlayerMessage();
+                /*agree.gameObject.SetActive(true);
+                agree.transform.GetChild(0).GetComponent<Text>().text = blueAnsweringText[currentMessageAnswering];
+                degree.gameObject.SetActive(true);
+                degree.transform.GetChild(0).GetComponent<Text>().text = redAnsweringText[currentMessageAnswering];*/
+            }
+            else
+            {
+                observer.RemoveElement(this.gameObject);
+            }
         }
         else
         {
-            observer.CompleteSceneWithoutCheck();
+            newMessage.transform.GetChild(0).GetComponent<Text>().text = badSenderText[currentMessageSender];
+            yield return new WaitForSeconds(4);
+            observer.OpenLoseScreen();
         }
+        
     }
 
     private void ActivateButton()

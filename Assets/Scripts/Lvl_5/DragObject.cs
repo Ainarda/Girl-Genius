@@ -13,15 +13,18 @@ public class DragObject : MonoBehaviour//, IPointerDownHandler, IPointerUpHandle
     [SerializeField]
     private GameObject endPosition;
     [SerializeField]
+    private GameObject losePosition;
+    [SerializeField]
     private Vector2 startPosition;
     private Vector3 offset;
     private bool moveObject = false;
 
-    GameObject obserever;
+    Observer observer;
     private void Awake()
     {
-        obserever = GameObject.FindGameObjectWithTag("Observer");
+        observer = GameObject.FindGameObjectWithTag("Observer").GetComponent<Observer>();
         transform.position = startPosition;
+        observer.AddElement(this.gameObject);
     }
 
     // Start is called before the first frame update
@@ -56,7 +59,6 @@ public class DragObject : MonoBehaviour//, IPointerDownHandler, IPointerUpHandle
 
     private void OnMouseDown()
     {
-        Debug.Log("+");
         moveObject = true;
         offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
@@ -67,7 +69,14 @@ public class DragObject : MonoBehaviour//, IPointerDownHandler, IPointerUpHandle
         if(Vector2.Distance(offset+Camera.main.ScreenToWorldPoint(Input.mousePosition),endPosition.transform.position)<0.5f)
         {
             transform.position = endPosition.transform.position;
-            obserever.GetComponent<Observer>().CompleteSceneWithoutCheck();
+            observer.RemoveElement(this.gameObject);
+            this.enabled = false;
+        }
+        else if(losePosition != null && Vector2.Distance(offset + Camera.main.ScreenToWorldPoint(Input.mousePosition), losePosition.transform.position) < 0.5f)
+        {
+            transform.position = losePosition.transform.position;
+            observer.OpenLoseScreen();
+            this.enabled = false;
         }
         else
         {
