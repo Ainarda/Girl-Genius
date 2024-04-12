@@ -9,11 +9,19 @@ public class PlayerData : MonoBehaviour
     public static int PlayerCoin = 0;
     public static int CurrentLvl = 1;
     public static List<Dress> dress;
-    private static List<int> unlockId;
+    public static List<int> unlockId;
+    private static int dressProgress = 0;
+    private static int currentUnclokNumber = 0;
     public static void LoadNextLevel()
     {
         CurrentLvl++;
         PlayerCoin += 20;
+        dressProgress++;
+        if (dressProgress == 3)
+        {
+            dressProgress = 0;
+            dress[unlockId[currentUnclokNumber++]].UnlockDress();
+        }
         SceneManager.LoadScene("Level_" + CurrentLvl);
     }
 

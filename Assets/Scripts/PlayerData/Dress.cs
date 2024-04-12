@@ -7,9 +7,9 @@ public class Dress
     private int Id;
     private string Name;
     private bool UnlockState;
-    private GameObject DressObject;
+    private Sprite DressObject;
 
-    public Dress(int id,string name, GameObject dressObject, bool unlockState = false)
+    public Dress(int id,string name, Sprite dressObject, bool unlockState = false)
     {
         Id = id;
         Name = name;
@@ -37,7 +37,7 @@ public class Dress
         return UnlockState;
     }
 
-    public GameObject GetDreeObject()
+    public Sprite GetSprite()
     {
         return DressObject;
     }

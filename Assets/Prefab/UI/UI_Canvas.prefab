@@ -403,6 +403,7 @@ GameObject:
   - component: {fileID: 1285733651043981263}
   - component: {fileID: 5734862980262042265}
   - component: {fileID: 6469900209428322159}
+  - component: {fileID: 8462589325041308604}
   m_Layer: 5
   m_Name: UI_Canvas
   m_TagString: MainUI
@@ -453,7 +454,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &5734862980262042265
 MonoBehaviour:
@@ -495,6 +496,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8462589325041308604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8378327858941464756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f869b4f41cc7444b1146b14b9bf721, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LvlObject: {fileID: 1187145762672507939}
 --- !u!1 &8857243399304052185
 GameObject:
   m_ObjectHideFlags: 0

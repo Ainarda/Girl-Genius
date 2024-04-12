@@ -24,7 +24,7 @@ public class LoadSceneUI : MonoBehaviour
             eventSystem = Instantiate(eventSystem);
         observer = GameObject.FindGameObjectWithTag("Observer").GetComponent<Observer>();
         InitUI();
-        observer.AddScreens(winUI, loseUI);
+        observer.AddScreens(winUI, loseUI, mainUI);
         lvlText = GameObject.FindGameObjectWithTag("LevelUI").GetComponent<Text>();
         coinText = GameObject.FindGameObjectWithTag("CoinUI").GetComponent<Text>();
         string[] sceneNameText = SceneManager.GetActiveScene().name.Split('_', System.StringSplitOptions.RemoveEmptyEntries);

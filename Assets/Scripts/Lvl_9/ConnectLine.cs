@@ -8,6 +8,8 @@ public class ConnectLine : MonoBehaviour
     private bool canDrag = false;
     [SerializeField]
     private GameObject endPoint;
+    [SerializeField]
+    private List<GameObject> failEndPoint;
 
     private Observer observer;
     private Vector3 offset;
@@ -48,7 +50,21 @@ public class ConnectLine : MonoBehaviour
         canDrag = false;
         if(Vector2.Distance(offset + Camera.main.ScreenToWorldPoint(Input.mousePosition), endPoint.transform.position) > 0.5f)
         {
-            lineRenderer.SetPosition(1, new Vector2(0,0));
+            bool findEndPoint = false;
+            foreach (var elem in failEndPoint)
+            {
+                if (Vector2.Distance(offset + Camera.main.ScreenToWorldPoint(Input.mousePosition), elem.transform.position) < 0.5f)
+                {
+                    findEndPoint = true;
+                    lineRenderer.SetPosition(1, elem.transform.position);
+                    break;
+                }
+            }
+            if (!endPoint)
+                lineRenderer.SetPosition(1, new Vector2(0, 0));
+            else
+                foreach (var elem in failEndPoint)
+                    observer.OpenLoseScreen();
         }
         else
         {

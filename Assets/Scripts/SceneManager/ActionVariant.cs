@@ -96,5 +96,9 @@ public enum ActionType
     playAnimation,
     walk,
     talk,
-    wait
+    wait,
+    moveWithCamera,
+    cameraCrop,
+    activateMiniGame,
+    completeScene
 }
