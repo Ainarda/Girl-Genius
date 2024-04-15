@@ -17,6 +17,8 @@ public class ConnectLine : MonoBehaviour
     private void Awake()
     {
         lineRenderer = transform.GetChild(0).GetComponent<LineRenderer>();
+        lineRenderer.SetPosition(0, transform.position);
+        lineRenderer.SetPosition(1, transform.position);
         observer = GameObject.FindGameObjectWithTag("Observer").GetComponent<Observer>();
         observer.AddElement(gameObject);
     }

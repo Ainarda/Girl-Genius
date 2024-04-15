@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,7 +134,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: car_base_gray
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1111
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 366e818dbb0c1e940ba4c9e77fc54569
+      internalID: -439275141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: car_saddle_back
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 0
+        width: 185
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a201b9276024b3542af69abcadcea9a1
+      internalID: 178532132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: car_rul
+      rect:
+        serializedVersion: 2
+        x: 1738
+        y: 156
+        width: 68
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45cb91b5a2b53ee4598806cc00a94d9a
+      internalID: 1785872807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: qiche_paochezise_down_3
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 234
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf022c26c6dbda643b6e101f12663111
+      internalID: 1368533525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: qiche_paochezise_down_4
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 192
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62bc46478f710b041995cdbe4c2af7ca
+      internalID: 1328560135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: car_saddle_top
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 0
+        width: 210
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac2f04f85b4a254fa206b9dbc735e06
+      internalID: 300902030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: car_panel
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 0
+        width: 205
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46ac54c418255834a9977ade4558b516
+      internalID: 232623067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: car_wheel_top
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 0
+        width: 150
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16e31ed11280cb4d8caee662d7b2770
+      internalID: -1192069677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: qiche_paochezise_down_0
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 0
+        width: 160
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468a2a47ea9d874469d7bf5aa0d30cce
+      internalID: 652540318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: car_key
+      rect:
+        serializedVersion: 2
+        x: 1802
+        y: 156
+        width: 79
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad023a3b3d77e948b3013ba651d2adc
+      internalID: -1344951059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +355,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      car_base_gray: -439275141
+      car_key: -1344951059
+      car_panel: 232623067
+      car_rul: 1785872807
+      car_saddle_back: 178532132
+      car_saddle_top: 300902030
+      car_wheel_top: -1192069677
+      qiche_paochezise_down_0: 652540318
+      qiche_paochezise_down_3: 1368533525
+      qiche_paochezise_down_4: 1328560135
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
