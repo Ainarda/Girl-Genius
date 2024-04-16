@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerData : MonoBehaviour
 {
     public static string PlayerName;
-    public static int PlayerCoin = 0;
+    public static int PlayerCoin = 500;
     public static int CurrentLvl = 1;
     public static List<Dress> dress;
     public static List<int> unlockId;
@@ -43,6 +43,7 @@ public class PlayerData : MonoBehaviour
             PlayerCoin -= cost;
             action();
         }
+        Debug.Log("Can't spend coin");
     }
 
     public static bool CanSpendCoin(int cost)
