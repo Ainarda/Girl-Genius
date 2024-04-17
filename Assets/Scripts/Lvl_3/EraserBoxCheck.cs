@@ -30,10 +30,14 @@ public class EraserBoxCheck : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            if(isFailElem)
+
+            if (isFailElem)
                 observer.RemoveFailElementWithEraser(this.gameObject);
             else
+            {
+                Debug.Log("+");
                 observer.RemoveElementWithEraser(this.gameObject);
+            }
             IsDelete = true;
         }
     }

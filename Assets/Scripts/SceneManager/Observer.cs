@@ -14,6 +14,7 @@ public class Observer : MonoBehaviour
     private GameObject loseScreen;
     private GameObject mainScreen;
 
+    private bool IsLevelComplete = false;
     public void AddScreens(GameObject addedWinScreen, GameObject addedLoseScreen, GameObject addedMainScreen)
     {
         winScreen = addedWinScreen;
@@ -61,8 +62,12 @@ public class Observer : MonoBehaviour
     public void RemoveElementWithEraser(GameObject element)
     {
         unCompletedElement.Remove(element);
-        if (unCompletedElement.Count < elementMaxCount / 8)
-            OpenWinScreen();//CompleteSceneWithoutCheck();
+        if (unCompletedElement.Count <= elementMaxCount / 8 && !IsLevelComplete)
+        {
+            IsLevelComplete = true;
+            OpenWinScreen();
+        }
+            //CompleteSceneWithoutCheck();
     }
 
     public void AddAction(DoAction inuputAction)
@@ -100,6 +105,8 @@ public class Observer : MonoBehaviour
 
     public void OpenWinScreen()
     {
+        PlayerData.AddReward();
+        winScreen.GetComponent<WinUI>().SetDressScale();
         winScreen.SetActive(true);
         mainScreen.GetComponent<MainUI>().HideLvlObject();
     }
@@ -118,6 +125,11 @@ public class Observer : MonoBehaviour
     public void ReloadScene()
     {
         PlayerData.ReloadScene();
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("Maison");
     }
 }
 

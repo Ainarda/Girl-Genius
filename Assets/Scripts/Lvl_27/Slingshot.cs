@@ -15,6 +15,8 @@ public class Slingshot : MonoBehaviour
 
     [SerializeField]
     private Vector2 rightAngle;
+    [SerializeField]
+    private bool Click = true;
 
     private Observer observer;
     // Start is called before the first frame update
@@ -37,7 +39,7 @@ public class Slingshot : MonoBehaviour
             currentAngle += angleGrow * Time.deltaTime;
             transform.rotation = Quaternion.AngleAxis(currentAngle, Vector3.forward);
         }
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && Click)
         {
             Debug.Log("+");
             angleGrow = 0;
@@ -47,6 +49,12 @@ public class Slingshot : MonoBehaviour
                 observer.ReloadScene();
 
         }
+    }
+
+    public void StopArrow()
+    {
+        angleGrow = 0;
+        Debug.Log(currentAngle);
     }
 
     

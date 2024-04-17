@@ -13,6 +13,10 @@ public class WinUI : MonoBehaviour
     private Button getRewardButton;
     [SerializeField]
     private Button homeButton;
+    [SerializeField]
+    private RectTransform greenDress;
+    [SerializeField]
+    private Text dressProgressText;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +28,14 @@ public class WinUI : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void SetDressScale()
+    {
+        int value = (int)(100 * ((float)PlayerData.dressProgress / 4));
+        greenDress.offsetMax = new Vector2(greenDress.offsetMax.x,-200+ 50 *  PlayerData.dressProgress);
+        
+        dressProgressText.text = "NEW SKIN: "+ value +"%";
     }
 
     /// <summary>

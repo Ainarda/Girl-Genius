@@ -27,6 +27,7 @@ public class LoadSceneUI : MonoBehaviour
         observer.AddScreens(winUI, loseUI, mainUI);
         lvlText = GameObject.FindGameObjectWithTag("LevelUI").GetComponent<Text>();
         coinText = GameObject.FindGameObjectWithTag("CoinUI").GetComponent<Text>();
+        PlayerData.CoinUI = coinText;
         string[] sceneNameText = SceneManager.GetActiveScene().name.Split('_', System.StringSplitOptions.RemoveEmptyEntries);
         lvlText.text = sceneNameText[0] + " " + sceneNameText[1];
         coinText.text = PlayerData.PlayerCoin.ToString();
@@ -42,7 +43,7 @@ public class LoadSceneUI : MonoBehaviour
 
         winUI.GetComponent<WinUI>().SetButtonAction(3, observer.CompleteSceneWithoutCheck);
         winUI.GetComponent<WinUI>().SetButtonAction(2, observer.ReloadScene);
-
+        winUI.GetComponent<WinUI>().SetButtonAction(0, observer.LoadMainMenu);
         loseUI.GetComponent<LoseUI>().SetRetryButton(observer.ReloadScene);
     }
 

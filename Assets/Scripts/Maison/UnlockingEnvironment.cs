@@ -13,6 +13,10 @@ public class UnlockingEnvironment : MonoBehaviour
     private Text costDisplay;
     [SerializeField]
     private Button buyButton;
+    [SerializeField]
+    private int roomNumber;
+    [SerializeField]
+    private int environmentId;
     // Start is called before the first frame update
     void Awake()
     {
@@ -28,12 +32,21 @@ public class UnlockingEnvironment : MonoBehaviour
     
     private void BuyEnvironment()
     {
-        PlayerData.SpendCoin(cost, ActivateObject);
+        PlayerData.SpendCoin(cost,roomNumber ,environmentId, ActivateObject);
     }
 
-    private void ActivateObject()
+    public void ActivateObject()
     {
         unlockingObject.SetActive(true);
+        Debug.Log("Room id " + roomNumber + " envi id " + environmentId);
         GameObject.FindGameObjectWithTag("MainisonUI").GetComponent<UnlockingItemList>().RemoveUnlockingItem(this.gameObject);
     }
+
+    public int GetRoomNumber()
+    {
+        return roomNumber;
+    }
+
+    public int GetEnvironmentId()
+    { return environmentId;}
 }

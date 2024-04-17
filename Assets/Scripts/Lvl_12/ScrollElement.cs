@@ -11,10 +11,14 @@ public class ScrollElement : MonoBehaviour
     [SerializeField]
     private GameObject rightChecker;
 
+    [SerializeField]
+    private Vector3 currentPos;
+
     private Vector2 startPos;
     private Vector3 offset;
     private bool canDrag = false;
     private bool complete = false;
+
 
     private Vector2 moveVector;
     private Observer observer;
@@ -39,8 +43,9 @@ public class ScrollElement : MonoBehaviour
         {
             moveVector = offset + Camera.main.ScreenToWorldPoint(Input.mousePosition);
             moveVector.x = startPos.x;
-            if(Mathf.Abs(moveVector.y) < scrollRange)
+            if(Mathf.Abs(moveVector.y-startPos.y) < scrollRange)
                 transform.position = moveVector;
+            currentPos = transform.position;
         }
     }
 
