@@ -32,7 +32,7 @@ public class UnlockingEnvironment : MonoBehaviour
     
     private void BuyEnvironment()
     {
-        PlayerData.SpendCoin(cost,roomNumber ,environmentId, ActivateObject);
+        PlayerData.SpendCoin(cost,roomNumber-1 ,environmentId-1, ActivateObject);
     }
 
     public void ActivateObject()

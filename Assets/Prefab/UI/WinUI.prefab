@@ -773,10 +773,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f14b657f9a75b64d9bd46a64f15b705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAngle: 45
-  minAngle: -45
+  maxAngle: 90
+  minAngle: -90
   currentAngle: 0
-  angleGrow: 5
+  angleGrow: 90
   rightAngle: {x: 0, y: 0}
   Click: 0
 --- !u!1 &2952742464403651349
@@ -808,7 +808,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8642892743288049328}
-  - {fileID: 6337961703043840349}
   - {fileID: 8995938942058076184}
   - {fileID: 3649219449589891726}
   - {fileID: 1950710940740698518}
@@ -952,6 +951,7 @@ GameObject:
   - component: {fileID: 9189885544268784550}
   - component: {fileID: 1900992258152954449}
   - component: {fileID: 4361186074320695749}
+  - component: {fileID: 8405049047601739142}
   m_Layer: 5
   m_Name: VideoRewardButton
   m_TagString: Untagged
@@ -974,6 +974,7 @@ RectTransform:
   - {fileID: 2052054756493314942}
   - {fileID: 5225728148275223036}
   - {fileID: 7267441132581912348}
+  - {fileID: 6337961703043840349}
   m_Father: {fileID: 4324102890802757654}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
@@ -1063,6 +1064,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8405049047601739142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3744727526702367136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce992a6f461bf34aba940b18fe7e298, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angles: {x: -15, y: 15}
+  angleGrow: 65
+  waitTime: 1.5
 --- !u!1 &3945912773674710249
 GameObject:
   m_ObjectHideFlags: 0
@@ -2175,7 +2191,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 4324102890802757654}
+    m_TransformParent: {fileID: 8642892743288049328}
     m_Modifications:
     - target: {fileID: 722797779849381111, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
       propertyPath: m_Sprite
@@ -2243,15 +2259,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3515881074171433424, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3515881074171433424, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3515881074171433424, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3515881074171433424, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2259,7 +2275,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3515881074171433424, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -198.5
+      value: -33.100006
       objectReference: {fileID: 0}
     - target: {fileID: 3515881074171433424, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

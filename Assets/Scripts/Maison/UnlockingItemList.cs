@@ -18,6 +18,11 @@ public class UnlockingItemList : MonoBehaviour
         Debug.Log(startPos);
     }
 
+    private void Start()
+    {
+        LoadUpgradeIcon();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -38,8 +43,6 @@ public class UnlockingItemList : MonoBehaviour
                 Debug.Log(roomUnlockingList[i].GetComponent<RectTransform>().localPosition);
             }
         }
-        //roomUnlockingList[1].transform.localPosition = startPos + step;
-        //roomUnlockingList[2].transform.localPosition = startPos + step * 2;
     }
 
     public void LoadEnvironment()
@@ -57,5 +60,29 @@ public class UnlockingItemList : MonoBehaviour
         {
             item.GetComponent<UnlockingEnvironment>().ActivateObject();
         }    
+    }
+
+    public void LoadUpgradeIcon()
+    {
+        int number = 0;
+        foreach(GameObject item in roomUnlockingList)
+        {
+            if(!PlayerData.unlockingRoom[item.GetComponent<UnlockingEnvironment>().GetRoomNumber()-1])
+            {
+                item.transform.localPosition = new Vector3(-1000000, -100000);
+            }
+            else
+            {
+                if(number < 3)
+                {
+                    item.transform.localPosition = startPos + step * number;
+                    number++;
+                }
+                else
+                {
+                    item.transform.localPosition = new Vector3(-1000000, -100000);
+                }
+            }
+        }
     }
 }

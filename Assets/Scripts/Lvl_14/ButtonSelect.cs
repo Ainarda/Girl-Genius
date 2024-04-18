@@ -17,6 +17,8 @@ public class ButtonSelect : MonoBehaviour
         observer = GameObject.FindGameObjectWithTag("Observer").GetComponent<Observer>();
         rightButton.onClick.AddListener(RightClick);
         wrongButton.onClick.AddListener(WrongClick);
+        observer.AddElement(rightButton.gameObject);
+        observer.AddFailElement(wrongButton.gameObject);
     }
 
     // Update is called once per frame
@@ -27,10 +29,10 @@ public class ButtonSelect : MonoBehaviour
 
     private void RightClick()
     {
-        observer.CompleteSceneWithoutCheck();
+        observer.RemoveElement(rightButton.gameObject);
     }
     private void WrongClick()
     {
-        observer.ReloadScene();
+        observer.RemoveElement(wrongButton.gameObject);
     }
 }

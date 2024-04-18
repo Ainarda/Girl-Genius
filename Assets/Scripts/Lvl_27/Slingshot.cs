@@ -23,6 +23,10 @@ public class Slingshot : MonoBehaviour
     void Start()
     {
         observer = GameObject.FindGameObjectWithTag("Observer").GetComponent<Observer>();
+        if (Click)
+        {
+            observer.AddElement(this.gameObject); 
+        }
     }
 
     // Update is called once per frame
@@ -44,9 +48,10 @@ public class Slingshot : MonoBehaviour
             Debug.Log("+");
             angleGrow = 0;
             if (currentAngle <= rightAngle.y && currentAngle >= rightAngle.x)
-                observer.CompleteSceneWithoutCheck();
+                observer.RemoveElement(this.gameObject);
             else
                 observer.ReloadScene();
+            Click = false;
 
         }
     }

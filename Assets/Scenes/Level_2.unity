@@ -491,7 +491,7 @@ SpriteRenderer:
   m_Size: {x: 3.07, y: 1.38}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &492820310
@@ -1641,26 +1641,6 @@ PrefabInstance:
     - target: {fileID: 6208716905347265628, guid: aaee57fd14b08144dbd7f0a148d1b07d, type: 3}
       propertyPath: m_Name
       value: VisorMain
-      objectReference: {fileID: 0}
-    - target: {fileID: 8502033890969789406, guid: aaee57fd14b08144dbd7f0a148d1b07d, type: 3}
-      propertyPath: m_BackSortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8502033890969789406, guid: aaee57fd14b08144dbd7f0a148d1b07d, type: 3}
-      propertyPath: m_FrontSortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8502033890969789406, guid: aaee57fd14b08144dbd7f0a148d1b07d, type: 3}
-      propertyPath: m_FrontSortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8502033890969789406, guid: aaee57fd14b08144dbd7f0a148d1b07d, type: 3}
-      propertyPath: m_BackSortingLayerID
-      value: -1786744373
-      objectReference: {fileID: 0}
-    - target: {fileID: 8502033890969789406, guid: aaee57fd14b08144dbd7f0a148d1b07d, type: 3}
-      propertyPath: m_FrontSortingLayerID
-      value: 603376949
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

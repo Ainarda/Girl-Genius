@@ -7,14 +7,15 @@ using UnityEngine.UI;
 public class PlayerData : MonoBehaviour
 {
     public static string PlayerName;
-    public static int PlayerCoin = 350;
+    public static int PlayerCoin = 0;
     public static int CurrentLvl = 1;
     public static List<Dress> dress;
     public static List<int> unlockId;
     public static int dressProgress = 0;
     public static Text CoinUI;
     private static int currentUnclokNumber = 0;
-    private static bool[] unlockingRoom = new bool[] { true, false, false, false, false };
+    public static bool[] unlockingRoom = new bool[] { false, false, false, false, false, false, false };
+    public static int[] lvlUnlockedRoom = new int[] { 10, 11, 12, 16, 24,36, 52 };
 
     public static void LoadNextLevel()
     {
@@ -24,6 +25,16 @@ public class PlayerData : MonoBehaviour
 
     public static void AddReward()
     {
+        for (int i = 0; i < lvlUnlockedRoom.Length; i++)
+        {
+            if (lvlUnlockedRoom[i] == CurrentLvl)
+            {
+                Debug.LogWarning("Room " + i + "unlocked");
+                unlockingRoom[i] = true;
+                //Unlock manison room
+            }
+        }
+        //TODO if lvl complete can't add reward
         CurrentLvl++;
         Debug.Log(CurrentLvl);
         PlayerCoin += 50;
@@ -31,6 +42,7 @@ public class PlayerData : MonoBehaviour
         dressProgress++;
         if (dressProgress == 4)
         {
+            Debug.LogWarning("Dress can be added");
             dressProgress = 0;
             //dress[unlockId[currentUnclokNumber++]].UnlockDress();
         }
@@ -82,7 +94,13 @@ public class PlayerData : MonoBehaviour
         CoinUI.text = PlayerCoin.ToString();
     }
 
-    public static List<bool[]> environmentIntoRooms = new List<bool[]>() { new bool[] { true, false,false }, new bool[] { false }, new bool[] { false } };
+    public static List<bool[]> environmentIntoRooms = new List<bool[]>() { new bool[] { false, false,false, false }, 
+        new bool[] { false }, 
+        new bool[] { false }, 
+        new bool[] { false }, 
+        new bool[] { false }, 
+        new bool[] { false }, 
+        new bool[] { false } };
     public static void OpenEnvironmentIntoRooms(int roomNumber, int environmentNumber)
     {
         //todo גלוסעמ environmentNumber למזוע name;

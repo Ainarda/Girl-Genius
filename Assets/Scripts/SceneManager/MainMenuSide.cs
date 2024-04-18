@@ -10,7 +10,7 @@ public class MainMenuSide : MonoBehaviour
     [SerializeField]
     private Vector2 distance;
     [SerializeField]
-    private Vector2 vectorMove;
+    private Vector2 vectorMoveBase;
     [SerializeField]
     private float cameraSpeed = 1;
     [SerializeField]
@@ -20,10 +20,12 @@ public class MainMenuSide : MonoBehaviour
     [SerializeField]
     private int textGrowSpeed = 1;
 
+
+    private Vector2 vectorMove;
     [SerializeField]
     private Button loadLevel;
     [SerializeField]
-    private Button Renter;
+    private Button renter;
     [SerializeField]
     private Button manison;
     [SerializeField]
@@ -31,10 +33,13 @@ public class MainMenuSide : MonoBehaviour
 
     [SerializeField]
     private GameObject manisonUI;
+    [SerializeField]
+    private GameObject renterCanvas;
     private GameObject mainMenuUI;
     bool canMove = true;
     private void Awake()
     {
+        vectorMove = vectorMoveBase;
         manisonUI.SetActive(true);
         manisonUI.GetComponent<UnlockingItemList>().LoadEnvironment();
         manisonUI.SetActive(false);
@@ -47,11 +52,13 @@ public class MainMenuSide : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        renter.onClick.AddListener(OpenRenterMenu);
         loadLevel.onClick.AddListener(LoadLevel);
         manison.onClick.AddListener(EnterToManison);
         skin.onClick.AddListener(OpenSkinWardrobe);
         StartCoroutine(TextGrow());
     }
+
     float x;
     // Update is called once per frame
     void Update()
@@ -59,14 +66,15 @@ public class MainMenuSide : MonoBehaviour
         if (mainMenuUI.active)
         {
             x = Camera.main.transform.position.x;
-            if (x < distance.y && x > distance.x)
+            if(x > distance.y)
             {
-                Camera.main.transform.Translate(vectorMove * cameraSpeed * Time.deltaTime);
+                vectorMove = -vectorMoveBase;
             }
-            else
+            else if(x < distance.x)
             {
-                vectorMove *= -1;
+                vectorMove = vectorMoveBase;
             }
+            Camera.main.transform.Translate(vectorMove * cameraSpeed * Time.deltaTime);
         }
         
     }
@@ -80,19 +88,25 @@ public class MainMenuSide : MonoBehaviour
     {
         manisonUI.SetActive(true);
         mainMenuUI.SetActive(false);
-        StopCoroutine(TextGrow());
+        //StopCoroutine(TextGrow());
     }
 
     public void OpenSkinWardrobe()
     {
-
+        //SceneManager.LoadScene("Skin" + PlayerData.CurrentLvl);
     }
     
+    public void OpenRenterMenu()
+    {
+        renterCanvas.SetActive(true);
+        renterCanvas.GetComponent<RenterUI>().ActivateButton();
+    }
+
     public void OpenMainMenu()
     {
         manisonUI.SetActive(false);
         mainMenuUI.SetActive(true);
-        StartCoroutine(TextGrow());
+        //StartCoroutine(TextGrow());
     }
 
     public IEnumerator TextGrow()
