@@ -93,7 +93,7 @@ public class MainMenuSide : MonoBehaviour
 
     public void OpenSkinWardrobe()
     {
-        //SceneManager.LoadScene("Skin" + PlayerData.CurrentLvl);
+        SceneManager.LoadScene("Skin");
     }
     
     public void OpenRenterMenu()

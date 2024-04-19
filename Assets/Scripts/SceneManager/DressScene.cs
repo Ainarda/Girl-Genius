@@ -11,7 +11,7 @@ public class DressScene : MonoBehaviour
 
     private void Awake()
     {
-        List<Dress> id = PlayerData.dress;
+        /*List<Dress> id = PlayerData.dress;
         for(int i = 0; i < id.Count; i++)
         {
             if (id[i].GetState())
@@ -22,6 +22,6 @@ public class DressScene : MonoBehaviour
             {
                 dressObject[i].GetComponent<DressObject>().ActiveLocked();
             }
-        }
+        }*/
     }
 }

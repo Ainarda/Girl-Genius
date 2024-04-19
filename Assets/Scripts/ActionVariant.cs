@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,9 @@ public class ActionVariant : MonoBehaviour
     private List<Transform> walkPosition;
     [SerializeField]
     private List<string> talkText;
+
+    [SerializeField]
+    private List<GroupAction> groupActionList;
 
     [SerializeField]
     private bool activateStage = false;
@@ -90,6 +94,17 @@ public class ActionVariant : MonoBehaviour
     }
     
 }
+
+[Serializable]
+public struct GroupAction
+{
+    public ActionType actionType;
+    public List<GameObject> group;
+    //TODO MOVE POSITION
+    //CAMERA SCALE
+    //ANIMATION
+}
+
 public enum ActionType
 {
     playAnimation,

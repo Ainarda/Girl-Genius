@@ -16,7 +16,7 @@ public class DressObject : MonoBehaviour
     void Start()
     {
         image = GetComponent<SpriteRenderer>();
-        unlockedImage = PlayerData.dress[dressId].GetSprite();
+        //unlockedImage = PlayerData.dress[dressId].GetSprite();
     }
 
     // Update is called once per frame

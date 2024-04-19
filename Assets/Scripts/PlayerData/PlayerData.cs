@@ -9,7 +9,7 @@ public class PlayerData : MonoBehaviour
     public static string PlayerName;
     public static int PlayerCoin = 0;
     public static int CurrentLvl = 1;
-    public static List<Dress> dress;
+    public static bool[] dress = new bool[] { true, true, false};
     public static List<int> unlockId;
     public static int dressProgress = 0;
     public static Text CoinUI;
@@ -17,6 +17,8 @@ public class PlayerData : MonoBehaviour
     public static bool[] unlockingRoom = new bool[] { false, false, false, false, false, false, false };
     public static int[] lvlUnlockedRoom = new int[] { 10, 11, 12, 16, 24,36, 52 };
 
+    private static DressSlot currentDress;
+    public static int currentDressId = 2;
     public static void LoadNextLevel()
     {
         
@@ -43,6 +45,14 @@ public class PlayerData : MonoBehaviour
         if (dressProgress == 4)
         {
             Debug.LogWarning("Dress can be added");
+            int i;
+            for(i =0; i < dress.Length; i++)
+            {
+                if (!dress[i])
+                    break;
+            }
+            UnlockCustom(i);
+            //In observerOpenOnWinUI dresUnlockingScreen;
             dressProgress = 0;
             //dress[unlockId[currentUnclokNumber++]].UnlockDress();
         }
@@ -56,7 +66,7 @@ public class PlayerData : MonoBehaviour
     //TMP
     public static void UnlockCustom(int id)
     {
-        dress[id].UnlockDress();
+        dress[id] = true;
     }
 
     public static void SpendCoin(int cost, int roomId,int enviId, DoAction action)
@@ -105,5 +115,19 @@ public class PlayerData : MonoBehaviour
     {
         //todo גלוסעמ environmentNumber למזוע name;
         environmentIntoRooms[roomNumber][environmentNumber] = true;
+    }
+
+    public static void SetCurrentDress(DressSlot slot)
+    {
+        if(currentDress != null)
+            currentDress.DeselectCurrentDress();
+        currentDress = slot;
+        currentDress.SelectCurrentDress();
+        currentDressId = currentDress.GetDressId();
+    }
+
+    public static bool DressIsUnlocked(int dressId)
+    {
+        return dress[dressId];
     }
 }
