@@ -9,7 +9,7 @@ public class PlayerData : MonoBehaviour
     public static string PlayerName;
     public static int PlayerCoin = 0;
     public static int CurrentLvl = 1;
-    public static bool[] dress = new bool[] { true, true, false};
+    public static bool[] dress = new bool[] { true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false };
     public static List<int> unlockId;
     public static int dressProgress = 0;
     public static Text CoinUI;

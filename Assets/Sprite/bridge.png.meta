@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4fc1fd8e9341d3f468d8ca67a6698287
+guid: a699cee4d2e92e14c97ecc94e9ca32f4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,43 +136,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: men_guimi_0
+      name: bridge_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 301
-        height: 512
+        y: 1172
+        width: 33
+        height: 689
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ff11e9b8241ace4ca340e73700ef988
-      internalID: -1585433929
+      spriteID: 911d8601e8b0b484a832372cf8a4ac32
+      internalID: -122638834
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: men_guimi_1
+      name: bridge_1
       rect:
         serializedVersion: 2
-        x: 302
-        y: 0
-        width: 210
-        height: 512
+        x: 46
+        y: 1230
+        width: 30
+        height: 360
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37e5dc742f2aa1545b28a351f17a6102
-      internalID: -2105483685
+      spriteID: 9dadca28b9228d048ac0d3125b450e27
+      internalID: -108063261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 110
+        width: 197
+        height: 1063
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca1159d274f57e34fb1ed482a1911382
+      internalID: -1078506598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 234
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe76c961fc99fd40b284bfdf65e2c59
+      internalID: 1488630861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge_4
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 101
+        width: 201
+        height: 1128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1f428d4bcd66c44189cf926a6f58811
+      internalID: 428963941
       vertices: []
       indices: 
       edges: []
@@ -188,8 +251,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      men_guimi_0: -1585433929
-      men_guimi_1: -2105483685
+      bridge_0: -122638834
+      bridge_1: -108063261
+      bridge_2: -1078506598
+      bridge_3: 1488630861
+      bridge_4: 428963941
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

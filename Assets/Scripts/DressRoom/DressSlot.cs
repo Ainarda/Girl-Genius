@@ -22,6 +22,8 @@ public class DressSlot : MonoBehaviour
     [SerializeField]
     private int id;
     // Start is called before the first frame update
+
+    //TODO fix particle system
     private void Awake()
     {
         dressGameObject.sprite = dressSprite;
