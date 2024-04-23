@@ -7,7 +7,7 @@ using UnityEngine;
 public class Scroll : MonoBehaviour
 {
     [SerializeField]
-    private float scrollRange;
+    private Vector2 scrollRange;
 
     private Vector3 offset;
     private Vector3 currentPos;
@@ -15,7 +15,6 @@ public class Scroll : MonoBehaviour
     private Vector2 startPos;
     
     private bool canDrag = false;
-    private bool complete = false;
     
 
     // Start is called before the first frame update
@@ -34,7 +33,7 @@ public class Scroll : MonoBehaviour
         {
             moveVector = offset + Camera.main.ScreenToWorldPoint(Input.mousePosition);
             moveVector.x = startPos.x;
-            if (Mathf.Abs(moveVector.y - startPos.y) < scrollRange)
+            if (moveVector.y < scrollRange.y && moveVector.y>scrollRange.x)
                 transform.position = moveVector;
             currentPos = transform.position;
         }

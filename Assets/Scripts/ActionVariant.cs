@@ -79,7 +79,8 @@ public class ActionVariant : MonoBehaviour
 
     private void StartWalk()
     {
-        //TODO Делать кое-что другое. Пока заглушка
+        //TODO Делать кое-что другое. Пока заглушка.
+        //добавить IEnumerable
         foreach (GameObject elem in group)
         {
             elem.transform.position = walkPosition[walkPositionNumber].position;
@@ -93,6 +94,15 @@ public class ActionVariant : MonoBehaviour
         Debug.Log(talkText[talkTextNumber++]);
     }
     
+
+    private IEnumerable walk(Vector3 endPos, GameObject objectMove)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1);
+            objectMove.transform.Translate(Vector3.up);
+        }
+    }
 }
 
 [Serializable]
@@ -116,3 +126,4 @@ public enum ActionType
     activateMiniGame,
     completeScene
 }
+

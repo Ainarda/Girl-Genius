@@ -14,15 +14,28 @@ public class PlayerData : MonoBehaviour
     public static int dressProgress = 0;
     public static Text CoinUI;
     private static int currentUnclokNumber = 0;
+
     public static bool[] unlockingRoom = new bool[] { false, false, false, false, false, false, false };
     public static int[] lvlUnlockedRoom = new int[] { 10, 11, 12, 16, 24,36, 52 };
 
+    public static bool[] pet = new bool[] { true, false, false, false, false, false, false, false, false };
+
+    private static PetSlot currentPet;
+    public static int currentPetId = 0;
+
     private static DressSlot currentDress;
-    public static int currentDressId = 2;
+    public static int currentDressId = 1;
     public static void LoadNextLevel()
     {
         
         SceneManager.LoadScene("Level_" + CurrentLvl);
+    }
+
+    public static void SkipLevel()
+    {
+        //reklama or somthing else
+        CurrentLvl++;
+        LoadNextLevel();
     }
 
     public static void AddReward()
@@ -61,12 +74,6 @@ public class PlayerData : MonoBehaviour
     public static void ReloadScene()
     {
         SceneManager.LoadScene("Level_" + CurrentLvl);
-    }
-
-    //TMP
-    public static void UnlockCustom(int id)
-    {
-        dress[id] = true;
     }
 
     public static void SpendCoin(int cost, int roomId,int enviId, DoAction action)
@@ -117,6 +124,12 @@ public class PlayerData : MonoBehaviour
         environmentIntoRooms[roomNumber][environmentNumber] = true;
     }
 
+    #region Dress
+    public static void UnlockCustom(int id)
+    {
+        dress[id] = true;
+    }
+
     public static void SetCurrentDress(DressSlot slot)
     {
         if(currentDress != null)
@@ -130,4 +143,21 @@ public class PlayerData : MonoBehaviour
     {
         return dress[dressId];
     }
+    #endregion
+
+    #region Pet
+    public static void SetCurrentPet(PetSlot slot)
+    {
+        if(currentPet != null)
+            currentPet.DeselectCurrentPet();
+        currentPet = slot;
+        currentPet.SelectCurrentPet();
+        currentPetId = currentPet.GetPetId();
+    }
+
+    public static bool PetIsUnlocked(int petId)
+    {
+        return pet[petId];
+    }
+    #endregion
 }
