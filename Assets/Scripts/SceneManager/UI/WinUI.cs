@@ -14,14 +14,21 @@ public class WinUI : MonoBehaviour
     [SerializeField]
     private Button homeButton;
     [SerializeField]
+    private Button getDressButton;
+    [SerializeField]
+    private Button skipDressButton;
+    [SerializeField]
     private RectTransform greenDress;
     [SerializeField]
     private Text dressProgressText;
+    [SerializeField]
+    private GameObject unlockDressScreen;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        getDressButton.onClick.AddListener(GetDress);
+        skipDressButton.onClick.AddListener(SkipDress);
     }
 
     // Update is called once per frame
@@ -65,5 +72,17 @@ public class WinUI : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    public void SkipDress()
+    {
+        unlockDressScreen.SetActive(false);
+    }
+
+    public void GetDress()
+    {
+        //reklama
+        Debug.Log("Get dress");
+        unlockDressScreen.SetActive(false);
     }
 }

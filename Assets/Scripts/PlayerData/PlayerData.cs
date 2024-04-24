@@ -25,6 +25,8 @@ public class PlayerData : MonoBehaviour
 
     private static DressSlot currentDress;
     public static int currentDressId = 1;
+
+    //TODO add win UI and load dressUnlocker after complete all dress unlocking stages
     public static void LoadNextLevel()
     {
         

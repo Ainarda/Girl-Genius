@@ -17,6 +17,12 @@ public class ActionVariant : MonoBehaviour
     private List<Transform> walkPosition;
     [SerializeField]
     private List<string> talkText;
+    [SerializeField]
+    private List<float> waitTime;
+    [SerializeField]
+    private List<float> cropSize;
+    [SerializeField]
+    private GameObject miniGame;
 
     [SerializeField]
     private List<GroupAction> groupActionList;
@@ -24,27 +30,38 @@ public class ActionVariant : MonoBehaviour
     [SerializeField]
     private bool activateStage = false;
 
-    private int animationNameNumber, walkPositionNumber, talkTextNumber;
+    private int animationNameNumber, walkPositionNumber, talkTextNumber, waitTimeNumber, cropSizeNumber;
 
+    private bool stageIsActive = false;
 
+    private Observer observer;
     private List<DoAction> activateAction;
     // Start is called before the first frame update
     void Start()
     {
+        observer = GameObject.FindGameObjectWithTag("Observer").GetComponent<Observer>();
         activateAction = new List<DoAction>();
         InitAction();
-
+        ActivateAction();
     }
 
     private int currentAction = 0;
     // Update is called once per frame
     void Update()
     {
-        if(activateStage)
+        /*if(activateStage)
         {
             activateStage = false;
             activateAction[currentAction++]();
-        }   
+        } */  
+    }
+
+    private void ActivateAction()
+    {
+        if (currentAction < activateAction.Count)
+            activateAction[currentAction++]();
+        else
+            Debug.LogWarning("EndScene");
     }
 
     private void InitAction()
@@ -62,12 +79,28 @@ public class ActionVariant : MonoBehaviour
                 case ActionType.talk:
                     activateAction.Add(StartTalk);
                     break;
+                case ActionType.wait:
+                    activateAction.Add(StartWait);
+                    break;
+                case ActionType.moveWithCamera:
+                    activateAction.Add(StartMoveWithCamera);
+                    break;
+                case ActionType.cameraCrop:
+                    activateAction.Add(StartCameraCrop);
+                    break;
+                case ActionType.activateMiniGame:
+                    activateAction.Add(StartMinigame);
+                    break;
+                case ActionType.completeScene:
+                    activateAction.Add(StartCompleteScene);
+                    break;
                 default:
                     break;
             }
         }
     }
 
+    #region Start some action region
     private void StartAnimation()
     {
         foreach(GameObject elem in group)
@@ -79,30 +112,103 @@ public class ActionVariant : MonoBehaviour
 
     private void StartWalk()
     {
-        //TODO Делать кое-что другое. Пока заглушка.
         //добавить IEnumerable
-        foreach (GameObject elem in group)
+        /*foreach (GameObject elem in group)
         {
             elem.transform.position = walkPosition[walkPositionNumber].position;
-        }
+        }*/
+        Debug.Log("+");
+        StartCoroutine(Walk(walkPosition[walkPositionNumber].position, group[0]));
         walkPositionNumber++;
     }
 
     private void StartTalk()
     {
+        stageIsActive = false;
         //TODO show current message
-        Debug.Log(talkText[talkTextNumber++]);
+        StartCoroutine(Talk());
     }
     
-
-    private IEnumerable walk(Vector3 endPos, GameObject objectMove)
+    private void StartWait()
     {
-        while (true)
-        {
-            yield return new WaitForSeconds(1);
-            objectMove.transform.Translate(Vector3.up);
-        }
+        StartCoroutine(Wait());
     }
+
+    private void StartMoveWithCamera()
+    {
+        StartCoroutine(MoveWithCamera(walkPosition[walkPositionNumber++].position, group[0]));
+    }
+
+    private void StartCameraCrop()
+    {
+        StartCoroutine(CameraCrop(cropSize[cropSizeNumber++]));
+    }
+
+    private void StartMinigame()
+    {
+        miniGame.SetActive(true);
+    }
+
+    private void StartCompleteScene()
+    {
+        observer.OpenWinScreen();
+    }
+    #endregion
+
+    #region IEnumerator action region
+    private IEnumerator Wait()
+    {
+        Debug.Log("Start wait");
+        yield return new WaitForSeconds(waitTime[waitTimeNumber++]);
+        Debug.Log("End wait");
+        ActivateAction();
+    }
+
+    private IEnumerator Talk()
+    {
+        Debug.Log(talkText[talkTextNumber++]);
+        yield return new WaitForSeconds(1);
+        ActivateAction();
+    }
+
+    private IEnumerator Walk(Vector3 endPos, GameObject objectMove)
+    {
+        Vector3 moveVector = (endPos - objectMove.transform.position).normalized*0.05f;
+        while (Vector3.Distance(objectMove.transform.position, endPos) > 0.1f)
+        {
+            yield return new WaitForSeconds(0.02f);
+            objectMove.transform.Translate(moveVector);
+        }
+        objectMove.transform.position = endPos;
+        stageIsActive = false;
+        ActivateAction();
+    }
+
+    private IEnumerator MoveWithCamera(Vector3 endPos, GameObject objectMove)
+    {
+        Vector3 moveVector = (endPos - objectMove.transform.position).normalized * 0.05f;
+        while (Vector3.Distance(objectMove.transform.position, endPos) > 0.1f)
+        {
+            yield return new WaitForSeconds(0.02f);
+            objectMove.transform.Translate(moveVector);
+            Camera.main.transform.Translate(moveVector);
+        }
+        objectMove.transform.position = endPos;
+        ActivateAction();
+    }
+
+    private IEnumerator CameraCrop(float crop)
+    {
+        int multiplayer = crop-Camera.main.orthographicSize < 0 ? -1 : 1;
+        while(Mathf.Abs(Camera.main.orthographicSize-crop) > 0.1)
+        {
+            Camera.main.orthographicSize += 0.05f * multiplayer;
+            yield return new WaitForSeconds(0.02f);
+        }
+        Camera.main.orthographicSize = crop;
+        ActivateAction();
+    }
+    #endregion
 }
 
 [Serializable]

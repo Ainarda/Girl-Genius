@@ -441,7 +441,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6154238706269195599
 RectTransform:
   m_ObjectHideFlags: 0
@@ -455,6 +455,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6772190792005421286}
+  - {fileID: 3974780221107594859}
   - {fileID: 1619670126999815298}
   - {fileID: 6040235734583935823}
   m_Father: {fileID: 8274067952660682522}
@@ -1696,8 +1697,11 @@ MonoBehaviour:
   nextButton: {fileID: 896107895129195538}
   getRewardButton: {fileID: 4361186074320695749}
   homeButton: {fileID: 3733499594960525367}
+  getDressButton: {fileID: 7837677221342429391}
+  skipDressButton: {fileID: 7755309750290572960}
   greenDress: {fileID: 7108372630705971205}
   dressProgressText: {fileID: 3126218137690594544}
+  unlockDressScreen: {fileID: 1881374672072265316}
 --- !u!1 &4598946985806565595
 GameObject:
   m_ObjectHideFlags: 0
@@ -2901,8 +2905,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3974780221107594859}
+  m_Children: []
   m_Father: {fileID: 6154238706269195599}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2990,14 +2993,14 @@ RectTransform:
   m_GameObject: {fileID: 8754911901713588198}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.75, z: 1}
+  m_LocalScale: {x: 0.6, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6772190792005421286}
+  m_Father: {fileID: 6154238706269195599}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 31}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5127708420980061640
