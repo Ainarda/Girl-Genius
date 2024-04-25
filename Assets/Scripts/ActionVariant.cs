@@ -94,6 +94,12 @@ public class ActionVariant : MonoBehaviour
                 case ActionType.completeScene:
                     activateAction.Add(StartCompleteScene);
                     break;
+                case ActionType.someAction:
+                    activateAction.Add(StartSomeAction);
+                    break;
+                case ActionType.rotate:
+                    activateAction.Add(StartRotate);
+                    break;
                 default:
                     break;
             }
@@ -144,6 +150,16 @@ public class ActionVariant : MonoBehaviour
         StartCoroutine(CameraCrop(cropSize[cropSizeNumber++]));
     }
 
+    private void StartRotate()
+    {
+        //TODO rotate
+    }
+
+    private void StartSomeAction()
+    {
+
+    }
+
     private void StartMinigame()
     {
         miniGame.SetActive(true);
@@ -153,6 +169,7 @@ public class ActionVariant : MonoBehaviour
     {
         observer.OpenWinScreen();
     }
+    
     #endregion
 
     #region IEnumerator action region
@@ -229,6 +246,8 @@ public enum ActionType
     wait,
     moveWithCamera,
     cameraCrop,
+    rotate,
+    someAction,
     activateMiniGame,
     completeScene
 }
