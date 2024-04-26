@@ -15,8 +15,8 @@ public class PlayerData : MonoBehaviour
     public static Text CoinUI;
     private static int currentUnclokNumber = 0;
 
-    public static bool[] unlockingRoom = new bool[] { false, false, false, false, false, false, false };
-    public static int[] lvlUnlockedRoom = new int[] { 10, 11, 12, 16, 24,36, 52 };
+    public static bool[] unlockingRoom = new bool[] { false, false, false, false, false, false, false, false, false, false, false };
+    public static int[] lvlUnlockedRoom = new int[] {6, 10, 16, 26, 46, 56, 68, 77, 86, 96 };
 
     public static bool[] pet = new bool[] { true, false, false, false, false, false, false, false, false };
 
@@ -113,13 +113,17 @@ public class PlayerData : MonoBehaviour
         CoinUI.text = PlayerCoin.ToString();
     }
 
-    public static List<bool[]> environmentIntoRooms = new List<bool[]>() { new bool[] { false, false,false, false }, 
-        new bool[] { false }, 
-        new bool[] { false }, 
-        new bool[] { false }, 
-        new bool[] { false }, 
-        new bool[] { false }, 
-        new bool[] { false } };
+    public static List<bool[]> environmentIntoRooms = new List<bool[]>() { new bool[] { false, false,false, false, false,false,false,false,false,false,false,false,false },
+        new bool[] { false, false, false, false, false },
+        new bool[] { false, false, false, false, false, false, false },
+        new bool[] { false, false, false, false, false },
+        new bool[] { false, false, false, false, false, false},
+        new bool[] { false, false, false },
+        new bool[] { false, false, false },
+        new bool[] { },
+        new bool[] { },
+        new bool[] { },
+        new bool[] { false, false } };
     public static void OpenEnvironmentIntoRooms(int roomNumber, int environmentNumber)
     {
         //todo גלוסעמ environmentNumber למזוע name;
