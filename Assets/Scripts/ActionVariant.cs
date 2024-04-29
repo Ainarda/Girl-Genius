@@ -22,6 +22,8 @@ public class ActionVariant : MonoBehaviour
     [SerializeField]
     private List<float> cropSize;
     [SerializeField]
+    private List<AudioClip> audioClips;
+    [SerializeField]
     private GameObject miniGame;
 
     [SerializeField]
@@ -30,7 +32,7 @@ public class ActionVariant : MonoBehaviour
     [SerializeField]
     private bool activateStage = false;
 
-    private int animationNameNumber, walkPositionNumber, talkTextNumber, waitTimeNumber, cropSizeNumber;
+    private int animationNameNumber, walkPositionNumber, talkTextNumber, waitTimeNumber, cropSizeNumber, audioClipNumber;
 
     private bool stageIsActive = false;
 
@@ -247,6 +249,7 @@ public enum ActionType
     moveWithCamera,
     cameraCrop,
     rotate,
+    playMusic,
     someAction,
     activateMiniGame,
     completeScene
