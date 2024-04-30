@@ -9,10 +9,12 @@ public class LoseTimeField : MonoBehaviour
     private Text numberText;
     [SerializeField]
     private Image fieldCircle;
+    [SerializeField]
+    private GameObject retryButton;
     // Start is called before the first frame update
     void Start()
     {
-        StartTimer();
+        //StartTimer();
     }
 
     // Update is called once per frame
@@ -21,12 +23,12 @@ public class LoseTimeField : MonoBehaviour
         
     }
 
-    public void StartTimer()
+    public void StartTimer(DoAction action)
     {
-        StartCoroutine(Timer());
+        StartCoroutine(Timer(action));
     }
 
-    private IEnumerator Timer()
+    private IEnumerator Timer(DoAction action)
     {
         float timer = 1.0f;
         float displayTime = timer;
@@ -40,7 +42,10 @@ public class LoseTimeField : MonoBehaviour
             else
                 numberText.text = ((int)displayTime).ToString();
             fieldCircle.fillAmount = timer;
+            if(timer <= 0.5f)
+                retryButton.SetActive(true);
         }
         numberText.text = 0 + "";
+        action.Invoke();
     }
 }

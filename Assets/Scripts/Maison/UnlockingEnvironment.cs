@@ -8,6 +8,8 @@ public class UnlockingEnvironment : MonoBehaviour
     [SerializeField]
     private GameObject unlockingObject;
     [SerializeField]
+    private GameObject hideObject;
+    [SerializeField]
     private int cost;
     [SerializeField]
     private Text costDisplay;
@@ -37,6 +39,8 @@ public class UnlockingEnvironment : MonoBehaviour
 
     public void ActivateObject()
     {
+        if(hideObject != null)
+            hideObject.SetActive(false);
         unlockingObject.SetActive(true);
         Debug.Log("Room id " + roomNumber + " envi id " + environmentId);
         GameObject.FindGameObjectWithTag("MainisonUI").GetComponent<UnlockingItemList>().RemoveUnlockingItem(this.gameObject);

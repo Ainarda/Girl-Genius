@@ -587,7 +587,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &16624652
 Transform:
   m_ObjectHideFlags: 0
@@ -656,6 +656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 1048704662}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 233668491}
   buyButton: {fileID: 1645065865}
@@ -1768,6 +1769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 1242817357}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 1914789457}
   buyButton: {fileID: 277989306}
@@ -1909,6 +1911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 146194724}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 1038713714}
   buyButton: {fileID: 1289731590}
@@ -3724,6 +3727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 731231446}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 248853743}
   buyButton: {fileID: 1372732429}
@@ -4826,7 +4830,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &146194725
 Transform:
   m_ObjectHideFlags: 0
@@ -5344,6 +5348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 447236490}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 1184503081}
   buyButton: {fileID: 1216118048}
@@ -7371,7 +7376,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &232621766
 Transform:
   m_ObjectHideFlags: 0
@@ -7484,7 +7489,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &241227232
 Transform:
   m_ObjectHideFlags: 0
@@ -7629,6 +7634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 241227231}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 673391446}
   buyButton: {fileID: 11838567}
@@ -7765,6 +7771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 1981280313}
+  hideObject: {fileID: 258367526}
   cost: 300
   costDisplay: {fileID: 980858622}
   buyButton: {fileID: 383503367}
@@ -7794,7 +7801,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 258367526}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -7827,7 +7834,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 80670f0cd16be854d9bc9b3fc70b9ae5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7851,7 +7858,8 @@ Transform:
   m_LocalPosition: {x: 0, y: -0.45000076, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 724511321}
   m_Father: {fileID: 1754414263}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &259119860
@@ -8800,7 +8808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &281335586
 Transform:
   m_ObjectHideFlags: 0
@@ -9040,6 +9048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 1546758005}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 1176195138}
   buyButton: {fileID: 1038793894}
@@ -9828,6 +9837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 807366612}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 1052503624}
   buyButton: {fileID: 1379802959}
@@ -9969,6 +9979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 604639098}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 400483443}
   buyButton: {fileID: 912045867}
@@ -10073,7 +10084,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &334179964
 Transform:
   m_ObjectHideFlags: 0
@@ -10277,7 +10288,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &349744874
 Transform:
   m_ObjectHideFlags: 0
@@ -10627,6 +10638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 607205122}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 1786128228}
   buyButton: {fileID: 2140311483}
@@ -12134,7 +12146,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &393591530
 Transform:
   m_ObjectHideFlags: 0
@@ -13555,7 +13567,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &448026827
 Transform:
   m_ObjectHideFlags: 0
@@ -15763,7 +15775,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &543748157
 Transform:
   m_ObjectHideFlags: 0
@@ -17186,7 +17198,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &582035308
 Transform:
   m_ObjectHideFlags: 0
@@ -17873,7 +17885,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &604639099
 Transform:
   m_ObjectHideFlags: 0
@@ -17909,7 +17921,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &607205123
 Transform:
   m_ObjectHideFlags: 0
@@ -18628,6 +18640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 49052291}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 1567271375}
   buyButton: {fileID: 1516131343}
@@ -19985,6 +19998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 1922924384}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 2073736625}
   buyButton: {fileID: 1815692343}
@@ -20210,6 +20224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 809821714}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 1095723040}
   buyButton: {fileID: 1021756068}
@@ -20398,7 +20413,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &705015646
 Transform:
   m_ObjectHideFlags: 0
@@ -21003,11 +21018,11 @@ Transform:
   m_GameObject: {fileID: 724511319}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.45000076, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1754414263}
+  m_Father: {fileID: 258367528}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &731231446
 GameObject:
@@ -21513,7 +21528,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &736581755
 Transform:
   m_ObjectHideFlags: 0
@@ -21560,6 +21575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 448026826}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 1678829595}
   buyButton: {fileID: 1698631978}
@@ -22198,7 +22214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &757415901
 Transform:
   m_ObjectHideFlags: 0
@@ -23045,6 +23061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 997964900}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 571683910}
   buyButton: {fileID: 872894967}
@@ -23131,7 +23148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &807366613
 Transform:
   m_ObjectHideFlags: 0
@@ -23647,6 +23664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 1387202326}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 2121293282}
   buyButton: {fileID: 379235826}
@@ -24602,6 +24620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 757415900}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 1340670819}
   buyButton: {fileID: 33566570}
@@ -24892,7 +24911,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &868777962
 Transform:
   m_ObjectHideFlags: 0
@@ -25504,6 +25523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 1075010016}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 647392123}
   buyButton: {fileID: 259119862}
@@ -26283,7 +26303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &911225636
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26856,6 +26876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 393591529}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 1057425513}
   buyButton: {fileID: 776762388}
@@ -28243,7 +28264,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &993251706
 Transform:
   m_ObjectHideFlags: 0
@@ -28312,6 +28333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 543748156}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 124691461}
   buyButton: {fileID: 142447612}
@@ -28431,6 +28453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 334179963}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 261916391}
   buyButton: {fileID: 1441943482}
@@ -28912,7 +28935,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1008404581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30079,7 +30102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1048704663
 Transform:
   m_ObjectHideFlags: 0
@@ -30486,6 +30509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 868777961}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 187897968}
   buyButton: {fileID: 1267625858}
@@ -31249,7 +31273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1075010017
 Transform:
   m_ObjectHideFlags: 0
@@ -31677,7 +31701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1103437565
 Transform:
   m_ObjectHideFlags: 0
@@ -32485,6 +32509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 1237365826}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 1035151295}
   buyButton: {fileID: 1657103987}
@@ -33220,6 +33245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 160421194}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 585386123}
   buyButton: {fileID: 478387188}
@@ -33801,6 +33827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 1923783347}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 2061402498}
   buyButton: {fileID: 1719913024}
@@ -35162,7 +35189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1229254941
 Transform:
   m_ObjectHideFlags: 0
@@ -35271,7 +35298,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1237365827
 Transform:
   m_ObjectHideFlags: 0
@@ -35476,7 +35503,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1242817358
 Transform:
   m_ObjectHideFlags: 0
@@ -36677,7 +36704,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1275640233
 Transform:
   m_ObjectHideFlags: 0
@@ -36908,6 +36935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 911225635}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 1157877351}
   buyButton: {fileID: 733437925}
@@ -37764,6 +37792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 1701507476}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 840929820}
   buyButton: {fileID: 1543703142}
@@ -38485,7 +38514,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1342845281
 Transform:
   m_ObjectHideFlags: 0
@@ -38760,6 +38789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 349744873}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 1438842945}
   buyButton: {fileID: 1937941586}
@@ -39277,6 +39307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 1229254940}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 831311986}
   buyButton: {fileID: 270863046}
@@ -39503,7 +39534,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1387202327
 Transform:
   m_ObjectHideFlags: 0
@@ -40840,6 +40871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 16624651}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 1106598520}
   buyButton: {fileID: 820701217}
@@ -42360,6 +42392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 1957506346}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 1549961994}
   buyButton: {fileID: 907686226}
@@ -42895,7 +42928,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1546758006
 Transform:
   m_ObjectHideFlags: 0
@@ -43764,6 +43797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 705015645}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 68175997}
   buyButton: {fileID: 832110329}
@@ -44291,6 +44325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 1342845280}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 866946157}
   buyButton: {fileID: 229976743}
@@ -45468,7 +45503,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1635196572
 Transform:
   m_ObjectHideFlags: 0
@@ -47163,7 +47198,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1701507477
 Transform:
   m_ObjectHideFlags: 0
@@ -48166,6 +48201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 993251705}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 732242953}
   buyButton: {fileID: 1593931591}
@@ -48423,6 +48459,82 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1745179273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1745179274}
+  - component: {fileID: 1745179276}
+  - component: {fileID: 1745179275}
+  m_Layer: 5
+  m_Name: CoinImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1745179274
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745179273}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.79999995, y: 0.79999995, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2136385117}
+  m_Father: {fileID: 2079919037}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -146, y: -35}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1745179275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745179273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ea41d83e5e63a7043a80cece2445d98d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1745179276
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745179273}
+  m_CullTransparentMesh: 1
 --- !u!1 &1754414261
 GameObject:
   m_ObjectHideFlags: 0
@@ -48506,7 +48618,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 258367528}
-  - {fileID: 724511321}
   m_Father: {fileID: 117082669}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1756108477
@@ -49102,6 +49213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 1275640232}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 1606192259}
   buyButton: {fileID: 1242996413}
@@ -49159,6 +49271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 736581754}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 176786340}
   buyButton: {fileID: 2085019883}
@@ -49300,6 +49413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 232621765}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 493379589}
   buyButton: {fileID: 986891784}
@@ -50186,6 +50300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 1103437564}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 893544033}
   buyButton: {fileID: 1666637087}
@@ -52586,6 +52701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 582035307}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 938455353}
   buyButton: {fileID: 61505828}
@@ -52965,6 +53081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 1635196571}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 565853613}
   buyButton: {fileID: 433087509}
@@ -53406,7 +53523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1922924385
 Transform:
   m_ObjectHideFlags: 0
@@ -53441,7 +53558,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1923783348
 Transform:
   m_ObjectHideFlags: 0
@@ -55047,7 +55164,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1957506347
 Transform:
   m_ObjectHideFlags: 0
@@ -55284,6 +55401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 2146699792}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 565333073}
   buyButton: {fileID: 1328546140}
@@ -55425,6 +55543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 375193458}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 1142962267}
   buyButton: {fileID: 1104066994}
@@ -55557,6 +55676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 349744873}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 65211607}
   buyButton: {fileID: 1138580614}
@@ -55577,7 +55697,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1981280314
 Transform:
   m_ObjectHideFlags: 0
@@ -56935,6 +57055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockingObject: {fileID: 281335585}
+  hideObject: {fileID: 0}
   cost: 300
   costDisplay: {fileID: 578034704}
   buyButton: {fileID: 1992343223}
@@ -58602,6 +58723,108 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073736623}
   m_CullTransparentMesh: 1
+--- !u!1 &2079919033
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2079919037}
+  - component: {fileID: 2079919036}
+  - component: {fileID: 2079919035}
+  - component: {fileID: 2079919034}
+  m_Layer: 5
+  m_Name: CoinsCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2079919034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079919033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &2079919035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079919033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &2079919036
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079919033}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &2079919037
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079919033}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1745179274}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &2080291611
 GameObject:
   m_ObjectHideFlags: 0
@@ -59789,6 +60012,85 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2136385116
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2136385117}
+  - component: {fileID: 2136385119}
+  - component: {fileID: 2136385118}
+  m_Layer: 5
+  m_Name: CoinCount
+  m_TagString: CoinUI
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2136385117
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136385116}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1745179274}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 106.13, y: -25}
+  m_SizeDelta: {x: 200, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2136385118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136385116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: a4134afe793062643ba0b563319a96ec, type: 3}
+    m_FontSize: 40
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 4000
+--- !u!222 &2136385119
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136385116}
+  m_CullTransparentMesh: 1
 --- !u!1 &2140311481
 GameObject:
   m_ObjectHideFlags: 0
@@ -60010,7 +60312,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2146699793
 Transform:
   m_ObjectHideFlags: 0
@@ -60180,3 +60482,4 @@ SceneRoots:
   - {fileID: 355683924}
   - {fileID: 1610382671}
   - {fileID: 1070658506}
+  - {fileID: 2079919037}

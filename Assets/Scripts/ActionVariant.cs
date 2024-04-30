@@ -12,11 +12,13 @@ public class ActionVariant : MonoBehaviour
     [SerializeField]
     private List<ActionType> typeActionList;
     [SerializeField]
-    private List<string> animationName;
+    private List<Animation> animationName;
+    [SerializeField]
+    private List<GameObject> rotationObject;
     [SerializeField]
     private List<Transform> walkPosition;
     [SerializeField]
-    private List<string> talkText;
+    private List<TalkText> talkText;
     [SerializeField]
     private List<float> waitTime;
     [SerializeField]
@@ -25,14 +27,15 @@ public class ActionVariant : MonoBehaviour
     private List<AudioClip> audioClips;
     [SerializeField]
     private GameObject miniGame;
-
+    [SerializeField]
+    private AudioSource audioSource;
     [SerializeField]
     private List<GroupAction> groupActionList;
 
     [SerializeField]
     private bool activateStage = false;
 
-    private int animationNameNumber, walkPositionNumber, talkTextNumber, waitTimeNumber, cropSizeNumber, audioClipNumber;
+    private int animationNameNumber, walkPositionNumber, talkTextNumber, waitTimeNumber, cropSizeNumber, audioClipNumber, rotationObjectNumber;
 
     private bool stageIsActive = false;
 
@@ -56,6 +59,16 @@ public class ActionVariant : MonoBehaviour
             activateStage = false;
             activateAction[currentAction++]();
         } */  
+    }
+
+    public void SetAudioSource(AudioSource source)
+    {
+        audioSource = source;
+    }
+
+    public void NextAction()
+    {
+        ActivateAction();
     }
 
     private void ActivateAction()
@@ -102,6 +115,9 @@ public class ActionVariant : MonoBehaviour
                 case ActionType.rotate:
                     activateAction.Add(StartRotate);
                     break;
+                case ActionType.playMusic:
+                    activateAction.Add(StartAudioPlay);
+                    break;
                 default:
                     break;
             }
@@ -113,7 +129,7 @@ public class ActionVariant : MonoBehaviour
     {
         foreach(GameObject elem in group)
         {
-            elem.GetComponent<Animator>().SetBool(animationName[animationNameNumber], true);
+            //elem.GetComponent<Animator>().SetBool(animationName[animationNameNumber], true);
         }
         animationNameNumber++;
     }
@@ -152,9 +168,18 @@ public class ActionVariant : MonoBehaviour
         StartCoroutine(CameraCrop(cropSize[cropSizeNumber++]));
     }
 
+    private void StartAudioPlay()
+    {
+        audioSource.clip = audioClips[audioClipNumber++];
+        audioSource.Play();
+        ActivateAction();
+    }
+
     private void StartRotate()
     {
         //TODO rotate
+        rotationObject[rotationObjectNumber++].transform.rotation = Quaternion.AngleAxis(180, Vector3.up);
+        ActivateAction();
     }
 
     private void StartSomeAction()
@@ -185,7 +210,7 @@ public class ActionVariant : MonoBehaviour
 
     private IEnumerator Talk()
     {
-        Debug.Log(talkText[talkTextNumber++]);
+        Debug.Log(talkText[talkTextNumber++].text);
         yield return new WaitForSeconds(1);
         ActivateAction();
     }
@@ -253,5 +278,12 @@ public enum ActionType
     someAction,
     activateMiniGame,
     completeScene
+}
+
+[Serializable]
+public struct TalkText
+{
+    public bool side; //left = true, right = false
+    public string text;
 }
 

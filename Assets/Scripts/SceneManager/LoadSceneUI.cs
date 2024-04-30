@@ -16,6 +16,12 @@ public class LoadSceneUI : MonoBehaviour
     private GameObject winUI;
     [SerializeField]
     private GameObject eventSystem;
+    [SerializeField]
+    private GameObject sceneAudioSource;
+    [SerializeField]
+    private GameObject mainAudioSource;
+    [SerializeField]
+    private GameObject actionManager;
 
     private Observer observer;
     private void Awake()
@@ -23,7 +29,10 @@ public class LoadSceneUI : MonoBehaviour
         if (!GameObject.Find("EventSystem"))
             eventSystem = Instantiate(eventSystem);
         observer = GameObject.FindGameObjectWithTag("Observer").GetComponent<Observer>();
+        actionManager = GameObject.FindGameObjectWithTag("ActionManager");
         InitUI();
+        InitAudio();
+
         observer.AddScreens(winUI, loseUI, mainUI);
         lvlText = GameObject.FindGameObjectWithTag("LevelUI").GetComponent<Text>();
         coinText = GameObject.FindGameObjectWithTag("CoinUI").GetComponent<Text>();
@@ -47,6 +56,14 @@ public class LoadSceneUI : MonoBehaviour
         loseUI.GetComponent<LoseUI>().SetRetryButton(observer.ReloadScene);
     }
 
+    private void InitAudio()
+    {
+        sceneAudioSource = Instantiate(sceneAudioSource);
+        mainAudioSource = Instantiate(mainAudioSource);
+        mainAudioSource.GetComponent<AudioSource>().Play();
+        actionManager.GetComponent<ActionVariant>().SetAudioSource(sceneAudioSource.GetComponent<AudioSource>());
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,5 +80,6 @@ public class LoadSceneUI : MonoBehaviour
     public void LoadLoseUI()
     {
         loseUI.SetActive(true);
+        loseUI.GetComponent<LoseUI>().ActivateTimer();
     }
 }

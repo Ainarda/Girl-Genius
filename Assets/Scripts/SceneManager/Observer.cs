@@ -114,6 +114,7 @@ public class Observer : MonoBehaviour
     public void OpenLoseScreen()
     {
         loseScreen.SetActive(true);
+        loseScreen.GetComponent<LoseUI>().ActivateTimer();
         mainScreen.GetComponent<MainUI>().HideLvlObject();
     }
 
