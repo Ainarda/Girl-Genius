@@ -21,7 +21,7 @@ public class LoadSceneUI : MonoBehaviour
     [SerializeField]
     private GameObject mainAudioSource;
     [SerializeField]
-    private GameObject actionManager;
+    private ActionVariant actionManager;
 
     private Observer observer;
     private void Awake()
@@ -29,7 +29,7 @@ public class LoadSceneUI : MonoBehaviour
         if (!GameObject.Find("EventSystem"))
             eventSystem = Instantiate(eventSystem);
         observer = GameObject.FindGameObjectWithTag("Observer").GetComponent<Observer>();
-        actionManager = GameObject.FindGameObjectWithTag("ActionManager");
+        actionManager = GetComponent<ActionVariant>();
         InitUI();
         InitAudio();
 
@@ -61,7 +61,7 @@ public class LoadSceneUI : MonoBehaviour
         sceneAudioSource = Instantiate(sceneAudioSource);
         mainAudioSource = Instantiate(mainAudioSource);
         mainAudioSource.GetComponent<AudioSource>().Play();
-        actionManager.GetComponent<ActionVariant>().SetAudioSource(sceneAudioSource.GetComponent<AudioSource>());
+        actionManager.SetAudioSource(sceneAudioSource.GetComponent<AudioSource>());
     }
 
     // Start is called before the first frame update

@@ -1,3 +1,5 @@
+using Spine;
+using Spine.Unity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,15 +10,17 @@ public class ActionVariant : MonoBehaviour
     [SerializeField]
     private string groupName;
     [SerializeField]
-    private List<GameObject> group;
+    private List<Group> group;
     [SerializeField]
     private List<ActionType> typeActionList;
     [SerializeField]
-    private List<Animation> animationName;
+    private List<NPC_Animation> objectAnimationName;
+    [SerializeField]
+    private List<GameObject> animationObject;
     [SerializeField]
     private List<GameObject> rotationObject;
     [SerializeField]
-    private List<Transform> walkPosition;
+    private List<WalkPosition> walkPosition;
     [SerializeField]
     private List<TalkText> talkText;
     [SerializeField]
@@ -26,16 +30,19 @@ public class ActionVariant : MonoBehaviour
     [SerializeField]
     private List<AudioClip> audioClips;
     [SerializeField]
-    private GameObject miniGame;
+    private List<GameObject> miniGame;
+    [SerializeField]
+    private List<GameObject> hideObject;
+    [SerializeField]
+    private List<GameObject> activeObject;
     [SerializeField]
     private AudioSource audioSource;
-    [SerializeField]
-    private List<GroupAction> groupActionList;
 
     [SerializeField]
     private bool activateStage = false;
 
-    private int animationNameNumber, walkPositionNumber, talkTextNumber, waitTimeNumber, cropSizeNumber, audioClipNumber, rotationObjectNumber;
+    private int animationNameNumber, walkPositionNumber, talkTextNumber, waitTimeNumber, cropSizeNumber, audioClipNumber, 
+        rotationObjectNumber, animationObjectNumber, groupNumber, miniGameNumber, hideObjectNumber, activeObjectNumber;
 
     private bool stageIsActive = false;
 
@@ -118,6 +125,12 @@ public class ActionVariant : MonoBehaviour
                 case ActionType.playMusic:
                     activateAction.Add(StartAudioPlay);
                     break;
+                case ActionType.hideObject:
+                    activateAction.Add(HideObject);
+                    break;
+                case ActionType.activeObject:
+                    activateAction.Add(ActiveObject);
+                    break;
                 default:
                     break;
             }
@@ -127,11 +140,20 @@ public class ActionVariant : MonoBehaviour
     #region Start some action region
     private void StartAnimation()
     {
-        foreach(GameObject elem in group)
+        if (objectAnimationName[animationNameNumber].isGroup)
         {
-            //elem.GetComponent<Animator>().SetBool(animationName[animationNameNumber], true);
+            foreach(GameObject elem in group[objectAnimationName[animationNameNumber].groupId].group)
+            {
+                TrackEntry entry = elem.GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(1, objectAnimationName[animationNameNumber].animationName, true);
+            }
+            animationNameNumber++;
         }
-        animationNameNumber++;
+        else
+        {
+            //Add true or false loop animation
+            TrackEntry entry = animationObject[animationObjectNumber++].GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(1, objectAnimationName[animationNameNumber++].animationName, true);
+        }
+        ActivateAction();
     }
 
     private void StartWalk()
@@ -142,7 +164,7 @@ public class ActionVariant : MonoBehaviour
             elem.transform.position = walkPosition[walkPositionNumber].position;
         }*/
         Debug.Log("+");
-        StartCoroutine(Walk(walkPosition[walkPositionNumber].position, group[0]));
+        StartCoroutine(Walk(walkPosition[walkPositionNumber].position.position, group[walkPosition[walkPositionNumber].groupId].group));
         walkPositionNumber++;
     }
 
@@ -160,7 +182,8 @@ public class ActionVariant : MonoBehaviour
 
     private void StartMoveWithCamera()
     {
-        StartCoroutine(MoveWithCamera(walkPosition[walkPositionNumber++].position, group[0]));
+        StartCoroutine(MoveWithCamera(walkPosition[walkPositionNumber].position.position, group[walkPosition[walkPositionNumber].groupId].group));
+        walkPositionNumber++;
     }
 
     private void StartCameraCrop()
@@ -189,12 +212,24 @@ public class ActionVariant : MonoBehaviour
 
     private void StartMinigame()
     {
-        miniGame.SetActive(true);
+        miniGame[miniGameNumber++].SetActive(true);
     }
 
     private void StartCompleteScene()
     {
         observer.OpenWinScreen();
+    }
+
+    private void HideObject()
+    {
+        hideObject[hideObjectNumber++].SetActive(false);
+        ActivateAction();
+    }
+
+    private void ActiveObject()
+    {
+        activeObject[activeObjectNumber++].SetActive(true);
+        ActivateAction();
     }
     
     #endregion
@@ -215,29 +250,37 @@ public class ActionVariant : MonoBehaviour
         ActivateAction();
     }
 
-    private IEnumerator Walk(Vector3 endPos, GameObject objectMove)
+    private IEnumerator Walk(Vector3 endPos, List<GameObject> objectMove)
     {
-        Vector3 moveVector = (endPos - objectMove.transform.position).normalized*0.05f;
-        while (Vector3.Distance(objectMove.transform.position, endPos) > 0.1f)
+        Vector3 moveVector = (endPos - objectMove[0].transform.position).normalized*0.05f;
+        Debug.Log(moveVector);
+        while (Vector3.Distance(objectMove[0].transform.position, endPos) > 0.1f)
         {
             yield return new WaitForSeconds(0.02f);
-            objectMove.transform.Translate(moveVector);
+            foreach (GameObject obj in objectMove)
+            {
+                obj.transform.Translate(moveVector);
+            }
         }
-        objectMove.transform.position = endPos;
+        objectMove[0].transform.position = endPos;
         stageIsActive = false;
         ActivateAction();
     }
 
-    private IEnumerator MoveWithCamera(Vector3 endPos, GameObject objectMove)
+    private IEnumerator MoveWithCamera(Vector3 endPos, List<GameObject> objectMove)
     {
-        Vector3 moveVector = (endPos - objectMove.transform.position).normalized * 0.05f;
-        while (Vector3.Distance(objectMove.transform.position, endPos) > 0.1f)
+        Vector3 moveVector = (endPos - objectMove[0].transform.position).normalized * 0.05f;
+        while (Vector3.Distance(objectMove[0].transform.position, endPos) > 0.1f)
         {
             yield return new WaitForSeconds(0.02f);
-            objectMove.transform.Translate(moveVector);
+            foreach (GameObject obj in objectMove)
+            {
+                obj.transform.Translate(moveVector);
+            }
+            
             Camera.main.transform.Translate(moveVector);
         }
-        objectMove.transform.position = endPos;
+        objectMove[0].transform.position = endPos;
         ActivateAction();
     }
 
@@ -256,9 +299,8 @@ public class ActionVariant : MonoBehaviour
 }
 
 [Serializable]
-public struct GroupAction
+public struct Group
 {
-    public ActionType actionType;
     public List<GameObject> group;
     //TODO MOVE POSITION
     //CAMERA SCALE
@@ -277,7 +319,9 @@ public enum ActionType
     playMusic,
     someAction,
     activateMiniGame,
-    completeScene
+    completeScene,
+    hideObject,
+    activeObject
 }
 
 [Serializable]
@@ -286,4 +330,21 @@ public struct TalkText
     public bool side; //left = true, right = false
     public string text;
 }
+
+[Serializable]
+public struct NPC_Animation
+{
+    public string animationName;
+    public bool isGroup;
+    public int groupId;
+}
+
+[Serializable]
+public struct WalkPosition
+{
+    public Transform position;
+    public int groupId;
+}
+
+//TODO Add move camera
 

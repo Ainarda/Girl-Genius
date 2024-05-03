@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6996247099635991863}
   - component: {fileID: 5138426522822803639}
   - component: {fileID: 8199434535094193655}
+  - component: {fileID: 5242350859111839686}
   m_Layer: 0
   m_Name: Observer
   m_TagString: Observer
@@ -65,3 +66,31 @@ MonoBehaviour:
   eventSystem: {fileID: 7588018609248471217, guid: 001a950a990e4a84ba37426e3fdd93e8, type: 3}
   sceneAudioSource: {fileID: 6817751235767791084, guid: 2ab54e60ba0742c4395a4921a4d71000, type: 3}
   mainAudioSource: {fileID: 7776396690643216067, guid: a9c71ded889712c43bc7a20f35fafcc2, type: 3}
+  actionManager: {fileID: 0}
+--- !u!114 &5242350859111839686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9127945949731854918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f287e410b1aec5c408a4994de3d0a672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groupName: 
+  group: []
+  typeActionList: 
+  objectAnimationName: []
+  rotationObject: []
+  walkPosition: []
+  talkText: []
+  animationObject: []
+  waitTime: []
+  cropSize: []
+  audioClips: []
+  miniGame: {fileID: 0}
+  audioSource: {fileID: 0}
+  groupActionList: []
+  activateStage: 0

@@ -49,7 +49,7 @@ public class Observer : MonoBehaviour
     {
         unCompletedElement.Remove(element);
         if(unCompletedElement.Count == 0)
-            OpenWinScreen();// CompleteSceneWithoutCheck();
+            GetComponent<ActionVariant>().NextAction();//OpenWinScreen();// CompleteSceneWithoutCheck();
     }
 
     public void RemoveFailElementWithEraser(GameObject element)
@@ -65,7 +65,7 @@ public class Observer : MonoBehaviour
         if (unCompletedElement.Count <= elementMaxCount / 8 && !IsLevelComplete)
         {
             IsLevelComplete = true;
-            OpenWinScreen();
+            GetComponent<ActionVariant>().NextAction();//OpenWinScreen();
         }
             //CompleteSceneWithoutCheck();
     }
@@ -86,17 +86,20 @@ public class Observer : MonoBehaviour
     public void CompleteScene()
     {
         bool isComplete = true;
-        foreach (CheckComplete check in checkList)
+        if (checkList != null)
         {
-            if (!check())
+            foreach (CheckComplete check in checkList)
             {
-                isComplete = false;
-                break;
-            }
+                if (!check())
+                {
+                    isComplete = false;
+                    break;
+                }
 
+            }
         }
         if (isComplete)
-            OpenWinScreen();
+            GetComponent<ActionVariant>().NextAction();//OpenWinScreen();
         //PlayerData.LoadNextLevel();
         else
             OpenLoseScreen();
