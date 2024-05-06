@@ -822,7 +822,7 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
-  _animationName: 
+  _animationName: 2001_02_b1_x
   loop: 1
   timeScale: 1
 --- !u!23 &851374712
@@ -845,7 +845,15 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 08c91f254bf4eba40a967d158477fb5e, type: 2}
+  - {fileID: 2100000, guid: f8fcc99c7c1aa714989c923b1cc859bf, type: 2}
+  - {fileID: 2100000, guid: 08c91f254bf4eba40a967d158477fb5e, type: 2}
+  - {fileID: 2100000, guid: f8fcc99c7c1aa714989c923b1cc859bf, type: 2}
+  - {fileID: 2100000, guid: 08c91f254bf4eba40a967d158477fb5e, type: 2}
+  - {fileID: 2100000, guid: f8fcc99c7c1aa714989c923b1cc859bf, type: 2}
+  - {fileID: 2100000, guid: 08c91f254bf4eba40a967d158477fb5e, type: 2}
+  - {fileID: 2100000, guid: f8fcc99c7c1aa714989c923b1cc859bf, type: 2}
+  - {fileID: 2100000, guid: 08c91f254bf4eba40a967d158477fb5e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1300,27 +1308,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groupName: TestGroupName
   group:
-  - {fileID: 1447872837}
+  - group: []
   typeActionList: 00000000010000000000000003000000060000000000000004000000010000000000000005000000050000000700000000000000
   objectAnimationName:
-  - run
-  - idle
-  - run
-  - idle
-  - zhengjing
-  rotationObject:
-  - {fileID: 265198620}
-  walkPosition:
-  - {fileID: 634314214}
-  - {fileID: 723146896}
-  - {fileID: 1208954441}
-  talkText:
-  - side: 0
-    text: 
-  - side: 0
-    text: 
-  - side: 0
-    text: 
+  - animationName: 
+    isGroup: 0
+    groupId: 0
+  - animationName: 
+    isGroup: 0
+    groupId: 0
+  - animationName: 
+    isGroup: 0
+    groupId: 0
+  - animationName: 
+    isGroup: 0
+    groupId: 0
+  - animationName: 
+    isGroup: 0
+    groupId: 0
   animationObject:
   - {fileID: 265198620}
   - {fileID: 265198620}
@@ -1328,6 +1333,22 @@ MonoBehaviour:
   - {fileID: 265198620}
   - {fileID: 265198620}
   - {fileID: 265198620}
+  rotationObject:
+  - {fileID: 265198620}
+  walkPosition:
+  - position: {fileID: 0}
+    groupId: 0
+  - position: {fileID: 0}
+    groupId: 0
+  - position: {fileID: 0}
+    groupId: 0
+  talkText:
+  - side: 0
+    text: 
+  - side: 0
+    text: 
+  - side: 0
+    text: 
   waitTime:
   - 5
   cropSize:
@@ -1335,9 +1356,11 @@ MonoBehaviour:
   - 5
   audioClips:
   - {fileID: 8300000, guid: aecb3bc8e1fe1c0459e61d4915ddacbb, type: 3}
-  miniGame: {fileID: 1419941435}
+  miniGame:
+  - {fileID: 0}
+  hideObject: []
+  activeObject: []
   audioSource: {fileID: 0}
-  groupActionList: []
   activateStage: 0
 --- !u!1001 &1502383566
 PrefabInstance:
@@ -1427,14 +1450,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groupName: TestGroupName
   group:
-  - {fileID: 1551543471}
+  - group: []
   typeActionList: 02000000010000000300000002000000040000000100000005000000050000000700000008000000
   objectAnimationName: []
+  animationObject: []
   rotationObject: []
   walkPosition:
-  - {fileID: 634314214}
-  - {fileID: 723146896}
-  - {fileID: 1208954441}
+  - position: {fileID: 0}
+    groupId: 0
+  - position: {fileID: 0}
+    groupId: 0
+  - position: {fileID: 0}
+    groupId: 0
   talkText:
   - side: 0
     text: 
@@ -1442,7 +1469,6 @@ MonoBehaviour:
     text: 
   - side: 0
     text: 
-  animationObject: []
   waitTime:
   - 5
   cropSize:
@@ -1450,9 +1476,11 @@ MonoBehaviour:
   - 5
   audioClips:
   - {fileID: 8300000, guid: aecb3bc8e1fe1c0459e61d4915ddacbb, type: 3}
-  miniGame: {fileID: 1419941435}
+  miniGame:
+  - {fileID: 0}
+  hideObject: []
+  activeObject: []
   audioSource: {fileID: 0}
-  groupActionList: []
   activateStage: 0
 --- !u!4 &1551543473
 Transform:
@@ -1492,7 +1520,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1828361374
 MonoBehaviour:
   m_ObjectHideFlags: 0

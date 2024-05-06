@@ -41,7 +41,7 @@ public class ActionVariant : MonoBehaviour
     [SerializeField]
     private bool activateStage = false;
 
-    private int animationNameNumber, walkPositionNumber, talkTextNumber, waitTimeNumber, cropSizeNumber, audioClipNumber, 
+    private int animationNameNumber, walkPositionNumber, talkTextNumber, waitTimeNumber, cropSizeNumber, audioClipNumber,
         rotationObjectNumber, animationObjectNumber, groupNumber, miniGameNumber, hideObjectNumber, activeObjectNumber;
 
     private bool stageIsActive = false;
@@ -231,7 +231,7 @@ public class ActionVariant : MonoBehaviour
         activeObject[activeObjectNumber++].SetActive(true);
         ActivateAction();
     }
-    
+
     #endregion
 
     #region IEnumerator action region
