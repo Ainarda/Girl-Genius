@@ -16,9 +16,11 @@ public class DragObject : MonoBehaviour//, IPointerDownHandler, IPointerUpHandle
     private GameObject losePosition;
     [SerializeField]
     private Vector2 startPosition;
+    [SerializeField]
+    private bool someAction;
     private Vector3 offset;
     private bool moveObject = false;
-
+    
     Observer observer;
     private void Awake()
     {
@@ -71,6 +73,9 @@ public class DragObject : MonoBehaviour//, IPointerDownHandler, IPointerUpHandle
             transform.position = endPosition.transform.position;
             observer.RemoveElement(this.gameObject);
             this.enabled = false;
+            if (someAction)
+                SomeAction();
+
         }
         else if(losePosition != null && Vector2.Distance(offset + Camera.main.ScreenToWorldPoint(Input.mousePosition), losePosition.transform.position) < 0.5f)
         {
@@ -82,5 +87,10 @@ public class DragObject : MonoBehaviour//, IPointerDownHandler, IPointerUpHandle
         {
             transform.position = startPosition;
         }
+    }
+
+    public void SomeAction()
+    {
+        GetComponent<LoadObject>().Activate();
     }
 }

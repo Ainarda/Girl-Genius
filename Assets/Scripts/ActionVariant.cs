@@ -140,18 +140,19 @@ public class ActionVariant : MonoBehaviour
     #region Start some action region
     private void StartAnimation()
     {
+        Debug.Log("Start animation " + objectAnimationName[animationNameNumber].animationName);
         if (objectAnimationName[animationNameNumber].isGroup)
         {
             foreach(GameObject elem in group[objectAnimationName[animationNameNumber].groupId].group)
             {
-                TrackEntry entry = elem.GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(1, objectAnimationName[animationNameNumber].animationName, true);
+                TrackEntry entry = elem.GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(1, objectAnimationName[animationNameNumber].animationName, !objectAnimationName[animationNameNumber].isLoop);
             }
             animationNameNumber++;
         }
         else
         {
             //Add true or false loop animation
-            TrackEntry entry = animationObject[animationObjectNumber++].GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(1, objectAnimationName[animationNameNumber++].animationName, true);
+            TrackEntry entry = animationObject[animationObjectNumber++].GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(1, objectAnimationName[animationNameNumber++].animationName, !objectAnimationName[animationNameNumber].isLoop);
         }
         ActivateAction();
     }
@@ -164,7 +165,7 @@ public class ActionVariant : MonoBehaviour
             elem.transform.position = walkPosition[walkPositionNumber].position;
         }*/
         Debug.Log("+");
-        StartCoroutine(Walk(walkPosition[walkPositionNumber].position.position, group[walkPosition[walkPositionNumber].groupId].group));
+        StartCoroutine(Walk(walkPosition[walkPositionNumber].position.position, group[walkPosition[walkPositionNumber].groupId].group, walkPosition[walkPositionNumber].speed));
         walkPositionNumber++;
     }
 
@@ -182,7 +183,7 @@ public class ActionVariant : MonoBehaviour
 
     private void StartMoveWithCamera()
     {
-        StartCoroutine(MoveWithCamera(walkPosition[walkPositionNumber].position.position, group[walkPosition[walkPositionNumber].groupId].group));
+        StartCoroutine(MoveWithCamera(walkPosition[walkPositionNumber].position.position, group[walkPosition[walkPositionNumber].groupId].group, walkPosition[walkPositionNumber].speed));
         walkPositionNumber++;
     }
 
@@ -250,8 +251,10 @@ public class ActionVariant : MonoBehaviour
         ActivateAction();
     }
 
-    private IEnumerator Walk(Vector3 endPos, List<GameObject> objectMove)
+    private IEnumerator Walk(Vector3 endPos, List<GameObject> objectMove, float speed)
     {
+        if (speed <= 0)
+            speed = 1;
         Vector3 moveVector = (endPos - objectMove[0].transform.position).normalized*0.05f;
         Debug.Log(moveVector);
         while (Vector3.Distance(objectMove[0].transform.position, endPos) > 0.1f)
@@ -259,7 +262,7 @@ public class ActionVariant : MonoBehaviour
             yield return new WaitForSeconds(0.02f);
             foreach (GameObject obj in objectMove)
             {
-                obj.transform.Translate(moveVector);
+                obj.transform.Translate(moveVector*speed);
             }
         }
         objectMove[0].transform.position = endPos;
@@ -267,18 +270,20 @@ public class ActionVariant : MonoBehaviour
         ActivateAction();
     }
 
-    private IEnumerator MoveWithCamera(Vector3 endPos, List<GameObject> objectMove)
+    private IEnumerator MoveWithCamera(Vector3 endPos, List<GameObject> objectMove, float speed)
     {
+        if (speed <= 0)
+            speed = 1;
         Vector3 moveVector = (endPos - objectMove[0].transform.position).normalized * 0.05f;
         while (Vector3.Distance(objectMove[0].transform.position, endPos) > 0.1f)
         {
             yield return new WaitForSeconds(0.02f);
             foreach (GameObject obj in objectMove)
             {
-                obj.transform.Translate(moveVector);
+                obj.transform.Translate(moveVector*speed);
             }
             
-            Camera.main.transform.Translate(moveVector);
+            Camera.main.transform.Translate(moveVector*speed);
         }
         objectMove[0].transform.position = endPos;
         ActivateAction();
@@ -337,6 +342,7 @@ public struct NPC_Animation
     public string animationName;
     public bool isGroup;
     public int groupId;
+    public bool isLoop;
 }
 
 [Serializable]
@@ -344,6 +350,7 @@ public struct WalkPosition
 {
     public Transform position;
     public int groupId;
+    public float speed;
 }
 
 //TODO Add move camera
