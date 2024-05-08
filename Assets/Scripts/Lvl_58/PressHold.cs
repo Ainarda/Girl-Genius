@@ -40,6 +40,6 @@ public class PressHold : MonoBehaviour
             currentValue++;
         }
         Debug.Log("ActionComplete");
-        observer.CompleteSceneWithoutCheck();
+        observer.CompleteScene();
     }
 }

@@ -50,7 +50,7 @@ public class Slingshot : MonoBehaviour
             if (currentAngle <= rightAngle.y && currentAngle >= rightAngle.x)
                 observer.RemoveElement(this.gameObject);
             else
-                observer.ReloadScene();
+                observer.OpenLoseScreen();
             Click = false;
 
         }

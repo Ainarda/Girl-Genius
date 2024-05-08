@@ -59,7 +59,7 @@ public class Draw_line : MonoBehaviour
                 if (Vector2.Distance(lineRenderer.GetPosition(0), lineRenderer.GetPosition(lineRenderer.positionCount-1))<1.0f)
                 {
                     Debug.LogWarning("RightCoord");
-                    observer.CompleteSceneWithoutCheck();
+                    observer.CompleteScene();
                 }
                 else
                 {
@@ -75,6 +75,7 @@ public class Draw_line : MonoBehaviour
     private void CreateLine()
     {
         currentLine = Instantiate(linePrefab, Vector3.zero, Quaternion.identity);
+        currentLine.transform.parent = this.transform;
         lineRenderer = currentLine.GetComponent<LineRenderer>();
         lineRenderer.SetWidth(lineSize, lineSize);
         edgeCollider = currentLine.GetComponent<EdgeCollider2D>();

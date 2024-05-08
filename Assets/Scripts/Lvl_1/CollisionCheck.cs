@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class CollisionCheck : MonoBehaviour
 {
+    [SerializeField]
+    private bool isInvert;
     private bool missionTask = true;
     Observer observer;
     private void Awake()
@@ -28,8 +30,16 @@ public class CollisionCheck : MonoBehaviour
     {
         if (collision.transform.tag == "DroppedObject")
         {
-            Debug.Log("+");
-            missionTask = false;
+            if (isInvert)
+            {
+                Debug.Log("+");
+                missionTask = true;
+            }
+            else
+            {
+                missionTask = false;
+            }
+            
         }
         //some time wait and restart lvlv
     }
