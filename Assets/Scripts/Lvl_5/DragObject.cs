@@ -18,6 +18,8 @@ public class DragObject : MonoBehaviour//, IPointerDownHandler, IPointerUpHandle
     private Vector2 startPosition;
     [SerializeField]
     private bool someAction;
+    [SerializeField]
+    private bool isWorng = false;
     private Vector3 offset;
     private bool moveObject = false;
     
@@ -26,7 +28,8 @@ public class DragObject : MonoBehaviour//, IPointerDownHandler, IPointerUpHandle
     {
         observer = GameObject.FindGameObjectWithTag("Observer").GetComponent<Observer>();
         transform.position = startPosition;
-        observer.AddElement(this.gameObject);
+        if(!isWorng)
+            observer.AddElement(this.gameObject);
     }
 
     // Start is called before the first frame update

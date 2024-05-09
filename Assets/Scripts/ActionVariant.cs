@@ -36,13 +36,18 @@ public class ActionVariant : MonoBehaviour
     [SerializeField]
     private List<GameObject> activeObject;
     [SerializeField]
+    private List<float> objectSize;
+    [SerializeField]
+    private List<GameObject> sizebleObject;
+
+    [SerializeField]
     private AudioSource audioSource;
 
     [SerializeField]
     private bool activateStage = false;
 
     private int animationNameNumber, walkPositionNumber, talkTextNumber, waitTimeNumber, cropSizeNumber, audioClipNumber,
-        rotationObjectNumber, animationObjectNumber, groupNumber, miniGameNumber, hideObjectNumber, activeObjectNumber;
+        rotationObjectNumber, animationObjectNumber, groupNumber, miniGameNumber, hideObjectNumber, activeObjectNumber, sizeChangeNumber;
 
     private bool stageIsActive = false;
 
@@ -130,6 +135,9 @@ public class ActionVariant : MonoBehaviour
                     break;
                 case ActionType.activeObject:
                     activateAction.Add(ActiveObject);
+                    break;
+                case ActionType.changeSize:
+                    activateAction.Add(StartChangeSize);
                     break;
                 default:
                     break;
@@ -233,6 +241,12 @@ public class ActionVariant : MonoBehaviour
         ActivateAction();
     }
 
+    private void StartChangeSize()
+    {
+        StartCoroutine(SizeChange(sizebleObject[sizeChangeNumber], objectSize[sizeChangeNumber]));
+        sizeChangeNumber++;
+    }
+
     #endregion
 
     #region IEnumerator action region
@@ -300,6 +314,18 @@ public class ActionVariant : MonoBehaviour
         Camera.main.orthographicSize = crop;
         ActivateAction();
     }
+
+    private IEnumerator SizeChange(GameObject sizebleObject, float size)
+    {
+        int multiplayer = size - sizebleObject.transform.localScale.x < 0 ? -1 : 1;
+        while (Mathf.Abs(sizebleObject.transform.localScale.x - size) > 0.1)
+        {
+            sizebleObject.transform.localScale += new Vector3(0.01f, 0.01f) * multiplayer;
+            yield return new WaitForSeconds(0.02f);
+        }
+        sizebleObject.transform.localScale = new Vector3(size, size);
+        ActivateAction();
+    }
     #endregion
 }
 
@@ -326,7 +352,8 @@ public enum ActionType
     activateMiniGame,
     completeScene,
     hideObject,
-    activeObject
+    activeObject,
+    changeSize,
 }
 
 [Serializable]

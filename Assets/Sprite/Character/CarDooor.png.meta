@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3a85ebc41afe22449a6647982a1d1ff5
+guid: 3c29abc3ff947454e9794e627b0273a7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,7 +134,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: DoorCarFadeEx
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 581
+        width: 480
+        height: 366
+      alignment: 9
+      pivot: {x: 1.7301626, y: 1.9277508}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad248e53ae72de140800000000000000
+      internalID: 4750497068825985754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CarDooor_0
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 947
+        width: 479
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775b5e604ec9f194c8aab5fdaad625cd
+      internalID: 400951556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +187,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CarDooor_0: 400951556
+      DoorCarFadeEx: 4750497068825985754
+      haokuang: -309373874232771395
+      huaikuang: 1786074682668067672
+      lunzi1: -6495602098763123452
+      lunzi2: -8448938732396607914
+      meng12: -7765485420379267568
+      nei: -1167403837932948299
+      qiameng: 7564247499542528362
+      qianchuangzi: 6139981188578385593
+      sui1: 8793733414086631139
+      sui2: 5707889111156538113
+      sui3: -5209863454415977829
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
