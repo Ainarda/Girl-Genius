@@ -803,7 +803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[0].side
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[0].text
@@ -811,7 +811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[1].side
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[1].text
@@ -858,8 +858,27 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 155404523}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].textRu
+      value: "\u0411\u043E\u0441\u0441 \u0433\u043E\u0432\u043E\u0440\u0438\u0442,
+        \u0447\u0442\u043E \u043D\u0438\u043A\u043E\u0433\u043E \u043D\u0435 \u043F\u0443\u0441\u043A\u0430\u044E\u0442"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[1].textRu
+      value: "\u0417\u0430\u0447\u0435\u043C \u0435\u043C\u0443 \u043D\u0435 \u043F\u0443\u0441\u043A\u0430\u0442\u044C
+        \u043C\u0435\u043D\u044F? \u042F \u0434\u043E\u043B\u0436\u0435\u043D \u044D\u0442\u043E
+        \u0432\u044B\u044F\u0441\u043D\u0438\u0442\u044C!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: objectAnimationName.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].textEng
+      value: The boss says no one is allowed in
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[1].textEng
+      value: Why would he keep me out? I must find out!
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: walkPosition.Array.data[0].position
@@ -1723,6 +1742,8 @@ MonoBehaviour:
   endPosition: {fileID: 188254868}
   losePosition: {fileID: 0}
   startPosition: {x: 2.15, y: 3.46}
+  someAction: 0
+  isWorng: 0
 --- !u!212 &2067847010
 SpriteRenderer:
   m_ObjectHideFlags: 0

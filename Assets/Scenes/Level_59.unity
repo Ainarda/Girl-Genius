@@ -664,6 +664,7 @@ MonoBehaviour:
   losePosition: {fileID: 0}
   startPosition: {x: -2.47, y: 2.44}
   someAction: 0
+  isWorng: 0
 --- !u!212 &626523928
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1398,7 +1399,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bc78ba7737e33d041a968d7494f5f278, type: 2}
+  - {fileID: 2100000, guid: ffe2ea50b8ebb234c83efa28d6303a8e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1779,8 +1780,17 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].textRu
+      value: "\u0421\u043E\u043B\u043D\u0446\u0435 \u0442\u0430\u043A\u043E\u0435
+        \u044F\u0440\u043A\u043E\u0435! \u042F \u0437\u0430\u0433\u043E\u0440\u044E!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: objectAnimationName.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].textEng
+      value: The sun is so bright! I am going to get sunburnt!
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: walkPosition.Array.data[0].speed

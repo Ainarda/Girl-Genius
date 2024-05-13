@@ -793,12 +793,20 @@ PrefabInstance:
       value: asd
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[1].side
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[1].text
       value: asd
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[2].text
       value: asd
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[3].side
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[3].text
@@ -845,6 +853,26 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].textRu
+      value: "\u041E\u0442\u0434\u0430\u0439\u0442\u0435 \u043C\u043D\u0435 \u0446\u0435\u043D\u043D\u043E\u0441\u0442\u0438!
+        \u041D\u0435 \u0437\u0430\u0441\u0442\u0430\u0432\u043B\u044F\u0439 \u043C\u0435\u043D\u044F
+        \u0441\u0442\u0440\u0435\u043B\u044F\u0442\u044C!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[1].textRu
+      value: "\u041F\u0440\u043E\u0441\u0442\u043E \u0443\u0439\u0434\u0438 \u0438
+        \u043E\u0441\u0442\u0430\u0432\u044C \u043D\u0430\u0441 \u0432 \u043F\u043E\u043A\u043E\u0435."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[2].textRu
+      value: "\u042F \u0432\u0430\u0441 \u043F\u0440\u0435\u0434\u0443\u043F\u0440\u0435\u0436\u0434\u0430\u043B!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[3].textRu
+      value: "\u0411\u0435\u0433\u0438! \u042F \u043E\u0442\u0432\u043B\u0435\u043A\u0443
+        \u0435\u0433\u043E!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: typeActionList.Array.data[10]
       value: 11
       objectReference: {fileID: 0}
@@ -883,6 +911,22 @@ PrefabInstance:
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: objectAnimationName.Array.size
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].textEng
+      value: Give me the valuables! Don't make me shoot!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[1].textEng
+      value: Just walk away and leave us alone.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[2].textEng
+      value: I warned you!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[3].textEng
+      value: Run! I will distract him!
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: walkPosition.Array.data[0].groupId
@@ -1478,6 +1522,8 @@ MonoBehaviour:
   endPosition: {fileID: 1135946104}
   losePosition: {fileID: 0}
   startPosition: {x: 3.5, y: 0}
+  someAction: 0
+  isWorng: 0
 --- !u!212 &1458670079
 SpriteRenderer:
   m_ObjectHideFlags: 0

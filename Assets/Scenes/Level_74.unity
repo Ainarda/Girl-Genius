@@ -553,6 +553,17 @@ PrefabInstance:
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].textRu
+      value: "\u041E\u043D\u0438 \u043D\u0435 \u0432\u0438\u0434\u044F\u0442 \u043D\u0430\u0448\u0435\u0433\u043E
+        \u0444\u0430\u043A\u0435\u043B\u0430. \u041D\u0430\u043C \u043D\u0443\u0436\u043D\u043E
+        \u0447\u0442\u043E-\u0442\u043E \u0431\u043E\u043B\u044C\u0448\u0435\u0435."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[1].textRu
+      value: "\u041D\u0430\u043A\u043E\u043D\u0435\u0446-\u0442\u043E \u043C\u044B
+        \u0434\u043E\u0431\u0440\u0430\u043B\u0438\u0441\u044C \u0434\u043E \u0433\u043E\u0440\u043E\u0434\u0430!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: typeActionList.Array.data[10]
       value: 3
       objectReference: {fileID: 0}
@@ -583,6 +594,14 @@ PrefabInstance:
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: objectAnimationName.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].textEng
+      value: They can't see our torch. We need something bigger.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[1].textEng
+      value: We finally made it to the city!
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: walkPosition.Array.data[0].speed
@@ -1791,6 +1810,7 @@ MonoBehaviour:
   losePosition: {fileID: 0}
   startPosition: {x: 1.08, y: 0.87}
   someAction: 0
+  isWorng: 0
 --- !u!212 &1187066355
 SpriteRenderer:
   m_ObjectHideFlags: 0

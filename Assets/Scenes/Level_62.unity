@@ -950,6 +950,10 @@ PrefabInstance:
       value: gsdgasgdf
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[1].side
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[1].text
       value: gsdgasgdf
       objectReference: {fileID: 0}
@@ -988,6 +992,18 @@ PrefabInstance:
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: typeActionList.Array.data[9]
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].textRu
+      value: "\u041D\u0430\u043C \u043D\u0443\u0436\u0435\u043D \u043E\u0433\u043E\u043D\u044C,
+        \u0438\u043D\u0430\u0447\u0435 \u043C\u044B \u0437\u0430\u043C\u0435\u0440\u0437\u043D\u0435\u043C
+        \u043D\u0430\u0441\u043C\u0435\u0440\u0442\u044C!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[1].textRu
+      value: "\u041C\u043D\u0435 \u043D\u0443\u0436\u043D\u043E \u043D\u0430\u0439\u0442\u0438
+        \u0441\u043F\u043E\u0441\u043E\u0431 \u0440\u0430\u0437\u0432\u0435\u0441\u0442\u0438
+        \u043E\u0433\u043E\u043D\u044C!"
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: typeActionList.Array.data[10]
@@ -1036,6 +1052,14 @@ PrefabInstance:
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: objectAnimationName.Array.size
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].textEng
+      value: We need a fire or we are going to freeze to death!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[1].textEng
+      value: I have to find a way to make a fire!
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: walkPosition.Array.data[1].groupId

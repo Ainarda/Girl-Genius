@@ -661,8 +661,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 224172728}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].side
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[0].text
       value: gsasdf
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[1].side
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[1].text
@@ -709,6 +717,17 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].textRu
+      value: "\u041F\u043E\u0447\u0435\u043C\u0443! \u041F\u043E\u0447\u0435\u043C\u0443
+        \u043E\u043D\u0438 \u0445\u043E\u0442\u044F\u0442 \u0442\u0435\u0431\u044F
+        \u0443\u0431\u0438\u0442\u044C?! \u041A\u0442\u043E \u0443\u0431\u0438\u0439\u0446\u0430?!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[1].textRu
+      value: "\u041E\u043D\u0438 \u0442\u043E\u0440\u0433\u0443\u044E\u0442 \u0432
+        \u043F\u0430\u0440\u043A\u0435! \u042F \u043E\u0442\u043E\u043C\u0449\u0443!!!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: typeActionList.Array.data[10]
       value: 3
       objectReference: {fileID: 0}
@@ -731,6 +750,14 @@ PrefabInstance:
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: objectAnimationName.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].textEng
+      value: Why! Why they want to kill you?! Who is the murder?!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[1].textEng
+      value: They trade in the park! I will have my revenge!!!
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: walkPosition.Array.data[0].speed

@@ -1876,6 +1876,8 @@ MonoBehaviour:
   endPosition: {fileID: 487173271}
   losePosition: {fileID: 0}
   startPosition: {x: 2.81, y: -1.78}
+  someAction: 0
+  isWorng: 0
 --- !u!212 &1425169233
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2386,6 +2388,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 488716019}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].side
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: typeActionList.Array.data[0]
       value: 2
       objectReference: {fileID: 0}
@@ -2426,6 +2432,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].textRu
+      value: "\u041A\u0430\u043A \u043C\u043D\u0435 \u0438\u0445 \u043F\u043E\u0439\u043C\u0430\u0442\u044C?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: typeActionList.Array.data[10]
       value: 1
       objectReference: {fileID: 0}
@@ -2440,6 +2450,10 @@ PrefabInstance:
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: objectAnimationName.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].textEng
+      value: How can i catch them?
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: walkPosition.Array.data[0].speed

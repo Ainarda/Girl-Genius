@@ -11,10 +11,13 @@ public class MainUI : MonoBehaviour
     private Button skipButton;
     [SerializeField]
     private Button hintButton;
+
+    private GameObject observer;
     // Start is called before the first frame update
     void Awake()
     {
-        skipButton.onClick.AddListener(PlayerData.SkipLevel);
+        observer = GameObject.FindGameObjectWithTag("Observer");
+        skipButton.onClick.AddListener(observer.GetComponent<Observer>().SkipLevel);
     }
 
     // Update is called once per frame

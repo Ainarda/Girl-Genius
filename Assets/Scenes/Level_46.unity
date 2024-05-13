@@ -204,6 +204,8 @@ MonoBehaviour:
   endPosition: {fileID: 1513744561}
   losePosition: {fileID: 0}
   startPosition: {x: 7.12, y: -0.96}
+  someAction: 0
+  isWorng: 0
 --- !u!212 &118404010
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -605,6 +607,8 @@ MonoBehaviour:
   endPosition: {fileID: 753632260}
   losePosition: {fileID: 0}
   startPosition: {x: 8.35, y: -1.22}
+  someAction: 0
+  isWorng: 0
 --- !u!212 &199334148
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1073,6 +1077,10 @@ PrefabInstance:
       value: asdf
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[1].side
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: typeActionList.Array.data[0]
       value: 4
       objectReference: {fileID: 0}
@@ -1087,6 +1095,29 @@ PrefabInstance:
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: typeActionList.Array.data[3]
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: typeActionList.Array.data[4]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].textRu
+      value: "\u041C\u043E\u0439 \u0442\u0435\u043B\u0435\u0444\u043E\u043D \u0437\u0432\u043E\u043D\u0438\u0442.
+        \u0413\u0434\u0435 \u044D\u0442\u043E?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[1].textRu
+      value: "\u0420\u0430\u0437\u0432\u044F\u0436\u0438\u0442\u0435 \u043D\u0430\u0441!
+        \u0412\u044B \u0442\u043E\u043B\u044C\u043A\u043E \u0445\u0443\u0436\u0435
+        \u0441\u0435\u0431\u0435 \u0434\u0435\u043B\u0430\u0435\u0442\u0435!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].textEng
+      value: My phone is ringing. Where is it?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[1].textEng
+      value: My phone is ringing. Where is it?
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: walkPosition.Array.data[0].position
@@ -1398,6 +1429,8 @@ MonoBehaviour:
   endPosition: {fileID: 1513744561}
   losePosition: {fileID: 0}
   startPosition: {x: 8.16, y: -1.09}
+  someAction: 0
+  isWorng: 0
 --- !u!212 &1190981011
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1547,6 +1580,8 @@ MonoBehaviour:
   endPosition: {fileID: 1513744561}
   losePosition: {fileID: 0}
   startPosition: {x: 7.41, y: -0.61}
+  someAction: 0
+  isWorng: 0
 --- !u!212 &1199367704
 SpriteRenderer:
   m_ObjectHideFlags: 0

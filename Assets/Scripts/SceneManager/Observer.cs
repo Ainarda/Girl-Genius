@@ -123,6 +123,7 @@ public class Observer : MonoBehaviour
 
     public void CompleteSceneWithoutCheck()
     {
+        SavePlayerData();
         PlayerData.LoadNextLevel();
     }
 
@@ -135,6 +136,78 @@ public class Observer : MonoBehaviour
     {
         SceneManager.LoadScene("Maison");
     }
+
+    public void SavePlayerData()
+    {
+        PlayerPrefs.SetInt("PlayerCoin", PlayerData.PlayerCoin);
+        PlayerPrefs.SetInt("CurrentLvl", PlayerData.CurrentLvl);
+        PlayerPrefs.SetInt("dressProgress", PlayerData.dressProgress);
+        PlayerPrefs.SetInt("currentPetId", PlayerData.currentPetId);
+        PlayerPrefs.SetInt("currentDressId", PlayerData.currentDressId);
+        SaveFloatArray("dress", PlayerData.dress);
+        SaveFloatArray("unlockingRoom", PlayerData.unlockingRoom);
+        SaveFloatArray("pet", PlayerData.pet);
+    }
+
+    private void SaveFloatArray(string name, bool[] array)
+    {
+        string savingLine = "";
+        for(int i = 0; i < array.Length; i++)
+        {
+            if (array[i])
+                savingLine += 1;
+            else
+                savingLine += 0;
+        }
+        PlayerPrefs.SetString(name, savingLine);
+    }
+
+    private bool[] LoadFloatArray(string name)
+    {
+        string strArray = PlayerPrefs.GetString(name);
+        bool[] retArray = new bool[strArray.Length];
+        for(int i = 0; i < strArray.Length; i++)
+        {
+            if ((int)strArray[i] == 1)
+                retArray[i] = true;
+            else
+                retArray[i] = false;
+        }
+        return retArray;
+    }
+
+    public void LoadData()
+    {
+        PlayerData.PlayerCoin = PlayerPrefs.GetInt("PlayerCoin");
+        PlayerData.CurrentLvl = PlayerPrefs.GetInt("CurrentLvl");
+        PlayerData.dressProgress = PlayerPrefs.GetInt("dressProgress");
+        PlayerData.currentPetId = PlayerPrefs.GetInt("currentPetId");
+        PlayerData.currentDressId = PlayerPrefs.GetInt("currentDressId");
+        PlayerData.dress = LoadFloatArray("dress");
+        PlayerData.unlockingRoom = LoadFloatArray("unlockingRoom");
+        PlayerData.pet = LoadFloatArray("pet");
+    }
+
+    public void ResetData()
+    {
+        PlayerData.PlayerCoin = 0;
+        PlayerData.CurrentLvl = 1;
+        PlayerData.dressProgress = 0;
+        PlayerData.currentPetId = 0;
+        PlayerData.currentDressId = 0;
+        PlayerData.dress = new bool[PlayerData.dress.Length];
+        PlayerData.unlockingRoom = new bool[PlayerData.unlockingRoom.Length];
+        PlayerData.pet = new bool[PlayerData.pet.Length];
+
+    }
+
+    public void SkipLevel()
+    {
+        PlayerData.CurrentLvl++;
+        SavePlayerData();
+        PlayerData.LoadNextLevel();
+    }
+
 }
 
 //TODO tmp

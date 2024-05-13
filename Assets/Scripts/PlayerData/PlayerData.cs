@@ -14,9 +14,10 @@ public class PlayerData : MonoBehaviour
     public static int dressProgress = 0;
     public static Text CoinUI;
     private static int currentUnclokNumber = 0;
-
+    //TODO add unlocking room interier on 13 and after each 10 lvl, animal after 10 and each 10, rent after 16 and each 10
+    private static int lvlInterier = 13, lvlAnimal = 10, lvlRent = 16;
     public static bool[] unlockingRoom = new bool[] { false, false, false, false, false, false, false, false, false, false, false };
-    public static int[] lvlUnlockedRoom = new int[] {6, 10, 16, 26, 46, 56, 68, 77, 86, 96 };
+    public static int[] lvlUnlockedRoom = new int[] {6, 10, 8, 13, 23, 28, 43, 38, 43, 48 };
 
     public static bool[] pet = new bool[] { true, false, false, false, false, false, false, false, false };
 
@@ -26,18 +27,13 @@ public class PlayerData : MonoBehaviour
     private static DressSlot currentDress;
     public static int currentDressId = 1;
 
+    public static string localText = "ru";//TMP next load local text "ru" "eng"
+
     //TODO add win UI and load dressUnlocker after complete all dress unlocking stages
     public static void LoadNextLevel()
     {
         
         SceneManager.LoadScene("Level_" + CurrentLvl);
-    }
-
-    public static void SkipLevel()
-    {
-        //reklama or somthing else
-        CurrentLvl++;
-        LoadNextLevel();
     }
 
     public static void AddReward()
@@ -165,5 +161,5 @@ public class PlayerData : MonoBehaviour
     {
         return pet[petId];
     }
-    #endregion
+    #endregion   
 }

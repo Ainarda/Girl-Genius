@@ -15,6 +15,8 @@ public class LoadSceneUI : MonoBehaviour
     [SerializeField]
     private GameObject winUI;
     [SerializeField]
+    private GameObject messageUI;
+    [SerializeField]
     private GameObject eventSystem;
     [SerializeField]
     private GameObject sceneAudioSource;
@@ -45,6 +47,7 @@ public class LoadSceneUI : MonoBehaviour
     private void InitUI()
     {
         mainUI = Instantiate(mainUI);
+        messageUI = Instantiate(messageUI);
         loseUI = Instantiate(loseUI);
         winUI = Instantiate(winUI);
         loseUI.SetActive(false);

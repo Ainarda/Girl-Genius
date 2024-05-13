@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ActionVariant : MonoBehaviour
 {
@@ -51,6 +52,9 @@ public class ActionVariant : MonoBehaviour
 
     private bool stageIsActive = false;
 
+    private GameObject playerMessage, otherMessage;
+    private Text playerField, otherField;
+
     private Observer observer;
     private List<DoAction> activateAction;
     // Start is called before the first frame update
@@ -71,6 +75,14 @@ public class ActionVariant : MonoBehaviour
             activateStage = false;
             activateAction[currentAction++]();
         } */  
+    }
+
+    public void SetTextField(GameObject playerM, GameObject otherM)
+    {
+        playerMessage = playerM;
+        otherMessage = otherM;
+        playerField = playerMessage.transform.GetChild(0).GetComponent<Text>();
+        otherField = otherMessage.transform.GetChild(0).GetComponent<Text>();
     }
 
     public void SetAudioSource(AudioSource source)
@@ -181,7 +193,7 @@ public class ActionVariant : MonoBehaviour
     {
         stageIsActive = false;
         //TODO show current message
-        StartCoroutine(Talk());
+        StartCoroutine(Talk(talkText[talkTextNumber++]));
     }
     
     private void StartWait()
@@ -258,10 +270,38 @@ public class ActionVariant : MonoBehaviour
         ActivateAction();
     }
 
-    private IEnumerator Talk()
+    private IEnumerator Talk(TalkText currentTalkText)
     {
-        Debug.Log(talkText[talkTextNumber++].text);
-        yield return new WaitForSeconds(1);
+        string text;
+        if (PlayerData.localText == "ru")
+        {
+            text = currentTalkText.textRu;
+        }
+        else
+        {
+            text = currentTalkText.textEng;
+        }
+        
+        Text textCloud;
+        if(currentTalkText.side)
+        {
+            textCloud = playerField;
+            playerMessage.SetActive(true);
+        }
+        else
+        {
+            textCloud = otherField;
+            otherMessage.SetActive(true);
+        }
+        textCloud.text = "";
+        foreach (char c in text)
+        {
+            yield return new WaitForSeconds(0.075f);
+            textCloud.text += c;
+        }
+        yield return new WaitForSeconds(2.5f);
+        otherMessage.SetActive(false);
+        playerMessage.SetActive(false);
         ActivateAction();
     }
 
@@ -360,7 +400,8 @@ public enum ActionType
 public struct TalkText
 {
     public bool side; //left = true, right = false
-    public string text;
+    public string textRu;
+    public string textEng;
 }
 
 [Serializable]

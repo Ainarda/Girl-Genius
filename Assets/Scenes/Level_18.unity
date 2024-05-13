@@ -409,6 +409,8 @@ MonoBehaviour:
   endPosition: {fileID: 1946789882}
   losePosition: {fileID: 0}
   startPosition: {x: 1.02, y: -2.24}
+  someAction: 0
+  isWorng: 0
 --- !u!212 &783449955
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -674,8 +676,16 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].side
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[0].text
       value: 2143
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[1].side
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[1].text
@@ -684,6 +694,10 @@ PrefabInstance:
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[2].text
       value: 1423
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[3].side
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[3].text
@@ -726,8 +740,45 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].textRu
+      value: "\u0413\u0434\u0435 \u043C\u043E\u0439 \u043F\u0430\u0440\u0435\u043D\u044C?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[1].textRu
+      value: "\u0415\u0433\u043E \u0437\u0434\u0435\u0441\u044C \u043D\u0435\u0442.
+        \u041F\u043E\u0432\u0435\u0440\u044C\u0442\u0435 \u043C\u043D\u0435!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[2].textRu
+      value: "\u042F \u0442\u0435\u0431\u0435 \u043D\u0435 \u0434\u043E\u0432\u0435\u0440\u044F\u044E.
+        \u0415\u0441\u043B\u0438 \u043E\u043D \u0437\u0434\u0435\u0441\u044C, \u044F
+        \u043D\u0430\u0439\u0434\u0443 \u0435\u0433\u043E!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[3].textRu
+      value: "\u041D\u0443, \u0442\u044B \u043D\u0430\u0448\u0435\u043B \u043C\u0435\u043D\u044F,
+        \u0438 \u044F \u043D\u0438\u043A\u043E\u0433\u0434\u0430 \u043D\u0435 \u043B\u044E\u0431\u0438\u043B
+        \u0442\u0435\u0431\u044F \u0432 \u043E\u0442\u0432\u0435\u0442!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: objectAnimationName.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].textEng
+      value: Where is my boyfriend?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[1].textEng
+      value: He is not here. Trust me!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[2].textEng
+      value: I don't trust you. If he is here, I will find him!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[3].textEng
+      value: Well, you found me and i never loved you back!
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: group.Array.data[0].group.Array.size

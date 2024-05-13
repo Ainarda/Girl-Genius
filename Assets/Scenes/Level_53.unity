@@ -726,8 +726,16 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].textRu
+      value: "\u041C\u043D\u0435 \u043D\u0443\u0436\u043D\u043E \u0432 \u0442\u0443\u0430\u043B\u0435\u0442"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: objectAnimationName.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].textEng
+      value: I need to use the bathroom
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: walkPosition.Array.data[1].speed
@@ -2377,6 +2385,7 @@ MonoBehaviour:
   losePosition: {fileID: 0}
   startPosition: {x: -2.12, y: 2.22}
   someAction: 0
+  isWorng: 0
 --- !u!212 &1942957422
 SpriteRenderer:
   m_ObjectHideFlags: 0

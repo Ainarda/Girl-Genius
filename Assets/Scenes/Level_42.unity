@@ -204,6 +204,8 @@ MonoBehaviour:
   endPosition: {fileID: 1990249995}
   losePosition: {fileID: 0}
   startPosition: {x: 3.19, y: -3}
+  someAction: 0
+  isWorng: 0
 --- !u!212 &83903587
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -440,6 +442,10 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].side
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[0].text
       value: vfdghgjjh
       objectReference: {fileID: 0}
@@ -484,6 +490,11 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].textRu
+      value: "\u041A\u043E\u043D\u0435\u0446 \u043F\u0443\u0442\u0438. \u0427\u0442\u043E
+        \u043C\u043D\u0435 \u0442\u0435\u043F\u0435\u0440\u044C \u0434\u0435\u043B\u0430\u0442\u044C?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: typeActionList.Array.data[10]
       value: 11
       objectReference: {fileID: 0}
@@ -510,6 +521,10 @@ PrefabInstance:
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: objectAnimationName.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].textEng
+      value: End of the road. What do i do now?
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: walkPosition.Array.data[1].speed

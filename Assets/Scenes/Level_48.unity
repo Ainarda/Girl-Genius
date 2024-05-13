@@ -901,6 +901,7 @@ MonoBehaviour:
   losePosition: {fileID: 0}
   startPosition: {x: 2.19, y: 2.17}
   someAction: 0
+  isWorng: 0
 --- !u!212 &772850991
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1489,6 +1490,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1602796718}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].side
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[0].text
       value: Green
       objectReference: {fileID: 0}
@@ -1523,6 +1528,15 @@ PrefabInstance:
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: typeActionList.Array.data[7]
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].textRu
+      value: "\u041C\u043D\u0435 \u043D\u0443\u0436\u043D\u043E \u0437\u0435\u043B\u0435\u043D\u043E\u0435
+        \u043F\u043B\u0430\u0442\u044C\u0435"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].textEng
+      value: I need a green dress
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: walkPosition.Array.data[0].position
@@ -1672,6 +1686,7 @@ MonoBehaviour:
   losePosition: {fileID: 0}
   startPosition: {x: 4.81, y: 2.17}
   someAction: 1
+  isWorng: 0
 --- !u!212 &1596204433
 SpriteRenderer:
   m_ObjectHideFlags: 0
