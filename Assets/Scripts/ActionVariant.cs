@@ -283,7 +283,7 @@ public class ActionVariant : MonoBehaviour
         }
         
         Text textCloud;
-        if(currentTalkText.side)
+        if(!currentTalkText.side)
         {
             textCloud = playerField;
             playerMessage.SetActive(true);

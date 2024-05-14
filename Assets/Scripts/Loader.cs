@@ -5,9 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class Loader : MonoBehaviour
 {
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+    [DllImport("__Internal")]
+    private static extern string GetLang();
+#endif
+
     // Start is called before the first frame update
     void Start()
     {
+#if UNITY_WEBGL && !UNITY_EDITOR
+        PlayerData.localText = GetLang();
+#endif
         Observer observer = GetComponent<Observer>();
         try
         {

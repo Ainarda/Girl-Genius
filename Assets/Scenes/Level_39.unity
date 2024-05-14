@@ -2905,7 +2905,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1032752023
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3769,7 +3769,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1370733093
 Transform:
   m_ObjectHideFlags: 0
@@ -4183,6 +4183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1533171884}
   - component: {fileID: 1533171885}
+  - component: {fileID: 1533171886}
   m_Layer: 0
   m_Name: Circle (2)
   m_TagString: Untagged
@@ -4258,6 +4259,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1533171886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533171883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1629688e9167604449a6c374776bcec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text:
+    ruText: "\u0422\u044B \u043D\u0430\u0448\u0435\u043B \u0434\u0435\u0432\u0443\u0448\u043A\u0443?"
+    enText: Have you get the girl?
+  textField: {fileID: 1191815747}
 --- !u!1 &1547932805
 GameObject:
   m_ObjectHideFlags: 0
@@ -5559,6 +5576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1983508890}
   - component: {fileID: 1983508891}
+  - component: {fileID: 1983508892}
   m_Layer: 0
   m_Name: Circle (3)
   m_TagString: Untagged
@@ -5635,6 +5653,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1983508892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983508889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1629688e9167604449a6c374776bcec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text:
+    ruText: "\u041E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u043E!"
+    enText: For sure!
+  textField: {fileID: 233278669}
 --- !u!1 &2001799006
 GameObject:
   m_ObjectHideFlags: 0

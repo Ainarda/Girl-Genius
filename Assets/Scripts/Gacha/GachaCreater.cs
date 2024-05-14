@@ -1,0 +1,76 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class GachaCreater : MonoBehaviour
+{
+    [SerializeField]
+    private GameObject hideText;
+    
+    [SerializeField]
+    private List<GameObject> gachaSphere;
+    [SerializeField]
+    private GameObject rewardObject;
+    [SerializeField]
+    private Image rewardSprite;
+    [SerializeField]
+    private List<Sprite> pets;
+    [SerializeField]
+    private float textGrowSpeed = 0.1f;
+    [SerializeField]
+    private Vector2 pulseRange;
+
+    private Text pulsedText;
+
+    private void Awake()
+    {
+        pulsedText = hideText.GetComponent<Text>();
+        StartCoroutine(TextGrow());
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        RandomaizeReward();
+    }
+
+    public void RandomaizeReward()
+    {
+        foreach (var gacha in gachaSphere)
+        {
+            gacha.GetComponent<GachaScript>().SetPetId(0, this);//Random number
+        }
+    }
+
+    public void ShowReward(int id)
+    {
+        hideText.SetActive(false);
+        foreach(var gacha in gachaSphere)
+        {
+            gacha.SetActive(false);
+        }
+        rewardObject.SetActive(true);
+        rewardSprite.sprite = pets[id];
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public IEnumerator TextGrow()
+    {
+        Debug.Log("+");
+        float addedNumber = .01f;
+        while (true)
+        {
+            yield return new WaitForSeconds(0.025f);
+            pulsedText.transform.localScale = new Vector3(addedNumber * textGrowSpeed, addedNumber * textGrowSpeed) + pulsedText.transform.localScale;
+            if (pulsedText.transform.localScale.x > pulseRange.y)
+                addedNumber *= -1;
+            if (pulsedText.transform.localScale.x < pulseRange.x)
+                addedNumber *= -1;
+        }
+    }
+}
