@@ -22,6 +22,7 @@ public class GachaCreater : MonoBehaviour
     private Vector2 pulseRange;
 
     private Text pulsedText;
+    private int selectedPetId;
 
     private void Awake()
     {
@@ -36,9 +37,16 @@ public class GachaCreater : MonoBehaviour
 
     public void RandomaizeReward()
     {
+        List<int> lockPetId = new List<int>();
+        for(int i = 0; i < PlayerData.pet.Length;i++)
+        {
+            if (!PlayerData.pet[i])
+                lockPetId.Add(i);
+        }
+        int counter = 0;
         foreach (var gacha in gachaSphere)
         {
-            gacha.GetComponent<GachaScript>().SetPetId(0, this);//Random number
+            gacha.GetComponent<GachaScript>().SetPetId(lockPetId[counter++], this);//Random number
         }
     }
 
@@ -51,6 +59,11 @@ public class GachaCreater : MonoBehaviour
         }
         rewardObject.SetActive(true);
         rewardSprite.sprite = pets[id];
+    }
+
+    public int GetSelectedPetId()
+    {
+        return selectedPetId;
     }
 
     // Update is called once per frame

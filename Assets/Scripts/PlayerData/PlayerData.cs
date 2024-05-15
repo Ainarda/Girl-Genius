@@ -15,15 +15,20 @@ public class PlayerData : MonoBehaviour
     public static Text CoinUI;
     private static int currentUnclokNumber = 0;
     //TODO add unlocking room interier on 13 and after each 10 lvl, animal after 10 and each 10, rent after 16 and each 10
-    private static int lvlInterier = 13, lvlAnimal = 10, lvlRent = 16;
+    public static int lvlInterier = 13, lvlAnimal = 10, lvlRent = 16;
     public static bool[] unlockingRoom = new bool[] { false, false, false, false, false, false, false, false, false, false, false };
     public static int[] lvlUnlockedRoom = new int[] {6, 10, 8, 13, 23, 28, 43, 38, 43, 48 };
+    public static bool[] renterState = new bool[] { false, false, false, false, false, false, false, false };
+
+    public static int currentRenter = 0;
+    public static bool openRenterCanvas = true;
 
     public static bool[] pet = new bool[] { true, false, false, false, false, false, false, false, false };
 
     private static PetSlot currentPet;
     public static int currentPetId = 0;
 
+    public static Observer currentObserver;
     private static DressSlot currentDress;
     public static int currentDressId = 1;
 
@@ -32,8 +37,10 @@ public class PlayerData : MonoBehaviour
     //TODO add win UI and load dressUnlocker after complete all dress unlocking stages
     public static void LoadNextLevel()
     {
-        
-        SceneManager.LoadScene("Level_" + CurrentLvl);
+        if(openRenterCanvas)
+            SceneManager.LoadScene("Maison");
+        else
+            SceneManager.LoadScene("Level_" + CurrentLvl);
     }
 
     public static void AddReward()
@@ -47,10 +54,28 @@ public class PlayerData : MonoBehaviour
                 //Unlock manison room
             }
         }
+        //TODO go deeper, if dress unlocked, do not show this
+        if(CurrentLvl >= lvlAnimal)
+        {
+            lvlAnimal += 10;
+            currentObserver.OpenAnimalRewardScreen();
+            
+        }
+        if(CurrentLvl >= lvlInterier)
+        {
+            lvlInterier += 10;
+            currentObserver.OpenEnvironmentRewardScreen();
+        }
+        if(CurrentLvl >= lvlRent)
+        {
+            //TODO may be need add bool type to open this scrin after load next level?
+            openRenterCanvas = true;
+            lvlRent += 10;
+        }
         //TODO if lvl complete can't add reward
         CurrentLvl++;
         Debug.Log(CurrentLvl);
-        PlayerCoin += 50;
+        AddCoin(50);
         CoinUI.text = PlayerCoin.ToString();
         dressProgress++;
         if (dressProgress == 4)
@@ -97,6 +122,11 @@ public class PlayerData : MonoBehaviour
             retValue = true;
         }
         return retValue;
+    }
+
+    public static void AddCoin(int addedCoin)
+    {
+        PlayerCoin += addedCoin;
     }
 
     public static bool RoomIsOpen(int roomNumber)

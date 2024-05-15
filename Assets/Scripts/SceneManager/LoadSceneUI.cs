@@ -17,6 +17,10 @@ public class LoadSceneUI : MonoBehaviour
     [SerializeField]
     private GameObject messageUI;
     [SerializeField]
+    private GameObject petRewardUI;
+    [SerializeField]
+    private GameObject environmentRewardUI;
+    [SerializeField]
     private GameObject eventSystem;
     [SerializeField]
     private GameObject sceneAudioSource;
@@ -35,7 +39,7 @@ public class LoadSceneUI : MonoBehaviour
         InitUI();
         InitAudio();
 
-        observer.AddScreens(winUI, loseUI, mainUI);
+        observer.AddScreens(winUI, loseUI, mainUI, petRewardUI, environmentRewardUI);
         lvlText = GameObject.FindGameObjectWithTag("LevelUI").GetComponent<Text>();
         coinText = GameObject.FindGameObjectWithTag("CoinUI").GetComponent<Text>();
         PlayerData.CoinUI = coinText;

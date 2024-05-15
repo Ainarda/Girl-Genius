@@ -13,13 +13,17 @@ public class Observer : MonoBehaviour
     private GameObject winScreen;
     private GameObject loseScreen;
     private GameObject mainScreen;
+    private GameObject petRewardScreen;
+    private GameObject environmentRewardScreen;
 
     private bool IsLevelComplete = false;
-    public void AddScreens(GameObject addedWinScreen, GameObject addedLoseScreen, GameObject addedMainScreen)
+    public void AddScreens(GameObject addedWinScreen, GameObject addedLoseScreen, GameObject addedMainScreen, GameObject addedPetRewardScreen, GameObject addedEnvironmentRewardScreen)
     {
         winScreen = addedWinScreen;
         loseScreen = addedLoseScreen;
         mainScreen = addedMainScreen;
+        petRewardScreen = addedPetRewardScreen;
+        environmentRewardScreen = addedEnvironmentRewardScreen;
     }
 
     public void AddCheck(CheckComplete check)
@@ -121,6 +125,21 @@ public class Observer : MonoBehaviour
         mainScreen.GetComponent<MainUI>().HideLvlObject();
     }
 
+    public void OpenAnimalRewardScreen()
+    {
+        petRewardScreen.SetActive(true);
+    }
+
+    public void OpenEnvironmentRewardScreen()
+    {
+        environmentRewardScreen.SetActive(true);
+    }
+
+    public void OpenRentScreen()
+    {
+        //TODO change value in playerData and instan close mainmenu screen and open rent screen
+    }
+
     public void CompleteSceneWithoutCheck()
     {
         SavePlayerData();
@@ -144,9 +163,14 @@ public class Observer : MonoBehaviour
         PlayerPrefs.SetInt("dressProgress", PlayerData.dressProgress);
         PlayerPrefs.SetInt("currentPetId", PlayerData.currentPetId);
         PlayerPrefs.SetInt("currentDressId", PlayerData.currentDressId);
+        PlayerPrefs.SetInt("lvlInterier", PlayerData.lvlInterier);
+        PlayerPrefs.SetInt("lvlRent", PlayerData.lvlRent);
+        PlayerPrefs.SetInt("lvlAnimal", PlayerData.lvlAnimal);
+        PlayerPrefs.SetInt("currentRenter", PlayerData.currentRenter);
         SaveFloatArray("dress", PlayerData.dress);
         SaveFloatArray("unlockingRoom", PlayerData.unlockingRoom);
         SaveFloatArray("pet", PlayerData.pet);
+        SaveFloatArray("renterState", PlayerData.renterState);
     }
 
     private void SaveFloatArray(string name, bool[] array)
@@ -183,9 +207,14 @@ public class Observer : MonoBehaviour
         PlayerData.dressProgress = PlayerPrefs.GetInt("dressProgress");
         PlayerData.currentPetId = PlayerPrefs.GetInt("currentPetId");
         PlayerData.currentDressId = PlayerPrefs.GetInt("currentDressId");
+        PlayerData.currentDressId = PlayerPrefs.GetInt("lvlInterier");
+        PlayerData.currentDressId = PlayerPrefs.GetInt("lvlRent");
+        PlayerData.currentDressId = PlayerPrefs.GetInt("lvlAnimal");
+        PlayerData.currentRenter = PlayerPrefs.GetInt("currentRenter");
         PlayerData.dress = LoadFloatArray("dress");
         PlayerData.unlockingRoom = LoadFloatArray("unlockingRoom");
         PlayerData.pet = LoadFloatArray("pet");
+        PlayerData.renterState = LoadFloatArray("renterState");
     }
 
     public void ResetData()

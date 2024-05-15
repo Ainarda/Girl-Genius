@@ -3202,22 +3202,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 88834790214544626}
     m_Modifications:
-    - target: {fileID: 722797779849381111, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: ea41d83e5e63a7043a80cece2445d98d, type: 3}
-    - target: {fileID: 722797779849381111, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 722797779849381111, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 722797779849381111, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3515881074171433424, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3301,46 +3285,6 @@ PrefabInstance:
     - target: {fileID: 3698191710771554389, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
       propertyPath: m_Name
       value: Coins
-      objectReference: {fileID: 0}
-    - target: {fileID: 3751245147607421334, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 3751245147607421334, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 4526696252193169363, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 4526696252193169363, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 4526696252193169363, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 8361592938981293932, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
-      propertyPath: m_Text
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 8361592938981293932, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: f72ec9f95adbf3a44ac7297cda2446b1, type: 3}
-    - target: {fileID: 8361592938981293932, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 29
-      objectReference: {fileID: 0}
-    - target: {fileID: 8361592938981293932, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8361592938981293932, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
-      propertyPath: m_FontData.m_FontStyle
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

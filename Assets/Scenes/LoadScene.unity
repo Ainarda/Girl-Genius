@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 621653626}
   - component: {fileID: 621653625}
   - component: {fileID: 621653627}
+  - component: {fileID: 621653628}
   m_Layer: 0
   m_Name: Load
   m_TagString: Untagged
@@ -182,6 +183,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unCompletedElement: []
   unCompletedFailElements: []
+--- !u!114 &621653628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621653624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5d41bc27fdc754180cd0ab1b88dd53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rooms:
+  - id: 0
+    environmentSprites: []
+    cost: 
 --- !u!1 &806653918
 GameObject:
   m_ObjectHideFlags: 0
