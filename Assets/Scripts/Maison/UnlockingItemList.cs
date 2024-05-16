@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class UnlockingItemList : MonoBehaviour
@@ -13,7 +14,7 @@ public class UnlockingItemList : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        
+        roomUnlockingList = GameObject.FindGameObjectsWithTag("roomUnlocking").ToList();
         startPos = roomUnlockingList[0].GetComponent<RectTransform>().localPosition;
         Debug.Log(startPos);
     }
@@ -35,12 +36,19 @@ public class UnlockingItemList : MonoBehaviour
         roomUnlockingList.Remove(item);
         for (int i = 0; i < 3; i++)
         {
-            if (PlayerData.RoomIsOpen(roomUnlockingList[i].GetComponent<UnlockingEnvironment>().GetRoomNumber()))
+            try
             {
-                Debug.Log(startPos + step * i);
-                //roomUnlockingList[i].GetComponent<RectTransform>().localPosition = startPos + step * i;
-                roomUnlockingList[i].transform.localPosition = startPos + step * i;
-                Debug.Log(roomUnlockingList[i].GetComponent<RectTransform>().localPosition);
+                if (PlayerData.RoomIsOpen(roomUnlockingList[i].GetComponent<UnlockingEnvironment>().GetRoomNumber()))
+                {
+                    Debug.Log(startPos + step * i);
+                    //roomUnlockingList[i].GetComponent<RectTransform>().localPosition = startPos + step * i;
+                    roomUnlockingList[i].transform.localPosition = startPos + step * i;
+                    Debug.Log(roomUnlockingList[i].GetComponent<RectTransform>().localPosition);
+                }
+            }
+            catch
+            {
+                Debug.LogWarning("ERROR ON: i:" + i+" item name:"+item.name);
             }
         }
     }
@@ -67,12 +75,12 @@ public class UnlockingItemList : MonoBehaviour
         int number = 0;
         foreach(GameObject item in roomUnlockingList)
         {
-            if(!PlayerData.unlockingRoom[item.GetComponent<UnlockingEnvironment>().GetRoomNumber()-1])
-            {
-                item.transform.localPosition = new Vector3(-1000000, -100000);
-            }
-            else
-            {
+            //if(!PlayerData.unlockingRoom[item.GetComponent<UnlockingEnvironment>().GetRoomNumber()-1])
+            //{
+            //    item.transform.localPosition = new Vector3(-1000000, -100000);
+            //}
+            //else
+           // {
                 if(number < 3)
                 {
                     item.transform.localPosition = startPos + step * number;
@@ -82,7 +90,7 @@ public class UnlockingItemList : MonoBehaviour
                 {
                     item.transform.localPosition = new Vector3(-1000000, -100000);
                 }
-            }
+           // }
         }
     }
 }

@@ -842,7 +842,7 @@ GameObject:
   - component: {fileID: 23270346}
   m_Layer: 5
   m_Name: Unlocking (24)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2109,7 +2109,7 @@ GameObject:
   - component: {fileID: 56286169}
   m_Layer: 5
   m_Name: Unlocking (28)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2253,7 +2253,7 @@ GameObject:
   - component: {fileID: 58794994}
   m_Layer: 5
   m_Name: Unlocking (43)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4669,7 +4669,7 @@ GameObject:
   - component: {fileID: 115889047}
   m_Layer: 5
   m_Name: Unlocking (23)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6593,7 +6593,7 @@ GameObject:
   - component: {fileID: 165367843}
   m_Layer: 5
   m_Name: Unlocking (22)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9211,7 +9211,7 @@ GameObject:
   - component: {fileID: 244788798}
   m_Layer: 5
   m_Name: Unlocking (8)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9350,7 +9350,7 @@ GameObject:
   - component: {fileID: 250089086}
   m_Layer: 5
   m_Name: Unlocking (16)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10739,7 +10739,7 @@ GameObject:
   - component: {fileID: 292812166}
   m_Layer: 5
   m_Name: Unlocking (15)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10787,6 +10787,82 @@ MonoBehaviour:
   roomNumber: 2
   environmentId: 3
   locker: {fileID: 1476708099}
+--- !u!1 &292956993
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 292956994}
+  - component: {fileID: 292956996}
+  - component: {fileID: 292956995}
+  m_Layer: 5
+  m_Name: LockImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &292956994
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292956993}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 333481756}
+  m_Father: {fileID: 1905163387}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 140}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &292956995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292956993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 0.7294118}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &292956996
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292956993}
+  m_CullTransparentMesh: 1
 --- !u!1 &297149269
 GameObject:
   m_ObjectHideFlags: 0
@@ -11530,7 +11606,7 @@ GameObject:
   - component: {fileID: 325742889}
   m_Layer: 5
   m_Name: Unlocking (32)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11674,7 +11750,7 @@ GameObject:
   - component: {fileID: 329612765}
   m_Layer: 5
   m_Name: Unlocking (39)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11806,6 +11882,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &333481755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 333481756}
+  - component: {fileID: 333481758}
+  - component: {fileID: 333481757}
+  m_Layer: 5
+  m_Name: Locker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &333481756
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333481755}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 292956994}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 60, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &333481757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333481755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b0ad814e202d3154ab16bcc0914f7f3a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &333481758
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333481755}
+  m_CullTransparentMesh: 1
 --- !u!1 &334179963
 GameObject:
   m_ObjectHideFlags: 0
@@ -12411,7 +12562,7 @@ GameObject:
   - component: {fileID: 359983026}
   m_Layer: 5
   m_Name: Unlocking (30)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21847,7 +21998,7 @@ GameObject:
   - component: {fileID: 633059601}
   m_Layer: 5
   m_Name: Unlocking (25)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23694,7 +23845,7 @@ GameObject:
   - component: {fileID: 678252685}
   m_Layer: 5
   m_Name: Unlocking (5)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24139,7 +24290,7 @@ GameObject:
   - component: {fileID: 686428203}
   m_Layer: 5
   m_Name: Unlocking (19)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25858,7 +26009,7 @@ GameObject:
   - component: {fileID: 741883465}
   m_Layer: 5
   m_Name: Unlocking (3)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28004,7 +28155,7 @@ GameObject:
   - component: {fileID: 791951527}
   m_Layer: 5
   m_Name: Unlocking (18)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28901,7 +29052,7 @@ GameObject:
   - component: {fileID: 823623858}
   m_Layer: 5
   m_Name: Unlocking (29)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30193,7 +30344,7 @@ GameObject:
   - component: {fileID: 862948748}
   m_Layer: 5
   m_Name: Unlocking (1)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30217,7 +30368,7 @@ MonoBehaviour:
   buyButton: {fileID: 33566570}
   roomNumber: 1
   environmentId: 2
-  locker: {fileID: 0}
+  locker: {fileID: 1290012767}
 --- !u!224 &862948749
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30233,6 +30384,7 @@ RectTransform:
   - {fileID: 90894231}
   - {fileID: 101905243}
   - {fileID: 33566573}
+  - {fileID: 1290012768}
   m_Father: {fileID: 210033542}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
@@ -31330,7 +31482,7 @@ GameObject:
   - component: {fileID: 887471183}
   m_Layer: 5
   m_Name: Unlocking (36)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33226,7 +33378,7 @@ GameObject:
   - component: {fileID: 939495307}
   m_Layer: 5
   m_Name: Unlocking (34)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35068,7 +35220,7 @@ GameObject:
   - component: {fileID: 993671777}
   m_Layer: 5
   m_Name: Unlocking (40)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35288,7 +35440,7 @@ GameObject:
   - component: {fileID: 996422807}
   m_Layer: 5
   m_Name: Unlocking (4)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37986,7 +38138,7 @@ GameObject:
   - component: {fileID: 1059339786}
   m_Layer: 5
   m_Name: Unlocking (41)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38775,6 +38927,8 @@ MonoBehaviour:
   - {fileID: 1905163385}
   - {fileID: 741883464}
   - {fileID: 996422806}
+  - {fileID: 678252683}
+  - {fileID: 1600019683}
   startPos: {x: -80, y: -100}
   step: {x: 80, y: 0}
 --- !u!1 &1075010016
@@ -40289,7 +40443,7 @@ GameObject:
   - component: {fileID: 1127652189}
   m_Layer: 5
   m_Name: Unlocking (12)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41169,7 +41323,7 @@ GameObject:
   - component: {fileID: 1157392193}
   m_Layer: 5
   m_Name: Unlocking (21)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42018,7 +42172,7 @@ GameObject:
   - component: {fileID: 1183915666}
   m_Layer: 5
   m_Name: Unlocking (33)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42538,6 +42692,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193288418}
+  m_CullTransparentMesh: 1
+--- !u!1 &1196402435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1196402436}
+  - component: {fileID: 1196402438}
+  - component: {fileID: 1196402437}
+  m_Layer: 5
+  m_Name: Locker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1196402436
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196402435}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1290012768}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 60, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1196402437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196402435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b0ad814e202d3154ab16bcc0914f7f3a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1196402438
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196402435}
   m_CullTransparentMesh: 1
 --- !u!1 &1198408529
 GameObject:
@@ -45834,7 +46063,7 @@ GameObject:
   - component: {fileID: 1286844417}
   m_Layer: 5
   m_Name: Unlocking (26)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46003,6 +46232,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1289731588}
+  m_CullTransparentMesh: 1
+--- !u!1 &1290012767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1290012768}
+  - component: {fileID: 1290012770}
+  - component: {fileID: 1290012769}
+  m_Layer: 5
+  m_Name: LockImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1290012768
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290012767}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1196402436}
+  m_Father: {fileID: 862948749}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 140}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1290012769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290012767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 0.7294118}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1290012770
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290012767}
   m_CullTransparentMesh: 1
 --- !u!1001 &1295204504
 PrefabInstance:
@@ -46852,7 +47157,7 @@ GameObject:
   - component: {fileID: 1327987654}
   m_Layer: 5
   m_Name: Unlocking (42)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48178,7 +48483,7 @@ GameObject:
   - component: {fileID: 1370042232}
   m_Layer: 5
   m_Name: Unlocking (38)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48773,7 +49078,7 @@ GameObject:
   - component: {fileID: 1379759309}
   m_Layer: 5
   m_Name: Unlocking (31)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48820,7 +49125,7 @@ MonoBehaviour:
   buyButton: {fileID: 270863046}
   roomNumber: 5
   environmentId: 1
-  locker: {fileID: 0}
+  locker: {fileID: 1436344477}
 --- !u!1 &1379802957
 GameObject:
   m_ObjectHideFlags: 0
@@ -50962,7 +51267,7 @@ GameObject:
   - component: {fileID: 1431393752}
   m_Layer: 5
   m_Name: Unlocking
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50982,6 +51287,7 @@ RectTransform:
   - {fileID: 1593785176}
   - {fileID: 900915582}
   - {fileID: 820701216}
+  - {fileID: 2074575489}
   m_Father: {fileID: 210033542}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
@@ -51008,7 +51314,7 @@ MonoBehaviour:
   buyButton: {fileID: 820701217}
   roomNumber: 1
   environmentId: 1
-  locker: {fileID: 0}
+  locker: {fileID: 2074575488}
 --- !u!1 &1436344477
 GameObject:
   m_ObjectHideFlags: 0
@@ -53332,7 +53638,7 @@ GameObject:
   - component: {fileID: 1522797830}
   m_Layer: 5
   m_Name: Unlocking (13)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53614,6 +53920,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1529511652}
+  m_CullTransparentMesh: 1
+--- !u!1 &1529579143
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1529579144}
+  - component: {fileID: 1529579146}
+  - component: {fileID: 1529579145}
+  m_Layer: 5
+  m_Name: Locker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1529579144
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529579143}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2074575489}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 60, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1529579145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529579143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b0ad814e202d3154ab16bcc0914f7f3a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1529579146
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529579143}
   m_CullTransparentMesh: 1
 --- !u!1 &1536132627
 GameObject:
@@ -55464,7 +55845,7 @@ GameObject:
   - component: {fileID: 1589252404}
   m_Layer: 5
   m_Name: Unlocking (9)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56070,7 +56451,7 @@ GameObject:
   - component: {fileID: 1600019685}
   m_Layer: 5
   m_Name: Unlocking (6)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60728,7 +61109,7 @@ GameObject:
   - component: {fileID: 1732474011}
   m_Layer: 5
   m_Name: Unlocking (7)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61968,7 +62349,7 @@ GameObject:
   - component: {fileID: 1766018214}
   m_Layer: 5
   m_Name: Unlocking (44)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62028,7 +62409,7 @@ GameObject:
   - component: {fileID: 1769928802}
   m_Layer: 5
   m_Name: Unlocking (11)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62172,7 +62553,7 @@ GameObject:
   - component: {fileID: 1775093678}
   m_Layer: 5
   m_Name: Unlocking (27)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63216,7 +63597,7 @@ GameObject:
   - component: {fileID: 1793887764}
   m_Layer: 5
   m_Name: Unlocking (35)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66413,7 +66794,7 @@ GameObject:
   - component: {fileID: 1902266344}
   m_Layer: 5
   m_Name: Unlocking (37)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66819,7 +67200,7 @@ GameObject:
   - component: {fileID: 1905163386}
   m_Layer: 5
   m_Name: Unlocking (2)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66843,7 +67224,7 @@ MonoBehaviour:
   buyButton: {fileID: 433087509}
   roomNumber: 1
   environmentId: 3
-  locker: {fileID: 0}
+  locker: {fileID: 292956993}
 --- !u!224 &1905163387
 RectTransform:
   m_ObjectHideFlags: 0
@@ -66859,6 +67240,7 @@ RectTransform:
   - {fileID: 1128840998}
   - {fileID: 1503822018}
   - {fileID: 433087512}
+  - {fileID: 292956994}
   m_Father: {fileID: 210033542}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
@@ -69496,7 +69878,7 @@ GameObject:
   - component: {fileID: 1963152345}
   m_Layer: 5
   m_Name: Unlocking (17)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69640,7 +70022,7 @@ GameObject:
   - component: {fileID: 1970818106}
   m_Layer: 5
   m_Name: Unlocking (20)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69775,7 +70157,7 @@ GameObject:
   - component: {fileID: 1978847312}
   m_Layer: 5
   m_Name: Unlocking (14)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71307,7 +71689,7 @@ GameObject:
   - component: {fileID: 2010543396}
   m_Layer: 5
   m_Name: Unlocking (10)
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73552,6 +73934,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073736623}
+  m_CullTransparentMesh: 1
+--- !u!1 &2074575488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2074575489}
+  - component: {fileID: 2074575491}
+  - component: {fileID: 2074575490}
+  m_Layer: 5
+  m_Name: LockImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2074575489
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074575488}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1529579144}
+  m_Father: {fileID: 1431393751}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 140}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2074575490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074575488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 0.7294118}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2074575491
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074575488}
   m_CullTransparentMesh: 1
 --- !u!1 &2079919033
 GameObject:

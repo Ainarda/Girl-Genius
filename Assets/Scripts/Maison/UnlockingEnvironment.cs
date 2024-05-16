@@ -24,7 +24,7 @@ public class UnlockingEnvironment : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        locker.SetActive(!PlayerData.RoomIsOpen(roomNumber-1));
+        locker.SetActive(!PlayerData.RoomIsOpen(roomNumber));
         costDisplay.text = cost.ToString();
         buyButton.onClick.AddListener(BuyEnvironment);
     }
