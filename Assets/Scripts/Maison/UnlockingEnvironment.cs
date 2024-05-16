@@ -19,9 +19,12 @@ public class UnlockingEnvironment : MonoBehaviour
     private int roomNumber;
     [SerializeField]
     private int environmentId;
+    [SerializeField]
+    private GameObject locker;
     // Start is called before the first frame update
     void Awake()
     {
+        locker.SetActive(!PlayerData.RoomIsOpen(roomNumber-1));
         costDisplay.text = cost.ToString();
         buyButton.onClick.AddListener(BuyEnvironment);
     }

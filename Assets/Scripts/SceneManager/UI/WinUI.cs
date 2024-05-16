@@ -23,12 +23,15 @@ public class WinUI : MonoBehaviour
     private Text dressProgressText;
     [SerializeField]
     private GameObject unlockDressScreen;
+    [SerializeField]
+    private Button payReward;
 
     // Start is called before the first frame update
     void Awake()
     {
         getDressButton.onClick.AddListener(GetDress);
         skipDressButton.onClick.AddListener(SkipDress);
+        payReward.onClick.AddListener(RewardPayButton);
     }
 
     // Update is called once per frame
@@ -90,5 +93,10 @@ public class WinUI : MonoBehaviour
     public void OpenDressScreen()
     {
         unlockDressScreen.SetActive(true);
+    }
+
+    public void RewardPayButton()
+    {
+
     }
 }

@@ -21,12 +21,12 @@ public class PlayerData : MonoBehaviour
     public static bool[] renterState = new bool[] { false, false, false, false, false, false, false, false };
 
     public static int currentRenter = 0;
-    public static bool openRenterCanvas = true;
+    public static bool openRenterCanvas = false;
 
     public static bool[] pet = new bool[] { true, false, false, false, false, false, false, false, false };
 
     private static PetSlot currentPet;
-    public static int currentPetId = 0;
+    public static int currentPetId = -1;
 
     public static Observer currentObserver;
     private static DressSlot currentDress;

@@ -822,7 +822,7 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
-  _animationName: 21_06_x
+  _animationName: 2005_03_x
   loop: 1
   timeScale: 1
 --- !u!23 &851374712
@@ -845,6 +845,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+  - {fileID: 2100000, guid: f8fcc99c7c1aa714989c923b1cc859bf, type: 2}
+  - {fileID: 2100000, guid: 08c91f254bf4eba40a967d158477fb5e, type: 2}
   - {fileID: 2100000, guid: f8fcc99c7c1aa714989c923b1cc859bf, type: 2}
   - {fileID: 2100000, guid: 08c91f254bf4eba40a967d158477fb5e, type: 2}
   - {fileID: 2100000, guid: f8fcc99c7c1aa714989c923b1cc859bf, type: 2}

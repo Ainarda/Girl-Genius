@@ -30,6 +30,10 @@ public class MainMenuSide : MonoBehaviour
     private Button manison;
     [SerializeField]
     private Button skin;
+    [SerializeField]
+    private Button disableAds;
+    [SerializeField]
+    private Button shop;
 
     [SerializeField]
     private GameObject manisonUI;
@@ -56,6 +60,8 @@ public class MainMenuSide : MonoBehaviour
         loadLevel.onClick.AddListener(LoadLevel);
         manison.onClick.AddListener(EnterToManison);
         skin.onClick.AddListener(OpenSkinWardrobe);
+        disableAds.onClick.AddListener(DisableAds);
+        shop.onClick.AddListener(OpenShop);
         StartCoroutine(TextGrow());
     }
 
@@ -107,6 +113,16 @@ public class MainMenuSide : MonoBehaviour
         manisonUI.SetActive(false);
         mainMenuUI.SetActive(true);
         //StartCoroutine(TextGrow());
+    }
+
+    public void OpenShop()
+    {
+        SceneManager.LoadScene("Shop");
+    }
+
+    public void DisableAds()
+    {
+        //DISABLE ADS
     }
 
     public IEnumerator TextGrow()
