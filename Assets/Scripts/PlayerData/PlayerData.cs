@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerData : MonoBehaviour
 {
+    public static bool firstLoad = true;
     public static string PlayerName;
     public static int PlayerCoin = 0;
     public static int CurrentLvl = 1;

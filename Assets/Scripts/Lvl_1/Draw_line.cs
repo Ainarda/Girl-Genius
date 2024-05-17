@@ -26,6 +26,9 @@ public class Draw_line : MonoBehaviour
     private float lineSize = 0.25f;
     private Observer observer;
 
+    [SerializeField]
+    private bool canDropIt = false;
+
     private bool canDraw = true;
     // Start is called before the first frame update
     void Start()
@@ -56,7 +59,7 @@ public class Draw_line : MonoBehaviour
             if (IsLoop)
             {
                 canDraw = false;
-                if (Vector2.Distance(lineRenderer.GetPosition(0), lineRenderer.GetPosition(lineRenderer.positionCount-1))<1.0f)
+                if (Vector2.Distance(lineRenderer.GetPosition(0), lineRenderer.GetPosition(lineRenderer.positionCount - 1)) < 1.0f)
                 {
                     Debug.LogWarning("RightCoord");
                     observer.CompleteScene();
@@ -68,7 +71,13 @@ public class Draw_line : MonoBehaviour
                 }
             }
             else
-                StartCoroutine(WaitForCheck());     
+            {
+                if (canDropIt)
+                {
+                   edgeCollider.gameObject.AddComponent<Rigidbody2D>();
+                }
+                StartCoroutine(WaitForCheck());
+            }
         }
     }
 

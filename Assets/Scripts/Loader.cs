@@ -25,6 +25,11 @@ public class Loader : MonoBehaviour
         catch {
 
         }
+        GetComponent<YdLoader>().YdInit();
+    }
+
+    public void ContinueLoad()
+    {
         SceneManager.LoadScene("Maison");
     }
 

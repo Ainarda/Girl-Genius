@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.blackbox.kimicuyandexgames": {
+      "version": "https://github.com/Kitgun1/KimicuYandexGames.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "65b6db14c4ffa923beeecf1be10e560819ed96a3"
+    },
     "com.unity.2d.animation": {
       "version": "9.0.3",
       "depth": 1,
@@ -163,6 +170,13 @@
     "com.unity.mathematics": {
       "version": "1.2.6",
       "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.2.1",
+      "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"

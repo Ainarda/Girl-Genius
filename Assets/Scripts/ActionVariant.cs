@@ -165,7 +165,7 @@ public class ActionVariant : MonoBehaviour
         {
             foreach(GameObject elem in group[objectAnimationName[animationNameNumber].groupId].group)
             {
-                TrackEntry entry = elem.GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(1, objectAnimationName[animationNameNumber].animationName, !objectAnimationName[animationNameNumber].isLoop);
+                TrackEntry entry = elem.GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0, objectAnimationName[animationNameNumber].animationName, !objectAnimationName[animationNameNumber].isLoop);
             }
             animationNameNumber++;
         }

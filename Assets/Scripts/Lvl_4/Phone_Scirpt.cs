@@ -147,6 +147,7 @@ public class Phone_Scirpt : MonoBehaviour
             {
                 yield return new WaitForSeconds(4);
                 observer.RemoveElement(this.gameObject);
+                //observer.GetComponent<ActionVariant>().NextAction();
             }
         }
         else
@@ -155,7 +156,10 @@ public class Phone_Scirpt : MonoBehaviour
                 newMessage.transform.GetChild(0).GetComponent<Text>().text = badSenderText[currentMessageSender].ruText;
             else
                 newMessage.transform.GetChild(0).GetComponent<Text>().text = badSenderText[currentMessageSender].enText;
-            //yield return new WaitForSeconds(4);
+            yield return new WaitForSeconds(2);
+            currentMessageSender++;
+            ActivateButton();
+            NextPlayerMessage();
             //observer.OpenLoseScreen();
         }
         if (currentMessageNumber > 3)
