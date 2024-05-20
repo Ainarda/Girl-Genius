@@ -74,7 +74,7 @@ public class Draw_line : MonoBehaviour
             {
                 if (canDropIt)
                 {
-                   edgeCollider.gameObject.AddComponent<Rigidbody2D>();
+                    edgeCollider.gameObject.AddComponent<Rigidbody2D>();
                 }
                 StartCoroutine(WaitForCheck());
             }
