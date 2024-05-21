@@ -143,7 +143,10 @@ public class Observer : MonoBehaviour
     public void CompleteSceneWithoutCheck()
     {
         SavePlayerData();
-        PlayerData.LoadNextLevel();
+        if (!PlayerData.openRenterCanvas)
+            PlayerData.LoadNextLevel();
+        else
+            LoadMainMenu();
     }
 
     public void ReloadScene()

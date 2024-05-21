@@ -67,7 +67,8 @@ public class LoadSceneUI : MonoBehaviour
     {
         sceneAudioSource = Instantiate(sceneAudioSource);
         mainAudioSource = Instantiate(mainAudioSource);
-        mainAudioSource.GetComponent<AudioSource>().Play();
+        if(PlayerData.musicPlay)
+            mainAudioSource.GetComponent<AudioSource>().Play();
         actionManager.SetAudioSource(sceneAudioSource.GetComponent<AudioSource>());
     }
 

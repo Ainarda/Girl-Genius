@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5717689187698740525}
   - component: {fileID: 1071941651322894587}
   - component: {fileID: 2798791349822207349}
+  - component: {fileID: 8765423175329641546}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Untagged
@@ -62,22 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
-  - {fileID: 2100000, guid: 64dbb78f306dd754287defadd2962fec, type: 2}
-  - {fileID: 0}
-  - {fileID: 2100000, guid: 64dbb78f306dd754287defadd2962fec, type: 2}
-  - {fileID: 0}
-  - {fileID: 2100000, guid: 64dbb78f306dd754287defadd2962fec, type: 2}
-  - {fileID: 0}
-  - {fileID: 2100000, guid: 64dbb78f306dd754287defadd2962fec, type: 2}
-  - {fileID: 0}
-  - {fileID: 2100000, guid: 64dbb78f306dd754287defadd2962fec, type: 2}
-  - {fileID: 0}
-  - {fileID: 2100000, guid: 64dbb78f306dd754287defadd2962fec, type: 2}
-  - {fileID: 0}
-  - {fileID: 2100000, guid: 64dbb78f306dd754287defadd2962fec, type: 2}
-  - {fileID: 0}
-  - {fileID: 2100000, guid: 64dbb78f306dd754287defadd2962fec, type: 2}
+  - {fileID: 2100000, guid: 8b73611ca845ff544a1a5cea69c7e796, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -111,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: fa7a0b4552e6535428fa10ff7922e214, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 47bcb8286db221c47878d02c1d1c3bc3, type: 2}
   initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0
@@ -136,3 +122,15 @@ MonoBehaviour:
   _animationName: 
   loop: 1
   timeScale: 1
+--- !u!114 &8765423175329641546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3831637925715456569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1981df2517b654a44ab155974307de5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

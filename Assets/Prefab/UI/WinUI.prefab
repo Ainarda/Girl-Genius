@@ -1105,7 +1105,7 @@ GameObject:
   - component: {fileID: 794770379367362090}
   - component: {fileID: 1878333896610754048}
   - component: {fileID: 1334351731000421712}
-  - component: {fileID: 2681247455243964947}
+  - component: {fileID: 7516721159975048715}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -1171,7 +1171,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2681247455243964947
+--- !u!114 &7516721159975048715
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1180,15 +1180,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2542459900629606986}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f14b657f9a75b64d9bd46a64f15b705, type: 3}
+  m_Script: {fileID: 11500000, guid: ffcf661edb4279b4ebac1e44ef0f48fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAngle: 90
-  minAngle: -90
+  maxAngle: 75
+  minAngle: -75
   currentAngle: 0
-  angleGrow: 90
-  rightAngle: {x: 0, y: 0}
-  Click: 0
+  angleGrow: 150
+  Click: 1
+  coinText: {fileID: 1383807791118948321}
+  coins: 200
 --- !u!1 &2732555770578195881
 GameObject:
   m_ObjectHideFlags: 0
@@ -3817,6 +3818,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
+--- !u!114 &1383807791118948321 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8361592938981293932, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
+  m_PrefabInstance: {fileID: 7439416221578356877}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &6337961703043840349 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3515881074171433424, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}

@@ -21,6 +21,7 @@ public class PlayerData : MonoBehaviour
     public static int[] lvlUnlockedRoom = new int[] {6, 10, 8, 13, 23, 28, 43, 38, 43, 48 };
     public static bool[] renterState = new bool[] { false, false, false, false, false, false, false, false };
 
+    public static bool musicPlay = true;
     public static int currentRenter = 0;
     public static bool openRenterCanvas = false;
 
@@ -31,7 +32,9 @@ public class PlayerData : MonoBehaviour
 
     public static Observer currentObserver;
     private static DressSlot currentDress;
-    public static int currentDressId = 1;
+    public static int currentDressId = 2;
+
+    public static bool isFirstRullet = true;
 
     public static string localText = "ru";//TMP next load local text "ru" "eng"
 
@@ -71,6 +74,7 @@ public class PlayerData : MonoBehaviour
         {
             //TODO may be need add bool type to open this scrin after load next level?
             openRenterCanvas = true;
+            currentObserver.OpenRentScreen();
             lvlRent += 10;
         }
         //TODO if lvl complete can't add reward
@@ -81,6 +85,7 @@ public class PlayerData : MonoBehaviour
         dressProgress++;
         if (dressProgress == 4)
         {
+            currentObserver.OpenEnvironmentRewardScreen();
             Debug.LogWarning("Dress can be added");
             int i;
             for(i =0; i < dress.Length; i++)

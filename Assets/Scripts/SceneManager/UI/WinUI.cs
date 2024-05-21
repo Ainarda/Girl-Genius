@@ -46,7 +46,8 @@ public class WinUI : MonoBehaviour
         greenDress.offsetMax = new Vector2(greenDress.offsetMax.x,-200+ 50 *  PlayerData.dressProgress);
         
         dressProgressText.text = "NEW SKIN: "+ value +"%";
-        OpenDressScreen();
+        if(PlayerData.dressProgress == 4)
+            OpenDressScreen();
     }
 
     /// <summary>

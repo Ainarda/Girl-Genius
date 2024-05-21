@@ -1,6 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.Networking;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Loader : MonoBehaviour
@@ -14,9 +18,18 @@ public class Loader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        try
+        {
 #if UNITY_WEBGL && !UNITY_EDITOR
         PlayerData.localText = GetLang();
+        
 #endif
+        }
+        catch
+        {
+            Debug.LogWarning("Can't get lang from ySDK");
+        }
+
         Observer observer = GetComponent<Observer>();
         try
         {
@@ -25,7 +38,16 @@ public class Loader : MonoBehaviour
         catch {
 
         }
-        GetComponent<YdLoader>().YdInit();
+        try
+            {
+                GetComponent<YdLoader>().YdInit();
+            }
+            catch
+            {
+                Debug.LogWarning("Can't load yandexSDK");
+            ContinueLoad();
+        }
+        
     }
 
     public void ContinueLoad()

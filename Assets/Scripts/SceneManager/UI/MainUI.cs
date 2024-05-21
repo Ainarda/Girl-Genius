@@ -11,11 +11,14 @@ public class MainUI : MonoBehaviour
     private Button skipButton;
     [SerializeField]
     private Button hintButton;
+    [SerializeField]
+    private Button homeButton;
 
     private GameObject observer;
     // Start is called before the first frame update
     void Awake()
     {
+        homeButton.onClick.AddListener(GoHome);
         observer = GameObject.FindGameObjectWithTag("Observer");
         skipButton.onClick.AddListener(observer.GetComponent<Observer>().SkipLevel);
     }
@@ -39,5 +42,9 @@ public class MainUI : MonoBehaviour
     public Button GetHintButton()
     {
         return hintButton;
+    }
+    public void GoHome()
+    {
+        observer.GetComponent<Observer>().LoadMainMenu();
     }
 }

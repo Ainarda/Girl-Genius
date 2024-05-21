@@ -87,7 +87,19 @@ public class MainMenuSide : MonoBehaviour
 
     public void LoadLevel()
     {
-        SceneManager.LoadScene("Level_" + PlayerData.CurrentLvl);
+        int lvl = PlayerData.CurrentLvl;
+        if (lvl <= 0)
+        {
+            SceneManager.LoadScene("Level_1");
+        }
+        else if (lvl > 100)
+        {
+            SceneManager.LoadScene("Level_100");
+        }
+        else
+        {
+            SceneManager.LoadScene("Level_" + PlayerData.CurrentLvl);
+        }
     }
 
     public void EnterToManison()

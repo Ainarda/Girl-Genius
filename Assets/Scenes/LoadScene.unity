@@ -198,8 +198,70 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rooms:
   - id: 0
-    environmentSprites: []
-    cost: 
+    environmentSprites:
+    - {fileID: 21300000, guid: 96182a0cc6a97ac4badd63b5178e4194, type: 3}
+    - {fileID: 21300000, guid: e717301cff1c8e642baeb8d4563b2f09, type: 3}
+    - {fileID: 21300000, guid: aa2161c33d8be6c40a209c939832bc75, type: 3}
+    - {fileID: 21300000, guid: eb49fe5a4b1ad784bb227591d8fc7f46, type: 3}
+    - {fileID: 21300000, guid: caca23cc78f8bb240a4433ff8afb6350, type: 3}
+    - {fileID: 21300000, guid: 5b64514de93f8dc42931ee8786a0fe69, type: 3}
+    - {fileID: 21300000, guid: 4578e0dc0430ba24eb13a196e29e353a, type: 3}
+    - {fileID: 21300000, guid: 0087ba6b10b421845a8258028313c501, type: 3}
+    - {fileID: 21300000, guid: f2786f812eb7be74ca04b591233926f8, type: 3}
+    - {fileID: 21300000, guid: 4f0b9dc8f073137418f0967852dfc53d, type: 3}
+    - {fileID: 21300000, guid: fdfdb6872204c4c44b24a53318502bb6, type: 3}
+    - {fileID: 21300000, guid: 4dab9842cc84ddd48939c6ba1cc2f260, type: 3}
+    - {fileID: 21300000, guid: bf92d5df2a224904cad1f60744363c03, type: 3}
+    cost: 2c0100002c0100002c0100005e010000c2010000f40100005e010000fa000000900100002c0100005e0100002c010000f4010000
+  - id: 1
+    environmentSprites:
+    - {fileID: 21300000, guid: 7470b6c5380b7874393fb7e532ae5bf7, type: 3}
+    - {fileID: 21300000, guid: 5040aa2a1cb4802479ff80d28c007c7c, type: 3}
+    - {fileID: 21300000, guid: bbf6912b6e2747544b7250297f590129, type: 3}
+    - {fileID: 21300000, guid: 4701df8aee2c8f8428dcaf1352f55972, type: 3}
+    - {fileID: 21300000, guid: 7d7bd86565739314d971fb2936ab2f0f, type: 3}
+    cost: 5e010000f401000090010000260200002c010000
+  - id: 2
+    environmentSprites:
+    - {fileID: 21300000, guid: 561735ff6fe806f45ad7a80f7ef568a2, type: 3}
+    - {fileID: 21300000, guid: 5389275a833ff9a47ae082df38c8f06d, type: 3}
+    - {fileID: 21300000, guid: e204ecbfe05d2c948b485456bf0af3b9, type: 3}
+    - {fileID: 21300000, guid: edf2d9ff1cf928c418eeecb5ea73cab2, type: 3}
+    - {fileID: 21300000, guid: c6159dd561448dd4091fab96c07897d2, type: 3}
+    - {fileID: 21300000, guid: 745995ab995c5944ebddae0b265569b7, type: 3}
+    - {fileID: 21300000, guid: 8ee5ffd417270b340907c1c6d911e95c, type: 3}
+    cost: 2c0100005e0100002c010000f4010000c20100005e0100002c010000
+  - id: 3
+    environmentSprites:
+    - {fileID: 21300000, guid: 75ebefda48569dd439536692b582ac91, type: 3}
+    - {fileID: 21300000, guid: adcfc9254f24d6944a07db29f5f1a48f, type: 3}
+    - {fileID: 21300000, guid: b40fd838a914b9d4b994d179e0322bd4, type: 3}
+    - {fileID: 21300000, guid: e99ca96f928dba34884f293bed9a9c49, type: 3}
+    - {fileID: 21300000, guid: 67c62539f2aa7b34d8f7e415c19bcbef, type: 3}
+    cost: 2c0100005e010000c2010000f401000058020000
+  - id: 4
+    environmentSprites:
+    - {fileID: 21300000, guid: c8c904f4b7934714e83eb7c4489b7552, type: 3}
+    - {fileID: 21300000, guid: 9c3689e508490094c8e23b27b8ea6852, type: 3}
+    cost: 90010000f4010000
+  - id: 5
+    environmentSprites:
+    - {fileID: 21300000, guid: 814938d73d267ff4fb16c72976789f03, type: 3}
+    - {fileID: 21300000, guid: 8e76382210fe26e4ea2f3024ce4c634c, type: 3}
+    - {fileID: 21300000, guid: bf6334ccd073e414b94ca563c8379243, type: 3}
+    - {fileID: 21300000, guid: 3b7ff346b6ade0d4b8098fad9b3de907, type: 3}
+    - {fileID: 21300000, guid: 0497043a2452c414b8097aa978fe818b, type: 3}
+    - {fileID: 21300000, guid: 5068dc00651338e479dca5e643a52bef, type: 3}
+    cost: 26020000900100002c0100002c0100005e010000c2010000
+  - id: 6
+    environmentSprites:
+    - {fileID: 21300000, guid: 216a8bc6b17a5b946973404e44426669, type: 3}
+    - {fileID: 21300000, guid: f9ab32c7912f57447b10b46c0a1a6982, type: 3}
+    - {fileID: 21300000, guid: c58c03f50f5a40d47b0d226ad9ff1474, type: 3}
+    - {fileID: 21300000, guid: 1437198c54139174690f1a08818797fe, type: 3}
+    - {fileID: 21300000, guid: e489aa4ce4cebe842899dfdcf4042cb2, type: 3}
+    - {fileID: 21300000, guid: 554c33ba4e75bef41b83ea24998a4680, type: 3}
+    cost: 5e010000fa0000009001000026020000c20100002c010000
 --- !u!114 &621653629
 MonoBehaviour:
   m_ObjectHideFlags: 0

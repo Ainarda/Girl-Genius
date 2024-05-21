@@ -1,3 +1,5 @@
+using Kimicu.YandexGames;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,5 +16,15 @@ public class Adds : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ShowAds(Action nextAction)
+    {
+        Advertisement.ShowInterstitialAd(onCloseCallback: nextAction);
+    }
+
+    public void ShowRewardAds(Action rewardAction)
+    {
+        Advertisement.ShowVideoAd(onRewardedCallback: rewardAction);
     }
 }
