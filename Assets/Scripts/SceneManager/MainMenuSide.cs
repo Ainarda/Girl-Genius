@@ -90,6 +90,7 @@ public class MainMenuSide : MonoBehaviour
         int lvl = PlayerData.CurrentLvl;
         if (lvl <= 0)
         {
+            PlayerData.CurrentLvl = 1;
             SceneManager.LoadScene("Level_1");
         }
         else if (lvl > 100)

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5138426522822803639}
   - component: {fileID: 8199434535094193655}
   - component: {fileID: 5242350859111839686}
+  - component: {fileID: 3674197094469333208}
   m_Layer: 0
   m_Name: Observer
   m_TagString: Observer
@@ -101,3 +102,15 @@ MonoBehaviour:
   sizebleObject: []
   audioSource: {fileID: 0}
   activateStage: 0
+--- !u!114 &3674197094469333208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9127945949731854918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf90ec942780d6b4a9de4160b6253f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

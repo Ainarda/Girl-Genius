@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,10 +13,12 @@ public class RewardCanvas : MonoBehaviour
     [SerializeField]
     private Button loseReward;
 
+    private GameObject observer;
     private void Awake()
     {
         loseReward.onClick.AddListener(CloseWindow);
         getRewardButton.onClick.AddListener(GetReward);
+        observer = GameObject.FindGameObjectWithTag("Observer");
     }
     // Start is called before the first frame update
     void Start()
@@ -36,21 +39,23 @@ public class RewardCanvas : MonoBehaviour
 
     private void GetReward()
     {
+        Action action;
         switch (rewardType)
         {
             case RewardType.pet:
-                PlayerData.pet[GetComponent<GachaCreater>().GetSelectedPetId()] = true;
+                action = () => { PlayerData.pet[GetComponent<GachaCreater>().GetSelectedPetId()] = true; CloseWindow(); };
                 break;
             case RewardType.room:
-                GetComponent<RoomReward>().UnlockEnvironment();
+                action = () => { GetComponent<RoomReward>().UnlockEnvironment(); CloseWindow(); };
                 break;
             case RewardType.dress:
-                PlayerData.dress[0] = true;
-                break;
+                action = () => { PlayerData.dress[0] = true; CloseWindow(); };
+                    break;
             default:
-                Debug.Log("Nothing!");
+                action = () => Debug.Log("Nothing!");
                 break;
         }
+        observer.GetComponent<YdLoader>().LoadAdsWithReward(action);
     }
 }
 

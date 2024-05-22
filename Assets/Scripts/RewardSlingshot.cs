@@ -41,26 +41,6 @@ public class RewardSlingshot : MonoBehaviour
             currentAngle += angleGrow * Time.deltaTime;
             transform.rotation = Quaternion.AngleAxis(currentAngle, Vector3.forward);
         }
-        if (Input.GetMouseButtonDown(0) && Click)
-        {
-            Debug.Log("+");
-            angleGrow = 0;
-            //CheckAngle
-            if(Mathf.Abs(currentAngle) <25)
-            {
-
-            }
-            else if(Mathf.Abs(currentAngle)<55)
-            {
-
-            }
-            else
-            {
-
-            }
-            Click = false;
-
-        }
 
         if (Mathf.Abs(currentAngle) < 25)
         {
@@ -76,9 +56,24 @@ public class RewardSlingshot : MonoBehaviour
         }
     }
 
-    public void StopArrow()
+    public int StopArrow()
     {
+        int coin = 200;
         angleGrow = 0;
         Debug.Log(currentAngle);
+        if (Mathf.Abs(currentAngle) < 25)
+        {
+            coin *= 4;
+        }
+        else if (Mathf.Abs(currentAngle) < 55)
+        {
+            coin *= 3;
+        }
+        else
+        {
+            coin *= 2;
+        }
+        Click = false;
+        return coin;
     }
 }

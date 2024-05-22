@@ -9,16 +9,16 @@ using UnityEngine.SceneManagement;
 
 public class Loader : MonoBehaviour
 {
-
+/*
 #if UNITY_WEBGL && !UNITY_EDITOR
     [DllImport("__Internal")]
     private static extern string GetLang();
 #endif
-
+*/
     // Start is called before the first frame update
     void Start()
     {
-        try
+  /*      try
         {
 #if UNITY_WEBGL && !UNITY_EDITOR
         PlayerData.localText = GetLang();
@@ -29,7 +29,7 @@ public class Loader : MonoBehaviour
         {
             Debug.LogWarning("Can't get lang from ySDK");
         }
-
+  */
         Observer observer = GetComponent<Observer>();
         try
         {
@@ -39,15 +39,15 @@ public class Loader : MonoBehaviour
 
         }
         try
-            {
-                GetComponent<YdLoader>().YdInit();
-            }
-            catch
-            {
-                Debug.LogWarning("Can't load yandexSDK");
+        {
+            GetComponent<YdLoader>().YdInit();
+        }
+        catch
+        {
+            Debug.LogWarning("Can't load yandexSDK");
             ContinueLoad();
         }
-        
+
     }
 
     public void ContinueLoad()

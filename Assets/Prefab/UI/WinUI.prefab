@@ -1870,6 +1870,7 @@ MonoBehaviour:
   dressProgressText: {fileID: 3126218137690594544}
   unlockDressScreen: {fileID: 1881374672072265316}
   payReward: {fileID: 6041139634808600114}
+  roulete: {fileID: 2542459900629606986}
 --- !u!1 &4598946985806565595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1917,6 +1918,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6040235734583935823}
+  - component: {fileID: 4506973057762357240}
   m_Layer: 5
   m_Name: Footer
   m_TagString: Untagged
@@ -1946,6 +1948,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 59.7}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4506973057762357240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4745629822160303606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1629688e9167604449a6c374776bcec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text:
+    ruText: "\u0415\u0421\u041B\u0418 \u0412\u042B \u041F\u0420\u041E\u041F\u0423\u0421\u0422\u0418\u0422\u0415
+      \u042D\u0422\u041E, \u0412\u042B \u041C\u041E\u0416\u0415\u0422\u0415 \u041F\u041E\u0422\u0415\u0420\u042F\u0422\u042C
+      \u041D\u0410\u0412\u0421\u0415\u0413\u0414\u0410"
+    enText: THIS IS ONE TIME OFFER ONLY.  IF YOU MISS IT, YOU MAY LOSE IT FOREVER
+  textField: {fileID: 4991150874122256380}
 --- !u!1 &4846126892648312606
 GameObject:
   m_ObjectHideFlags: 0

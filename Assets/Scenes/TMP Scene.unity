@@ -1910,6 +1910,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinUI
       objectReference: {fileID: 0}
+    - target: {fileID: 3945912773674710249, guid: d4e33597aedd0ce44982b285b1a940e0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8274067952660682522, guid: d4e33597aedd0ce44982b285b1a940e0, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3043,7 +3047,7 @@ Transform:
   m_GameObject: {fileID: 1953039177}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.03, y: -2.39, z: 0}
+  m_LocalPosition: {x: -3.31, y: -3.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

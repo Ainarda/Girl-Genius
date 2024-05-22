@@ -13,6 +13,8 @@ public class MainUI : MonoBehaviour
     private Button hintButton;
     [SerializeField]
     private Button homeButton;
+    [SerializeField]
+    private GameObject helper;
 
     private GameObject observer;
     // Start is called before the first frame update
@@ -20,7 +22,8 @@ public class MainUI : MonoBehaviour
     {
         homeButton.onClick.AddListener(GoHome);
         observer = GameObject.FindGameObjectWithTag("Observer");
-        skipButton.onClick.AddListener(observer.GetComponent<Observer>().SkipLevel);
+        skipButton.onClick.AddListener(delegate { observer.GetComponent<YdLoader>().LoadAdsWithReward(observer.GetComponent<Observer>().SkipLevel); });
+        hintButton.onClick.AddListener(delegate { observer.GetComponent<YdLoader>().LoadAdsWithReward(ActivateHint); });
     }
 
     // Update is called once per frame
@@ -46,5 +49,10 @@ public class MainUI : MonoBehaviour
     public void GoHome()
     {
         observer.GetComponent<Observer>().LoadMainMenu();
+    }
+
+    public void ActivateHint()
+    {
+        helper.SetActive(true);
     }
 }

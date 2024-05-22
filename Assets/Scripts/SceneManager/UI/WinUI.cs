@@ -25,13 +25,19 @@ public class WinUI : MonoBehaviour
     private GameObject unlockDressScreen;
     [SerializeField]
     private Button payReward;
+    [SerializeField]
+    private GameObject roulete;
+
+    private GameObject observer;
 
     // Start is called before the first frame update
     void Awake()
     {
+        observer = GameObject.FindGameObjectWithTag("Observer");
         getDressButton.onClick.AddListener(GetDress);
         skipDressButton.onClick.AddListener(SkipDress);
         payReward.onClick.AddListener(RewardPayButton);
+        getRewardButton.onClick.AddListener(GetCoinRouleteReward);
     }
 
     // Update is called once per frame
@@ -79,6 +85,12 @@ public class WinUI : MonoBehaviour
         }
     }
 
+    private void GetCoinRouleteReward()
+    {
+        int coin = roulete.GetComponent<RewardSlingshot>().StopArrow();
+        observer.GetComponent<YdLoader>().LoadAdsWithReward(() => { PlayerData.AddCoin(coin); PlayerData.LoadNextLevel(); });
+    }
+
     public void SkipDress()
     {
         unlockDressScreen.SetActive(false);
@@ -87,6 +99,7 @@ public class WinUI : MonoBehaviour
     public void GetDress()
     {
         //reklama
+        observer.GetComponent<YdLoader>().LoadAdsWithReward(() => { PlayerData.UnlockCustom(); unlockDressScreen.SetActive(false);  });
         Debug.Log("Get dress");
         unlockDressScreen.SetActive(false);
     }

@@ -34,6 +34,8 @@ public class PlayerData : MonoBehaviour
     private static DressSlot currentDress;
     public static int currentDressId = 2;
 
+    public static bool firstInit;
+    
     public static bool isFirstRullet = true;
 
     public static string localText = "ru";//TMP next load local text "ru" "eng"
@@ -86,14 +88,7 @@ public class PlayerData : MonoBehaviour
         if (dressProgress == 4)
         {
             currentObserver.OpenEnvironmentRewardScreen();
-            Debug.LogWarning("Dress can be added");
-            int i;
-            for(i =0; i < dress.Length; i++)
-            {
-                if (!dress[i])
-                    break;
-            }
-            UnlockCustom(i);
+           
             //In observerOpenOnWinUI dresUnlockingScreen;
             dressProgress = 0;
             //dress[unlockId[currentUnclokNumber++]].UnlockDress();
@@ -163,6 +158,18 @@ public class PlayerData : MonoBehaviour
     }
 
     #region Dress
+    public static void UnlockCustom()
+    {
+        Debug.LogWarning("Dress can be added");
+        int i;
+        for (i = 0; i < dress.Length; i++)
+        {
+            if (!dress[i])
+                break;
+        }
+        dress[i] = true;
+    }
+
     public static void UnlockCustom(int id)
     {
         dress[id] = true;

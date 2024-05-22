@@ -29,6 +29,11 @@ public class LoseUI : MonoBehaviour
         retryButton.onClick.AddListener(retryAction.Invoke);
     }
 
+    public void ActivateHint()
+    {
+        //TODO Hint activation
+    }
+
     // Update is called once per frame
     void Update()
     {

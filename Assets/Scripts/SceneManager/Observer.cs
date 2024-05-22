@@ -142,6 +142,12 @@ public class Observer : MonoBehaviour
 
     public void CompleteSceneWithoutCheck()
     {
+        GetComponent<YdLoader>().LoadAds(SaveAndNextLevel);
+        
+    }
+
+    private void SaveAndNextLevel()
+    {
         SavePlayerData();
         if (!PlayerData.openRenterCanvas)
             PlayerData.LoadNextLevel();
@@ -170,6 +176,7 @@ public class Observer : MonoBehaviour
         PlayerPrefs.SetInt("lvlRent", PlayerData.lvlRent);
         PlayerPrefs.SetInt("lvlAnimal", PlayerData.lvlAnimal);
         PlayerPrefs.SetInt("currentRenter", PlayerData.currentRenter);
+        PlayerPrefs.SetInt("firstInit", PlayerData.firstInit? 1 : 0);
         SaveFloatArray("dress", PlayerData.dress);
         SaveFloatArray("unlockingRoom", PlayerData.unlockingRoom);
         SaveFloatArray("pet", PlayerData.pet);
@@ -205,6 +212,8 @@ public class Observer : MonoBehaviour
 
     public void LoadData()
     {
+        PlayerData.firstInit = PlayerPrefs.GetInt("firstInit") == 1? true : false;
+        Debug.Log(PlayerData.firstInit);
         PlayerData.PlayerCoin = PlayerPrefs.GetInt("PlayerCoin");
         PlayerData.CurrentLvl = PlayerPrefs.GetInt("CurrentLvl");
         PlayerData.dressProgress = PlayerPrefs.GetInt("dressProgress");
