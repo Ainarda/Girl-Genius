@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using static UnityEngine.ParticleSystem;
 
 public class DressSlot : MonoBehaviour
@@ -21,11 +22,19 @@ public class DressSlot : MonoBehaviour
     private GameObject buyMenu;
     [SerializeField]
     private int id;
+    [SerializeField]
+    private Button buyButton;
+    [SerializeField]
+    private int cost;
+    [SerializeField]
+    private Text costText;
     // Start is called before the first frame update
 
     //TODO fix particle system
     private void Awake()
     {
+        costText.text = cost.ToString();
+        buyButton.onClick.AddListener(BuyDress);
         dressGameObject.sprite = dressSprite;
         if (PlayerData.currentDressId == id)
         {
@@ -61,6 +70,15 @@ public class DressSlot : MonoBehaviour
         greenLight.SetActive(false);
         offStand.SetActive(true);
         onStand.SetActive(false);
+    }
+
+    private void BuyDress()
+    {
+        if(PlayerData.CanSpendCoin(cost))
+        {
+            PlayerData.AddCoin(-cost);
+            PlayerData.UnlockCustom(id);
+        }
     }
 
     // Update is called once per frame

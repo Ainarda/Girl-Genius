@@ -19,6 +19,7 @@ public class YdLoader : MonoBehaviour
         Debug.Log("Start load Advert");
         Advertisement.Initialize();
         LoadLanguage();
+        Billing.Initialize();
     }
 
     public void LoadLanguage()

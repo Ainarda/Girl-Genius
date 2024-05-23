@@ -58,6 +58,7 @@ public class LoadSceneUI : MonoBehaviour
         winUI.SetActive(false);
 
         winUI.GetComponent<WinUI>().SetButtonAction(3, observer.CompleteSceneWithoutCheck);
+        Debug.Log(winUI.name);
         winUI.GetComponent<WinUI>().SetButtonAction(2, observer.ReloadScene);
         winUI.GetComponent<WinUI>().SetButtonAction(0, observer.LoadMainMenu);
         loseUI.GetComponent<LoseUI>().SetRetryButton(observer.ReloadScene);

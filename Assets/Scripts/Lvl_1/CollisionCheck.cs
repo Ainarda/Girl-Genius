@@ -12,6 +12,8 @@ public class CollisionCheck : MonoBehaviour
     private void Awake()
     {
         observer = GameObject.FindGameObjectWithTag("Observer").GetComponent<Observer>();
+        if (isInvert)
+            observer.AddElement(this.gameObject);
         observer.AddCheck(IsLevelComplete);
     }
     // Start is called before the first frame update
@@ -33,6 +35,7 @@ public class CollisionCheck : MonoBehaviour
             if (isInvert)
             {
                 Debug.Log("+");
+                observer.RemoveElement(this.gameObject);
                 missionTask = true;
             }
             else

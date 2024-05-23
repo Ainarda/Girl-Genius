@@ -14,6 +14,8 @@ public class MainUI : MonoBehaviour
     [SerializeField]
     private Button homeButton;
     [SerializeField]
+    private Button retryButton;
+    [SerializeField]
     private GameObject helper;
 
     private GameObject observer;

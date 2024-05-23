@@ -21,7 +21,7 @@ public class LineDrawer : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
-        //cantDrawOverLayerIndex = LayerMask.NameToLayer("CantDrawOver");
+        cantDrawOverLayerIndex = LayerMask.NameToLayer("CantDrawOver");
     }
 
     void Update()
@@ -54,7 +54,7 @@ public class LineDrawer : MonoBehaviour
         Vector2 mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
 
         //Check if mousePos hits any collider with layer "CantDrawOver", if true cut the line by calling EndDraw( )
-        RaycastHit2D hit = Physics2D.CircleCast(mousePosition, lineWidth / 3f, Vector2.zero, 1f);// cantDrawOverLayer);
+        RaycastHit2D hit = Physics2D.CircleCast(mousePosition, lineWidth / 3f, Vector2.zero, 1f, cantDrawOverLayer);
 
         if (hit)
             EndDraw();
@@ -74,7 +74,7 @@ public class LineDrawer : MonoBehaviour
             else
             {
                 //Add the line to "CantDrawOver" layer
-                //currentLine.gameObject.layer = cantDrawOverLayerIndex;
+                currentLine.gameObject.layer = cantDrawOverLayerIndex;
 
                 //Activate Physics on the line
                 currentLine.UsePhysics(true);
