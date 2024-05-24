@@ -54,4 +54,30 @@ public class YdLoader : MonoBehaviour
     {
         Advertisement.ShowVideoAd(onRewardedCallback: action, onCloseCallback: closeAction);
     }
+
+    public void Purchase(string id)
+    {
+        Billing.PurchaseProduct(id, AfterPurchase);
+    }
+
+    private void AfterPurchase( Agava.YandexGames.PurchaseProductResponse product)
+    {
+        var token = product.purchaseData.purchaseToken;
+        if(token == PurchaseData.id[0])
+        {
+            PlayerData.lvlAds = false;
+        }
+        else if(token == PurchaseData.id[0])
+        {
+            PlayerData.lvlAds = false;
+            PlayerData.UnlockAllRoom();
+            PlayerData.AddCoin(15000);
+        }
+        else
+        {
+
+        }
+        Billing.ConsumeProduct(token);
+        GetComponent<Observer>().SavePlayerData();
+    }
 }

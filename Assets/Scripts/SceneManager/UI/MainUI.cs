@@ -15,8 +15,6 @@ public class MainUI : MonoBehaviour
     private Button homeButton;
     [SerializeField]
     private Button retryButton;
-    [SerializeField]
-    private GameObject helper;
 
     private GameObject observer;
     // Start is called before the first frame update
@@ -24,8 +22,11 @@ public class MainUI : MonoBehaviour
     {
         homeButton.onClick.AddListener(GoHome);
         observer = GameObject.FindGameObjectWithTag("Observer");
+        retryButton.onClick.AddListener(observer.GetComponent<Observer>().ReloadScene);
         skipButton.onClick.AddListener(delegate { observer.GetComponent<YdLoader>().LoadAdsWithReward(observer.GetComponent<Observer>().SkipLevel); });
         hintButton.onClick.AddListener(delegate { observer.GetComponent<YdLoader>().LoadAdsWithReward(ActivateHint); });
+        if(PlayerData.lvlsWithoutHelper.Contains(PlayerData.CurrentLvl))
+            hintButton.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
@@ -55,6 +56,12 @@ public class MainUI : MonoBehaviour
 
     public void ActivateHint()
     {
-        helper.SetActive(true);
+        observer.GetComponent<YdLoader>().LoadAdsWithReward(AddHint);
+    }
+
+    public void AddHint()
+    {
+        PlayerData.lvlHints = true;
+        observer.GetComponent<Observer>().ReloadScene();
     }
 }

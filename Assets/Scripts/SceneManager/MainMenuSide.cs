@@ -135,6 +135,7 @@ public class MainMenuSide : MonoBehaviour
 
     public void DisableAds()
     {
+        SceneManager.LoadScene("Shop");
         //DISABLE ADS
     }
 

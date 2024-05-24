@@ -1756,6 +1756,7 @@ GameObject:
   - component: {fileID: 6276768741361627732}
   - component: {fileID: 5426397932092086267}
   - component: {fileID: 334865785016782246}
+  - component: {fileID: 4102309322819328636}
   m_Layer: 5
   m_Name: WinUI
   m_TagString: Untagged
@@ -1871,6 +1872,20 @@ MonoBehaviour:
   unlockDressScreen: {fileID: 1881374672072265316}
   payReward: {fileID: 6041139634808600114}
   roulete: {fileID: 2542459900629606986}
+--- !u!114 &4102309322819328636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3945912773674710249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631c010981d15664f9989f0e1d3bbb96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bigButton: {fileID: 6041139634808600114}
+  adsButton: {fileID: 0}
 --- !u!1 &4598946985806565595
 GameObject:
   m_ObjectHideFlags: 0

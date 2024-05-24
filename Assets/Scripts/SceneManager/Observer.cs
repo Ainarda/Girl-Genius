@@ -142,7 +142,14 @@ public class Observer : MonoBehaviour
 
     public void CompleteSceneWithoutCheck()
     {
-        GetComponent<YdLoader>().LoadAds(SaveAndNextLevel);
+        if (!PlayerData.lvlAds)
+        {
+            SaveAndNextLevel();
+        }
+        else
+        {
+            GetComponent<YdLoader>().LoadAds(SaveAndNextLevel);
+        }
         
     }
 
@@ -177,6 +184,7 @@ public class Observer : MonoBehaviour
         PlayerPrefs.SetInt("lvlAnimal", PlayerData.lvlAnimal);
         PlayerPrefs.SetInt("currentRenter", PlayerData.currentRenter);
         PlayerPrefs.SetInt("firstInit", PlayerData.firstInit? 1 : 0);
+        PlayerPrefs.SetInt("lvlAds", PlayerData.lvlAds ? 1 : 0);
         SaveFloatArray("dress", PlayerData.dress);
         SaveFloatArray("unlockingRoom", PlayerData.unlockingRoom);
         SaveFloatArray("pet", PlayerData.pet);
@@ -223,6 +231,7 @@ public class Observer : MonoBehaviour
         PlayerData.currentDressId = PlayerPrefs.GetInt("lvlRent");
         PlayerData.currentDressId = PlayerPrefs.GetInt("lvlAnimal");
         PlayerData.currentRenter = PlayerPrefs.GetInt("currentRenter");
+        PlayerData.lvlAds = PlayerPrefs.GetInt("lvlAds ") == 1 ? true : false;
         PlayerData.dress = LoadFloatArray("dress");
         PlayerData.unlockingRoom = LoadFloatArray("unlockingRoom");
         PlayerData.pet = LoadFloatArray("pet");

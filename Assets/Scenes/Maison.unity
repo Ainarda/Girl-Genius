@@ -4158,7 +4158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8946,7 +8946,7 @@ Transform:
   m_GameObject: {fileID: 232616478}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.6, z: -10}
+  m_LocalPosition: {x: -5.79, y: -0.6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -69965,6 +69965,7 @@ GameObject:
   - component: {fileID: 1952053503}
   - component: {fileID: 1952053502}
   - component: {fileID: 1952053501}
+  - component: {fileID: 1952053504}
   m_Layer: 5
   m_Name: TAP TO START
   m_TagString: Untagged
@@ -70074,6 +70075,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1952053499}
   m_CullTransparentMesh: 1
+--- !u!114 &1952053504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952053499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1629688e9167604449a6c374776bcec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text:
+    ruText: "\u0416\u041C\u0418 \u0418\u0413\u0420\u0410\u0422\u042C"
+    enText: TAP TO START
+  textField: {fileID: 108329267}
 --- !u!1 &1954429472
 GameObject:
   m_ObjectHideFlags: 0

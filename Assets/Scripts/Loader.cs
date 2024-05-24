@@ -9,27 +9,25 @@ using UnityEngine.SceneManagement;
 
 public class Loader : MonoBehaviour
 {
-/*
-#if UNITY_WEBGL && !UNITY_EDITOR
-    [DllImport("__Internal")]
-    private static extern string GetLang();
-#endif
-*/
+
+    [SerializeField]
+    private string[] purchasingId;
     // Start is called before the first frame update
     void Start()
     {
-  /*      try
-        {
-#if UNITY_WEBGL && !UNITY_EDITOR
-        PlayerData.localText = GetLang();
-        
-#endif
-        }
-        catch
-        {
-            Debug.LogWarning("Can't get lang from ySDK");
-        }
-  */
+        /*      try
+              {
+      #if UNITY_WEBGL && !UNITY_EDITOR
+              PlayerData.localText = GetLang();
+
+      #endif
+              }
+              catch
+              {
+                  Debug.LogWarning("Can't get lang from ySDK");
+              }
+        */
+        PurchaseData.id = purchasingId;
         Observer observer = GetComponent<Observer>();
         try
         {

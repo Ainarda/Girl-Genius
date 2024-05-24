@@ -21,6 +21,10 @@ public class PlayerData : MonoBehaviour
     public static int[] lvlUnlockedRoom = new int[] {6, 10, 8, 13, 23, 28, 43, 38, 43, 48 };
     public static bool[] renterState = new bool[] { false, false, false, false, false, false, false, false };
 
+    public static List<int> lvlsWithoutHelper = new List<int>() { 22, 30, 43, 52, 55, 61, 62, 66, 69, 71, 75, 81, 83, 93, 94 };
+    public static bool lvlAds = true;
+    public static bool lvlHints = false;
+
     public static bool musicPlay = true;
     public static int currentRenter = 0;
     public static bool openRenterCanvas = false;
@@ -205,4 +209,12 @@ public class PlayerData : MonoBehaviour
         return pet[petId];
     }
     #endregion   
+
+    public static void UnlockAllRoom()
+    {
+        for(int i = 0; i < unlockingRoom.Length; i++ )
+        {
+            unlockingRoom[i] = true;
+        }
+    }
 }
