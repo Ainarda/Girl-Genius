@@ -2,15 +2,21 @@ trackSelection = true
 refreshSearchWindowsInPlayMode = false
 fetchPreview = true
 defaultFlags = 0
-keepOpen = false
+keepOpen = true
 queryFolder = "Assets"
 onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.110DEAF1" = "#m_FontData.m_Font=\"GlobalObjectId_V1-4-0000000000000000e000000000000000-10102-0\""
+	"last_search.110DEAF1" = "t:Observer"
 	"OpenInspectorPreview.110DEAF1" = "0"
-	"currentGroup.110DEAF1" = "scene"
+	"currentGroup.110DEAF1" = "asset"
+	"last_search.3BE40471" = "t:Observer"
+	"OpenInspectorPreview.3BE40471" = "0"
+	"currentGroup.3BE40471" = "scene"
+	"last_search.E8DA15E5" = "t:Observer"
+	"OpenInspectorPreview.E8DA15E5" = "0"
+	"currentGroup.E8DA15E5" = "asset"
 }
 providers = {
 	packages = {
@@ -62,14 +68,16 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"t:Observer"
 	"#m_FontData.m_Font=\"GlobalObjectId_V1-4-0000000000000000e000000000000000-10102-0\""
-	"#m_FontData.m_Font=<$object:none,Font$>"
 	""
+	"t:textmeshp"
+	"h: guid=UnityEditor.ObjectWrapperJSON:{\"guid\":\"f72ec9f95adbf3a44ac7297cda2446b1\",\""
+	"#m_FontData.m_Font=<$object:none,Font$>"
 	"t:Font"
 	"h"
 	"h: guid"
 	"h: guid=f72ec9f95adbf3a44ac7297cda2446b1"
-	"h: guid=UnityEditor.ObjectWrapperJSON:{\"guid\":\"f72ec9f95adbf3a44ac7297cda2446b1\",\""
 	"h: guid=UnityEditor.ObjectWrapperJSON:{\"guid\":\"f72ec9f95adbf3a44ac7297cda2446b1\",\"localI"
 	"h: guid=UnityEditor.ObjectWrapperJSON:{\"guid\":\"f72ec9f95adbf3a44ac7297cda2446b1\",\"localId\":12800"
 	"h: guid=UnityEditor.ObjectWrapperJSON:{\"guid\":\"f72ec9f95adbf3a44ac7297cda2446b1\",\"localId\":12800000,\"ty"
@@ -80,19 +88,16 @@ recentSearches = [
 	"h: п"
 	"h: ref=<f72ec9f95adbf3a44ac7297cda2446b1>"
 	"h: ref=<f72ec9f95adbf3a44ac7297cda2446b1\",\"localId\":12800000,\"type\":3,\"instanceID\":30298}>"
-	"h: ref=<UnityEditor.ObjectWrapperJSON:{\"guid\":\"f72ec9f95adbf3a44ac7297cda2446b1\",\"localId\":12800000,\"type\":3,\"instanceID\":30298}>"
-	"h: ref=<$object:none$>"
 ]
 searchItemFavorites = [
 ]
 savedSearchesSortOrder = 0
 showSavedSearchPanel = true
 hideTabs = false
-expandedQueries = [
-]
+expandedQueries = [-1765347274 961552606]
 queryBuilder = true
 ignoredProperties = "id;name;classname;imagecontentshash"
-helperWidgetCurrentArea = "h:"
+helperWidgetCurrentArea = "all"
 disabledIndexers = ""
 minIndexVariations = 2
 findProviderIndexHelper = true
