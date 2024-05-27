@@ -47,12 +47,14 @@ public class YdLoader : MonoBehaviour
 
     public void LoadAds(Action closeAction)
     {
-        Advertisement.ShowInterstitialAd(onCloseCallback: closeAction);
+        AudioListener.pause = true;
+        Advertisement.ShowInterstitialAd(onCloseCallback: () => { AudioListener.pause = false; closeAction.Invoke(); });
     }
 
     public void LoadAdsWithReward(Action action, Action closeAction = null)
     {
-        Advertisement.ShowVideoAd(onRewardedCallback: action, onCloseCallback: closeAction);
+        AudioListener.pause = true;
+        Advertisement.ShowVideoAd(onRewardedCallback: ()=> { AudioListener.pause = false ; action.Invoke(); }, onCloseCallback: closeAction);
     }
 
     public void Purchase(string id)

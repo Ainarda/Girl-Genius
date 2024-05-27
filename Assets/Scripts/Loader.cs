@@ -50,7 +50,10 @@ public class Loader : MonoBehaviour
 
     public void ContinueLoad()
     {
-        SceneManager.LoadScene("Maison");
+        if (PlayerData.firstInit)
+            SceneManager.LoadScene("Maison");
+        else
+            SceneManager.LoadScene("Level_1");
     }
 
     // Update is called once per frame

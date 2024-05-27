@@ -85,6 +85,11 @@ public class ActionVariant : MonoBehaviour
         otherField = otherMessage.transform.GetChild(0).GetComponent<Text>();
     }
 
+    public void GetAudioSource()
+    {
+
+    }
+
     public void SetAudioSource(AudioSource source)
     {
         audioSource = source;

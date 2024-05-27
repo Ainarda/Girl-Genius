@@ -222,20 +222,27 @@ public class Observer : MonoBehaviour
     {
         PlayerData.firstInit = PlayerPrefs.GetInt("firstInit") == 1? true : false;
         Debug.Log(PlayerData.firstInit);
-        PlayerData.PlayerCoin = PlayerPrefs.GetInt("PlayerCoin");
-        PlayerData.CurrentLvl = PlayerPrefs.GetInt("CurrentLvl");
-        PlayerData.dressProgress = PlayerPrefs.GetInt("dressProgress");
-        PlayerData.currentPetId = PlayerPrefs.GetInt("currentPetId");
-        PlayerData.currentDressId = PlayerPrefs.GetInt("currentDressId");
-        PlayerData.currentDressId = PlayerPrefs.GetInt("lvlInterier");
-        PlayerData.currentDressId = PlayerPrefs.GetInt("lvlRent");
-        PlayerData.currentDressId = PlayerPrefs.GetInt("lvlAnimal");
-        PlayerData.currentRenter = PlayerPrefs.GetInt("currentRenter");
-        PlayerData.lvlAds = PlayerPrefs.GetInt("lvlAds ") == 1 ? true : false;
-        PlayerData.dress = LoadFloatArray("dress");
-        PlayerData.unlockingRoom = LoadFloatArray("unlockingRoom");
-        PlayerData.pet = LoadFloatArray("pet");
-        PlayerData.renterState = LoadFloatArray("renterState");
+        if (!PlayerData.firstInit)
+        {
+            PlayerData.PlayerCoin = PlayerPrefs.GetInt("PlayerCoin");
+            PlayerData.CurrentLvl = PlayerPrefs.GetInt("CurrentLvl");
+            PlayerData.dressProgress = PlayerPrefs.GetInt("dressProgress");
+            PlayerData.currentPetId = PlayerPrefs.GetInt("currentPetId");
+            PlayerData.currentDressId = PlayerPrefs.GetInt("currentDressId");
+            PlayerData.currentDressId = PlayerPrefs.GetInt("lvlInterier");
+            PlayerData.currentDressId = PlayerPrefs.GetInt("lvlRent");
+            PlayerData.currentDressId = PlayerPrefs.GetInt("lvlAnimal");
+            PlayerData.currentRenter = PlayerPrefs.GetInt("currentRenter");
+            PlayerData.lvlAds = PlayerPrefs.GetInt("lvlAds ") == 1 ? true : false;
+            PlayerData.dress = LoadFloatArray("dress");
+            PlayerData.unlockingRoom = LoadFloatArray("unlockingRoom");
+            PlayerData.pet = LoadFloatArray("pet");
+            PlayerData.renterState = LoadFloatArray("renterState");
+        }
+        else
+        {
+            PlayerData.firstInit = false;
+        }
     }
 
     public void ResetData()
