@@ -28,6 +28,8 @@ public class LoadSceneUI : MonoBehaviour
     private GameObject mainAudioSource;
     [SerializeField]
     private ActionVariant actionManager;
+    [SerializeField]
+    private GameObject audioManager;
 
     private Observer observer;
     private void Awake()

@@ -17,6 +17,12 @@ public class Observer : MonoBehaviour
     private GameObject environmentRewardScreen;
 
     private bool IsLevelComplete = false;
+
+    private void Awake()
+    {
+        PlayerData.currentObserver = this;
+    }
+
     public void AddScreens(GameObject addedWinScreen, GameObject addedLoseScreen, GameObject addedMainScreen, GameObject addedPetRewardScreen, GameObject addedEnvironmentRewardScreen)
     {
         winScreen = addedWinScreen;
@@ -113,8 +119,10 @@ public class Observer : MonoBehaviour
     public void OpenWinScreen()
     {
         PlayerData.AddReward();
+        Debug.LogError("Added reward");
         winScreen.GetComponent<WinUI>().SetDressScale();
         winScreen.SetActive(true);
+        winScreen.GetComponent<WinUI>().ShowBottomButtons();
         mainScreen.GetComponent<MainUI>().HideLvlObject();
     }
 
@@ -138,6 +146,16 @@ public class Observer : MonoBehaviour
     public void OpenRentScreen()
     {
         //TODO change value in playerData and instan close mainmenu screen and open rent screen
+    }
+
+    public void SetDressProgress()
+    {
+        //winScreen.GetComponent<WinUI>()
+    }
+
+    public void OpenDessScene()
+    {
+        winScreen.GetComponent<WinUI>().OpenDressScreen();
     }
 
     public void CompleteSceneWithoutCheck()
