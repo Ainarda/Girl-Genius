@@ -298,7 +298,29 @@ public class ActionVariant : MonoBehaviour
             textCloud = otherField;
             otherMessage.SetActive(true);
         }
+        
+        // Getting best font size
+        textCloud.text = text;
+        textCloud.resizeTextForBestFit = true;
+        Color color = textCloud.color;
+        textCloud.color = new Color(0, 0, 0, 0);
+
+        yield return null;
+        
+        textCloud.color = color;
+        int fontSize = textCloud.cachedTextGenerator.fontSizeUsedForBestFit;
+
+        // Fixing pixelated font
+        if (fontSize is 12 or 13)
+            fontSize = 11;
+        else if (fontSize is 15 or 16 or 17)
+            fontSize = 14;
+
+        textCloud.fontSize = fontSize;
+        textCloud.resizeTextForBestFit = false;
+
         textCloud.text = "";
+
         foreach (char c in text)
         {
             yield return new WaitForSeconds(0.075f);
