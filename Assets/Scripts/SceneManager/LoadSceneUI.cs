@@ -58,6 +58,11 @@ public class LoadSceneUI : MonoBehaviour
         winUI = Instantiate(winUI);
         loseUI.SetActive(false);
         winUI.SetActive(false);
+        petRewardUI = Instantiate(petRewardUI);
+        environmentRewardUI = Instantiate(environmentRewardUI);
+        petRewardUI.SetActive(false);
+        environmentRewardUI.SetActive(false);
+        //TODO init pet and environment canvas
 
         winUI.GetComponent<WinUI>().SetButtonAction(3, observer.CompleteSceneWithoutCheck);
         Debug.Log(winUI.name);

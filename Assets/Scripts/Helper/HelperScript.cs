@@ -12,12 +12,14 @@ public class HelperScript : MonoBehaviour
     private float speed = 1.0f;
     [SerializeField]
     private bool onlyShow = false;
+    [SerializeField]
+    private bool alwaysShow = false;
 
     private int currentPoints = 0;
 
     private void Awake()
     {
-        if (!PlayerData.lvlHints)
+        if (!PlayerData.lvlHints && !alwaysShow)
         {
             gameObject.SetActive(false);
             PlayerData.lvlHints = false;
