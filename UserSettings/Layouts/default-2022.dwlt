@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 421}
   m_MaxSize: {x: 10000, y: 10000}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 221
+  controlID: 18
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 222
+  controlID: 19
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 163
+  controlID: 20
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 164
+  controlID: 21
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -295,8 +295,8 @@ MonoBehaviour:
     y: 0
     width: 603
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -437,23 +437,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 64defdffd0defdffeae1fdff18e2fdffb0eafdffdaeafdff00ebfdff32ecfdff72ecfdff98ecfdffd2edfdfffaedfdff40eefdff80eefdffaeeefdffd8eefdff0eeffdff58effdff7eeffdffa8effdffd6f0fdff02f1fdff2cf1fdff62f1fdff8cf1fdffb6f1fdffeef1fdff20f2fdff46f2fdff76f2fdffaef2fdffe0f2fdff22f4fdff62f4fdff88f4fdffb4f4fdfff4f4fdff22f6fdff4ef6fdff70f6fdffaaf6fdffd0f6fdff08f7fdff3cf7fdff6ef7fdff9cf7fdffdcf7fdff26f8fdff54f9fdff86f9fdffb0f9fdffd6f9fdff08fafdff3afafdff7cfbfdffbefbfdffe2fbfdff0cfcfdff2efcfdff58fcfdff86fcfdffb0fcfdffdafcfdff00fdfdff2afdfdff50fdfdff82fefdffa8fefdffcefefdfff8fffdff1a00feff5a00feff8400feffae00feffe200feff0801feff2a01feff5201feff7c01feffa201feffbe01fefff002feff2603feff5403feff8c04feffce05fefff805feff3806feff5e06feff8806feffb806fefff806feffd207fefffc07feff2208feff4a08feff7209feff9c09feffbe09fefffc09feff3e0afeff820bfeffe20bfeff3c0cfeff1a0efeff360efeff5610feffe631feffbc3cfeff0cb3feffbab8feff92c1feff00c2feff3ac5feff8ac5feff44cefeff90cefeffd8cefeff2cd0feff8ed0feffd6d0feff32d2feff7cd2feffe4d2feff46d3feff96d3feffe2d3feff3ad4feffa6d4feffeed4feff3ad5feff8ad6feffd8d6feff24d7feff7cd7feffc8d7feff14d8feff6ed8feffc2d8feff0ad9feff5cd9feffb6d9feff0adafeff6edbfeffd0dbfeff18dcfeff66dcfeffc8dcfeff18defeff66defeffaadefeff06dffeff4edffeffa8dffefffedffeff52e0feffa2e0feff04e1feff70e1feffc0e2feff14e3feff60e3feffa8e3fefffce3feff50e4feffb4e5feff18e6feff5ee6feffaae6feffeee6feff3ae7feff8ae7feffd6e7feff22e8feff6ae8feffb6e8fefffee8feff52eafeff9aeafeffe2eafeff2eecfeff72ecfeffd4ecfeff20edfeff6cedfeffc2edfeff0aeefeff4eeefeff98eefeffe4eefeff2ceffeff6aeffeffbef0feff16f1feff66f1feffc0f2feff24f4feff70f4feffd2f4feff1af5feff66f5feffb6f5feff18f6feff12f7feff5ef7feffa6f7feffeef7feff38f9feff84f9feffc6f9feff24fafeff84fafeffe4fbfeff64fcfeffe0fcfeffbcfefeffeefefeff9803ffffd604fffffc04ffff3805ffff5a05ffff8005ffffac05ffffe805ffffbe06ffffe406ffff0607ffff2a07ffff4e08ffff7408ffff9208ffffcc08ffff0a09ffff4a0affffa60afffffc0affffd20cffffe80cffff900dffffb67fffff1edaffffe6f2ffff16fbffff20bb0000b8bb0000d0b2010044bb010086bf0100be060200580a02002a160200
+      m_SelectedIDs: 10f5ffff
+      m_LastClickedID: -2800
+      m_ExpandedIDs: 16fbffffc8730000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: CoinContainer
-        m_OriginalName: CoinContainer
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -126890
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 9}
       m_SearchString: 
@@ -871,9 +871,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 161.5, y: 287.5, z: 0}
+    m_Target: {x: 5.1406293, y: -0.15467213, z: 0.007865465}
     speed: 2
-    m_Value: {x: 263.9945, y: 494.94812, z: 27.055283}
+    m_Value: {x: 5.1406293, y: -0.15467213, z: 0.007865465}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -923,9 +923,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 329.75522
+    m_Target: 3.651289
     speed: 2
-    m_Value: 297.63553
+    m_Value: 3.651289
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1065,7 +1065,7 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefab/UI
+    - Assets/Prefab/Helper
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1073,16 +1073,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefab/UI
+  - Assets/Prefab/Helper
   m_LastFoldersGridSize: 64
   m_LastProjectPath: D:\Unity\Girl-Genius_0
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b07c0000
-    m_LastClickedID: 31920
-    m_ExpandedIDs: 00000000f67a0000f87a0000fa7a0000fc7a0000fe7a0000007b0000027b0000047b0000067b0000087b00000a7b00000c7b00000e7b0000107b0000127b0000147b0000167b0000187b0000b47c0000b67c0000b87c0000c07c000056810000
+    m_SelectedIDs: b87d0000
+    m_LastClickedID: 32184
+    m_ExpandedIDs: 000000000c7c00000e7c0000107c0000127c0000147c0000167c0000187c00001a7c00001c7c00001e7c0000207c0000227c0000247c0000267c0000287c00002a7c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1110,7 +1110,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f67a0000f87a0000fa7a0000fc7a0000fe7a0000007b0000027b0000047b0000067b0000087b00000a7b00000c7b00000e7b0000107b0000127b0000147b0000167b0000187b0000
+    m_ExpandedIDs: 000000000c7c00000e7c0000107c0000127c0000147c0000167c0000187c00001a7c00001c7c00001e7c0000207c0000227c0000247c0000267c0000287c00002a7c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

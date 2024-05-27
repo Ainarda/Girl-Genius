@@ -177,7 +177,7 @@ public class ActionVariant : MonoBehaviour
         else
         {
             //Add true or false loop animation
-            TrackEntry entry = animationObject[animationObjectNumber++].GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(1, objectAnimationName[animationNameNumber++].animationName, !objectAnimationName[animationNameNumber].isLoop);
+            TrackEntry entry = animationObject[animationObjectNumber++].GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0, objectAnimationName[animationNameNumber++].animationName, !objectAnimationName[animationNameNumber].isLoop);
         }
         ActivateAction();
     }

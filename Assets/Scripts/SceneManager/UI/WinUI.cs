@@ -52,7 +52,8 @@ public class WinUI : MonoBehaviour
         greenDress.offsetMax = new Vector2(greenDress.offsetMax.x,-200+ 50 *  PlayerData.dressProgress);
         
         dressProgressText.text = "NEW SKIN: "+ value +"%";
-        if(PlayerData.dressProgress == 4)
+        Debug.LogError("Dress progress "+value);
+        if (PlayerData.dressProgress == 4)
             OpenDressScreen();
     }
 
@@ -94,12 +95,12 @@ public class WinUI : MonoBehaviour
     public void SkipDress()
     {
         unlockDressScreen.SetActive(false);
+        PlayerData.dressProgress = 0;
     }
 
     public void GetDress()
     {
-        //reklama
-        observer.GetComponent<YdLoader>().LoadAdsWithReward(() => { PlayerData.UnlockCustom(); unlockDressScreen.SetActive(false);  });
+        observer.GetComponent<YdLoader>().LoadAdsWithReward(() => { PlayerData.UnlockCustom(); unlockDressScreen.SetActive(false); PlayerData.dressProgress = 0; });
         Debug.Log("Get dress");
         unlockDressScreen.SetActive(false);
     }
@@ -107,6 +108,18 @@ public class WinUI : MonoBehaviour
     public void OpenDressScreen()
     {
         unlockDressScreen.SetActive(true);
+        
+    }
+
+    public void ShowBottomButtons()
+    {
+        Invoke("ShowButtons", 1f);
+    }
+
+    private void ShowButtons()
+    {
+        retryButton.gameObject.SetActive(true);
+        nextButton.gameObject.SetActive(true);
     }
 
     public void RewardPayButton()

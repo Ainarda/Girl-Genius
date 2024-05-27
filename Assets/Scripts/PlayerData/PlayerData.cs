@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -85,16 +86,16 @@ public class PlayerData : MonoBehaviour
         }
         //TODO if lvl complete can't add reward
         CurrentLvl++;
-        Debug.Log(CurrentLvl);
+        
         AddCoin(50);
         CoinUI.text = PlayerCoin.ToString();
         dressProgress++;
         if (dressProgress == 4)
         {
-            currentObserver.OpenEnvironmentRewardScreen();
-           
+            //currentObserver.OpenEnvironmentRewardScreen();
+            //currentObserver.win
             //In observerOpenOnWinUI dresUnlockingScreen;
-            dressProgress = 0;
+            //dressProgress = 0;
             //dress[unlockId[currentUnclokNumber++]].UnlockDress();
         }
     }

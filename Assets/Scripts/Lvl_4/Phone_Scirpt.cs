@@ -130,25 +130,7 @@ public class Phone_Scirpt : MonoBehaviour
                 newMessage.transform.GetChild(0).GetComponent<Text>().text = goodSenderText[currentMessageSender].ruText;
             else
                 newMessage.transform.GetChild(0).GetComponent<Text>().text = goodSenderText[currentMessageSender].enText;
-            currentMessageSender++;
-
-            if (!(currentMessageAnswering >= blueAnsweringText.Count))
-            {
-                yield return new WaitForSeconds(2);
-                //TODO change text on agree and degree button
-                ActivateButton();
-                NextPlayerMessage();
-                /*agree.gameObject.SetActive(true);
-                agree.transform.GetChild(0).GetComponent<Text>().text = blueAnsweringText[currentMessageAnswering];
-                degree.gameObject.SetActive(true);
-                degree.transform.GetChild(0).GetComponent<Text>().text = redAnsweringText[currentMessageAnswering];*/
-            }
-            else
-            {
-                yield return new WaitForSeconds(4);
-                observer.RemoveElement(this.gameObject);
-                //observer.GetComponent<ActionVariant>().NextAction();
-            }
+            
         }
         else
         {
@@ -157,11 +139,22 @@ public class Phone_Scirpt : MonoBehaviour
             else
                 newMessage.transform.GetChild(0).GetComponent<Text>().text = badSenderText[currentMessageSender].enText;
             yield return new WaitForSeconds(2);
-            currentMessageSender++;
+        }
+        currentMessageSender++;
+
+        if (!(currentMessageAnswering >= blueAnsweringText.Count))
+        {
+            yield return new WaitForSeconds(2);
+            //TODO change text on agree and degree button
             ActivateButton();
             NextPlayerMessage();
-            //observer.OpenLoseScreen();
         }
+        else
+        {
+            yield return new WaitForSeconds(4);
+            observer.RemoveElement(this.gameObject);
+        }
+
         if (currentMessageNumber > 3)
             ScrollText();
 
