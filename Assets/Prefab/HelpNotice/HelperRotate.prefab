@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8429640244637067517}
   - component: {fileID: 9086562670959448059}
   - component: {fileID: 6052260805130671008}
+  - component: {fileID: 8956926614829434078}
   m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
@@ -75,6 +76,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8956926614829434078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509626653559722091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce992a6f461bf34aba940b18fe7e298, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angles: {x: -15, y: 15}
+  angleGrow: 150
+  waitTime: 0.5
 --- !u!1 &945860100444252235
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,6 +205,7 @@ GameObject:
   - component: {fileID: 3436459186814245013}
   - component: {fileID: 8469225999244130036}
   - component: {fileID: 1036101520141680126}
+  - component: {fileID: 5115652658716152592}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -270,6 +287,21 @@ MonoBehaviour:
     ruText: "\u041F\u041E\u0412\u0415\u0420\u041D\u0418"
     enText: Rotate something
   textField: {fileID: 5885082956497016742}
+--- !u!114 &5115652658716152592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4431631063348138215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5753ad4785b2bba4aaaef636426c497c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pulseObject: {fileID: 4431631063348138215}
+  pulseRange: {x: 0.975, y: 1.025}
+  growSpeed: 0.25
 --- !u!1 &7138436752760724903
 GameObject:
   m_ObjectHideFlags: 0

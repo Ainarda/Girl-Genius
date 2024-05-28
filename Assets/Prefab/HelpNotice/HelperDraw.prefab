@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 9012157798015116976}
   - component: {fileID: 1176935203075771877}
   - component: {fileID: 3419802511103387579}
+  - component: {fileID: 2291068631406700778}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -275,6 +276,21 @@ MonoBehaviour:
     ruText: "\u0421\u043E\u0442\u0440\u0438\u0442\u0435"
     enText: Draw something
   textField: {fileID: 2301855307774482176}
+--- !u!114 &2291068631406700778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8266057553854736185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5753ad4785b2bba4aaaef636426c497c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pulseObject: {fileID: 8266057553854736185}
+  pulseRange: {x: 0.975, y: 1.025}
+  growSpeed: 0.25
 --- !u!1 &8591651699163891574
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,6 +302,7 @@ GameObject:
   - component: {fileID: 4270168252104763865}
   - component: {fileID: 1127763462976440401}
   - component: {fileID: 6338730181662936706}
+  - component: {fileID: 4131918054995423602}
   m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
@@ -350,3 +367,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4131918054995423602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8591651699163891574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce992a6f461bf34aba940b18fe7e298, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angles: {x: -15, y: 15}
+  angleGrow: 150
+  waitTime: 0.5

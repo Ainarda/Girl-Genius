@@ -12,6 +12,7 @@ public class YdLoader : MonoBehaviour
         Debug.Log("Start load SDK");
         StartCoroutine(YandexGamesSdk.Initialize(LoadAdvert));
         Debug.Log("Step 2");
+        WebApplication.Initialize(StopGame);
     }
 
     public void LoadAdvert()
@@ -48,13 +49,13 @@ public class YdLoader : MonoBehaviour
     public void LoadAds(Action closeAction)
     {
         AudioListener.pause = true;
-        Advertisement.ShowInterstitialAd(onCloseCallback: () => { AudioListener.pause = false; closeAction.Invoke(); });
+        Advertisement.ShowInterstitialAd(onCloseCallback: closeAction);
     }
 
     public void LoadAdsWithReward(Action action, Action closeAction = null)
     {
         AudioListener.pause = true;
-        Advertisement.ShowVideoAd(onRewardedCallback: ()=> { AudioListener.pause = false ; action.Invoke(); }, onCloseCallback: closeAction);
+        Advertisement.ShowVideoAd(onRewardedCallback: action, onCloseCallback: closeAction);
     }
 
     public void Purchase(string id)
@@ -81,5 +82,14 @@ public class YdLoader : MonoBehaviour
         }
         Billing.ConsumeProduct(token);
         GetComponent<Observer>().SavePlayerData();
+    }
+
+
+
+    private void StopGame(bool isStopGame)
+    {
+        AudioListener.pause = isStopGame;
+        AudioListener.volume = isStopGame ? 0 : 1;
+        Time.timeScale = isStopGame ? 0 : 1;
     }
 }

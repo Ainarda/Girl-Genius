@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 2034726549468714402}
   - component: {fileID: 400370326231466050}
   - component: {fileID: 4291052620328664521}
+  - component: {fileID: 4315282116751685878}
   m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
@@ -177,6 +178,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4315282116751685878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700058713472677405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce992a6f461bf34aba940b18fe7e298, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angles: {x: -15, y: 15}
+  angleGrow: 150
+  waitTime: 0.5
 --- !u!1 &3082239001927150879
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,6 +285,7 @@ GameObject:
   - component: {fileID: 4866529824514435249}
   - component: {fileID: 3935565376153645703}
   - component: {fileID: 2589478755852126873}
+  - component: {fileID: 8933101835129068770}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -350,3 +367,18 @@ MonoBehaviour:
     ruText: "\u0412\u044B\u0441\u0442\u0440\u0435\u043B\u0438\u0442\u0435"
     enText: Tap to Shoot
   textField: {fileID: 9037619103623924933}
+--- !u!114 &8933101835129068770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8955880115949584495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5753ad4785b2bba4aaaef636426c497c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pulseObject: {fileID: 8955880115949584495}
+  pulseRange: {x: 0.975, y: 1.025}
+  growSpeed: 0.25
