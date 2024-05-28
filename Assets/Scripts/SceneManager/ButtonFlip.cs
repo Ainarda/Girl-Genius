@@ -39,11 +39,13 @@ public class ButtonFlip : MonoBehaviour
                 {
                     angle = angleGrow;
                     number++;
+                    transform.rotation = Quaternion.AngleAxis(angles.x+1, Vector3.forward);
                 }
                 else if(currentAngle >= angles.y)
                 {
                     angle = -angleGrow;
                     number++;
+                    transform.rotation = Quaternion.AngleAxis(angles.y-1, Vector3.forward);
                 }
                 RotateButton();
             }
