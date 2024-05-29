@@ -4169,7 +4169,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: a4134afe793062643ba0b563319a96ec, type: 3}
     m_FontSize: 30
     m_FontStyle: 1
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
@@ -40306,6 +40306,7 @@ GameObject:
   - component: {fileID: 1108356954}
   - component: {fileID: 1108356956}
   - component: {fileID: 1108356955}
+  - component: {fileID: 1108356957}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -40353,10 +40354,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a4134afe793062643ba0b563319a96ec, type: 3}
+    m_Font: {fileID: 12800000, guid: f72ec9f95adbf3a44ac7297cda2446b1, type: 3}
     m_FontSize: 13
     m_FontStyle: 1
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 7
@@ -40365,7 +40366,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: MANISON
+  m_Text: MANSION
 --- !u!222 &1108356956
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -40374,6 +40375,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108356953}
   m_CullTransparentMesh: 1
+--- !u!114 &1108356957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108356953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1629688e9167604449a6c374776bcec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text:
+    ruText: "\u041F\u041E\u041C\u0415\u0421\u0422\u042C\u0415"
+    enText: MANSION
+  textField: {fileID: 1108356955}
 --- !u!1 &1111038032
 GameObject:
   m_ObjectHideFlags: 0
@@ -43839,7 +43856,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: -13.1}
-  m_SizeDelta: {x: 60, y: 30}
+  m_SizeDelta: {x: 77.3, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1208995090
 MonoBehaviour:
@@ -43874,7 +43891,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: NO ADS
+  m_Text: "\u041E\u0422\u041A\u041B\u042E\u0427\u0418\u0422\u042C \u0420\u0415\u041A\u041B\u0410\u041C\u0423"
 --- !u!222 &1208995091
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -57126,6 +57143,7 @@ GameObject:
   - component: {fileID: 1605098375}
   - component: {fileID: 1605098377}
   - component: {fileID: 1605098376}
+  - component: {fileID: 1605098378}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -57149,8 +57167,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 11.320003, y: 2.505001}
-  m_SizeDelta: {x: -38.219997, y: -2.01}
+  m_AnchoredPosition: {x: 11.320003, y: 3.9}
+  m_SizeDelta: {x: -38.219997, y: -4.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1605098376
 MonoBehaviour:
@@ -57173,9 +57191,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a4134afe793062643ba0b563319a96ec, type: 3}
+    m_Font: {fileID: 12800000, guid: f72ec9f95adbf3a44ac7297cda2446b1, type: 3}
     m_FontSize: 16
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -57185,7 +57203,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SKIN
+  m_Text: "\u0421\u041A\u0418\u041D\u042B"
 --- !u!222 &1605098377
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -57194,6 +57212,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605098374}
   m_CullTransparentMesh: 1
+--- !u!114 &1605098378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605098374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1629688e9167604449a6c374776bcec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text:
+    ruText: "\u0421\u041A\u0418\u041D\u042B"
+    enText: SKIN
+  textField: {fileID: 1605098376}
 --- !u!1 &1606192257
 GameObject:
   m_ObjectHideFlags: 0
@@ -60878,6 +60912,7 @@ GameObject:
   - component: {fileID: 1717711772}
   - component: {fileID: 1717711774}
   - component: {fileID: 1717711773}
+  - component: {fileID: 1717711775}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -60901,8 +60936,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.3100014, y: 2.6449966}
-  m_SizeDelta: {x: -12.62, y: -5.2900066}
+  m_AnchoredPosition: {x: -4.094997, y: 2.6449966}
+  m_SizeDelta: {x: -31.430006, y: -5.2900066}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1717711773
 MonoBehaviour:
@@ -60925,10 +60960,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a4134afe793062643ba0b563319a96ec, type: 3}
+    m_Font: {fileID: 12800000, guid: f72ec9f95adbf3a44ac7297cda2446b1, type: 3}
     m_FontSize: 16
-    m_FontStyle: 0
-    m_BestFit: 0
+    m_FontStyle: 1
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 6
@@ -60946,6 +60981,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717711771}
   m_CullTransparentMesh: 1
+--- !u!114 &1717711775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717711771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1629688e9167604449a6c374776bcec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text:
+    ruText: "\u0410\u0420\u0415\u041D\u0414\u0410"
+    enText: RENTER
+  textField: {fileID: 1717711773}
 --- !u!1 &1719079369
 GameObject:
   m_ObjectHideFlags: 0
@@ -70113,7 +70164,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 3, y: 39.75}
-  m_SizeDelta: {x: 200, y: 80}
+  m_SizeDelta: {x: 380, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1952053501
 MonoBehaviour:
