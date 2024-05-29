@@ -435,13 +435,14 @@ GameObject:
   - component: {fileID: 6154238706269195599}
   - component: {fileID: 7754870237999730077}
   - component: {fileID: 7187260957533201935}
+  - component: {fileID: 8433103316300190483}
   m_Layer: 5
   m_Name: UnlockedSkinElement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6154238706269195599
 RectTransform:
   m_ObjectHideFlags: 0
@@ -503,6 +504,36 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8433103316300190483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881374672072265316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce87c05906c971b4e97662c1ab29bf81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dress:
+  - {fileID: 21300000, guid: 86f77777183fd7b4fbec75e68bb9fb8c, type: 3}
+  - {fileID: 21300000, guid: ccbbe31d7f93a1844bf3918c7574ab48, type: 3}
+  - {fileID: 21300000, guid: 477da27cd017ae745ac1b9fcb2733b24, type: 3}
+  - {fileID: 21300000, guid: 7dd28530bb0800a43991649561b295ad, type: 3}
+  - {fileID: 21300000, guid: e69f0ac38dcb06d439a2460ae1228999, type: 3}
+  - {fileID: 21300000, guid: bd36c8d9d1b7c2d428683f95410c0c0e, type: 3}
+  - {fileID: 21300000, guid: f2b9592d450fe20418fed3d9baab74d1, type: 3}
+  - {fileID: 21300000, guid: fb77b249a3e5643419b9fad0c1b723a6, type: 3}
+  - {fileID: 21300000, guid: ef2b11b01ebb7d54dbab12cd49bdaf0b, type: 3}
+  - {fileID: 21300000, guid: b6449a5d4d580dc44844a8d85dd6effa, type: 3}
+  - {fileID: 21300000, guid: fc1e51d58a8e52043b8f3e4ede51c5c1, type: 3}
+  - {fileID: 21300000, guid: 801a3874609358e45b566f0a22e081c5, type: 3}
+  - {fileID: 21300000, guid: 4c2ff5bbdc137e24a922ec121b999ea2, type: 3}
+  - {fileID: 21300000, guid: be865bf78d8c7784ea0621a176fab438, type: 3}
+  - {fileID: 21300000, guid: 8e4ba072b667b5046bce0cf22d29ed44, type: 3}
+  - {fileID: 21300000, guid: 18738684a9c19b14180f28b71439846d, type: 3}
+  dressImage: {fileID: 6706912515631179282}
 --- !u!1 &1944106874399359010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1935,6 +1966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bigButton: {fileID: 6041139634808600114}
   adsButton: {fileID: 0}
+  back: {fileID: 0}
 --- !u!1 &4598946985806565595
 GameObject:
   m_ObjectHideFlags: 0
@@ -3501,6 +3533,7 @@ GameObject:
   - component: {fileID: 1619670126999815298}
   - component: {fileID: 6392924978292137877}
   - component: {fileID: 4730388333746220354}
+  - component: {fileID: 2994088024442224167}
   m_Layer: 5
   m_Name: Dialog
   m_TagString: Untagged
@@ -3567,6 +3600,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2994088024442224167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8953479136536584941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1629688e9167604449a6c374776bcec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text:
+    ruText: "\u041C\u043D\u0435 \u043D\u0440\u0430\u0432\u0438\u0442\u0441\u044F
+      \u043D\u0430\u0440\u044F\u0434. \u041C\u043E\u0433\u0443 \u044F \u0435\u0433\u043E
+      \u043E\u0441\u0442\u0430\u0432\u0438\u0442\u044C?"
+    enText: I love this outfit! Can I keep it?
+  textField: {fileID: 2180199035990241255}
 --- !u!1 &9170154637265428041
 GameObject:
   m_ObjectHideFlags: 0

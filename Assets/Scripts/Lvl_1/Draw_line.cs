@@ -29,6 +29,12 @@ public class Draw_line : MonoBehaviour
     [SerializeField]
     private bool canDropIt = false;
 
+    [SerializeField]
+    private bool canStrictHeight = false;
+
+    [SerializeField]
+    private float strictHeight;
+
     private bool canDraw = true;
     // Start is called before the first frame update
     void Start()
@@ -98,6 +104,9 @@ public class Draw_line : MonoBehaviour
 
     private void UpdateLine(Vector2 newFingerPos)
     {
+        if(canStrictHeight && newFingerPos.y > strictHeight)
+            newFingerPos.y = strictHeight;
+
         fingerPosition.Add(newFingerPos);
         lineRenderer.positionCount++;
         lineRenderer.SetPosition(lineRenderer.positionCount-1, newFingerPos);

@@ -202,6 +202,7 @@ public class Observer : MonoBehaviour
         PlayerPrefs.SetInt("lvlAnimal", PlayerData.lvlAnimal);
         PlayerPrefs.SetInt("currentRenter", PlayerData.currentRenter);
         PlayerPrefs.SetInt("firstInit", PlayerData.firstInit? 1 : 0);
+        Debug.Log("First Init save " + PlayerData.firstInit);
         PlayerPrefs.SetInt("lvlAds", PlayerData.lvlAds ? 1 : 0);
         SaveFloatArray("dress", PlayerData.dress);
         SaveFloatArray("unlockingRoom", PlayerData.unlockingRoom);
@@ -260,6 +261,7 @@ public class Observer : MonoBehaviour
         else
         {
             PlayerData.firstInit = false;
+            PlayerData.CurrentLvl = 1;
         }
     }
 

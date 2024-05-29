@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ShopButton : MonoBehaviour
@@ -9,6 +10,8 @@ public class ShopButton : MonoBehaviour
     private Button bigButton;
     [SerializeField]
     private Button adsButton;
+    [SerializeField]
+    private Button back;
 
     private GameObject observer;
     // Start is called before the first frame update
@@ -17,6 +20,7 @@ public class ShopButton : MonoBehaviour
         observer = GameObject.FindGameObjectWithTag("Observer");
         bigButton.onClick.AddListener(BigPurchase);
         adsButton.onClick.AddListener(AdsPurchase);
+        back.onClick.AddListener(GoToBack);
     }
     void Start()
     {
@@ -37,6 +41,11 @@ public class ShopButton : MonoBehaviour
     private void AdsPurchase()
     {
         observer.GetComponent<YdLoader>().Purchase(PurchaseData.id[0]);
+    }
+
+    private void GoToBack()
+    {
+        SceneManager.LoadScene("Maison");
     }
 
 
