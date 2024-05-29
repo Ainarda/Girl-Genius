@@ -45,6 +45,8 @@ public class PlayerData : MonoBehaviour
 
     public static string localText = "ru";//TMP next load local text "ru" "eng"
 
+    public static bool canSelectRenter = false;
+
     //TODO add win UI and load dressUnlocker after complete all dress unlocking stages
     public static void LoadNextLevel()
     {
@@ -81,6 +83,7 @@ public class PlayerData : MonoBehaviour
         {
             //TODO may be need add bool type to open this scrin after load next level?
             openRenterCanvas = true;
+            canSelectRenter = true;
             currentObserver.OpenRentScreen();
             lvlRent += 10;
         }
@@ -102,7 +105,8 @@ public class PlayerData : MonoBehaviour
 
     public static void ReloadScene()
     {
-        SceneManager.LoadScene("Level_" + CurrentLvl);
+        string sceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(sceneName);
     }
 
     public static void SpendCoin(int cost, int roomId,int enviId, DoAction action)
@@ -217,5 +221,19 @@ public class PlayerData : MonoBehaviour
         {
             unlockingRoom[i] = true;
         }
+    }
+
+    public static int GetNextUnlockDressId()
+    {
+        int retId = -1;
+        for (int i = 0; i < dress.Length; i++)
+        {
+            if (!dress[i])
+            {
+                retId = i;
+                break;
+            }
+        }
+        return retId;
     }
 }
