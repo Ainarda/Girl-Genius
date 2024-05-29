@@ -162,7 +162,7 @@ public class PlayerData : MonoBehaviour
         new bool[] { false, false } };
     public static void OpenEnvironmentIntoRooms(int roomNumber, int environmentNumber)
     {
-        //todo вместо environmentNumber может name;
+        //todo РІРјРµСЃС‚Рѕ environmentNumber РјРѕР¶РµС‚ name;
         environmentIntoRooms[roomNumber][environmentNumber] = true;
     }
 
