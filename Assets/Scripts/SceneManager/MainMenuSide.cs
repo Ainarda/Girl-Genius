@@ -41,6 +41,10 @@ public class MainMenuSide : MonoBehaviour
     private GameObject renterCanvas;
     private GameObject mainMenuUI;
     bool canMove = true;
+
+    [SerializeField]
+    private bool hideMineMenu = false;
+
     private void Awake()
     {
         vectorMove = vectorMoveBase;
@@ -69,6 +73,8 @@ public class MainMenuSide : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (hideMineMenu)
+            return;
         if (mainMenuUI.active)
         {
             x = Camera.main.transform.position.x;

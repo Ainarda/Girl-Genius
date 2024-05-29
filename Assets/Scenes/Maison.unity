@@ -900,7 +900,6 @@ GameObject:
   m_Component:
   - component: {fileID: 25125366}
   - component: {fileID: 25125368}
-  - component: {fileID: 25125367}
   m_Layer: 0
   m_Name: GrassRoad
   m_TagString: Untagged
@@ -923,20 +922,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1122335769}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &25125367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 25125365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 081e2cd386a128341ae2142e40ed6222, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  locker: {fileID: 0}
-  roomNumber: 6
 --- !u!212 &25125368
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3939,6 +3924,15 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: text.enText
+      value: COMPLETE LEVEL 10 TO UNLOCK
+      objectReference: {fileID: 0}
+    - target: {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: text.ruText
+      value: "\u041F\u0420\u041E\u0419\u0414\u0418\u0422\u0415 \u0423\u0420\u041E\u0412\u0415\u041D\u042C
+        10 \u0427\u0422\u041E\u0411\u042B \u0420\u0410\u0417\u0411\u041B\u041E\u041A\u0418\u0420\u041E\u0412\u0410\u0422\u042C"
+      objectReference: {fileID: 0}
     - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4022,6 +4016,10 @@ PrefabInstance:
     - target: {fileID: 7086447457579743024, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
       propertyPath: m_Text
       value: COMPLETE LEVEL 10 TO UNLOCK
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815520720305519908, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5088,6 +5086,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: textField
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5180,7 +5182,12 @@ PrefabInstance:
       propertyPath: m_Text
       value: COMPLETE LEVEL 10 TO UNLOCK
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8815520720305519908, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
     m_RemovedGameObjects:
     - {fileID: 3986197081967681936, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
     - {fileID: 1988355778278290532, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
@@ -9083,6 +9090,7 @@ MonoBehaviour:
   shop: {fileID: 717846217}
   manisonUI: {fileID: 1074313901}
   renterCanvas: {fileID: 909482593}
+  hideMineMenu: 0
 --- !u!1 &232621765
 GameObject:
   m_ObjectHideFlags: 0
@@ -26908,6 +26916,15 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: text.enText
+      value: COMPLETE LEVEL 86 TO UNLOCK
+      objectReference: {fileID: 0}
+    - target: {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: text.ruText
+      value: "\u041F\u0420\u041E\u0419\u0414\u0418\u0422\u0415 \u0423\u0420\u041E\u0412\u0415\u041D\u042C
+        86 \u0427\u0422\u041E\u0411\u042B \u0420\u0410\u0417\u0411\u041B\u041E\u041A\u0418\u0420\u041E\u0412\u0410\u0422\u042C"
+      objectReference: {fileID: 0}
     - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -26999,6 +27016,10 @@ PrefabInstance:
     - target: {fileID: 7086447457579743024, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
       propertyPath: m_Text
       value: COMPLETE LEVEL 86 TO UNLOCK
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815520720305519908, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28821,6 +28842,15 @@ PrefabInstance:
     - target: {fileID: 3068861837460694273, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
       propertyPath: m_Name
       value: ClosedRoomCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: text.enText
+      value: COMPLETE LEVEL 96 TO UNLOCK
+      objectReference: {fileID: 0}
+    - target: {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: text.ruText
+      value: "\u041F\u0420\u041E\u0419\u0414\u0418\u0422\u0415 \u0423\u0420\u041E\u0412\u0415\u041D\u042C
+        96 \u0427\u0422\u041E\u0411\u042B \u0420\u0410\u0417\u0411\u041B\u041E\u041A\u0418\u0420\u041E\u0412\u0410\u0422\u042C"
       objectReference: {fileID: 0}
     - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
       propertyPath: m_Pivot.x
@@ -32185,6 +32215,15 @@ PrefabInstance:
     - target: {fileID: 3068861837460694273, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
       propertyPath: m_Name
       value: ClosedRoomCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: text.enText
+      value: COMPLETE LEVEL 77 TO UNLOCK
+      objectReference: {fileID: 0}
+    - target: {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: text.ruText
+      value: "\u041F\u0420\u041E\u0419\u0414\u0418\u0422\u0415 \u0423\u0420\u041E\u0412\u0415\u041D\u042C
+        77 \u0427\u0422\u041E\u0411\u042B \u0420\u0410\u0417\u0411\u041B\u041E\u041A\u0418\u0420\u041E\u0412\u0410\u0422\u042C"
       objectReference: {fileID: 0}
     - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
       propertyPath: m_Pivot.x
@@ -39299,6 +39338,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1070658506}
+  - component: {fileID: 1070658507}
   m_Layer: 0
   m_Name: Room3
   m_TagString: Untagged
@@ -39319,6 +39359,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1402907195}
   - {fileID: 1373759937}
   - {fileID: 1640823770}
   - {fileID: 1390285730}
@@ -39339,6 +39380,20 @@ Transform:
   - {fileID: 1275640233}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1070658507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070658505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 081e2cd386a128341ae2142e40ed6222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locker: {fileID: 1402907194}
+  roomNumber: 3
 --- !u!1 &1074313901
 GameObject:
   m_ObjectHideFlags: 0
@@ -40908,7 +40963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locker: {fileID: 1572807908}
-  roomNumber: 3
+  roomNumber: 5
 --- !u!1 &1123969833
 GameObject:
   m_ObjectHideFlags: 0
@@ -46954,6 +47009,15 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: text.enText
+      value: COMPLETE LEVEL 46 TO UNLOCK
+      objectReference: {fileID: 0}
+    - target: {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: text.ruText
+      value: "\u041F\u0420\u041E\u0419\u0414\u0418\u0422\u0415 \u0423\u0420\u041E\u0412\u0415\u041D\u042C
+        46 \u0427\u0422\u041E\u0411\u042B \u0420\u0410\u0417\u0411\u041B\u041E\u041A\u0418\u0420\u041E\u0412\u0410\u0422\u042C"
+      objectReference: {fileID: 0}
     - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -47037,6 +47101,10 @@ PrefabInstance:
     - target: {fileID: 7086447457579743024, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
       propertyPath: m_Text
       value: COMPLETE LEVEL 46 TO UNLOCK
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815520720305519908, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -50717,6 +50785,126 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400861596}
   m_CullTransparentMesh: 1
+--- !u!1001 &1402907193
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1070658506}
+    m_Modifications:
+    - target: {fileID: 3068861837460694273, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_Name
+      value: ClosedRoomCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: text.enText
+      value: COMPLETE LEVEL 8 TO UNLOCK
+      objectReference: {fileID: 0}
+    - target: {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: text.ruText
+      value: "\u041F\u0420\u041E\u0419\u0414\u0418\u0422\u0415 \u0423\u0420\u041E\u0412\u0415\u041D\u042C
+        8 \u0427\u0422\u041E\u0411\u042B \u0420\u0410\u0417\u0411\u041B\u041E\u041A\u0418\u0420\u041E\u0412\u0410\u0422\u042C"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 9.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815520720305519908, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+--- !u!1 &1402907194 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3068861837460694273, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+  m_PrefabInstance: {fileID: 1402907193}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1402907195 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+  m_PrefabInstance: {fileID: 1402907193}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1404878349
 GameObject:
   m_ObjectHideFlags: 0
@@ -51283,6 +51471,15 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.59
       objectReference: {fileID: 0}
+    - target: {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: text.enText
+      value: COMPLETE LEVEL 26 TO UNLOCK
+      objectReference: {fileID: 0}
+    - target: {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: text.ruText
+      value: "\u041F\u0420\u041E\u0419\u0414\u0418\u0422\u0415 \u0423\u0420\u041E\u0412\u0415\u041D\u042C
+        26 \u0427\u0422\u041E\u0411\u042B \u0420\u0410\u0417\u0411\u041B\u041E\u041A\u0418\u0420\u041E\u0412\u0410\u0422\u042C"
+      objectReference: {fileID: 0}
     - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -51378,6 +51575,10 @@ PrefabInstance:
     - target: {fileID: 8056319424657724480, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 1.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815520720305519908, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -55513,6 +55714,15 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: text.enText
+      value: COMPLETE LEVEL 16 TO UNLOCK
+      objectReference: {fileID: 0}
+    - target: {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: text.ruText
+      value: "\u041F\u0420\u041E\u0419\u0414\u0418\u0422\u0415 \u0423\u0420\u041E\u0412\u0415\u041D\u042C
+        16 \u0427\u0422\u041E\u0411\u042B \u0420\u0410\u0417\u0411\u041B\u041E\u041A\u0418\u0420\u041E\u0412\u0410\u0422\u042C"
+      objectReference: {fileID: 0}
     - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -55604,6 +55814,10 @@ PrefabInstance:
     - target: {fileID: 7086447457579743024, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
       propertyPath: m_Text
       value: COMPLETE LEVEL 16 TO UNLOCK
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815520720305519908, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -59083,6 +59297,15 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: text.enText
+      value: COMPLETE LEVEL 6 TO UNLOCK
+      objectReference: {fileID: 0}
+    - target: {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: text.ruText
+      value: "\u041F\u0420\u041E\u0419\u0414\u0418\u0422\u0415 \u0423\u0420\u041E\u0412\u0415\u041D\u042C
+        6 \u0427\u0422\u041E\u0411\u042B \u0420\u0410\u0417\u0411\u041B\u041E\u041A\u0418\u0420\u041E\u0412\u0410\u0422\u042C"
+      objectReference: {fileID: 0}
     - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -59174,6 +59397,10 @@ PrefabInstance:
     - target: {fileID: 7086447457579743024, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
       propertyPath: m_Text
       value: COMPLETE LEVEL 6 TO UNLOCK
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815520720305519908, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -68561,6 +68788,15 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: text.enText
+      value: COMPLETE LEVEL 56 TO UNLOCK
+      objectReference: {fileID: 0}
+    - target: {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: text.ruText
+      value: "\u041F\u0420\u041E\u0419\u0414\u0418\u0422\u0415 \u0423\u0420\u041E\u0412\u0415\u041D\u042C
+        56 \u0427\u0422\u041E\u0411\u042B \u0420\u0410\u0417\u0411\u041B\u041E\u041A\u0418\u0420\u041E\u0412\u0410\u0422\u042C"
+      objectReference: {fileID: 0}
     - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -71858,7 +72094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locker: {fileID: 106922997}
-  roomNumber: 3
+  roomNumber: 1
 --- !u!1 &1999523987
 GameObject:
   m_ObjectHideFlags: 0
@@ -73081,6 +73317,15 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: text.enText
+      value: COMPLETE LEVEL 68 TO UNLOCK
+      objectReference: {fileID: 0}
+    - target: {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: text.ruText
+      value: "\u041F\u0420\u041E\u0419\u0414\u0418\u0422\u0415 \u0423\u0420\u041E\u0412\u0415\u041D\u042C
+        68 \u0427\u0422\u041E\u0411\u042B \u0420\u0410\u0417\u0411\u041B\u041E\u041A\u0418\u0420\u041E\u0412\u0410\u0422\u042C"
+      objectReference: {fileID: 0}
     - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -73164,6 +73409,10 @@ PrefabInstance:
     - target: {fileID: 7086447457579743024, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
       propertyPath: m_Text
       value: COMPLETE LEVEL 68 TO UNLOCK
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815520720305519908, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -76768,6 +77017,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: textField
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6555513511329093187, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -76856,7 +77109,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8815520720305519908, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6358397564105026211, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
     m_RemovedGameObjects:
     - {fileID: 1988355778278290532, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}
     - {fileID: 3986197081967681936, guid: 96e366a05b2c32e4ea6f9d2f4123a0d6, type: 3}

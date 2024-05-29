@@ -16,6 +16,7 @@ public class RoomReward : MonoBehaviour
     void Awake()
     {
         FindRoomEnvironment();
+        Debug.LogError(roomId+" " + environmentId);
         roomImage.sprite = RoomStorage.roomData[roomId].environmentSprites[environmentId];
         cost.text = RoomStorage.roomData[roomId].cost[environmentId].ToString();
     }

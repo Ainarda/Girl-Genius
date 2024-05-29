@@ -51,7 +51,7 @@ public class WinUI : MonoBehaviour
         float value = PlayerData.dressProgress / 4f;
         greenDress.fillAmount = value;
         
-        dressProgressText.text = "NEW SKIN: "+ value +"%";
+        dressProgressText.text = "NEW SKIN: "+ ((int)(value*100)) +"%";
         Debug.LogError("Dress progress "+value);
         if (PlayerData.dressProgress == 4)
             OpenDressScreen();

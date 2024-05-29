@@ -10,7 +10,7 @@ public class PlayerData : MonoBehaviour
     public static bool firstLoad = true;
     public static string PlayerName;
     public static int PlayerCoin = 0;
-    public static int CurrentLvl = 1;
+    public static int CurrentLvl = 6;
     public static bool[] dress = new bool[] { true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false };
     public static List<int> unlockId;
     public static int dressProgress = 0;
@@ -39,7 +39,7 @@ public class PlayerData : MonoBehaviour
     private static DressSlot currentDress;
     public static int currentDressId = 2;
 
-    public static bool firstInit;
+    public static bool firstInit = true;
     
     public static bool isFirstRullet = true;
 
@@ -47,11 +47,16 @@ public class PlayerData : MonoBehaviour
 
     public static bool canSelectRenter = false;
 
+    public static bool mansionScene = true;
+
     //TODO add win UI and load dressUnlocker after complete all dress unlocking stages
     public static void LoadNextLevel()
     {
-        if(openRenterCanvas)
+        currentObserver?.SavePlayerData();
+        if (openRenterCanvas)
             SceneManager.LoadScene("Maison");
+        else if (CurrentLvl == 7 && mansionScene)
+            SceneManager.LoadScene("MaisonAction");
         else
             SceneManager.LoadScene("Level_" + CurrentLvl);
     }

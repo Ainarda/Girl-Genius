@@ -34,12 +34,13 @@ public class YdLoader : MonoBehaviour
         {
             Debug.Log("Can't load SDK!");
         }
+        Debug.Log("End load lang");
         GetComponent<Loader>().ContinueLoad();
     }
 
     public void StartGameReady()
     {
-        if(PlayerData.firstLoad)
+        if(PlayerData.firstInit)
         { 
             PlayerData.firstLoad = false;
             YandexGamesSdk.GameReady();

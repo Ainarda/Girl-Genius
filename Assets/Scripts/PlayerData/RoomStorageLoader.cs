@@ -8,7 +8,7 @@ public class RoomStorageLoader : MonoBehaviour
     private List<Room> rooms;
     void Awake()
     {
-        RoomStorage.roomData = new List<Room>();
+        RoomStorage.roomData = rooms;
     }
 
     // Update is called once per frame

@@ -9,6 +9,11 @@ public class TextMessageUI : MonoBehaviour
     [SerializeField]
     private GameObject otherMessage;
 
+    [SerializeField]
+    private Transform firstMessage;
+    [SerializeField]
+    private Transform secondMessage;
+
     private GameObject observer;
 
     private void Awake()

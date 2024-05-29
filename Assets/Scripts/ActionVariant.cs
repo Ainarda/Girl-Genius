@@ -288,20 +288,25 @@ public class ActionVariant : MonoBehaviour
         }
         
         Text textCloud;
+        RectTransform cloudImage;
+        float cloudTextSize = 80.25f;
         if(!currentTalkText.side)
         {
             textCloud = playerField;
             playerMessage.SetActive(true);
+            cloudImage = playerMessage.GetComponent<RectTransform>();
         }
         else
         {
             textCloud = otherField;
             otherMessage.SetActive(true);
+            cloudImage = otherMessage.GetComponent<RectTransform>();
         }
-        
+
+        #region text size
         // Getting best font size
         textCloud.text = text;
-        textCloud.resizeTextForBestFit = true;
+        /*textCloud.resizeTextForBestFit = true;
         Color color = textCloud.color;
         textCloud.color = new Color(0, 0, 0, 0);
 
@@ -316,8 +321,11 @@ public class ActionVariant : MonoBehaviour
         else if (fontSize is 15 or 16 or 17)
             fontSize = 14;
 
-        textCloud.fontSize = fontSize;
-        textCloud.resizeTextForBestFit = false;
+       // textCloud.fontSize = fontSize;
+       // textCloud.resizeTextForBestFit = false;
+        */
+        #endregion
+
 
         textCloud.text = "";
 
@@ -325,6 +333,11 @@ public class ActionVariant : MonoBehaviour
         {
             yield return new WaitForSeconds(0.075f);
             textCloud.text += c;
+            if(textCloud.GetComponent<RectTransform>().rect.height > cloudTextSize)
+            {
+                cloudTextSize = textCloud.GetComponent<RectTransform>().rect.height;
+                cloudImage.sizeDelta = new Vector2(cloudImage.sizeDelta.x, cloudImage.sizeDelta.y+ 40);
+            }
         }
         yield return new WaitForSeconds(2.5f);
         otherMessage.SetActive(false);
