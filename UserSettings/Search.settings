@@ -11,7 +11,7 @@ scopes = {
 	"last_search.110DEAF1" = "t:Observer"
 	"OpenInspectorPreview.110DEAF1" = "0"
 	"currentGroup.110DEAF1" = "asset"
-	"last_search.3BE40471" = "t:Observer"
+	"last_search.3BE40471" = "t:Canvas -t:CanvasRenderer"
 	"OpenInspectorPreview.3BE40471" = "0"
 	"currentGroup.3BE40471" = "scene"
 	"last_search.E8DA15E5" = "t:Observer"
@@ -68,6 +68,16 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"t:Canvas -t:CanvasRenderer"
+	"t:Canvas -t:CanvasRenderer uiscalemode=<$enum:ScaleWithScreenSize,ScaleMode$>"
+	"t:Canvas -t:CanvasRenderer uiscalemode=<$enum:ConstantPixelSize,ScaleMode$>"
+	"t:Canvas -t:CanvasRenderer -Enum"
+	"t:Canvas -t:CanvasRenderer Enum:World Space"
+	"t:Canvas -t:CanvasRenderer rendermode=<$enum:Default,RenderMode$>"
+	"t:Canvas -t:CanvasRenderer -rendermode=<$enum:WorldSpace,RenderMode$>"
+	"t:Canvas -rendermode=<$enum:WorldSpace,RenderMode$> -t:CanvasRenderer"
+	"t:Canvas -t:CanvasRenderer -rendermode=<$enum:ScreenSpaceOverlay,RenderMode$>"
+	"t:Canvas -t:CanvasRenderer rendermode=<$enum:WorldSpace,RenderMode$>"
 	"t:Canvas"
 	"t"
 	""
@@ -77,17 +87,6 @@ recentSearches = [
 	"h: guid=UnityEditor.ObjectWrapperJSON:{\"guid\":\"f72ec9f95adbf3a44ac7297cda2446b1\",\""
 	"#m_FontData.m_Font=<$object:none,Font$>"
 	"t:Font"
-	"h"
-	"h: guid"
-	"h: guid=f72ec9f95adbf3a44ac7297cda2446b1"
-	"h: guid=UnityEditor.ObjectWrapperJSON:{\"guid\":\"f72ec9f95adbf3a44ac7297cda2446b1\",\"localI"
-	"h: guid=UnityEditor.ObjectWrapperJSON:{\"guid\":\"f72ec9f95adbf3a44ac7297cda2446b1\",\"localId\":12800"
-	"h: guid=UnityEditor.ObjectWrapperJSON:{\"guid\":\"f72ec9f95adbf3a44ac7297cda2446b1\",\"localId\":12800000,\"ty"
-	"h: guid=UnityEditor.ObjectWrapperJSON:{\"guid\":\"f72ec9f95adbf3a44ac7297cda2446b1\",\"localId\":12800000,\"type\":3,\"i"
-	"h: guid=UnityEditor.ObjectWrapperJSON:{\"guid\":\"f72ec9f95adbf3a44ac7297cda2446b1\",\"localId\":12800000,\"type\":3,\"instanceI"
-	"h: guid=UnityEditor.ObjectWrapperJSON:{\"guid\":\"f72ec9f95adbf3a44ac7297cda2446b1\",\"localId\":12800000,\"type\":3,\"instanceID\":30298}"
-	"h: guid-UnityEditor.ObjectWrapperJSON:{\"guid\":\"f72ec9f95adbf3a44ac7297cda2446b1\",\"localId\":12800000,\"type\":3,\"instanceID\":30298}"
-	"h: п"
 ]
 searchItemFavorites = [
 ]

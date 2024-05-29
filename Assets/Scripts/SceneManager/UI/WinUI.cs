@@ -18,7 +18,7 @@ public class WinUI : MonoBehaviour
     [SerializeField]
     private Button skipDressButton;
     [SerializeField]
-    private RectTransform greenDress;
+    private Image greenDress;
     [SerializeField]
     private Text dressProgressText;
     [SerializeField]
@@ -48,8 +48,8 @@ public class WinUI : MonoBehaviour
 
     public void SetDressScale()
     {
-        int value = (int)(100 * ((float)PlayerData.dressProgress / 4));
-        greenDress.offsetMax = new Vector2(greenDress.offsetMax.x,-200+ 50 *  PlayerData.dressProgress);
+        float value = PlayerData.dressProgress / 4f;
+        greenDress.fillAmount = value;
         
         dressProgressText.text = "NEW SKIN: "+ value +"%";
         Debug.LogError("Dress progress "+value);
