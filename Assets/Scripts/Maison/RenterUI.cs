@@ -22,8 +22,11 @@ public class RenterUI : MonoBehaviour
     private RenterPage firstRenterPage;
     [SerializeField]
     private RenterPage secondRenterPage;
+
+    private GameObject observer;
     public void Awake()
     {
+        observer = GameObject.FindGameObjectWithTag("Observer");
         noThanksButton.onClick.AddListener(CloseRenterWindow);
         if (PlayerData.openRenterCanvas)
         {
@@ -41,8 +44,15 @@ public class RenterUI : MonoBehaviour
 
     public void InitiateRenters()
     {
-        InitRenterPage(firstRenterPage, renters[PlayerData.currentRenter], PlayerData.currentRenter);
-        InitRenterPage(secondRenterPage, renters[PlayerData.currentRenter + 1], PlayerData.currentRenter + 1);
+        if (PlayerData.canSelectRenter)
+        {
+            InitRenterPage(firstRenterPage, renters[PlayerData.currentRenter], PlayerData.currentRenter);
+            InitRenterPage(secondRenterPage, renters[PlayerData.currentRenter + 1], PlayerData.currentRenter + 1);
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     private void InitRenterPage(RenterPage page, Renter renter, int id)
@@ -119,12 +129,14 @@ public class RenterUI : MonoBehaviour
 
     private void SelectRenterWithAds(int id)
     {
-        //ADS
+        //
+        observer.GetComponent<YdLoader>().LoadAdsWithReward(() => { Debug.Log("VideoReward"); });
         SelectRenter(id);
     }
 
     private void SelectRenter(int id)
     {
+        PlayerData.canSelectRenter = false;
         renters[id].RenterGameObject.SetActive(true);
         renters[id].RenterGameObject.GetComponent<EntityAI>().SelectNextAction();
         PlayerData.renterState[id] = true;

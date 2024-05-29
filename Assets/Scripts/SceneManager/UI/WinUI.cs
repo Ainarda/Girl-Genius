@@ -107,6 +107,7 @@ public class WinUI : MonoBehaviour
 
     public void OpenDressScreen()
     {
+        PlayerData.dressProgress = 0;
         unlockDressScreen.SetActive(true);
         
     }

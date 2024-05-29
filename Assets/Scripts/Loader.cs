@@ -50,7 +50,7 @@ public class Loader : MonoBehaviour
 
     public void ContinueLoad()
     {
-        if (PlayerData.firstInit)
+        if (!PlayerData.firstInit)
             SceneManager.LoadScene("Maison");
         else
             SceneManager.LoadScene("Level_1");
