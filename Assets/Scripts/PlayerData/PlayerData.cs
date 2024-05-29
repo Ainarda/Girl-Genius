@@ -222,4 +222,18 @@ public class PlayerData : MonoBehaviour
             unlockingRoom[i] = true;
         }
     }
+
+    public static int GetNextUnlockDressId()
+    {
+        int retId = -1;
+        for (int i = 0; i < dress.Length; i++)
+        {
+            if (!dress[i])
+            {
+                retId = i;
+                break;
+            }
+        }
+        return retId;
+    }
 }

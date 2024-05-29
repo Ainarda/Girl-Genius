@@ -11,6 +11,9 @@ public class Maison : MonoBehaviour
     [SerializeField]
     private List<Vector2> roomObjectPosition;
 
+    [SerializeField]
+    private Vector2 dragRange;
+
     private List<bool> roomLockState;
 
     private Vector3 _origin;
@@ -37,6 +40,8 @@ public class Maison : MonoBehaviour
         _resetCamera = Camera.main.transform.position;
     }
 
+    private float dragX = 0;
+
     //Mouse movment
     private void LateUpdate()
     {
@@ -53,10 +58,11 @@ public class Maison : MonoBehaviour
         {
             drag = false;
         }
-
-        if(drag)
+        dragX = _origin.x - _difference.x;
+        if (drag)
         {
-            Camera.main.transform.position = new Vector3(_origin.x - _difference.x, -0.6f, _origin.z);
+            if(!(dragX< dragRange.x || dragX> dragRange.y))
+                Camera.main.transform.position = new Vector3(_origin.x - _difference.x, -0.6f, _origin.z);
         }
 
     }
