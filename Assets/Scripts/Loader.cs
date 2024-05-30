@@ -56,7 +56,7 @@ public class Loader : MonoBehaviour
             SceneManager.LoadScene("Maison");
         else
         {
-            PlayerData.firstInit = false;
+            PlayerData.firstInit = true;
             SceneManager.LoadScene("Level_1");
         }
     }

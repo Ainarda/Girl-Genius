@@ -11,7 +11,7 @@ public class ShopButton : MonoBehaviour
     [SerializeField]
     private Button adsButton;
     [SerializeField]
-    private Button back;
+    private Button backButton;
 
     private GameObject observer;
     // Start is called before the first frame update
@@ -20,11 +20,11 @@ public class ShopButton : MonoBehaviour
         observer = GameObject.FindGameObjectWithTag("Observer");
         bigButton.onClick.AddListener(BigPurchase);
         adsButton.onClick.AddListener(AdsPurchase);
-        back.onClick.AddListener(GoToBack);
+        
     }
     void Start()
     {
-        
+        backButton.onClick.AddListener(GoToBack);
     }
 
     // Update is called once per frame
@@ -43,8 +43,9 @@ public class ShopButton : MonoBehaviour
         observer.GetComponent<YdLoader>().Purchase(PurchaseData.id[0]);
     }
 
-    private void GoToBack()
+    public void GoToBack()
     {
+        Debug.Log("Go Back");
         SceneManager.LoadScene("Maison");
     }
 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -28,18 +29,36 @@ public class RenterUI : MonoBehaviour
     {
         observer = GameObject.FindGameObjectWithTag("Observer");
         noThanksButton.onClick.AddListener(CloseRenterWindow);
+        Debug.LogError(PlayerData.openRenterCanvas);
         if (PlayerData.openRenterCanvas)
         {
-            gameObject.SetActive(true);
-            baseCanvas.SetActive(false);
-            InitiateRenters();
-            PlayerData.openRenterCanvas = false;
-            PlayerData.currentRenter += 2;
+            LoadRenterCanvas();
         }
         else
         {
             CloseRenterWindow();
         }
+    }
+
+
+    private void LoadRenterCanvas()
+    {
+        gameObject.SetActive(true);
+        baseCanvas.SetActive(false);
+        InitiateRenters();
+        PlayerData.openRenterCanvas = false;
+        PlayerData.currentRenter += 2;
+    }
+    private void OnEnable()
+    {
+        Debug.Log("OnEnable");
+       if (!PlayerData.openRenterCanvas)
+        {
+            Debug.Log("Close renter Window");
+            CloseRenterWindow();
+        }
+        else
+            LoadRenterCanvas();
     }
 
     public void InitiateRenters()
@@ -51,12 +70,15 @@ public class RenterUI : MonoBehaviour
         }
         else
         {
-            gameObject.SetActive(false);
+            Debug.Log("+-+");
+            CloseRenterWindow();
+            //gameObject.SetActive(false);
         }
     }
 
     private void InitRenterPage(RenterPage page, Renter renter, int id)
     {
+        Debug.Log("Init Renter Page");
         page.AdsButton.GetComponent<Button>().onClick.AddListener(delegate { SelectRenterWithAds(id); });
         page.FreeButton.GetComponent<Button>().onClick.AddListener(delegate { SelectRenterWithAds(id); });
         if (renter.WithAds)
@@ -122,8 +144,10 @@ public class RenterUI : MonoBehaviour
 
     private void CloseRenterWindow()
     {
+        Debug.Log("CloseRenterWindow");
         noThanksButton.gameObject.SetActive(false);
         gameObject.SetActive(false);
+        Debug.Log(gameObject.active);
         baseCanvas.SetActive(true);
     }
 
