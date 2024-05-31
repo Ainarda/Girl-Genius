@@ -1,19 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class MainsonActionScene : MonoBehaviour
+public class RentersTalk : MonoBehaviour
 {
     [SerializeField]
-    private bool loadNextLevel = true;
+    private GameObject firstRenter;
+    [SerializeField]
+    private GameObject secondRenter;
+
     private void Awake()
     {
-        PlayerData.mansionScene = false;
-        if (loadNextLevel)
-            PlayerData.LoadNextLevel();
+        //selected renter
+        bool selectedRenter = false;
+        if(selectedRenter)
+            firstRenter.SetActive(false);
         else
-            SceneManager.LoadScene("Maison");
+            secondRenter.SetActive(false);
     }
     // Start is called before the first frame update
     void Start()
