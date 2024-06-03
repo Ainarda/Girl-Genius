@@ -562,7 +562,7 @@ RectTransform:
   m_GameObject: {fileID: 1944106874399359010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 729624527621473830}
@@ -570,7 +570,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 26}
+  m_AnchoredPosition: {x: 0, y: 22.93913}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &723057566842890613
@@ -1696,6 +1696,7 @@ GameObject:
   - component: {fileID: 1900992258152954449}
   - component: {fileID: 4361186074320695749}
   - component: {fileID: 8405049047601739142}
+  - component: {fileID: 3509577618624604869}
   m_Layer: 5
   m_Name: VideoRewardButton
   m_TagString: Untagged
@@ -1823,6 +1824,22 @@ MonoBehaviour:
   angles: {x: -15, y: 15}
   angleGrow: 65
   waitTime: 1.5
+--- !u!114 &3509577618624604869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3744727526702367136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1629688e9167604449a6c374776bcec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text:
+    ruText: "\u041F\u041E\u041B\u0423\u0427\u0418\u0422\u042C"
+    enText: CLAIM
+  textField: {fileID: 1500991831148463425}
 --- !u!1 &3945912773674710249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1966,7 +1983,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bigButton: {fileID: 6041139634808600114}
   adsButton: {fileID: 0}
-  back: {fileID: 0}
+  backButton: {fileID: 0}
 --- !u!1 &4598946985806565595
 GameObject:
   m_ObjectHideFlags: 0
@@ -2211,7 +2228,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: a4134afe793062643ba0b563319a96ec, type: 3}
     m_FontSize: 22
     m_FontStyle: 1
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
@@ -3824,21 +3841,44 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8361592938981293932, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8361592938981293932, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8361592938981293932, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 719736435531766302, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5248178204419956015}
   m_SourcePrefab: {fileID: 100100000, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
+--- !u!1 &520044935507062916 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 719736435531766302, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}
+  m_PrefabInstance: {fileID: 1065829620682943130}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5248178204419956015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520044935507062916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 2.5, y: 2.5}
+  m_UseGraphicAlpha: 1
 --- !u!224 &4467708617623386954 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3515881074171433424, guid: 50c3fca6afa012843b9cdf5aefdfed4e, type: 3}

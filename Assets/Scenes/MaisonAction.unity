@@ -1901,7 +1901,7 @@ MonoBehaviour:
   - group:
     - {fileID: 968081049}
     - {fileID: 1289402368}
-  typeActionList: 04000000010000000000000001000000000000000400000000000000010000000000000002000000000000000500000000000000020000000c000000
+  typeActionList: 0400000001000000000000000100000000000000040000000000000004000000010000000000000002000000000000000500000000000000020000000c000000
   objectAnimationName:
   - animationName: walk
     isGroup: 1
@@ -1943,6 +1943,9 @@ MonoBehaviour:
     groupId: 3
     speed: 0
   - position: {fileID: 1066562109}
+    groupId: 2
+    speed: 0
+  - position: {fileID: 419486248}
     groupId: 2
     speed: 0
   talkText:
@@ -14699,6 +14702,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &419486247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 419486248}
+  m_Layer: 0
+  m_Name: Point5
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &419486248
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419486247}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.91, y: -1.88, z: 0.0013027079}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &420216025
 GameObject:
   m_ObjectHideFlags: 0
@@ -36184,7 +36218,7 @@ Transform:
   m_GameObject: {fileID: 1066562108}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.91, y: -1.88, z: 0.0013027079}
+  m_LocalPosition: {x: 1.8, y: -1.88, z: 0.0013027079}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -69364,6 +69398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5805f67a31fddb247abcac431c6aa2c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadNextLevel: 1
 --- !u!4 &2095732091
 Transform:
   m_ObjectHideFlags: 0
@@ -70988,6 +71023,7 @@ SceneRoots:
   - {fileID: 214415885}
   - {fileID: 718569546}
   - {fileID: 1066562109}
+  - {fileID: 419486248}
   - {fileID: 1034971328}
   - {fileID: 1466333811}
   - {fileID: 1427309399}

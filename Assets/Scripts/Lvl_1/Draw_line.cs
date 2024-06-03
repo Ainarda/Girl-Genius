@@ -35,6 +35,11 @@ public class Draw_line : MonoBehaviour
     [SerializeField]
     private float strictHeight;
 
+    [SerializeField]
+    private bool hideHelper = false;
+    [SerializeField]
+    private GameObject helperObject;
+
     private bool canDraw = true;
     // Start is called before the first frame update
     void Start()
@@ -83,6 +88,10 @@ public class Draw_line : MonoBehaviour
                     edgeCollider.gameObject.AddComponent<Rigidbody2D>();
                 }
                 StartCoroutine(WaitForCheck());
+            }
+            if(hideHelper)
+            {
+                helperObject.SetActive(false);
             }
         }
     }

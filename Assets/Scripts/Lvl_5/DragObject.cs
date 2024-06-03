@@ -22,7 +22,9 @@ public class DragObject : MonoBehaviour//, IPointerDownHandler, IPointerUpHandle
     private bool isWorng = false;
     private Vector3 offset;
     private bool moveObject = false;
-    
+
+    [SerializeField]
+    private Vector2 checkRange = new Vector2(0.5f,0.5f);
     Observer observer;
     private void Awake()
     {
@@ -71,7 +73,8 @@ public class DragObject : MonoBehaviour//, IPointerDownHandler, IPointerUpHandle
     private void OnMouseUp()
     {
         moveObject = false;
-        if(Vector2.Distance(offset+Camera.main.ScreenToWorldPoint(Input.mousePosition),endPosition.transform.position)<0.5f)
+        Vector2 dist = offset + Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if(Mathf.Abs(dist.x- endPosition.transform.position.x) <= checkRange.x && Mathf.Abs(dist.y-endPosition.transform.position.y) <= checkRange.y)
         {
             transform.position = endPosition.transform.position;
             observer.RemoveElement(this.gameObject);

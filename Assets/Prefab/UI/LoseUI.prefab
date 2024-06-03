@@ -69,7 +69,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: f72ec9f95adbf3a44ac7297cda2446b1, type: 3}
     m_FontSize: 57
     m_FontStyle: 1
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 77
     m_Alignment: 4
@@ -166,6 +166,7 @@ GameObject:
   - component: {fileID: 8689907818614425546}
   - component: {fileID: 3490037455466340937}
   - component: {fileID: 2292199556309162558}
+  - component: {fileID: 500935027589359188}
   m_Layer: 5
   m_Name: RetryButton
   m_TagString: Untagged
@@ -275,6 +276,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &500935027589359188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665148551968927034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1629688e9167604449a6c374776bcec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text:
+    ruText: "\u0421\u0414\u0410\u0422\u042C\u0421\u042F"
+    enText: GIVE UP
+  textField: {fileID: 1223177513516250658}
 --- !u!1 &2471821830216273601
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,6 +303,7 @@ GameObject:
   - component: {fileID: 1794846919962473910}
   - component: {fileID: 7923377982463790066}
   - component: {fileID: 5570148473788601372}
+  - component: {fileID: 4766574691923688507}
   m_Layer: 5
   m_Name: Image (1)
   m_TagString: Untagged
@@ -301,7 +319,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2471821830216273601}
   m_LocalRotation: {x: 0.016722819, y: -0.99575114, z: 0.010573847, w: 0.089934185}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -310,7 +328,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 1.379, y: -169.7, z: -1.8}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -3, y: -94}
+  m_AnchoredPosition: {x: -2, y: -125}
   m_SizeDelta: {x: 291.68, y: 26.600006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7923377982463790066
@@ -351,6 +369,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4766574691923688507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2471821830216273601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1629688e9167604449a6c374776bcec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text:
+    ruText: "\u041A\u041E\u041D\u0415\u0426 \u0418\u0413\u0420\u042B"
+    enText: GAME OVER
+  textField: {fileID: 7770805602026561060}
 --- !u!1 &5051587363845068070
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,7 +725,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 35
     m_FontStyle: 1
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
@@ -793,6 +827,7 @@ GameObject:
   - component: {fileID: 6726494972394182014}
   - component: {fileID: 6448916645492861910}
   - component: {fileID: 3418945459697656811}
+  - component: {fileID: 6884349147065153087}
   m_Layer: 5
   m_Name: HintButton
   m_TagString: Untagged
@@ -919,6 +954,22 @@ MonoBehaviour:
   angles: {x: -15, y: 15}
   angleGrow: 65
   waitTime: 1
+--- !u!114 &6884349147065153087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850083278082162366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1629688e9167604449a6c374776bcec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text:
+    ruText: "\u041F\u041E\u041C\u041E\u0429\u042C"
+    enText: HINT
+  textField: {fileID: 199701692693282842}
 --- !u!1001 &7174735627713510587
 PrefabInstance:
   m_ObjectHideFlags: 0
