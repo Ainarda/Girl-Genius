@@ -268,6 +268,7 @@ MonoBehaviour:
   startPosition: {x: -1.57, y: -0.73}
   someAction: 0
   isWorng: 1
+  checkRange: {x: 0.5, y: 0.5}
 --- !u!212 &164995622
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -587,6 +588,7 @@ MonoBehaviour:
   startPosition: {x: -3.21, y: 0}
   someAction: 0
   isWorng: 0
+  checkRange: {x: 1, y: 1}
 --- !u!212 &203319164
 SpriteRenderer:
   m_ObjectHideFlags: 0

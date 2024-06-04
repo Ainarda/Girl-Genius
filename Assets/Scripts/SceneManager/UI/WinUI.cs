@@ -30,6 +30,7 @@ public class WinUI : MonoBehaviour
 
     private GameObject observer;
 
+    private bool canActivateRoulete = true;
     // Start is called before the first frame update
     void Awake()
     {
@@ -93,7 +94,13 @@ public class WinUI : MonoBehaviour
     private void GetCoinRouleteReward()
     {
         int coin = roulete.GetComponent<RewardSlingshot>().StopArrow();
-        observer.GetComponent<YdLoader>().LoadAdsWithReward(() => { PlayerData.AddCoin(coin); PlayerData.LoadNextLevel(); });
+        if(PlayerData.isFirstRullet)
+        {
+            PlayerData.AddCoin(coin);
+            PlayerData.isFirstRullet = false;
+        }
+        else
+            observer.GetComponent<YdLoader>().LoadAdsWithReward(() => { PlayerData.AddCoin(coin); PlayerData.LoadNextLevel(); });
     }
 
     public void SkipDress()

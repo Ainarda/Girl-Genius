@@ -62,8 +62,8 @@ public class ConnectLine : MonoBehaviour
                     break;
                 }
             }
-            if (!endPoint)
-                lineRenderer.SetPosition(1, new Vector2(0, 0));
+            if (!findEndPoint)
+                lineRenderer.SetPosition(1, lineRenderer.GetPosition(0));
             else
                 foreach (var elem in failEndPoint)
                     observer.OpenLoseScreen();

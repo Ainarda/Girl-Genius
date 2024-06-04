@@ -1524,7 +1524,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853073014}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -2108,6 +2108,7 @@ MonoBehaviour:
   startPosition: {x: 1.08, y: 0.87}
   someAction: 0
   isWorng: 0
+  checkRange: {x: 1.5, y: 1.5}
 --- !u!212 &1187066355
 SpriteRenderer:
   m_ObjectHideFlags: 0

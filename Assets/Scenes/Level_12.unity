@@ -1807,7 +1807,15 @@ PrefabInstance:
       value: I have to fix the image to open the door.
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: walkPosition.Array.data[0].speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: walkPosition.Array.data[1].speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: walkPosition.Array.data[2].speed
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
@@ -2592,7 +2600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text:
-    ruText: "\u041A\u0420\u0423\u0422\u0418\u0422\u0415 \u0418\u0417\u041E\u0411\u0420\u0410\u0416\u0415\u041D\u0418\u0415"
+    ruText: "\u041A\u0420\u0423\u0422\u0418 \u0418\u0417\u041E\u0411\u0420\u0410\u0416\u0415\u041D\u0418\u0415"
     enText: ROTATE THE IMAGE
   textField: {fileID: 1222298701}
 --- !u!114 &2138644025

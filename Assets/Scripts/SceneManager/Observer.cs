@@ -213,6 +213,7 @@ public class Observer : MonoBehaviour
         PlayerPrefs.SetInt("lvlAnimal", PlayerData.lvlAnimal);
         PlayerPrefs.SetInt("currentRenter", PlayerData.currentRenter);
         PlayerPrefs.SetInt("firstInit", PlayerData.firstInit? 1 : 0);
+        PlayerPrefs.SetInt("isFirstRullet", PlayerData.isFirstRullet ? 1 : 0);
         Debug.Log("First Init save " + PlayerData.firstInit);
         PlayerPrefs.SetInt("lvlAds", PlayerData.lvlAds ? 1 : 0);
         PlayerPrefs.SetInt("mansionScene", PlayerData.mansionScene ? 1 : 0);
@@ -261,10 +262,11 @@ public class Observer : MonoBehaviour
             PlayerData.dressProgress = PlayerPrefs.GetInt("dressProgress");
             PlayerData.currentPetId = PlayerPrefs.GetInt("currentPetId");
             PlayerData.currentDressId = PlayerPrefs.GetInt("currentDressId");
-            PlayerData.currentDressId = PlayerPrefs.GetInt("lvlInterier");
-            PlayerData.currentDressId = PlayerPrefs.GetInt("lvlRent");
-            PlayerData.currentDressId = PlayerPrefs.GetInt("lvlAnimal");
+            PlayerData.lvlInterier = PlayerPrefs.GetInt("lvlInterier");
+            PlayerData.lvlRent = PlayerPrefs.GetInt("lvlRent");
+            PlayerData.lvlAnimal = PlayerPrefs.GetInt("lvlAnimal");
             PlayerData.currentRenter = PlayerPrefs.GetInt("currentRenter");
+            PlayerData.isFirstRullet = PlayerPrefs.GetInt("isFirstRullet") == 1 ? true : false;
             PlayerData.lvlAds = PlayerPrefs.GetInt("lvlAds") == 1 ? true : false;
             PlayerData.mansionScene = PlayerPrefs.GetInt("mansionScene") == 1 ? true : false;
             PlayerData.dress = LoadFloatArray("dress");
