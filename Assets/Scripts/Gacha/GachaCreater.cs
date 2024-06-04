@@ -23,15 +23,19 @@ public class GachaCreater : MonoBehaviour
 
     private Text pulsedText;
     private int selectedPetId;
+    private GameObject observer;
 
     private void Awake()
     {
+        
         pulsedText = hideText.GetComponent<Text>();
         StartCoroutine(TextGrow());
     }
     // Start is called before the first frame update
     void Start()
     {
+        observer = GameObject.FindGameObjectWithTag("Observer");
+        observer.GetComponent<Observer>().CloseMainUI();
         RandomaizeReward();
     }
 

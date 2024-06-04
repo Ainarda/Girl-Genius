@@ -46,7 +46,12 @@ public class LoadSceneUI : MonoBehaviour
         coinText = GameObject.FindGameObjectWithTag("CoinUI").GetComponent<Text>();
         PlayerData.CoinUI = coinText;
         string[] sceneNameText = SceneManager.GetActiveScene().name.Split('_', System.StringSplitOptions.RemoveEmptyEntries);
-        lvlText.text = sceneNameText[0] + " " + sceneNameText[1];
+        string sceneName;
+        if (PlayerData.localText == "ru")
+            sceneName = "Уровень";
+        else
+            sceneName = "Level";
+        lvlText.text = sceneName + " " + sceneNameText[1];
         coinText.text = PlayerData.PlayerCoin.ToString();
     }
 

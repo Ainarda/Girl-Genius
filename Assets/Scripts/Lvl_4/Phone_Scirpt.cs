@@ -123,7 +123,7 @@ public class Phone_Scirpt : MonoBehaviour
         allText.Add(newMessage);
         currentMessageNumber++;
         newMessage.transform.GetChild(0).GetComponent<Text>().text = "...";
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(2);
         if (answerType)
         {
             if (PlayerData.localText == "ru")
@@ -138,20 +138,20 @@ public class Phone_Scirpt : MonoBehaviour
                 newMessage.transform.GetChild(0).GetComponent<Text>().text = badSenderText[currentMessageSender].ruText;
             else
                 newMessage.transform.GetChild(0).GetComponent<Text>().text = badSenderText[currentMessageSender].enText;
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
         }
         currentMessageSender++;
 
         if (!(currentMessageAnswering >= blueAnsweringText.Count))
         {
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
             //TODO change text on agree and degree button
             ActivateButton();
             NextPlayerMessage();
         }
         else
         {
-            yield return new WaitForSeconds(4);
+            yield return new WaitForSeconds(2);
             observer.RemoveElement(this.gameObject);
         }
 

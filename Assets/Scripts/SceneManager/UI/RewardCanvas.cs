@@ -23,7 +23,7 @@ public class RewardCanvas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        observer.GetComponent<Observer>().CloseMainUI();
     }
 
     // Update is called once per frame
@@ -34,6 +34,7 @@ public class RewardCanvas : MonoBehaviour
 
     private void CloseWindow()
     {
+        observer.GetComponent<Observer>().OpenMainUI();
         this.gameObject.SetActive(false);
     }
 
@@ -56,6 +57,7 @@ public class RewardCanvas : MonoBehaviour
                 break;
         }
         observer.GetComponent<YdLoader>().LoadAdsWithReward(action);
+        observer.GetComponent<Observer>().OpenMainUI();
     }
 }
 

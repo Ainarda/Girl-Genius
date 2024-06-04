@@ -10,7 +10,7 @@ public class PlayerData : MonoBehaviour
     public static bool firstLoad = true;
     public static string PlayerName;
     public static int PlayerCoin = 0;
-    public static int CurrentLvl = 6;
+    public static int CurrentLvl = 1;
     public static bool[] dress = new bool[] { true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false };
     public static List<int> unlockId;
     public static int dressProgress = 0;
@@ -28,7 +28,7 @@ public class PlayerData : MonoBehaviour
 
     public static bool musicPlay = true;
     public static int currentRenter = 0;
-    public static bool openRenterCanvas = true;
+    public static bool openRenterCanvas = false;
 
     public static bool[] pet = new bool[] { true, false, false, false, false, false, false, false, false };
 

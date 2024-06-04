@@ -158,6 +158,16 @@ public class Observer : MonoBehaviour
         winScreen.GetComponent<WinUI>().OpenDressScreen();
     }
 
+    public void CloseMainUI()
+    {
+        mainScreen.SetActive(false);
+    }
+
+    public void OpenMainUI()
+    {
+        mainScreen.SetActive(true);
+    }
+
     public void CompleteSceneWithoutCheck()
     {
         if (!PlayerData.lvlAds)

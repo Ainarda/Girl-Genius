@@ -6,6 +6,7 @@ public class RotateClock : MonoBehaviour
 {
     [SerializeField]
     private float rightAngle;
+
     bool canRotate = false;
     private Observer observer;
     private void Awake()
