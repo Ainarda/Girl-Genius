@@ -50,13 +50,13 @@ public class YdLoader : MonoBehaviour
     public void LoadAds(Action closeAction)
     {
         AudioListener.pause = true;
-        Advertisement.ShowInterstitialAd(onCloseCallback: closeAction);
+        PreAdScreen.Instance.ShowInterstitialAdClicker(closeAction);
     }
 
     public void LoadAdsWithReward(Action action, Action closeAction = null)
     {
         AudioListener.pause = true;
-        Advertisement.ShowVideoAd(onRewardedCallback: action, onCloseCallback: closeAction);
+        PreAdScreen.Instance.ShowRewardedAdClicker(action, closeAction);
     }
 
     public void Purchase(string id)
