@@ -33,7 +33,7 @@ public class GachaScript : MonoBehaviour
     {
         openedCap.SetActive(true);
         closedCap.SetActive(false);
-        Invoke("ShowReward",2);
+        Invoke("ShowReward",0.1f);
     }
 
     public void ShowReward()
