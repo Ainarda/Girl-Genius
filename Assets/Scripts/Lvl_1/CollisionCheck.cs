@@ -7,8 +7,12 @@ public class CollisionCheck : MonoBehaviour
 {
     [SerializeField]
     private bool isInvert;
+    [SerializeField]
+    private bool triggerOnce;
     private bool missionTask = true;
     Observer observer;
+
+    private bool triggered;
     private void Awake()
     {
         observer = GameObject.FindGameObjectWithTag("Observer").GetComponent<Observer>();
@@ -30,8 +34,24 @@ public class CollisionCheck : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.tag == "DroppedObject")
+        CheckCollision(collision.transform.tag);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        CheckCollision(collision.transform.tag);
+    }
+
+    private void CheckCollision(string colTag)
+    {
+        if(triggered)
+            return;
+
+        if (colTag == "DroppedObject")
         {
+            if (triggerOnce)
+                triggered = true;
+            
             if (isInvert)
             {
                 Debug.Log("+");
@@ -44,7 +64,7 @@ public class CollisionCheck : MonoBehaviour
             }
             
         }
-        //some time wait and restart lvlv
+        //some time wait and restart lvlv   
     }
 
     public bool IsLevelComplete()
