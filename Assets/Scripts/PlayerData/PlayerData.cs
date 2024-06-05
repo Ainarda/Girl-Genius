@@ -9,8 +9,8 @@ public class PlayerData : MonoBehaviour
 {
     public static bool firstLoad = true;
     public static string PlayerName;
-    public static int PlayerCoin = 0;
-    public static int CurrentLvl = 1;
+    public static int PlayerCoin = 300;
+    public static int CurrentLvl = 7;
     public static bool[] dress = new bool[] { true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false };
     public static List<int> unlockId;
     public static int dressProgress = 0;
@@ -18,7 +18,7 @@ public class PlayerData : MonoBehaviour
     private static int currentUnclokNumber = 0;
     //TODO add unlocking room interier on 13 and after each 10 lvl, animal after 10 and each 10, rent after 16 and each 10
     public static int lvlInterier = 13, lvlAnimal = 10, lvlRent = 16;
-    public static bool[] unlockingRoom = new bool[] { false, false, false, false, false, false, false, false, false, false, false };
+    public static bool[] unlockingRoom = new bool[] { true, false, false, false, false, false, false, false, false, false, false };
     public static int[] lvlUnlockedRoom = new int[] {6, 10, 8, 13, 23, 28, 43, 38, 43, 48 };
     public static bool[] renterState = new bool[] { false, false, false, false, false, false, false, false };
 

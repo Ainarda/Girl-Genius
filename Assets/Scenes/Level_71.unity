@@ -162,6 +162,10 @@ MonoBehaviour:
   activatePoint: []
   lineSize: 0.25
   canDropIt: 0
+  canStrictHeight: 0
+  strictHeight: 0
+  hideHelper: 0
+  helperObject: {fileID: 0}
 --- !u!4 &58620619
 Transform:
   m_ObjectHideFlags: 0
@@ -784,7 +788,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

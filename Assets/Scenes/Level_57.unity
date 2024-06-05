@@ -2076,7 +2076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: waitTime.Array.data[1]
-      value: 0.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: waitTime.Array.data[2]
@@ -2259,6 +2259,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MyText
       objectReference: {fileID: 0}
+    - target: {fileID: 2479385887104126269, guid: a4f827d446ee58243a968a46931003d1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6822309976825237010, guid: a4f827d446ee58243a968a46931003d1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2386,8 +2390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text:
     ruText: "\u0414\u0430! \u041F\u0440\u0438\u0434\u0438 \u0438 \u0437\u0430\u0431\u0435\u0440\u0438
-      \u043C\u0435\u043D\u044F.\u0414\u0430! \u041F\u0440\u0438\u0434\u0438 \u0438
-      \u0437\u0430\u0431\u0435\u0440\u0438 \u043C\u0435\u043D\u044F."
+      \u043C\u0435\u043D\u044F."
     enText: Yes! Come pick me up.
   textField: {fileID: 1484818892}
 --- !u!1 &1558130157

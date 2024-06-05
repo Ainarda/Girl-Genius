@@ -31,9 +31,9 @@ public class HelperScript : MonoBehaviour
     {
         if (!onlyShow)
         {
-            vectorMove = (points[currentPoints + 1].transform.position - helperPrefab.transform.position).normalized;
+            vectorMove = (points[currentPoints + 1].transform.position - helperPrefab.transform.position)*0.1f;
             Debug.Log(vectorMove);
-            vectorMove = NormilizeSpeed(vectorMove) * Time.fixedDeltaTime;
+            vectorMove = vectorMove * Time.fixedDeltaTime;
         }
     }
     private Vector2 vectorMove;
@@ -51,7 +51,7 @@ public class HelperScript : MonoBehaviour
                     if (currentPoints + 1 < points.Length)
                     {
                         vectorMove = (points[currentPoints + 1].transform.position - helperPrefab.transform.position);
-                        vectorMove = NormilizeSpeed(vectorMove) * Time.fixedDeltaTime;
+                        vectorMove = vectorMove * Time.fixedDeltaTime;
                     }
                 }
                 else
@@ -64,7 +64,7 @@ public class HelperScript : MonoBehaviour
                 helperPrefab.transform.position = points[0].transform.position;
                 currentPoints = 0;
                 vectorMove = (points[currentPoints + 1].transform.position - helperPrefab.transform.position).normalized;
-                vectorMove = NormilizeSpeed(vectorMove) * Time.fixedDeltaTime;
+                vectorMove = vectorMove * Time.fixedDeltaTime;
             }
         }
     }
