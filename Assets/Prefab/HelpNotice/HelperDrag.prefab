@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -11.1, y: 0}
+  m_AnchoredPosition: {x: -13.9, y: 0}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1185969933862756639
@@ -161,7 +161,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: f72ec9f95adbf3a44ac7297cda2446b1, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 90
     m_Alignment: 4
@@ -170,7 +170,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Drag something
+  m_Text: "\u0421\u0414\u0412\u0418\u041D\u042C \u041A\u041E\u0415-\u0427\u0422\u041E "
 --- !u!1 &6305274500427467169
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text:
-    ruText: "\u041F\u0415\u0420\u0415\u041C\u0415\u0421\u0422\u0418"
+    ruText: "\u0421\u0414\u0412\u0418\u041D\u042C \u041A\u041E\u0415-\u0427\u0422\u041E "
     enText: DRAG SOMETHING
   textField: {fileID: 7779831842265576625}
 --- !u!114 &8181604822726346246

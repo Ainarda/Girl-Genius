@@ -160,6 +160,7 @@ public class RenterUI : MonoBehaviour
 
     private void SelectRenter(int id)
     {
+        PlayerData.currentRenterSelected = id;
         PlayerData.canSelectRenter = false;
         renters[id].RenterGameObject.SetActive(true);
         renters[id].RenterGameObject.GetComponent<EntityAI>().SelectNextAction();

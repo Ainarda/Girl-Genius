@@ -212,6 +212,7 @@ public class Observer : MonoBehaviour
         PlayerPrefs.SetInt("lvlRent", PlayerData.lvlRent);
         PlayerPrefs.SetInt("lvlAnimal", PlayerData.lvlAnimal);
         PlayerPrefs.SetInt("currentRenter", PlayerData.currentRenter);
+        PlayerPrefs.SetInt("currentRenterSelected", PlayerData.currentRenterSelected);
         PlayerPrefs.SetInt("firstInit", PlayerData.firstInit? 1 : 0);
         PlayerPrefs.SetInt("isFirstRullet", PlayerData.isFirstRullet ? 1 : 0);
         Debug.Log("First Init save " + PlayerData.firstInit);
@@ -252,10 +253,10 @@ public class Observer : MonoBehaviour
 
     public void LoadData()
     {
-        PlayerData.firstInit = PlayerPrefs.GetInt("firstInit") == 0? true : false;
+        PlayerData.firstInit = PlayerPrefs.GetInt("firstInit") == 0? false : true;
         PlayerData.mansionScene = true;
-        Debug.Log(PlayerData.firstInit);
-        if (!PlayerData.firstInit)
+        Debug.Log(!PlayerData.firstInit);
+        if (PlayerData.firstInit)
         {
             PlayerData.PlayerCoin = PlayerPrefs.GetInt("PlayerCoin");
             PlayerData.CurrentLvl = PlayerPrefs.GetInt("CurrentLvl");
@@ -273,6 +274,7 @@ public class Observer : MonoBehaviour
             PlayerData.unlockingRoom = LoadFloatArray("unlockingRoom");
             PlayerData.pet = LoadFloatArray("pet");
             PlayerData.renterState = LoadFloatArray("renterState");
+            PlayerData.currentRenterSelected = PlayerPrefs.GetInt("currentRenterSelected");
         }
         else
         {

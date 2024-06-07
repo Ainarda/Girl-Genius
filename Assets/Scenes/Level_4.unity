@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 13731011}
   - component: {fileID: 13731013}
   - component: {fileID: 13731012}
+  - component: {fileID: 13731014}
   m_Layer: 5
   m_Name: Image (1)
   m_TagString: Untagged
@@ -203,6 +204,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13731010}
   m_CullTransparentMesh: 1
+--- !u!114 &13731014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13731010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1629688e9167604449a6c374776bcec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text:
+    ruText: "\u041C\u0418\u0428\u0410 - \u0410\u0412\u0422\u041E\u0421\u0415\u0420\u0412\u0418\u0421"
+    enText: BABY
+  textField: {fileID: 439058230}
 --- !u!1 &50413226
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,17 +519,18 @@ PrefabInstance:
       objectReference: {fileID: 399301229}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[0].textRu
-      value: "\u041C\u043D\u0435 \u043E\u0447\u0435\u043D\u044C \u0436\u0430\u043B\u044C,
-        \u0434\u0435\u0442\u043A\u0430. \u042D\u0442\u043E \u0431\u043E\u043B\u044C\u0448\u0435
-        \u043D\u0435 \u043F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u0441\u044F!"
+      value: "\u041B\u0430\u043F\u0443\u043B\u044F, \u043F\u0440\u043E\u0441\u0442\u0438.
+        \u042F \u0442\u0430\u043A\u043E\u0439\u2026 \u042D\u0442\u043E\u0433\u043E
+        \u0431\u043E\u043B\u044C\u0448\u0435 \u043D\u0435 \u043F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u0441\u044F!"
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[1].textRu
-      value: "\u041A\u0442\u043E \u0432\u0430\u043C \u043F\u0438\u0448\u0435\u0442?!?"
+      value: "\u0414\u0430? \u0410 \u043A\u0442\u043E \u044D\u0442\u043E \u0442\u0435\u0431\u0435
+        \u043F\u0438\u0448\u0435\u0442?"
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[2].textRu
-      value: "\u0422\u044B \u0436\u0435\u043D\u0430\u0442!?! \u0414\u0443\u0440\u0430\u043A!"
+      value: "\u042D\u2026 \u0442\u044B \u0436\u0435\u043D\u0430\u0442??? \u0411\u0435\u0437\u0443\u043C\u0438\u0435!"
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: typeActionList.Array.data[10]
@@ -1151,7 +1169,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 14}
-  m_SizeDelta: {x: -108, y: 30}
+  m_SizeDelta: {x: -94, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &439058230
 MonoBehaviour:
@@ -1177,7 +1195,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: f72ec9f95adbf3a44ac7297cda2446b1, type: 3}
     m_FontSize: 21
     m_FontStyle: 1
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
@@ -3752,44 +3770,43 @@ MonoBehaviour:
   senderBlock: {fileID: 3511385387626083493, guid: 71f248b201f0daa4d9afedaad103a20f, type: 3}
   myBlock: {fileID: 2479385887104126269, guid: a4f827d446ee58243a968a46931003d1, type: 3}
   startMessage:
-    ruText: "\u0413\u0434\u0435 \u0442\u044B, \u0434\u0435\u0442\u043A\u0430?"
+    ruText: "\u0422\u044B \u0433\u0434\u0435, \u043A\u043E\u0442\u0438\u043A?"
     enText: Where are you baby?
   goodSenderText:
   - ruText: "\u042F \u0431\u0435\u0440\u0435\u043C\u0435\u043D\u0430"
     enText: I'm prenant!
-  - ruText: "\u0422\u044B \u0441\u0435\u0440\u044C\u0435\u0437\u043D\u043E? \u042F
-      \u0411\u0415\u0420\u0415\u041C\u0415\u041D\u041D\u0410 \u043E\u0442 \u0442\u0435\u0431\u044F!"
+  - ruText: "\u0422\u044B \u0447\u0435 \u0442\u0443\u043F\u0438\u0448\u044C???? 
+      \u042F \u0431\u0435\u0440\u0435\u043C\u0435\u043D\u043D\u0430 \u041E\u0422
+      \u0422\u0415\u0411\u042F!!!!!"
     enText: Are you serious? I'm PREGNANT amd it is yours!
   - ruText: "\u042F \u0441\u0435\u0439\u0447\u0430\u0441 \u0431\u0443\u0434\u0443."
     enText: I'll be right there.
   badSenderText:
   - ruText: "\u042F \u0431\u0435\u0440\u0435\u043C\u0435\u043D\u0430"
     enText: I'm prenant!
-  - ruText: "\u0412\u044B \u0441\u0435\u0440\u044C\u0435\u0437\u043D\u043E? \u042F
-      \u0411\u0415\u0420\u0415\u041C\u0415\u041D\u041D\u0410 \u0438 \u044D\u0442\u043E
-      \u0442\u0432\u043E\u0435!"
+  - ruText: "\u0422\u044B \u0447\u0435 \u0442\u0443\u043F\u0438\u0448\u044C???? \u042F
+      \u0431\u0435\u0440\u0435\u043C\u0435\u043D\u043D\u0430 \u041E\u0422 \u0422\u0415\u0411\u042F!!!!!"
     enText: Are you serious? I'm PREGNANT amd it is yours!
-  - ruText: "\u042F \u0441\u0435\u0439\u0447\u0430\u0441 \u0431\u0443\u0434\u0443."
+  - ruText: "\u0416\u0434\u0438, \u0449\u0430 \u0431\u0443\u0434\u0443"
     enText: I'll be right there.
   blueAnsweringText:
-  - ruText: "\u041F\u0440\u0438\u0432\u0435\u0442, \u0434\u0435\u0442\u043A\u0430.
-      \u041A\u0430\u043A \u0434\u0435\u043B\u0430?"
+  - ruText: "\u041F\u0440\u0438\u0432\u0435\u0442\u0438\u043A. \u0427\u0442\u043E
+      \u0441\u043B\u0443\u0447\u0438\u043B\u043E\u0441\u044C?"
     enText: Hey baby. What's up?
-  - ruText: "\u041A\u0430\u043A\u043E\u0435 \u043E\u0442\u043D\u043E\u0448\u0435\u043D\u0438\u0435
-      \u044D\u0442\u043E \u0438\u043C\u0435\u0435\u0442 \u043A\u043E \u043C\u043D\u0435?"
+  - ruText: "\u0410 \u044F \u0442\u0443\u0442 \u043F\u0440\u0438\u0447\u0435\u043C?)"
     enText: What does it have to do with me?
-  - ruText: "\u041D\u0430\u0439\u0434\u0438 \u043C\u0435\u043D\u044F \u0438 \u0434\u0430\u0432\u0430\u0439
-      \u043E\u0431\u0441\u0443\u0434\u0438\u043C \u044D\u0442\u043E"
+  - ruText: "\u0414\u0430\u0432\u0430\u0439 \u0432\u0441\u0442\u0440\u0435\u0442\u0438\u043C\u0441\u044F
+      \u0438 \u043E\u0431\u0441\u0443\u0434\u0438\u043C"
     enText: Come find me and let's talk this out
   redAnsweringText:
-  - ruText: "\u041A\u0442\u043E \u044D\u0442\u043E?"
+  - ruText: "\u0410 \u043A\u0442\u043E \u044D\u0442\u043E?)"
     enText: Who is this?
-  - ruText: "\u0411\u0435\u0440\u0435\u043C\u0435\u043D\u043D\u0430? \u041A\u043E\u0433\u0434\u0430
-      \u044D\u0442\u043E \u043F\u0440\u043E\u0438\u0437\u043E\u0448\u043B\u043E?"
+  - ruText: "\u0428\u0442\u043E\u043E\u043E? \u041A\u0430\u043A \u044D\u0442\u043E
+      \u043C\u043E\u0433\u043B\u043E \u0441\u043B\u0443\u0447\u0438\u0442\u044C\u0441\u044F????"
     enText: Prenant? When did this happen?
-  - ruText: "\u041D\u0435 \u043C\u043E\u044F \u043F\u0440\u043E\u0431\u043B\u0435\u043C\u0430!
-      \u0423\u0445\u043E\u0434\u0438 \u0438 \u043D\u0435 \u0434\u0435\u043B\u0430\u0439
-      \u043D\u0438\u0447\u0435\u0433\u043E \u0441\u0443\u043C\u0430\u0441\u0448\u0435\u0434\u0448\u0435\u0433\u043E."
+  - ruText: "\u041D\u0435 \u043C\u043E\u0438 \u043F\u0440\u043E\u0431\u043B\u0435\u043C\u044B.
+      \u041A\u043E\u0440\u043E\u0447\u0435, \u0434\u0435\u043B\u0430\u0439 \u0447\u0442\u043E
+      \u0445\u043E\u0447\u0435\u0448\u044C!"
     enText: Not my problem! Don't go off and do anything crazy.
   messageScroll: {fileID: 532681059}
   senderSprite: {fileID: 21300000, guid: 5e4efd5b19cbf9f4cb952f11438c7194, type: 3}
