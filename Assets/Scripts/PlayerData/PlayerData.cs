@@ -9,20 +9,20 @@ public class PlayerData : MonoBehaviour
 {
     public static bool firstLoad = true;
     public static string PlayerName;
-    public static int PlayerCoin = 300;
-    public static int CurrentLvl = 7;
-    public static bool[] dress = new bool[] { true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false };
+    public static int PlayerCoin = 0;
+    public static int CurrentLvl = 1;
+    public static bool[] dress = new bool[] { true, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false };
     public static List<int> unlockId;
     public static int dressProgress = 0;
     public static Text CoinUI;
     private static int currentUnclokNumber = 0;
     //TODO add unlocking room interier on 13 and after each 10 lvl, animal after 10 and each 10, rent after 16 and each 10
-    public static int lvlInterier = 13, lvlAnimal = 10, lvlRent = 16;
+    public static int lvlInterier = 13, lvlAnimal = 10, lvlRent = 16, lvlGetRent = 22;
     public static bool[] unlockingRoom = new bool[] { true, false, false, false, false, false, false, false, false, false, false };
     public static int[] lvlUnlockedRoom = new int[] {6, 10, 8, 13, 23, 28, 43, 38, 43, 48 };
     public static bool[] renterState = new bool[] { false, false, false, false, false, false, false, false };
 
-    public static List<int> lvlsWithoutHelper = new List<int>() { 22, 30, 43, 52, 55, 61, 62, 66, 69, 71, 75, 81, 83, 93, 94 };
+    public static List<int> lvlsWithoutHelper = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 20, 23, 24, 25, 27, 28, 32, 39, 41, 48, 50, 54, 56, 57, 58, 60, 63, 70, 73, 77, 87, 98 };//{ 22, 30, 43, 52, 55, 61, 62, 66, 69, 71, 75, 81, 83, 93, 94 };
     public static bool lvlAds = true;
     public static bool lvlHints = false;
 
@@ -37,7 +37,7 @@ public class PlayerData : MonoBehaviour
 
     public static Observer currentObserver;
     private static DressSlot currentDress;
-    public static int currentDressId = 2;
+    public static int currentDressId = 12;
 
     public static bool firstInit = true;
     
@@ -48,6 +48,8 @@ public class PlayerData : MonoBehaviour
     public static bool canSelectRenter = false;
 
     public static bool mansionScene = true;
+
+    public static int currentRenterSelected = 0;
 
     //TODO add win UI and load dressUnlocker after complete all dress unlocking stages
     public static void LoadNextLevel()
@@ -84,13 +86,18 @@ public class PlayerData : MonoBehaviour
             lvlInterier += 10;
             currentObserver.OpenEnvironmentRewardScreen();
         }
-        if(CurrentLvl >= lvlRent)
+        if(CurrentLvl >= lvlRent && currentRenter < 8)
         {
             //TODO may be need add bool type to open this scrin after load next level?
             openRenterCanvas = true;
             canSelectRenter = true;
             currentObserver.OpenRentScreen();
             lvlRent += 10;
+        }
+        if(CurrentLvl >= lvlGetRent)
+        {
+            lvlGetRent += 10;
+            SceneManager.LoadScene("MaisonRenter1");
         }
         //TODO if lvl complete can't add reward
         CurrentLvl++;

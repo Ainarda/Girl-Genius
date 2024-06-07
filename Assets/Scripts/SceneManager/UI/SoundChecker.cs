@@ -16,7 +16,10 @@ public class SoundChecker : MonoBehaviour
 
     private void Silence(bool silence)
     {
-        AudioListener.pause = silence;
+        if (PlayerPrefs.GetInt("AudioState", 1) == 0)
+            AudioListener.pause = false;
+        else
+            AudioListener.pause = silence;
         // Or / And
         //AudioListener.volume = silence ? 0 : 1;
     }

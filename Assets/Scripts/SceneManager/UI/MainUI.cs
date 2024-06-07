@@ -25,7 +25,7 @@ public class MainUI : MonoBehaviour
         retryButton.onClick.AddListener(observer.GetComponent<Observer>().ReloadScene);
         skipButton.onClick.AddListener(delegate { observer.GetComponent<YdLoader>().LoadAdsWithReward(observer.GetComponent<Observer>().SkipLevel); });
         hintButton.onClick.AddListener(delegate { observer.GetComponent<YdLoader>().LoadAdsWithReward(ActivateHint); });
-        if(PlayerData.lvlsWithoutHelper.Contains(PlayerData.CurrentLvl))
+        if(!PlayerData.lvlsWithoutHelper.Contains(PlayerData.CurrentLvl))
             hintButton.gameObject.SetActive(true);
     }
 

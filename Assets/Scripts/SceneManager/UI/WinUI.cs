@@ -47,6 +47,8 @@ public class WinUI : MonoBehaviour
         
     }
 
+    private bool dressScreenIsOpen = false;
+
     public void SetDressScale()
     {
         float value = PlayerData.dressProgress / 4f;
@@ -59,7 +61,10 @@ public class WinUI : MonoBehaviour
         dressProgressText.text = text+ ((int)(value*100)) +"%";
         Debug.LogError("Dress progress "+value);
         if (PlayerData.dressProgress == 4)
+        {
+            dressScreenIsOpen = true;
             OpenDressScreen();
+        }
     }
 
     /// <summary>
@@ -114,6 +119,8 @@ public class WinUI : MonoBehaviour
         observer.GetComponent<YdLoader>().LoadAdsWithReward(() => { PlayerData.UnlockCustom(); unlockDressScreen.SetActive(false); PlayerData.dressProgress = 0; });
         Debug.Log("Get dress");
         unlockDressScreen.SetActive(false);
+        dressScreenIsOpen = false;
+        ShowBottomButtons();
     }
 
     public void OpenDressScreen()
@@ -125,13 +132,16 @@ public class WinUI : MonoBehaviour
 
     public void ShowBottomButtons()
     {
-        Invoke("ShowButtons", 1f);
+        Invoke("ShowButtons", 2f);
     }
 
     private void ShowButtons()
     {
-        retryButton.gameObject.SetActive(true);
-        nextButton.gameObject.SetActive(true);
+        if (!dressScreenIsOpen)
+        {
+            retryButton.gameObject.SetActive(true);
+            nextButton.gameObject.SetActive(true);
+        }
     }
 
     public void RewardPayButton()

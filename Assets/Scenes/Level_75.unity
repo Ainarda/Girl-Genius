@@ -385,6 +385,10 @@ MonoBehaviour:
   - {fileID: 820137971}
   lineSize: 0.05
   canDropIt: 0
+  canStrictHeight: 0
+  strictHeight: 0
+  hideHelper: 0
+  helperObject: {fileID: 0}
 --- !u!4 &148973441
 Transform:
   m_ObjectHideFlags: 0
@@ -2062,18 +2066,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[0].textRu
-      value: "\u0411\u044B\u0442\u044C \u0433\u043E\u043B\u044B\u043C \u0432 \u0433\u043E\u0440\u043E\u0434\u0435
-        \u0437\u0430\u043F\u0440\u0435\u0449\u0435\u043D\u043E! \u0412\u044B \u0430\u0440\u0435\u0441\u0442\u043E\u0432\u0430\u043D\u044B!"
+      value: "\u0412 \u0442\u0430\u043A\u043E\u043C \u0432\u0438\u0434\u0435 \u043F\u043E
+        \u0433\u043E\u0440\u043E\u0434\u0443 \u0445\u043E\u0434\u0438\u0442\u044C
+        \u043D\u0435\u043B\u044C\u0437\u044F. \u0412\u044B \u0430\u0440\u0435\u0441\u0442\u043E\u0432\u0430\u043D\u044B,
+        \u0440\u0435\u0431\u044F\u0442\u043A\u0438!"
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[1].textRu
-      value: "\u0422\u0430\u0440\u0437\u0430\u043D\u0443 \u043D\u0443\u0436\u043D\u044B
-        \u0448\u0442\u0430\u043D\u044B"
+      value: "\u041C\u043E\u0435\u043C\u0443 \u0422\u0430\u0440\u0437\u0430\u043D\u0443
+        \u043D\u0443\u0436\u043D\u044B \u0448\u0442\u0430\u043D\u0438\u0448\u043A\u0438"
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[2].textRu
-      value: "\u041D\u0430 \u044D\u0442\u043E\u0442 \u0440\u0430\u0437 \u0442\u0435\u0431\u0435
-        \u043F\u043E\u0432\u0435\u0437\u043B\u043E!"
+      value: "\u041B\u0430\u0434\u043D\u043E, \u043D\u0430 \u043F\u0435\u0440\u0432\u044B\u0439
+        \u0440\u0430\u0437 \u043F\u0440\u043E\u0449\u0430\u044E"
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: typeActionList.Array.data[10]
