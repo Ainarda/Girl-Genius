@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.U2D;
 using UnityEngine.UI;
 
 public class LoadSceneUI : MonoBehaviour
@@ -49,11 +51,11 @@ public class LoadSceneUI : MonoBehaviour
         string[] sceneNameText = SceneManager.GetActiveScene().name.Split('_', System.StringSplitOptions.RemoveEmptyEntries);
         string sceneName;
         if (PlayerData.localText == "ru")
-            sceneName = "�������";
+            sceneName = "Уровень";
         else
             sceneName = "Level";
         lvlText.text = sceneName + " " + sceneNameText[1];
-        coinText.text = PlayerData.PlayerCoin.ToString();
+        coinText.text = "<sprite index = 0> "+PlayerData.PlayerCoin.ToString();
     }
 
     private void InitUI()

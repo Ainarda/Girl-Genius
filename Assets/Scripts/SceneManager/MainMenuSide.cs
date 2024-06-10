@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -25,6 +26,8 @@ public class MainMenuSide : MonoBehaviour
     private Button disableAds;
     [SerializeField]
     private Button shop;
+    [SerializeField]
+    private TMP_Text coinUI;
 
     [SerializeField]
     private GameObject manisonUI;
@@ -39,6 +42,7 @@ public class MainMenuSide : MonoBehaviour
 
     private void Awake()
     {
+        PlayerData.CoinUI = coinUI;
         vectorMove = vectorMoveBase;
         manisonUI.SetActive(true);
         manisonUI.GetComponent<UnlockingItemList>().LoadEnvironment();

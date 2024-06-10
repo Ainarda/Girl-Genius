@@ -13,21 +13,37 @@ public class UnlockingEnvironment : MonoBehaviour
     [SerializeField]
     private int cost;
     [SerializeField]
-    private TextMeshProUGUI costDisplay;
+    private TMP_Text costDisplay;
     [SerializeField]
     private Button buyButton;
+    [SerializeField]
+    private Button adsButton;
     [SerializeField]
     private int roomNumber;
     [SerializeField]
     private int environmentId;
     [SerializeField]
     private GameObject locker;
+    [SerializeField]
+    private bool withAds = false;
+    [SerializeField]
+    private Image displayImage;
+    [SerializeField]
+    private Sprite displayedSprite;
+
+    GameObject observer;
+    
     // Start is called before the first frame update
     void Awake()
     {
+        displayImage.sprite = displayedSprite;
+        observer = GameObject.FindGameObjectWithTag("Observer");
+        buyButton.gameObject.SetActive(!withAds);
+        adsButton.gameObject.SetActive(withAds);
         locker.SetActive(!PlayerData.RoomIsOpen(roomNumber));
-        costDisplay.text = cost.ToString();
+        costDisplay.text = "<sprite index=0> "+cost.ToString();
         buyButton.onClick.AddListener(BuyEnvironment);
+        adsButton.onClick.AddListener(BuyEnvironmentWithAds);
     }
 
     // Update is called once per frame
@@ -39,6 +55,11 @@ public class UnlockingEnvironment : MonoBehaviour
     private void BuyEnvironment()
     {
         PlayerData.SpendCoin(cost,roomNumber-1 ,environmentId-1, ActivateObject);
+    }
+
+    private void BuyEnvironmentWithAds()
+    {
+        observer.GetComponent<YdLoader>().LoadAdsWithReward(ActivateObject);
     }
 
     public void ActivateObject()

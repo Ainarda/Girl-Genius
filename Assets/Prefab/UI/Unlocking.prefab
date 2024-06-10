@@ -360,9 +360,10 @@ GameObject:
   - component: {fileID: 6275192475971327862}
   - component: {fileID: 980743719292758496}
   - component: {fileID: 1512309687264553579}
+  - component: {fileID: 995832364921032075}
   m_Layer: 5
   m_Name: Unlocking
-  m_TagString: Untagged
+  m_TagString: roomUnlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -428,6 +429,30 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &995832364921032075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2783803051709203231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e50e8bfc21df9743bca46eb9871d7da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unlockingObject: {fileID: 0}
+  hideObject: {fileID: 0}
+  cost: 0
+  costDisplay: {fileID: 1044555643059265669}
+  buyButton: {fileID: 2953925029223137257}
+  adsButton: {fileID: 7193983170714494665}
+  roomNumber: 0
+  environmentId: 0
+  locker: {fileID: 2296475072448224032}
+  withAds: 0
+  displayImage: {fileID: 6060820348003099292}
+  displayedSprite: {fileID: 0}
 --- !u!1 &4860196375071898132
 GameObject:
   m_ObjectHideFlags: 0

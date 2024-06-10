@@ -159,7 +159,7 @@ public class PlayerData : MonoBehaviour
 
     public static void UpdateCoinCount()
     {
-        CoinUI.text = PlayerCoin.ToString();
+        CoinUI.text = "<sprite index=0> " + PlayerCoin.ToString();
     }
 
     public static List<bool[]> environmentIntoRooms = new List<bool[]>() { new bool[] { false, false,false, false, false,false,false,false,false,false,false,false,false },
