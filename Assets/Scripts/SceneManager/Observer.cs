@@ -60,6 +60,9 @@ public class Observer : MonoBehaviour
         unCompletedElement.Remove(element);
         if (unCompletedElement.Count == 0)
         {
+            GameObject hintNotice = GameObject.FindGameObjectWithTag("HintNotice");
+            if(hintNotice!=null)
+                hintNotice.SetActive(false);
             GetComponent<ActionVariant>().CloseHint();
             GetComponent<ActionVariant>().NextAction();//OpenWinScreen();// CompleteSceneWithoutCheck();
         }
