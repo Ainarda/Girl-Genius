@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LoadSceneUI : MonoBehaviour
 {
-    Text coinText;
+    TMP_Text coinText;
     Text lvlText;
     [SerializeField]
     private GameObject mainUI;
@@ -43,12 +44,12 @@ public class LoadSceneUI : MonoBehaviour
 
         observer.AddScreens(winUI, loseUI, mainUI, petRewardUI, environmentRewardUI);
         lvlText = GameObject.FindGameObjectWithTag("LevelUI").GetComponent<Text>();
-        coinText = GameObject.FindGameObjectWithTag("CoinUI").GetComponent<Text>();
+        coinText = GameObject.FindGameObjectWithTag("CoinUI").GetComponent<TMP_Text>();
         PlayerData.CoinUI = coinText;
         string[] sceneNameText = SceneManager.GetActiveScene().name.Split('_', System.StringSplitOptions.RemoveEmptyEntries);
         string sceneName;
         if (PlayerData.localText == "ru")
-            sceneName = "Уровень";
+            sceneName = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ";
         else
             sceneName = "Level";
         lvlText.text = sceneName + " " + sceneNameText[1];

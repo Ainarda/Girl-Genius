@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,7 +15,7 @@ public class PlayerData : MonoBehaviour
     public static bool[] dress = new bool[] { true, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false };
     public static List<int> unlockId;
     public static int dressProgress = 0;
-    public static Text CoinUI;
+    public static TMP_Text CoinUI;
     private static int currentUnclokNumber = 0;
     //TODO add unlocking room interier on 13 and after each 10 lvl, animal after 10 and each 10, rent after 16 and each 10
     public static int lvlInterier = 13, lvlAnimal = 10, lvlRent = 16, lvlGetRent = 22;

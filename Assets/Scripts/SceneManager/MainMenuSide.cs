@@ -14,15 +14,6 @@ public class MainMenuSide : MonoBehaviour
     [SerializeField]
     private float cameraSpeed = 1;
     [SerializeField]
-    private Vector2 pulseRange;
-    [SerializeField]
-    private Text pulsedText;
-    [SerializeField]
-    private int textGrowSpeed = 1;
-
-
-    private Vector2 vectorMove;
-    [SerializeField]
     private Button loadLevel;
     [SerializeField]
     private Button renter;
@@ -40,6 +31,7 @@ public class MainMenuSide : MonoBehaviour
     [SerializeField]
     private GameObject renterCanvas;
     private GameObject mainMenuUI;
+    private Vector2 vectorMove;
     bool canMove = true;
 
     [SerializeField]
@@ -52,7 +44,6 @@ public class MainMenuSide : MonoBehaviour
         manisonUI.GetComponent<UnlockingItemList>().LoadEnvironment();
         manisonUI.SetActive(false);
         mainMenuUI = GameObject.FindGameObjectWithTag("MainMenuUI");
-        PlayerData.CoinUI = GameObject.FindGameObjectWithTag("CoinUI").GetComponent<Text>();
         PlayerData.UpdateCoinCount();
         //loadEnviornmentInto rooms
     }
@@ -66,7 +57,6 @@ public class MainMenuSide : MonoBehaviour
         skin.onClick.AddListener(OpenSkinWardrobe);
         disableAds.onClick.AddListener(DisableAds);
         shop.onClick.AddListener(OpenShop);
-        StartCoroutine(TextGrow());
     }
 
     float x;
@@ -143,20 +133,5 @@ public class MainMenuSide : MonoBehaviour
     {
         SceneManager.LoadScene("Shop");
         //DISABLE ADS
-    }
-
-    public IEnumerator TextGrow()
-    {
-        Debug.Log("+");
-        float addedNumber = .01f;
-        while (true)
-        {
-                yield return new WaitForSeconds(0.025f);
-                pulsedText.transform.localScale = new Vector3(addedNumber * textGrowSpeed, addedNumber * textGrowSpeed) + pulsedText.transform.localScale;
-                if (pulsedText.transform.localScale.x > pulseRange.y)
-                    addedNumber *= -1;
-                if (pulsedText.transform.localScale.x < pulseRange.x)
-                    addedNumber *= -1;
-        }
     }
 }
