@@ -7,11 +7,11 @@ using UnityEngine.UI;
 public class UnlockingEnvironment : MonoBehaviour
 {
     [SerializeField]
-    private GameObject unlockingObject;
+    public GameObject unlockingObject;
     [SerializeField]
-    private GameObject hideObject;
+    public GameObject hideObject;
     [SerializeField]
-    private int cost;
+    public int cost;
     [SerializeField]
     private TMP_Text costDisplay;
     [SerializeField]
@@ -19,9 +19,9 @@ public class UnlockingEnvironment : MonoBehaviour
     [SerializeField]
     private Button adsButton;
     [SerializeField]
-    private int roomNumber;
+    public int roomNumber;
     [SerializeField]
-    private int environmentId;
+    public int environmentId;
     [SerializeField]
     private GameObject locker;
     [SerializeField]
@@ -29,7 +29,7 @@ public class UnlockingEnvironment : MonoBehaviour
     [SerializeField]
     private Image displayImage;
     [SerializeField]
-    private Sprite displayedSprite;
+    public Sprite displayedSprite;
 
     GameObject observer;
     
