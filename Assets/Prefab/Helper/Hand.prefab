@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2393439027778478572}
   m_Layer: 0
   m_Name: Hand
-  m_TagString: ActionManager
+  m_TagString: HintHand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,3 +105,5 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   speed: 2
+  onlyShow: 0
+  alwaysShow: 0

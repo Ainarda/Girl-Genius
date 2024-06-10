@@ -3,6 +3,7 @@ using Spine.Unity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -47,6 +48,9 @@ public class ActionVariant : MonoBehaviour
     [SerializeField]
     private bool activateStage = false;
 
+    [SerializeField]
+    private GameObject hint;
+
     private int animationNameNumber, walkPositionNumber, talkTextNumber, waitTimeNumber, cropSizeNumber, audioClipNumber,
         rotationObjectNumber, animationObjectNumber, groupNumber, miniGameNumber, hideObjectNumber, activeObjectNumber, sizeChangeNumber;
 
@@ -61,6 +65,8 @@ public class ActionVariant : MonoBehaviour
     void Start()
     {
         observer = GameObject.FindGameObjectWithTag("Observer").GetComponent<Observer>();
+        //hint = GameObject.FindGameObjectWithTag("HintHand");
+        CloseHint();
         activateAction = new List<DoAction>();
         InitAction();
         ActivateAction();
@@ -238,6 +244,8 @@ public class ActionVariant : MonoBehaviour
 
     private void StartMinigame()
     {
+        if(hint.GetComponent<HelperScript>().GetShowState() || PlayerData.lvlHints)
+            hint.SetActive(true);
         miniGame[miniGameNumber++].SetActive(true);
     }
 
@@ -407,6 +415,13 @@ public class ActionVariant : MonoBehaviour
         ActivateAction();
     }
     #endregion
+
+    public void CloseHint()
+    {
+        Debug.LogError("CloseHint");
+        if(hint != null)
+            hint.SetActive(false);
+    }
 }
 
 [Serializable]

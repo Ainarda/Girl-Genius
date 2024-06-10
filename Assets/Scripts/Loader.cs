@@ -15,18 +15,6 @@ public class Loader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        /*      try
-              {
-      #if UNITY_WEBGL && !UNITY_EDITOR
-              PlayerData.localText = GetLang();
-
-      #endif
-              }
-              catch
-              {
-                  Debug.LogWarning("Can't get lang from ySDK");
-              }
-        */
         PurchaseData.id = purchasingId;
         Observer observer = GetComponent<Observer>();
         try
@@ -52,11 +40,13 @@ public class Loader : MonoBehaviour
     {
         Debug.Log("Continue Load");
         Debug.Log(PlayerData.firstInit);
-        if (!PlayerData.firstInit)
+        GetComponent<YdLoader>().StartGameReady();
+        if (PlayerData.firstInit)
             SceneManager.LoadScene("Maison");
         else
         {
             PlayerData.firstInit = true;
+            GetComponent<Observer>().SavePlayerData();
             SceneManager.LoadScene("Level_1");
         }
     }
