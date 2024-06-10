@@ -40,10 +40,9 @@ public class YdLoader : MonoBehaviour
 
     public void StartGameReady()
     {
-        if(!PlayerData.firstInit)
-        { 
-            PlayerData.firstInit = true; 
-        }
+        //if(!PlayerData.firstInit)
+        //{ 
+        //}
         YandexGamesSdk.GameReady();
     }
 
