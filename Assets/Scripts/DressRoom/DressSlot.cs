@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using static UnityEngine.ParticleSystem;
@@ -7,7 +9,7 @@ using static UnityEngine.ParticleSystem;
 public class DressSlot : MonoBehaviour
 {
     [SerializeField]
-    private SpriteRenderer dressGameObject;
+    private Image dressImage;
     [SerializeField]
     private Sprite dressSprite;
     [SerializeField]
@@ -24,10 +26,11 @@ public class DressSlot : MonoBehaviour
     private int id;
     [SerializeField]
     private Button buyButton;
+    [SerializeField] private Button bigButton;
     [SerializeField]
     private int cost;
     [SerializeField]
-    private Text costText;
+    private TMP_Text costText;
     // Start is called before the first frame update
 
     //TODO fix particle system
@@ -35,7 +38,7 @@ public class DressSlot : MonoBehaviour
     {
         costText.text = cost.ToString();
         buyButton.onClick.AddListener(BuyDress);
-        dressGameObject.sprite = dressSprite;
+        dressImage.sprite = dressSprite;
         if (PlayerData.currentDressId == id)
         {
             PlayerData.SetCurrentDress(this);
@@ -51,9 +54,19 @@ public class DressSlot : MonoBehaviour
         }
     }
 
-    void Start()
+    private void OnEnable()
     {
-        
+        bigButton.onClick.AddListener(OnButtonClick);
+    }
+
+    private void OnDisable()
+    {
+        bigButton.onClick.RemoveListener(OnButtonClick);
+    }
+    
+    private void OnButtonClick()
+    {
+        PlayerData.SetCurrentDress(this);
     }
 
     public void SelectCurrentDress()
@@ -78,25 +91,6 @@ public class DressSlot : MonoBehaviour
         {
             PlayerData.AddCoin(-cost);
             PlayerData.UnlockCustom(id);
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnMouseDown()
-    {
-        if(Input.GetMouseButtonDown(0) && PlayerData.DressIsUnlocked(id))
-        {
-            PlayerData.SetCurrentDress(this);
-            //isActive = !isActive;
-            //if (isActive)
-            //    SelectCurrentDress();
-            //else
-            //    DeselectCurrentDress();
         }
     }
 
