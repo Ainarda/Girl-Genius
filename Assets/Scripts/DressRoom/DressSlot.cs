@@ -19,7 +19,7 @@ public class DressSlot : MonoBehaviour
     [SerializeField]
     private GameObject greenLight;
     [SerializeField]
-    private ParticleSystem particle;
+    private GameObject particle;
     [SerializeField]
     private GameObject buyMenu;
     [SerializeField]
@@ -66,12 +66,13 @@ public class DressSlot : MonoBehaviour
     
     private void OnButtonClick()
     {
-        PlayerData.SetCurrentDress(this);
+        if(PlayerData.DressIsUnlocked(id))
+            PlayerData.SetCurrentDress(this);
     }
 
     public void SelectCurrentDress()
     {
-        particle.Play();
+        particle.SetActive(true);
         greenLight.SetActive(true);
         offStand.SetActive(false);
         onStand.SetActive(true);
@@ -79,7 +80,7 @@ public class DressSlot : MonoBehaviour
 
     public void DeselectCurrentDress()
     {
-        particle.Stop();
+        particle.SetActive(false);
         greenLight.SetActive(false);
         offStand.SetActive(true);
         onStand.SetActive(false);

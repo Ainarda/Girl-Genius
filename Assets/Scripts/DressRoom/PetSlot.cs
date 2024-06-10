@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PetSlot : MonoBehaviour
 {
     [SerializeField]
-    private SpriteRenderer petGameObject;
+    private Image petImage;
     [SerializeField]
     private Sprite petSprite;
     [SerializeField]
@@ -16,16 +17,19 @@ public class PetSlot : MonoBehaviour
     [SerializeField]
     private GameObject greenLight;
     [SerializeField]
-    private ParticleSystem particle;
+    private GameObject particle;
     //end idk
     [SerializeField]
     private GameObject buyMenu;
+    [SerializeField] private Button bigButton; 
+
     [SerializeField]
     private int id;
     // Start is called before the first frame update
     void Awake()
     {
-        petGameObject.sprite = petSprite;
+        petImage.sprite = petSprite;
+        bigButton.onClick.AddListener(OnButtonClick);
         if (PlayerData.currentPetId == id)
         {
             PlayerData.SetCurrentPet(this);
@@ -40,16 +44,18 @@ public class PetSlot : MonoBehaviour
             buyMenu.SetActive(false);
         }
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    private void OnButtonClick()
     {
-        
+        if (PlayerData.PetIsUnlocked(id))
+        {
+            PlayerData.SetCurrentPet(this);
+        }
     }
 
     public void SelectCurrentPet()
     {
-        particle.Play();
+        particle.SetActive(true);
         greenLight.SetActive(true);
         offStand.SetActive(false);
         onStand.SetActive(true);
@@ -57,24 +63,12 @@ public class PetSlot : MonoBehaviour
 
     public void DeselectCurrentPet()
     {
-        particle.Stop();
+        particle.SetActive(false);
         greenLight.SetActive(false);
         offStand.SetActive(true);
         onStand.SetActive(false);
     }
 
-    private void OnMouseDown()
-    {
-        if (Input.GetMouseButtonDown(0) && PlayerData.PetIsUnlocked(id))
-        {
-            PlayerData.SetCurrentPet(this);
-            //isActive = !isActive;
-            //if (isActive)
-            //    SelectCurrentDress();
-            //else
-            //    DeselectCurrentDress();
-        }
-    }
 
     public int GetPetId()
     {
