@@ -58,8 +58,11 @@ public class Observer : MonoBehaviour
     public void RemoveElement(GameObject element)
     {
         unCompletedElement.Remove(element);
-        if(unCompletedElement.Count == 0)
+        if (unCompletedElement.Count == 0)
+        {
+            GetComponent<ActionVariant>().CloseHint();
             GetComponent<ActionVariant>().NextAction();//OpenWinScreen();// CompleteSceneWithoutCheck();
+        }
     }
 
     public void RemoveFailElementWithEraser(GameObject element)
@@ -75,6 +78,7 @@ public class Observer : MonoBehaviour
         if (unCompletedElement.Count <= elementMaxCount / 8 && !IsLevelComplete)
         {
             IsLevelComplete = true;
+            GetComponent<ActionVariant>().CloseHint();
             GetComponent<ActionVariant>().NextAction();//OpenWinScreen();
         }
             //CompleteSceneWithoutCheck();
@@ -109,7 +113,11 @@ public class Observer : MonoBehaviour
             }
         }
         if (isComplete)
+        {
+            GetComponent<ActionVariant>().CloseHint();
             GetComponent<ActionVariant>().NextAction();//OpenWinScreen();
+            
+        }
         //PlayerData.LoadNextLevel();
         else
             OpenLoseScreen();
@@ -203,6 +211,7 @@ public class Observer : MonoBehaviour
 
     public void SavePlayerData()
     {
+        Debug.LogWarning("StartDataSave");
         PlayerPrefs.SetInt("PlayerCoin", PlayerData.PlayerCoin);
         PlayerPrefs.SetInt("CurrentLvl", PlayerData.CurrentLvl);
         PlayerPrefs.SetInt("dressProgress", PlayerData.dressProgress);
@@ -255,9 +264,10 @@ public class Observer : MonoBehaviour
     {
         PlayerData.firstInit = PlayerPrefs.GetInt("firstInit") == 0? false : true;
         PlayerData.mansionScene = true;
-        Debug.Log(!PlayerData.firstInit);
+        Debug.Log("StartLoad data "+PlayerData.firstInit);
         if (PlayerData.firstInit)
         {
+            Debug.LogWarning("StartLoad all data");
             PlayerData.PlayerCoin = PlayerPrefs.GetInt("PlayerCoin");
             PlayerData.CurrentLvl = PlayerPrefs.GetInt("CurrentLvl");
             PlayerData.dressProgress = PlayerPrefs.GetInt("dressProgress");

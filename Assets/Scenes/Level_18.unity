@@ -522,6 +522,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2393439027778478572, guid: ad7cf80dcf1e93146b375706b061d783, type: 3}
+      propertyPath: alwaysShow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2393439027778478572, guid: ad7cf80dcf1e93146b375706b061d783, type: 3}
       propertyPath: points.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -550,6 +554,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad7cf80dcf1e93146b375706b061d783, type: 3}
+--- !u!1 &728258173 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7511273759811945566, guid: ad7cf80dcf1e93146b375706b061d783, type: 3}
+  m_PrefabInstance: {fileID: 728258172}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &783449952
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,6 +887,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: hint
+      value: 
+      objectReference: {fileID: 728258173}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: group.Array.size
       value: 2

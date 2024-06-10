@@ -19,16 +19,22 @@ public class HelperScript : MonoBehaviour
 
     private void Awake()
     {
-        if (!PlayerData.lvlHints && !alwaysShow)
-        {
-            gameObject.SetActive(false);
-            PlayerData.lvlHints = false;
-        }
+        
+    }
+
+    public bool GetShowState()
+    {
+        return alwaysShow;
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        if (!PlayerData.lvlHints && !alwaysShow)
+        {
+            //gameObject.SetActive(false);
+            //PlayerData.lvlHints = false;
+        }
         if (!onlyShow)
         {
             vectorMove = (points[currentPoints + 1].transform.position - helperPrefab.transform.position)*0.1f;

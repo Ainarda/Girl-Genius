@@ -2054,6 +2054,7 @@ MonoBehaviour:
   sizebleObject: []
   audioSource: {fileID: 0}
   activateStage: 0
+  hint: {fileID: 0}
 --- !u!1 &51806540
 GameObject:
   m_ObjectHideFlags: 0
@@ -7534,7 +7535,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &210033542
 RectTransform:
   m_ObjectHideFlags: 0
@@ -64279,6 +64280,7 @@ MonoBehaviour:
   offSprite: {fileID: 21300000, guid: b3dff15ef5a0054419cee7e85e90da1b, type: 3}
   onSprite: {fileID: 21300000, guid: 6481315d7c388f546811231c8c0d589c, type: 3}
   musicButtonImage: {fileID: 301712688}
+  audioMixer: {fileID: 0}
 --- !u!1 &1940638017
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class SettingButton : MonoBehaviour
@@ -11,6 +12,11 @@ public class SettingButton : MonoBehaviour
     private Sprite offSprite, onSprite;
     [SerializeField]
     private Image musicButtonImage;
+    [SerializeField] 
+    private AudioMixer audioMixer;
+
+    private const float DisabledVolume = -80;
+    private const float EnabledVolume = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,12 +31,13 @@ public class SettingButton : MonoBehaviour
 
     public void OffMusic()
     {
+        
         PlayerData.musicPlay = !PlayerData.musicPlay;
         if(PlayerData.musicPlay)
             musicButtonImage.sprite = onSprite;
         else
             musicButtonImage.sprite = offSprite;
-
+        audioMixer.SetFloat("Volume", PlayerData.musicPlay ? EnabledVolume : DisabledVolume);
     }
 
     public void OpenSettingScreen()
