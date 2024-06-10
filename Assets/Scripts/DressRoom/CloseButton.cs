@@ -22,7 +22,6 @@ public class CloseButton : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            SceneManager.LoadScene("Maison");
         }
     }
 }

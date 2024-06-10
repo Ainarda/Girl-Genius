@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ChangePannel : MonoBehaviour
@@ -17,6 +18,7 @@ public class ChangePannel : MonoBehaviour
     private GameObject dressScroll;
     [SerializeField]
     private GameObject petScroll;
+    [SerializeField] private Button closeButton;
 
     private bool stage = true; //true - dress || false - pet
     // Start is called before the first frame update
@@ -24,6 +26,7 @@ public class ChangePannel : MonoBehaviour
     {
         dressButton.onClick.AddListener(SetDressScroll);
         petButton.onClick.AddListener(SetPetScroll);
+        closeButton.onClick.AddListener(OnCloseButtonClick);
     }
 
 
@@ -41,5 +44,10 @@ public class ChangePannel : MonoBehaviour
         petButton.gameObject.GetComponent<Image>().sprite = unactiveButton;
         dressScroll.SetActive(true);
         petScroll.SetActive(false);
+    }
+
+    private void OnCloseButtonClick()
+    {
+        SceneManager.LoadScene("Maison");
     }
 }
