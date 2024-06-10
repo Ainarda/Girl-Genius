@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,7 +13,7 @@ public class UnlockingEnvironment : MonoBehaviour
     [SerializeField]
     private int cost;
     [SerializeField]
-    private Text costDisplay;
+    private TextMeshProUGUI costDisplay;
     [SerializeField]
     private Button buyButton;
     [SerializeField]
