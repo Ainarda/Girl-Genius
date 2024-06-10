@@ -756,7 +756,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &421810202
 Transform:
   m_ObjectHideFlags: 0
@@ -1091,7 +1091,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &556526341
 Transform:
   m_ObjectHideFlags: 0
@@ -3023,6 +3023,7 @@ MonoBehaviour:
     ruText: "\u0421\u043A\u0438\u043D\u044B"
     enText: Skin
   textField: {fileID: 1945578040}
+  tmpTxt: {fileID: 0}
 --- !u!1 &1053437050
 GameObject:
   m_ObjectHideFlags: 0
@@ -4409,6 +4410,7 @@ MonoBehaviour:
     ruText: "\u041F\u0438\u0442\u043E\u043C\u0446\u044B"
     enText: Pet
   textField: {fileID: 280597001}
+  tmpTxt: {fileID: 0}
 --- !u!4 &1444046049 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8648727390861212961, guid: 7aaeb271431a1914ba2caf98829f27ad, type: 3}

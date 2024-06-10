@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -103,8 +104,8 @@ public class RenterUI : MonoBehaviour
             page.DescriptionText.text = renter.Description.enText;
             page.NameText.text = renter.Name.enText;
         }
-        page.PayTextFree.text = renter.Payments.ToString();
-        page.PayTextAds.text = renter.Payments.ToString();
+        page.PayTextFree.text = $"<sprite index=0> {renter.Payments}";
+        page.PayTextAds.text = $"<sprite index=0> {renter.Payments}";
         page.RenterImage.sprite = renter.Icon;
         page.CurrentRenterId = id;
     }
@@ -198,10 +199,10 @@ public struct RenterPage
     public Image Background;
     public GameObject FreeButton;
     public GameObject AdsButton;
-    public Text NameText;
-    public Text DescriptionText;
-    public Text PayTextFree;
-    public Text PayTextAds;
+    public TMP_Text NameText;
+    public TMP_Text DescriptionText;
+    public TMP_Text PayTextFree;
+    public TMP_Text PayTextAds;
     public Image RenterImage;
     public int CurrentRenterId;
 }
