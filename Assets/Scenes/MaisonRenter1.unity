@@ -810,11 +810,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 1048704662}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 233668491}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 1645065865}
+  adsButton: {fileID: 0}
   roomNumber: 4
   environmentId: 2
   locker: {fileID: 786605609}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &25125365
 GameObject:
   m_ObjectHideFlags: 0
@@ -2058,6 +2062,7 @@ MonoBehaviour:
     ruText: "\u041F\u041E\u041B\u0423\u0427\u0418\u0422\u042C"
     enText: CLAIM
   textField: {fileID: 746305532}
+  tmpTxt: {fileID: 0}
 --- !u!114 &52109366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2300,11 +2305,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 1242817357}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 1914789457}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 277989306}
+  adsButton: {fileID: 0}
   roomNumber: 4
   environmentId: 4
   locker: {fileID: 1245114249}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &57264847
 GameObject:
   m_ObjectHideFlags: 0
@@ -2444,11 +2453,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 146194724}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 1038713714}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 1289731590}
+  adsButton: {fileID: 0}
   roomNumber: 3
   environmentId: 5
   locker: {fileID: 1458589283}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &59946426
 GameObject:
   m_ObjectHideFlags: 0
@@ -2483,15 +2496,13 @@ MonoBehaviour:
   distance: {x: -13.4, y: 25.8}
   vectorMoveBase: {x: 1, y: 0}
   cameraSpeed: 0.5
-  pulseRange: {x: 1, y: 1.5}
-  pulsedText: {fileID: 0}
-  textGrowSpeed: 1
   loadLevel: {fileID: 0}
   renter: {fileID: 0}
   manison: {fileID: 0}
   skin: {fileID: 0}
   disableAds: {fileID: 0}
   shop: {fileID: 0}
+  coinUI: {fileID: 0}
   manisonUI: {fileID: 1074313901}
   renterCanvas: {fileID: 0}
   hideMineMenu: 0
@@ -4635,11 +4646,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 731231446}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 248853743}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 1372732429}
+  adsButton: {fileID: 0}
   roomNumber: 3
   environmentId: 6
   locker: {fileID: 29012211}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &115965599
 GameObject:
   m_ObjectHideFlags: 0
@@ -6559,102 +6574,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 447236490}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 1184503081}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 1216118048}
+  adsButton: {fileID: 0}
   roomNumber: 3
   environmentId: 5
   locker: {fileID: 1539825057}
---- !u!1 &168678046
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 168678047}
-  - component: {fileID: 168678050}
-  - component: {fileID: 168678049}
-  - component: {fileID: 168678048}
-  m_Layer: 5
-  m_Name: CoinImage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &168678047
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168678046}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1059331325}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -26, y: 0.286911}
-  m_SizeDelta: {x: 50, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &168678048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168678046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
---- !u!114 &168678049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168678046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ea41d83e5e63a7043a80cece2445d98d, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &168678050
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168678046}
-  m_CullTransparentMesh: 1
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &168985242
 GameObject:
   m_ObjectHideFlags: 0
@@ -9079,11 +9007,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 241227231}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 673391446}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 11838567}
+  adsButton: {fileID: 0}
   roomNumber: 1
   environmentId: 9
   locker: {fileID: 1277883971}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &248853741
 GameObject:
   m_ObjectHideFlags: 0
@@ -9218,11 +9150,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 1981280313}
   hideObject: {fileID: 258367526}
   cost: 300
-  costDisplay: {fileID: 980858622}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 383503367}
+  adsButton: {fileID: 0}
   roomNumber: 2
   environmentId: 4
   locker: {fileID: 1529511652}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &258367526
 GameObject:
   m_ObjectHideFlags: 0
@@ -10497,11 +10433,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 1546758005}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 1176195138}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 1038793894}
+  adsButton: {fileID: 0}
   roomNumber: 2
   environmentId: 3
   locker: {fileID: 1476708099}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &292956993
 GameObject:
   m_ObjectHideFlags: 0
@@ -10987,15 +10927,13 @@ MonoBehaviour:
   distance: {x: -13.4, y: 25.8}
   vectorMoveBase: {x: 1, y: 0}
   cameraSpeed: 0.5
-  pulseRange: {x: 1, y: 1.5}
-  pulsedText: {fileID: 0}
-  textGrowSpeed: 1
   loadLevel: {fileID: 0}
   renter: {fileID: 0}
   manison: {fileID: 0}
   skin: {fileID: 0}
   disableAds: {fileID: 0}
   shop: {fileID: 0}
+  coinUI: {fileID: 0}
   manisonUI: {fileID: 1074313901}
   renterCanvas: {fileID: 0}
   hideMineMenu: 0
@@ -11520,15 +11458,13 @@ MonoBehaviour:
   distance: {x: -13.4, y: 25.8}
   vectorMoveBase: {x: 1, y: 0}
   cameraSpeed: 0.5
-  pulseRange: {x: 1, y: 1.5}
-  pulsedText: {fileID: 0}
-  textGrowSpeed: 1
   loadLevel: {fileID: 0}
   renter: {fileID: 0}
   manison: {fileID: 0}
   skin: {fileID: 0}
   disableAds: {fileID: 0}
   shop: {fileID: 0}
+  coinUI: {fileID: 0}
   manisonUI: {fileID: 1074313901}
   renterCanvas: {fileID: 0}
   hideMineMenu: 0
@@ -11736,11 +11672,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 807366612}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 1052503624}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 1379802959}
+  adsButton: {fileID: 0}
   roomNumber: 7
   environmentId: 1
   locker: {fileID: 1354791281}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &327930439
 GameObject:
   m_ObjectHideFlags: 0
@@ -11880,11 +11820,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 604639098}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 400483443}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 912045867}
+  adsButton: {fileID: 0}
   roomNumber: 3
   environmentId: 1
   locker: {fileID: 1449880296}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &331335036
 GameObject:
   m_ObjectHideFlags: 0
@@ -12724,11 +12668,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 607205122}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 1786128228}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 2140311483}
+  adsButton: {fileID: 0}
   roomNumber: 4
   environmentId: 5
   locker: {fileID: 756407111}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &360816639
 GameObject:
   m_ObjectHideFlags: 0
@@ -18296,6 +18244,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MessageCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4886575433406492562, guid: aa85859e75f906d429e8b25fd72bb0a7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7297754914292466862, guid: aa85859e75f906d429e8b25fd72bb0a7, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -21561,6 +21513,7 @@ MonoBehaviour:
     ruText: "\u041E\u0422\u041A\u041B\u042E\u0427\u0418\u0422\u042C \u0420\u0415\u041A\u041B\u0410\u041C\u0423"
     enText: NO ADS
   textField: {fileID: 710843099}
+  tmpTxt: {fileID: 0}
 --- !u!114 &597617799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22492,11 +22445,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 49052291}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 1567271375}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 1516131343}
+  adsButton: {fileID: 0}
   roomNumber: 3
   environmentId: 7
   locker: {fileID: 1825403199}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &637476123
 GameObject:
   m_ObjectHideFlags: 0
@@ -23202,6 +23159,7 @@ MonoBehaviour:
     ruText: "\u0421\u041A\u0418\u041D\u042B"
     enText: SKIN
   textField: {fileID: 658438893}
+  tmpTxt: {fileID: 0}
 --- !u!114 &658438893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24023,11 +23981,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 1922924384}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 2073736625}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 1815692343}
+  adsButton: {fileID: 0}
   roomNumber: 1
   environmentId: 6
   locker: {fileID: 1185057379}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &680603242
 GameObject:
   m_ObjectHideFlags: 0
@@ -24251,11 +24213,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 809821714}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 1095723040}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 1021756068}
+  adsButton: {fileID: 0}
   roomNumber: 3
   environmentId: 2
   locker: {fileID: 606549648}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &686778586
 GameObject:
   m_ObjectHideFlags: 0
@@ -26056,11 +26022,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 448026826}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 1678829595}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 1698631978}
+  adsButton: {fileID: 0}
   roomNumber: 1
   environmentId: 4
   locker: {fileID: 1181743485}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!224 &741883466
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28070,11 +28040,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 997964900}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 571683910}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 872894967}
+  adsButton: {fileID: 0}
   roomNumber: 3
   environmentId: 1
   locker: {fileID: 1045734871}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1001 &794678892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28638,6 +28612,7 @@ MonoBehaviour:
     ruText: "\u041E\u0422\u041A\u0410\u0417\u0410\u0422\u042C\u0421\u042F"
     enText: NO THANKS
   textField: {fileID: 590698967}
+  tmpTxt: {fileID: 0}
 --- !u!1 &812089890
 GameObject:
   m_ObjectHideFlags: 0
@@ -29037,15 +29012,13 @@ MonoBehaviour:
   distance: {x: -13.4, y: 25.8}
   vectorMoveBase: {x: 1, y: 0}
   cameraSpeed: 0.5
-  pulseRange: {x: 1, y: 1.5}
-  pulsedText: {fileID: 0}
-  textGrowSpeed: 1
   loadLevel: {fileID: 0}
   renter: {fileID: 0}
   manison: {fileID: 0}
   skin: {fileID: 0}
   disableAds: {fileID: 0}
   shop: {fileID: 0}
+  coinUI: {fileID: 0}
   manisonUI: {fileID: 1074313901}
   renterCanvas: {fileID: 0}
   hideMineMenu: 0
@@ -29178,11 +29151,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 1387202326}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 2121293282}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 379235826}
+  adsButton: {fileID: 0}
   roomNumber: 5
   environmentId: 2
   locker: {fileID: 1590698504}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &825140503
 GameObject:
   m_ObjectHideFlags: 0
@@ -30193,6 +30170,7 @@ MonoBehaviour:
     ruText: "\u041F\u041E\u041C\u0415\u0421\u0422\u042C\u0415"
     enText: MANSION
   textField: {fileID: 841663256}
+  tmpTxt: {fileID: 0}
 --- !u!114 &841663256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30598,11 +30576,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 757415900}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 1340670819}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 33566570}
+  adsButton: {fileID: 0}
   roomNumber: 1
   environmentId: 2
   locker: {fileID: 1290012767}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!224 &862948749
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31619,11 +31601,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 1075010016}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 647392123}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 259119862}
+  adsButton: {fileID: 0}
   roomNumber: 8
   environmentId: 1
   locker: {fileID: 2134897597}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &893544031
 GameObject:
   m_ObjectHideFlags: 0
@@ -32993,11 +32979,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 393591529}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 1057425513}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 776762388}
+  adsButton: {fileID: 0}
   roomNumber: 8
   environmentId: 2
   locker: {fileID: 1935398801}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &950761197
 GameObject:
   m_ObjectHideFlags: 0
@@ -34821,11 +34811,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 543748156}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 124691461}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 142447612}
+  adsButton: {fileID: 0}
   roomNumber: 3
   environmentId: 3
   locker: {fileID: 489638942}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &994136291
 GameObject:
   m_ObjectHideFlags: 0
@@ -34942,11 +34936,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 334179963}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 261916391}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 1441943482}
+  adsButton: {fileID: 0}
   roomNumber: 1
   environmentId: 5
   locker: {fileID: 476786226}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!224 &996422808
 RectTransform:
   m_ObjectHideFlags: 0
@@ -37317,117 +37315,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1057425511}
   m_CullTransparentMesh: 1
---- !u!1 &1059331324
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1059331325}
-  - component: {fileID: 1059331329}
-  - component: {fileID: 1059331328}
-  - component: {fileID: 1059331327}
-  - component: {fileID: 1059331326}
-  m_Layer: 5
-  m_Name: CoinCount
-  m_TagString: CoinUI
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1059331325
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059331324}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 168678047}
-  m_Father: {fileID: 1204309243}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 8.900002, y: 0.8999996}
-  m_SizeDelta: {x: 0, y: 13.426086}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1059331326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059331324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalFit: 2
-  m_VerticalFit: 0
---- !u!114 &1059331327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059331324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 3, y: 3}
-  m_UseGraphicAlpha: 0
---- !u!114 &1059331328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059331324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: a4134afe793062643ba0b563319a96ec, type: 3}
-    m_FontSize: 32
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
-    m_Alignment: 3
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 40000
---- !u!222 &1059331329
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059331324}
-  m_CullTransparentMesh: 1
 --- !u!1 &1059339784
 GameObject:
   m_ObjectHideFlags: 0
@@ -37483,11 +37370,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 868777961}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 187897968}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 1267625858}
+  adsButton: {fileID: 0}
   roomNumber: 3
   environmentId: 4
   locker: {fileID: 359049924}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &1061399870
 GameObject:
   m_ObjectHideFlags: 0
@@ -39809,11 +39700,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 1237365826}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 1035151295}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 1657103987}
+  adsButton: {fileID: 0}
   roomNumber: 1
   environmentId: 13
   locker: {fileID: 1607946759}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &1128840997
 GameObject:
   m_ObjectHideFlags: 0
@@ -40472,11 +40367,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 160421194}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 585386123}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 478387188}
+  adsButton: {fileID: 0}
   roomNumber: 3
   environmentId: 3
   locker: {fileID: 1115089382}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &1157877349
 GameObject:
   m_ObjectHideFlags: 0
@@ -41143,11 +41042,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 1923783347}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 2061402498}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 1719913024}
+  adsButton: {fileID: 0}
   roomNumber: 7
   environmentId: 2
   locker: {fileID: 1400861596}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &1184503079
 GameObject:
   m_ObjectHideFlags: 0
@@ -41864,82 +41767,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1204309242
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1204309243}
-  - component: {fileID: 1204309245}
-  - component: {fileID: 1204309244}
-  m_Layer: 5
-  m_Name: CoinContainer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1204309243
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1204309242}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.89844, y: 0.89844, z: 0.89844}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1059331325}
-  m_Father: {fileID: 2079919037}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -62, y: -36}
-  m_SizeDelta: {x: 100, y: 40}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1204309244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1204309242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3dd60b661d0e16647b11c0a586edc550, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1204309245
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1204309242}
-  m_CullTransparentMesh: 1
 --- !u!1 &1204694119
 GameObject:
   m_ObjectHideFlags: 0
@@ -44934,11 +44761,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 911225635}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 1157877351}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 733437925}
+  adsButton: {fileID: 0}
   roomNumber: 4
   environmentId: 1
   locker: {fileID: 1318123897}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &1289731588
 GameObject:
   m_ObjectHideFlags: 0
@@ -45949,11 +45780,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 1701507476}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 840929820}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 1543703142}
+  adsButton: {fileID: 0}
   roomNumber: 3
   environmentId: 2
   locker: {fileID: 4872404}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &1328161651
 GameObject:
   m_ObjectHideFlags: 0
@@ -46716,6 +46551,7 @@ MonoBehaviour:
     ruText: "\u0416\u041C\u0418 \u0418\u0413\u0420\u0410\u0422\u042C"
     enText: TAP TO START
   textField: {fileID: 2100094789}
+  tmpTxt: {fileID: 0}
 --- !u!114 &1336101178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47275,11 +47111,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 349744873}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 1438842945}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 1937941586}
+  adsButton: {fileID: 0}
   roomNumber: 2
   environmentId: 2
   locker: {fileID: 825140503}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &1372369148
 GameObject:
   m_ObjectHideFlags: 0
@@ -47870,11 +47710,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 1229254940}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 831311986}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 270863046}
+  adsButton: {fileID: 0}
   roomNumber: 5
   environmentId: 1
   locker: {fileID: 1436344477}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &1379802957
 GameObject:
   m_ObjectHideFlags: 0
@@ -49633,11 +49477,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 16624651}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 1106598520}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 820701217}
+  adsButton: {fileID: 0}
   roomNumber: 1
   environmentId: 1
   locker: {fileID: 2074575488}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &1436344477
 GameObject:
   m_ObjectHideFlags: 0
@@ -51320,6 +51168,7 @@ MonoBehaviour:
     ruText: "\u0410\u0420\u0415\u041D\u0414\u0410"
     enText: RENTER
   textField: {fileID: 1493041581}
+  tmpTxt: {fileID: 0}
 --- !u!114 &1493041581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52109,11 +51958,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 1957506346}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 1549961994}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 907686226}
+  adsButton: {fileID: 0}
   roomNumber: 2
   environmentId: 1
   locker: {fileID: 2064003119}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &1525125086
 GameObject:
   m_ObjectHideFlags: 0
@@ -54180,11 +54033,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 705015645}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 68175997}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 832110329}
+  adsButton: {fileID: 0}
   roomNumber: 3
   environmentId: 10
   locker: {fileID: 955163077}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &1590698504
 GameObject:
   m_ObjectHideFlags: 0
@@ -54786,11 +54643,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 1342845280}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 866946157}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 229976743}
+  adsButton: {fileID: 0}
   roomNumber: 1
   environmentId: 7
   locker: {fileID: 1612965101}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &1600202900
 GameObject:
   m_ObjectHideFlags: 0
@@ -59198,11 +59059,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 993251705}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 732242953}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 1593931591}
+  adsButton: {fileID: 0}
   roomNumber: 1
   environmentId: 8
   locker: {fileID: 226322976}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &1735982616
 GameObject:
   m_ObjectHideFlags: 0
@@ -60199,11 +60064,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 1275640232}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 1606192259}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 1242996413}
+  adsButton: {fileID: 0}
   roomNumber: 3
   environmentId: 6
   locker: {fileID: 2012917632}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &1769928800
 GameObject:
   m_ObjectHideFlags: 0
@@ -60259,11 +60128,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 736581754}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 176786340}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 2085019883}
+  adsButton: {fileID: 0}
   roomNumber: 1
   environmentId: 12
   locker: {fileID: 912772319}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &1772521973
 GameObject:
   m_ObjectHideFlags: 0
@@ -60403,11 +60276,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 232621765}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 493379589}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 986891784}
+  adsButton: {fileID: 0}
   roomNumber: 4
   environmentId: 3
   locker: {fileID: 739440505}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &1778214055
 GameObject:
   m_ObjectHideFlags: 0
@@ -61292,11 +61169,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 1103437564}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 893544033}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 1666637087}
+  adsButton: {fileID: 0}
   roomNumber: 7
   environmentId: 3
   locker: {fileID: 33931688}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &1794445451
 GameObject:
   m_ObjectHideFlags: 0
@@ -63985,11 +63866,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 582035307}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 938455353}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 61505828}
+  adsButton: {fileID: 0}
   roomNumber: 8
   environmentId: 3
   locker: {fileID: 1629657699}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &1902830339
 GameObject:
   m_ObjectHideFlags: 0
@@ -64368,11 +64253,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 1635196571}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 565853613}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 433087509}
+  adsButton: {fileID: 0}
   roomNumber: 1
   environmentId: 3
   locker: {fileID: 292956993}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!224 &1905163387
 RectTransform:
   m_ObjectHideFlags: 0
@@ -64470,6 +64359,140 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1907253302}
+  m_CullTransparentMesh: 1
+--- !u!1 &1908312297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1908312298}
+  - component: {fileID: 1908312300}
+  - component: {fileID: 1908312299}
+  m_Layer: 5
+  m_Name: CoinCount
+  m_TagString: CoinUI
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1908312298
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908312297}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2050578962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: -8}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1908312299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908312297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: <sprite index=0> 40000
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: d4208312f649d444a984d4a3735e24aa, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: a94ded740467a5a419bfb9d047650b2c, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 11400000, guid: faf5f5e9f17bc184b80d67c63a559906, type: 2}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 21.4
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 4096
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1908312300
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908312297}
   m_CullTransparentMesh: 1
 --- !u!1 &1914158785
 GameObject:
@@ -67089,11 +67112,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 2146699792}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 565333073}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 1328546140}
+  adsButton: {fileID: 0}
   roomNumber: 2
   environmentId: 5
   locker: {fileID: 744145615}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &1966322866
 GameObject:
   m_ObjectHideFlags: 0
@@ -67233,11 +67260,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 375193458}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 1142962267}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 1104066994}
+  adsButton: {fileID: 0}
   roomNumber: 2
   environmentId: 2
   locker: {fileID: 954871167}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &1973674627
 GameObject:
   m_ObjectHideFlags: 0
@@ -67368,11 +67399,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 349744873}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 65211607}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 1138580614}
+  adsButton: {fileID: 0}
   roomNumber: 2
   environmentId: 2
   locker: {fileID: 898208094}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &1981280313
 GameObject:
   m_ObjectHideFlags: 0
@@ -68916,11 +68951,15 @@ MonoBehaviour:
   unlockingObject: {fileID: 281335585}
   hideObject: {fileID: 0}
   cost: 300
-  costDisplay: {fileID: 578034704}
+  costDisplay: {fileID: 0}
   buyButton: {fileID: 1992343223}
+  adsButton: {fileID: 0}
   roomNumber: 1
   environmentId: 11
   locker: {fileID: 478199531}
+  withAds: 0
+  displayImage: {fileID: 0}
+  displayedSprite: {fileID: 0}
 --- !u!1 &2011462374
 GameObject:
   m_ObjectHideFlags: 0
@@ -70116,6 +70155,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2047567784}
   m_CullTransparentMesh: 1
+--- !u!1 &2050578961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2050578962}
+  - component: {fileID: 2050578964}
+  - component: {fileID: 2050578963}
+  m_Layer: 5
+  m_Name: CoinContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2050578962
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050578961}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1908312298}
+  m_Father: {fileID: 2073740421}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -62, y: -36}
+  m_SizeDelta: {x: 100, y: 35}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2050578963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050578961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3dd60b661d0e16647b11c0a586edc550, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2050578964
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050578961}
+  m_CullTransparentMesh: 1
 --- !u!1 &2051543790
 GameObject:
   m_ObjectHideFlags: 0
@@ -71119,6 +71234,108 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073736623}
   m_CullTransparentMesh: 1
+--- !u!1 &2073740417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2073740421}
+  - component: {fileID: 2073740420}
+  - component: {fileID: 2073740419}
+  - component: {fileID: 2073740418}
+  m_Layer: 5
+  m_Name: CoinsCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2073740418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073740417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &2073740419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073740417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 360, y: 640}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 1
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &2073740420
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073740417}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &2073740421
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073740417}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2050578962}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &2074575488
 GameObject:
   m_ObjectHideFlags: 0
@@ -71195,108 +71412,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074575488}
   m_CullTransparentMesh: 1
---- !u!1 &2079919033
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2079919037}
-  - component: {fileID: 2079919036}
-  - component: {fileID: 2079919035}
-  - component: {fileID: 2079919034}
-  m_Layer: 5
-  m_Name: CoinsCanvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2079919034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2079919033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &2079919035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2079919033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 360, y: 640}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 1
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &2079919036
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2079919033}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!224 &2079919037
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2079919033}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1204309243}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
 --- !u!1 &2080291611
 GameObject:
   m_ObjectHideFlags: 0
@@ -73443,7 +73558,6 @@ SceneRoots:
   - {fileID: 355683924}
   - {fileID: 1610382671}
   - {fileID: 1070658506}
-  - {fileID: 2079919037}
   - {fileID: 884638979}
   - {fileID: 527684424}
   - {fileID: 968081050}
@@ -73465,3 +73579,4 @@ SceneRoots:
   - {fileID: 1158351960}
   - {fileID: 333939996}
   - {fileID: 5073359114870576755}
+  - {fileID: 2073740421}
