@@ -104,7 +104,7 @@ public class PlayerData : MonoBehaviour
         CurrentLvl++;
         
         AddCoin(50);
-        CoinUI.text = PlayerCoin.ToString();
+        UpdateCoinCount();
         dressProgress++;
         if (dressProgress == 4)
         {
