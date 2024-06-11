@@ -55,7 +55,7 @@ public class LoadSceneUI : MonoBehaviour
         else
             sceneName = "Level";
         lvlText.text = sceneName + " " + sceneNameText[1];
-        coinText.text = "<sprite index = 0> "+PlayerData.PlayerCoin.ToString();
+        coinText.text = "<sprite index=0> "+PlayerData.PlayerCoin.ToString();
     }
 
     private void InitUI()
