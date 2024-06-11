@@ -22,6 +22,13 @@ public class PreAdClicker : MonoBehaviour
     
     public static UnityEvent AddScore = new UnityEvent();
 
+    private RectTransform rectTransform;
+
+    private void Awake()
+    {
+        rectTransform = transform as RectTransform;
+    }
+
     private void OnEnable()
     {
         AddScore.AddListener(OnAddScore);
@@ -82,9 +89,11 @@ public class PreAdClicker : MonoBehaviour
             
             RectTransform clickObjectRt = clickObject.transform as RectTransform;
 
+            float offset = clickObjectRt!.rect.width * .75f;
+            
             clickObjectRt!.anchoredPosition = new Vector2(
-                Random.Range(Screen.width * 0.1f, Screen.width * 0.9f),
-                Random.Range(Screen.height * 0.1f, Screen.height * 0.2f));
+                Random.Range(offset, rectTransform.rect.width - offset),
+                Random.Range(rectTransform.rect.height * 0.1f, rectTransform.rect.height * 0.2f));
             instantiatedObjects.Add(clickObject.gameObject);
             
             yield return new WaitForSecondsRealtime(spawnDelay);

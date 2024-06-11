@@ -31,7 +31,12 @@ public class PreAdScreen : MonoBehaviour
     
     #if UNITY_EDITOR
     [ContextMenu("Show AdClicker")]
+    private void ShowAdClicker()
+    {
+        ShowInterstitialAdClicker();
+    }
     #endif
+    
     public void ShowInterstitialAdClicker(Action onClose = null)
     {
         if (!Advertisement.AdvertisementIsAvailable || !PlayerData.lvlAds)
