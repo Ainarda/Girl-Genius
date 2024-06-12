@@ -10,6 +10,8 @@ public class ConnectLine : MonoBehaviour
     private GameObject endPoint;
     [SerializeField]
     private List<GameObject> failEndPoint;
+    [SerializeField]
+    private bool isWrong = false;
 
     private Observer observer;
     private Vector3 offset;
@@ -20,7 +22,8 @@ public class ConnectLine : MonoBehaviour
         lineRenderer.SetPosition(0, transform.position);
         lineRenderer.SetPosition(1, transform.position);
         observer = GameObject.FindGameObjectWithTag("Observer").GetComponent<Observer>();
-        observer.AddElement(gameObject);
+        if(!isWrong)
+            observer.AddElement(gameObject);
     }
 
     void Start()
@@ -71,7 +74,8 @@ public class ConnectLine : MonoBehaviour
         else
         {
             lineRenderer.SetPosition(1, endPoint.transform.position);
-            observer.RemoveElement(gameObject);
+            if(!isWrong)
+                observer.RemoveElement(gameObject);
         }
     }
 }

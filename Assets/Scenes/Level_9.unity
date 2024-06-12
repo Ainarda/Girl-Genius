@@ -799,6 +799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endPoint: {fileID: 2083982850}
   failEndPoint: []
+  isWrong: 0
 --- !u!212 &249792839
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -945,6 +946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endPoint: {fileID: 1239525033}
   failEndPoint: []
+  isWrong: 0
 --- !u!212 &265814247
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1425,7 +1427,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0.25, y: 0, z: 1}
+  - {x: 0, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.25
@@ -1434,7 +1436,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.40869597
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1927,6 +1929,7 @@ MonoBehaviour:
     ruText: "\u0421\u041E\u0415\u0414\u0418\u041D\u0418 \u0422\u0420\u0423\u0411\u042B"
     enText: CONNECT THE PIPES
   textField: {fileID: 1232181941}
+  tmpTxt: {fileID: 0}
 --- !u!114 &596402663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7035,7 +7038,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &734161311
 Transform:
   m_ObjectHideFlags: 0
@@ -7117,7 +7120,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0.25, y: 0, z: 1}
+  - {x: 0, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.25
@@ -7126,7 +7129,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.40869597
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -12424,7 +12427,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0.25, y: 0, z: 1}
+  - {x: 0, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.25
@@ -12433,7 +12436,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.40869597
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -12824,6 +12827,10 @@ PrefabInstance:
     - target: {fileID: 6073780321769636826, guid: 5b1d4108fb2719b47ae7b39ae89941f1, type: 3}
       propertyPath: m_Name
       value: HandHelp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6073780321769636826, guid: 5b1d4108fb2719b47ae7b39ae89941f1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13958,6 +13965,7 @@ MonoBehaviour:
   failEndPoint:
   - {fileID: 1239525033}
   - {fileID: 2083982850}
+  isWrong: 1
 --- !u!212 &1492204110
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -37,9 +37,18 @@ public class RewardSlingshot : MonoBehaviour
         }
         else
         {
+            if (currentAngle < maxAngle)
+            {
+                transform.rotation = Quaternion.AngleAxis(maxAngle - 1, Vector3.forward);
+            }
+            else if(currentAngle > minAngle)
+            {
+                transform.rotation = Quaternion.AngleAxis(minAngle + 1, Vector3.forward);
+            }
             angleGrow *= -1;
             currentAngle += angleGrow * Time.deltaTime;
             transform.rotation = Quaternion.AngleAxis(currentAngle, Vector3.forward);
+            
         }
 
         if (Mathf.Abs(currentAngle) < 25)
