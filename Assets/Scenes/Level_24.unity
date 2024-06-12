@@ -2212,12 +2212,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1994127373}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].side
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[0].text
       value: 214312
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[1].side
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[1].text
@@ -3116,6 +3120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endPoint: {fileID: 1040306753}
   failEndPoint: []
+  isWrong: 0
 --- !u!212 &618513841
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3776,6 +3781,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endPoint: {fileID: 1397065089}
   failEndPoint: []
+  isWrong: 0
 --- !u!212 &774619928
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5528,6 +5534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endPoint: {fileID: 113316040}
   failEndPoint: []
+  isWrong: 0
 --- !u!212 &1194761284
 SpriteRenderer:
   m_ObjectHideFlags: 0

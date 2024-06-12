@@ -33,6 +33,7 @@ public class MainMenuSide : MonoBehaviour
     private GameObject manisonUI;
     [SerializeField]
     private GameObject renterCanvas;
+    [SerializeField]
     private GameObject mainMenuUI;
     private Vector2 vectorMove;
     bool canMove = true;
@@ -47,7 +48,7 @@ public class MainMenuSide : MonoBehaviour
         manisonUI.SetActive(true);
         manisonUI.GetComponent<UnlockingItemList>().LoadEnvironment();
         manisonUI.SetActive(false);
-        mainMenuUI = GameObject.FindGameObjectWithTag("MainMenuUI");
+        //mainMenuUI = GameObject.FindGameObjectWithTag("MainMenuUI");
         PlayerData.UpdateCoinCount();
         //loadEnviornmentInto rooms
     }

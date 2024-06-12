@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,19 +14,24 @@ public class RentersPay : MonoBehaviour
     private Button getRent;
     [SerializeField]
     private Button noThanks;
+    [SerializeField]
+    private TMP_Text coinText;
 
     private GameObject observer;
     private void Awake()
     {
+        PlayerData.CoinUI = coinText;
+        PlayerData.UpdateCoinCount();
         observer = GameObject.FindGameObjectWithTag("Observer");
         getRent.onClick.AddListener(GetRent);   
         noThanks.onClick.AddListener(NoThanks);
-        payments[PlayerData.currentRenterSelected / 2].camera.SetActive(true);
+        
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+        payments[PlayerData.currentRenterSelected / 2].camera.SetActive(true);
+        payments[PlayerData.currentRenterSelected / 2].ActivateRentman(PlayerData.currentRenterSelected);
     }
 
     // Update is called once per frame

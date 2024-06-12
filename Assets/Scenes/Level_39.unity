@@ -2128,7 +2128,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 15
+  m_SortingOrder: 44
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.66723037, g: 0.9622642, b: 0.94704986, a: 1}
   m_FlipX: 0
@@ -4408,7 +4408,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 15
+  m_SortingOrder: 41
   m_Sprite: {fileID: 21300000, guid: f8fad20ca2cfa1d448ddd6795077a414, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4436,6 +4436,7 @@ MonoBehaviour:
     ruText: "\u0414\u0435\u0432\u0447\u043E\u043D\u043A\u0430 \u0443 \u0442\u0435\u0431\u044F?"
     enText: Have you get the girl?
   textField: {fileID: 1191815747}
+  tmpTxt: {fileID: 0}
 --- !u!1 &1547932805
 GameObject:
   m_ObjectHideFlags: 0
@@ -4718,7 +4719,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 16
+  m_SortingOrder: 43
   m_TargetDisplay: 0
 --- !u!1 &1579486936
 GameObject:
@@ -4838,11 +4839,11 @@ PrefabInstance:
       objectReference: {fileID: 1032752022}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: waitTime.Array.data[0]
-      value: 0.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: waitTime.Array.data[1]
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: activeObject.Array.size
@@ -5070,7 +5071,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 15
+  m_SortingOrder: 42
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
   m_FlipX: 0
@@ -5935,7 +5936,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 15
+  m_SortingOrder: 43
   m_Sprite: {fileID: 21300000, guid: a3256c1b067296d48806cbb275af9e6e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5963,6 +5964,7 @@ MonoBehaviour:
     ruText: "\u0414\u0430, \u0432\u0441\u0435 \u043D\u043E\u0440\u043C."
     enText: For sure!
   textField: {fileID: 233278669}
+  tmpTxt: {fileID: 0}
 --- !u!1 &2001799006
 GameObject:
   m_ObjectHideFlags: 0
@@ -6364,7 +6366,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 16
+  m_SortingOrder: 45
   m_TargetDisplay: 0
 --- !u!1 &2118222294
 GameObject:

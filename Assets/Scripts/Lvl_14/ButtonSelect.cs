@@ -33,6 +33,7 @@ public class ButtonSelect : MonoBehaviour
     }
     private void WrongClick()
     {
-        observer.RemoveElement(wrongButton.gameObject);
+        observer.OpenLoseScreen();
+        //observer.RemoveElement(wrongButton.gameObject);
     }
 }

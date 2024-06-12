@@ -59,6 +59,7 @@ public class RewardCanvas : MonoBehaviour
         observer.GetComponent<YdLoader>().LoadAdsWithReward(action);
         observer.GetComponent<Observer>().OpenMainUI();
     }
+
 }
 
 public enum RewardType

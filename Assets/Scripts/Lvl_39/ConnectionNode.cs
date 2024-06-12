@@ -24,7 +24,7 @@ public class ConnectionNode : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if(CanInteract)
+        if(CanInteract && pointer.canDrag)
         {
             observer.RemoveElement(this.gameObject);
             pointer.NextPoint(transform.position);

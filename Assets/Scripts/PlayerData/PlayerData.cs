@@ -29,7 +29,9 @@ public class PlayerData : MonoBehaviour
 
     public static bool musicPlay = true;
     public static int currentRenter = 0;
+
     public static bool openRenterCanvas = false;
+    public static bool canSelectRenter = false;
 
     public static bool[] pet = new bool[] { true, false, false, false, false, false, false, false, false };
 
@@ -46,7 +48,7 @@ public class PlayerData : MonoBehaviour
 
     public static string localText = "ru";//TMP next load local text "ru" "eng"
 
-    public static bool canSelectRenter = false;
+    
 
     public static bool mansionScene = true;
 

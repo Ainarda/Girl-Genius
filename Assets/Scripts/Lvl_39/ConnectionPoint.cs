@@ -7,7 +7,7 @@ public class ConnectionPoint : MonoBehaviour
 {
     private LineRenderer lineRenderer;
     private Vector3 offset;
-    private bool canDrag = false;
+    public bool canDrag = false;
 
     private int currentPoint = 0;
 
@@ -21,6 +21,7 @@ public class ConnectionPoint : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.LogWarning(canDrag);
         Debug.Log(transform.childCount);
         lineRenderer = transform.GetChild(0).GetComponent<LineRenderer>();
         currentPointPos = transform.position;

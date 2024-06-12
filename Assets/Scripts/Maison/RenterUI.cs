@@ -37,6 +37,7 @@ public class RenterUI : MonoBehaviour
         }
         else
         {
+            Debug.Log("Error");
             CloseRenterWindow();
         }
     }
@@ -47,8 +48,6 @@ public class RenterUI : MonoBehaviour
         gameObject.SetActive(true);
         baseCanvas.SetActive(false);
         InitiateRenters();
-        PlayerData.openRenterCanvas = false;
-        PlayerData.currentRenter += 2;
     }
     private void OnEnable()
     {
@@ -163,6 +162,8 @@ public class RenterUI : MonoBehaviour
     {
         PlayerData.currentRenterSelected = id;
         PlayerData.canSelectRenter = false;
+        PlayerData.openRenterCanvas = false;
+        PlayerData.currentRenter += 2;  
         renters[id].RenterGameObject.SetActive(true);
         renters[id].RenterGameObject.GetComponent<EntityAI>().SelectNextAction();
         PlayerData.renterState[id] = true;

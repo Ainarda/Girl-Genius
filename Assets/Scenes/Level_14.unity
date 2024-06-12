@@ -322,6 +322,7 @@ MonoBehaviour:
     ruText: "\u041A\u043E\u043D\u0442\u0430\u043A\u0442\u044B"
     enText: Contacts
   textField: {fileID: 1248510895}
+  tmpTxt: {fileID: 0}
 --- !u!114 &211933524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1890,10 +1891,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 360, y: 640}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -3748,7 +3749,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3124648193325125242, guid: 4126ad162d750b040926b5e654ba31b1, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3124648193325125242, guid: 4126ad162d750b040926b5e654ba31b1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3756,7 +3757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3124648193325125242, guid: 4126ad162d750b040926b5e654ba31b1, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3124648193325125242, guid: 4126ad162d750b040926b5e654ba31b1, type: 3}
       propertyPath: m_AnchorMin.y
@@ -3812,7 +3813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3124648193325125242, guid: 4126ad162d750b040926b5e654ba31b1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 161.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3124648193325125242, guid: 4126ad162d750b040926b5e654ba31b1, type: 3}
       propertyPath: m_AnchoredPosition.y

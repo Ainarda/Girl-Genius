@@ -264,16 +264,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1594165567}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].side
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[0].text
       value: 312
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[1].side
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[1].text
       value: 312
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[2].side
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[2].text
@@ -2216,6 +2224,7 @@ MonoBehaviour:
     ruText: "\u041F\u041E\u041F\u0410\u0414\u0418 \u0412 \u0413\u041B\u0410\u0417\u0410"
     enText: AIM FOR HE EYES
   textField: {fileID: 807967835}
+  tmpTxt: {fileID: 0}
 --- !u!114 &2001377756
 MonoBehaviour:
   m_ObjectHideFlags: 0
