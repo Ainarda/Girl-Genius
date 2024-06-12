@@ -244,8 +244,11 @@ public class ActionVariant : MonoBehaviour
 
     private void StartMinigame()
     {
-        if(hint.GetComponent<HelperScript>().GetShowState() || PlayerData.lvlHints)
-            hint.SetActive(true);
+        if (hint != null)
+        {
+            if (hint.GetComponent<HelperScript>().GetShowState() || PlayerData.lvlHints)
+                hint.SetActive(true);
+        }
         miniGame[miniGameNumber++].SetActive(true);
     }
 

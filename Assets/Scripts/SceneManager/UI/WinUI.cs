@@ -111,7 +111,9 @@ public class WinUI : MonoBehaviour
     public void SkipDress()
     {
         unlockDressScreen.SetActive(false);
+        dressScreenIsOpen = false;
         PlayerData.dressProgress = 0;
+        ShowBottomButtons();
     }
 
     public void GetDress()
