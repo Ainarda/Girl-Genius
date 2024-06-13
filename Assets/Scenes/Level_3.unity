@@ -1122,7 +1122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &749741659
 Transform:
   m_ObjectHideFlags: 0
@@ -2197,9 +2197,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text:
-    ruText: " \u0421\u0422\u0415\u0420\u0415\u0422\u042C \u0421\u0422\u0415\u041D\u0423"
+    ruText: "\u0421\u041E\u0422\u0420\u0418 \u0421\u0422\u0415\u041D\u0423"
     enText: ERASE THE WALL
   textField: {fileID: 1073442426}
+  tmpTxt: {fileID: 0}
 --- !u!1 &1489651904
 GameObject:
   m_ObjectHideFlags: 0
