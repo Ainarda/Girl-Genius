@@ -22,17 +22,17 @@ public class SoundChecker : MonoBehaviour
 
     private void Silence(bool silence)
     {
-        bool state = PlayerPrefs.GetInt("AudioState", 1) == 1;
-        AudioListener.pause = state;
-
-
-        if (state)
+        PlayerData.musicPlay = silence;
+        if (silence)
         {
-            AudioListener.pause = silence;
+            AudioListener.pause = false;
             audioMixer.SetFloat("Volume", silence ? EnabledVolume : DisabledVolume);
         }
         else
+        {
+            AudioListener.pause = true;
             audioMixer.SetFloat("Volume", DisabledVolume);
+        }
 
         // Or / And
         //AudioListener.volume = silence ? 0 : 1;

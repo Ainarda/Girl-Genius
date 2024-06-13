@@ -24,8 +24,8 @@ public class AudioButton : MonoBehaviour
     
     private void OnEnable()
     {
-        ChangeGraphics(AudioState);
-        ChangeSound(AudioState);
+        ChangeGraphics(PlayerData.musicPlay);
+        ChangeSound(PlayerData.musicPlay);
         
         button.onClick.AddListener(Switch);
     } 
@@ -37,9 +37,9 @@ public class AudioButton : MonoBehaviour
     
     private void Switch()
     {
-        AudioState = !AudioState;
-        ChangeGraphics(AudioState);
-        ChangeSound(AudioState);
+        PlayerData.musicPlay = !PlayerData.musicPlay;
+        ChangeGraphics(PlayerData.musicPlay);
+        ChangeSound(PlayerData.musicPlay);
     }
 
     private void ChangeGraphics(bool state)

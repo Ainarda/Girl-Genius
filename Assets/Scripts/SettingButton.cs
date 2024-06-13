@@ -20,7 +20,7 @@ public class SettingButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -31,11 +31,9 @@ public class SettingButton : MonoBehaviour
 
     public void OffMusic()
     {
-        
-        bool state = PlayerPrefs.GetInt("AudioState", 1) == 1;
-        state = !state;
-        PlayerPrefs.SetInt("AudioState", state == true ? 1 : 0);
-        if (state)
+        PlayerData.musicPlay = !PlayerData.musicPlay;
+        PlayerPrefs.SetInt("AudioState", PlayerData.musicPlay == true ? 1 : 0);
+        if (PlayerData.musicPlay)
         {
             musicButtonImage.sprite = onSprite;
         }
@@ -43,7 +41,7 @@ public class SettingButton : MonoBehaviour
         {
             musicButtonImage.sprite = offSprite;
         }
-        audioMixer.SetFloat("Volume", state ? EnabledVolume : DisabledVolume);
+        audioMixer.SetFloat("Volume", PlayerData.musicPlay ? EnabledVolume : DisabledVolume);
     }
 
     public void OpenSettingScreen()
