@@ -185,6 +185,8 @@ public class Phone_Scirpt : MonoBehaviour
 [Serializable]
 public struct PhoneText
 {
+    [TextArea]
     public string ruText;
+    [TextArea]
     public string enText;
 }
