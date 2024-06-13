@@ -1,3 +1,4 @@
+using Kimicu.YandexGames;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,6 +28,8 @@ public class WinUI : MonoBehaviour
     private Button payReward;
     [SerializeField]
     private GameObject roulete;
+    [SerializeField]
+    private GameObject waiter;
 
     private GameObject observer;
 
@@ -103,9 +106,10 @@ public class WinUI : MonoBehaviour
         {
             PlayerData.AddCoin(coin);
             PlayerData.isFirstRullet = false;
+            PlayerData.UpdateCoinCount();
         }
         else
-            observer.GetComponent<YdLoader>().LoadAdsWithReward(() => { PlayerData.AddCoin(coin); PlayerData.LoadNextLevel(); });
+            observer.GetComponent<YdLoader>().LoadAdsWithReward(() => { PlayerData.AddCoin(coin); PlayerData.UpdateCoinCount(); });
     }
 
     public void SkipDress()
@@ -143,7 +147,29 @@ public class WinUI : MonoBehaviour
         {
             retryButton.gameObject.SetActive(true);
             nextButton.gameObject.SetActive(true);
+            /*if (!Advertisement.AdvertisementIsAvailable)
+            {
+                nextButton.interactable = false;
+                waiter.SetActive(true);
+                StartCoroutine(WaitTimer());
+            }*/
+
         }
+    }
+
+    private IEnumerator WaitTimer()
+    {
+        for(int i = 0; i <= 30; i++)
+        {
+            waiter.GetComponent<WaiterText>().SetTime(30-i);
+            yield return new WaitForSeconds(1);
+            if(i == 30 && !Advertisement.AdvertisementIsAvailable)
+            {
+                i -= 10;
+            }
+        }
+        nextButton.interactable=true;
+        waiter.SetActive(false);
     }
 
     public void RewardPayButton()
