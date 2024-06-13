@@ -63,6 +63,12 @@ public class GachaCreater : MonoBehaviour
         }
         rewardObject.SetActive(true);
         rewardSprite.sprite = pets[id];
+        Invoke("ShowLoseButton", 2f);
+    }
+
+    private void ShowLoseButton()
+    {
+        GetComponent<RewardCanvas>().ShowLoseButton();
     }
 
     public int GetSelectedPetId()

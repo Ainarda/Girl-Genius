@@ -42,7 +42,6 @@ public class RenterUI : MonoBehaviour
         }
     }
 
-
     private void LoadRenterCanvas()
     {
         gameObject.SetActive(true);

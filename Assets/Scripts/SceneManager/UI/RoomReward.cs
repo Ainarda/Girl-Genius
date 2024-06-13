@@ -21,6 +21,16 @@ public class RoomReward : MonoBehaviour
         cost.text = RoomStorage.roomData[roomId].cost[environmentId].ToString();
     }
 
+    private void Start()
+    {
+        Invoke("ShowLoseButton", 2f);
+    }
+
+    private void ShowLoseButton()
+    {
+        GetComponent<RewardCanvas>().ShowLoseButton();
+    }
+
     // Update is called once per frame
     void Update()
     {

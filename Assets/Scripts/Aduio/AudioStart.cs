@@ -12,7 +12,7 @@ public class AudioStart : MonoBehaviour
     private const float EnabledVolume = 0;
     private void Awake()
     {
-        AudioListener.pause = PlayerData.musicPlay;
+        AudioListener.pause = !PlayerData.musicPlay;
         audioMixer.SetFloat("Volume", PlayerData.musicPlay ? EnabledVolume : DisabledVolume);
     }
     // Start is called before the first frame update

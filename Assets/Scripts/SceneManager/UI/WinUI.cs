@@ -133,7 +133,12 @@ public class WinUI : MonoBehaviour
     {
         PlayerData.dressProgress = 0;
         unlockDressScreen.SetActive(true);
-        
+        Invoke("ShowLoseButton",2f);
+    }
+
+    private void ShowLoseButton()
+    {
+        skipDressButton.gameObject.SetActive(true);
     }
 
     public void ShowBottomButtons()

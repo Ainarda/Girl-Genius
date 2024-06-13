@@ -18,6 +18,12 @@ public class SettingButton : MonoBehaviour
     private const float DisabledVolume = -80;
     private const float EnabledVolume = 0;
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        musicButtonImage.sprite = PlayerData.musicPlay ? onSprite : offSprite;
+    }
+
     void Start()
     {
 
@@ -42,6 +48,7 @@ public class SettingButton : MonoBehaviour
             musicButtonImage.sprite = offSprite;
         }
         audioMixer.SetFloat("Volume", PlayerData.musicPlay ? EnabledVolume : DisabledVolume);
+        AudioListener.pause = !PlayerData.musicPlay;
     }
 
     public void OpenSettingScreen()

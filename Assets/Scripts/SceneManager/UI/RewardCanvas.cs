@@ -32,6 +32,11 @@ public class RewardCanvas : MonoBehaviour
         
     }
 
+    public void ShowLoseButton()
+    {
+        loseReward.gameObject.SetActive(true);
+    }
+
     private void CloseWindow()
     {
         observer.GetComponent<Observer>().OpenMainUI();
