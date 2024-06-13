@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioStart : MonoBehaviour
 {
+    [SerializeField]
+    private AudioMixer audioMixer;
+
+    private const float DisabledVolume = -80;
+    private const float EnabledVolume = 0;
     private void Awake()
     {
-        if (PlayerPrefs.GetInt("AudioState", 1) == 0)
-            AudioListener.pause = false;
-        else
-            AudioListener.pause = true;
+        bool state = PlayerPrefs.GetInt("AudioState", 1) == 1;
+        AudioListener.pause = state;
+        audioMixer.SetFloat("Volume", state ? EnabledVolume : DisabledVolume);
     }
     // Start is called before the first frame update
     void Start()

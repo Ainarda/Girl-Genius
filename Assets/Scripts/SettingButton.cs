@@ -32,12 +32,18 @@ public class SettingButton : MonoBehaviour
     public void OffMusic()
     {
         
-        PlayerData.musicPlay = !PlayerData.musicPlay;
-        if(PlayerData.musicPlay)
+        bool state = PlayerPrefs.GetInt("AudioState", 1) == 1;
+        state = !state;
+        PlayerPrefs.SetInt("AudioState", state == true ? 1 : 0);
+        if (state)
+        {
             musicButtonImage.sprite = onSprite;
+        }
         else
+        {
             musicButtonImage.sprite = offSprite;
-        audioMixer.SetFloat("Volume", PlayerData.musicPlay ? EnabledVolume : DisabledVolume);
+        }
+        audioMixer.SetFloat("Volume", state ? EnabledVolume : DisabledVolume);
     }
 
     public void OpenSettingScreen()
