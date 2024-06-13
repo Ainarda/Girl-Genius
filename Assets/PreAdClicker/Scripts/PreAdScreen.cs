@@ -44,7 +44,6 @@ public class PreAdScreen : MonoBehaviour
             onClose?.Invoke();
             return;
         }
-        
         StartCoroutine(AdTimer(() =>
         {
             Advertisement.ShowInterstitialAd(onCloseCallback: onClose);
