@@ -40,7 +40,10 @@ public class PreAdScreen : MonoBehaviour
     public void ShowInterstitialAdClicker(Action onClose = null)
     {
         if (!Advertisement.AdvertisementIsAvailable || !PlayerData.lvlAds)
+        {
             onClose?.Invoke();
+            return;
+        }
         
         StartCoroutine(AdTimer(() =>
         {
