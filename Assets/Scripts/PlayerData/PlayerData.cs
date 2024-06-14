@@ -193,11 +193,13 @@ public class PlayerData : MonoBehaviour
                 break;
         }
         dress[i] = true;
+        currentDressId = i;
     }
 
     public static void UnlockCustom(int id)
     {
         dress[id] = true;
+        currentDressId = id;
     }
 
     public static void SetCurrentDress(DressSlot slot)
