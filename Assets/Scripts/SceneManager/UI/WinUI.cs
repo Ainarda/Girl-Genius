@@ -30,6 +30,9 @@ public class WinUI : MonoBehaviour
     private GameObject roulete;
     [SerializeField]
     private GameObject waiter;
+    [SerializeField]
+    private GameObject thankForReward;
+
 
     private GameObject observer;
 
@@ -127,7 +130,8 @@ public class WinUI : MonoBehaviour
 
     public void GetDress()
     {
-        observer.GetComponent<YdLoader>().LoadAdsWithReward(() => { PlayerData.UnlockCustom(); unlockDressScreen.SetActive(false); PlayerData.dressProgress = 0; });
+        observer.GetComponent<YdLoader>().LoadAdsWithReward(() => { PlayerData.UnlockCustom(); unlockDressScreen.SetActive(false); 
+            PlayerData.dressProgress = 0; thankForReward.SetActive(true); });
         Debug.Log("Get dress");
         unlockDressScreen.SetActive(false);
         dressScreenIsOpen = false;

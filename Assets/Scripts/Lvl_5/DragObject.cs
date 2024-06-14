@@ -43,7 +43,7 @@ public class DragObject : MonoBehaviour//, IPointerDownHandler, IPointerUpHandle
     // Update is called once per frame
     void Update()
     {     
-        if(moveObject)
+        if(moveObject && PlayerData.minigameIsActive)
         {
             Vector3 cam = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             float oX = transform.position.x, oY = transform.position.y;
@@ -75,27 +75,30 @@ public class DragObject : MonoBehaviour//, IPointerDownHandler, IPointerUpHandle
 
     private void OnMouseUp()
     {
-        PlayerData.minigameIsActive = false;
-        moveObject = false;
-        Vector2 dist = offset + Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if(Mathf.Abs(dist.x- endPosition.transform.position.x) <= checkRange.x && Mathf.Abs(dist.y-endPosition.transform.position.y) <= checkRange.y)
+        if (PlayerData.minigameIsActive)
         {
-            transform.position = endPosition.transform.position;
-            observer.RemoveElement(this.gameObject);
-            this.enabled = false;
-            if (someAction)
-                SomeAction();
+            PlayerData.minigameIsActive = false;
+            moveObject = false;
+            Vector2 dist = offset + Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            if (Mathf.Abs(dist.x - endPosition.transform.position.x) <= checkRange.x && Mathf.Abs(dist.y - endPosition.transform.position.y) <= checkRange.y)
+            {
+                transform.position = endPosition.transform.position;
+                observer.RemoveElement(this.gameObject);
+                this.enabled = false;
+                if (someAction)
+                    SomeAction();
 
-        }
-        else if(losePosition != null && Vector2.Distance(offset + Camera.main.ScreenToWorldPoint(Input.mousePosition), losePosition.transform.position) < 0.5f)
-        {
-            transform.position = losePosition.transform.position;
-            observer.OpenLoseScreen();
-            this.enabled = false;
-        }
-        else
-        {
-            transform.position = startPosition;
+            }
+            else if (losePosition != null && Vector2.Distance(offset + Camera.main.ScreenToWorldPoint(Input.mousePosition), losePosition.transform.position) < 0.5f)
+            {
+                transform.position = losePosition.transform.position;
+                observer.OpenLoseScreen();
+                this.enabled = false;
+            }
+            else
+            {
+                transform.position = startPosition;
+            }
         }
     }
 

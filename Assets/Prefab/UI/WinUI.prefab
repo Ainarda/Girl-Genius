@@ -686,6 +686,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8e4ba072b667b5046bce0cf22d29ed44, type: 3}
   - {fileID: 21300000, guid: 18738684a9c19b14180f28b71439846d, type: 3}
   dressImage: {fileID: 6706912515631179282}
+  thankForRewardImage: {fileID: 7587153934896853545}
 --- !u!1 &1944106874399359010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1634,13 +1635,14 @@ GameObject:
   - component: {fileID: 5364786198352852615}
   - component: {fileID: 5014170911473321790}
   - component: {fileID: 7185407972530846148}
+  - component: {fileID: 5171652049360828470}
   m_Layer: 5
   m_Name: SkinPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5364786198352852615
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1700,6 +1702,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5171652049360828470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2808124894405848521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1f502cda58c1f54484c14ec775ff7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2815717933033663919
 GameObject:
   m_ObjectHideFlags: 0
@@ -2322,6 +2336,7 @@ MonoBehaviour:
   payReward: {fileID: 6041139634808600114}
   roulete: {fileID: 2542459900629606986}
   waiter: {fileID: 2779911367164773337}
+  thankForReward: {fileID: 2808124894405848521}
 --- !u!114 &4102309322819328636
 MonoBehaviour:
   m_ObjectHideFlags: 0

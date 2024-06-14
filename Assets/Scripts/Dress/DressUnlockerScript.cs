@@ -9,6 +9,8 @@ public class DressUnlockerScript : MonoBehaviour
     private List<Sprite> dress;
     [SerializeField]
     private Image dressImage;
+    [SerializeField]
+    private Image thankForRewardImage;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -16,6 +18,7 @@ public class DressUnlockerScript : MonoBehaviour
         if(spriteId < 0)
             gameObject.SetActive(false);
         dressImage.sprite = dress[spriteId];
+        thankForRewardImage.sprite = dress[spriteId];
     }
 
     void Start()
