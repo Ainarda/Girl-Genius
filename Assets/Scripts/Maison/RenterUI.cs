@@ -9,8 +9,6 @@ using UnityEngine.UI;
 public class RenterUI : MonoBehaviour
 {
     [SerializeField]
-    private Button noThanksButton;
-    [SerializeField]
     private GameObject baseCanvas;
     // Start is called before the first frame update
     [SerializeField]
@@ -29,7 +27,6 @@ public class RenterUI : MonoBehaviour
     public void Awake()
     {
         observer = GameObject.FindGameObjectWithTag("Observer");
-        noThanksButton.onClick.AddListener(CloseRenterWindow);
         Debug.LogError(PlayerData.openRenterCanvas);
         if (PlayerData.openRenterCanvas)
         {
@@ -137,15 +134,9 @@ public class RenterUI : MonoBehaviour
         
     }
 
-    private void ActivateButtonWithDelay()
-    {
-        noThanksButton.gameObject.SetActive(true);
-    }
-
     private void CloseRenterWindow()
     {
         Debug.Log("CloseRenterWindow");
-        noThanksButton.gameObject.SetActive(false);
         gameObject.SetActive(false);
         Debug.Log(gameObject.active);
         baseCanvas.SetActive(true);
