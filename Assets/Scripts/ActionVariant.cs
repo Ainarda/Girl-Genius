@@ -51,8 +51,14 @@ public class ActionVariant : MonoBehaviour
     [SerializeField]
     private GameObject hint;
 
+    [SerializeField]
+    private List<ActionType> failTypeActionList;
+
     private int animationNameNumber, walkPositionNumber, talkTextNumber, waitTimeNumber, cropSizeNumber, audioClipNumber,
         rotationObjectNumber, animationObjectNumber, groupNumber, miniGameNumber, hideObjectNumber, activeObjectNumber, sizeChangeNumber;
+
+    private int failAnimationNameNumber, failWalkPositionNumber, failTextNumber, failWaitTimeNumber, failCropSizeNumber, failAudioClipNumber,
+        failRotationObjectNumber, failAnimationObjectNumber, failGroupNumber, failMiniGameNumber, failHideObjectNumber, failActiveObjectNumber, failSizeChangeNumber;
 
     private bool stageIsActive = false;
 
@@ -61,6 +67,7 @@ public class ActionVariant : MonoBehaviour
 
     private Observer observer;
     private List<DoAction> activateAction;
+    private List<DoAction> failActivateAction;
     // Start is called before the first frame update
     void Start()
     {
@@ -68,11 +75,14 @@ public class ActionVariant : MonoBehaviour
         //hint = GameObject.FindGameObjectWithTag("HintHand");
         CloseHint();
         activateAction = new List<DoAction>();
-        InitAction();
+        failActivateAction = new List<DoAction>();
+        InitAction(typeActionList, activateAction);
+        InitAction(failTypeActionList, failActivateAction);
         ActivateAction();
     }
 
     private int currentAction = 0;
+    private int failCurrentAction = 0;
     // Update is called once per frame
     void Update()
     {
@@ -108,59 +118,73 @@ public class ActionVariant : MonoBehaviour
 
     private void ActivateAction()
     {
-        if (currentAction < activateAction.Count)
-            activateAction[currentAction++]();
+        if (!PlayerData.isLvlFail)
+        {
+            if (currentAction < activateAction.Count)
+                activateAction[currentAction++]();
+            else
+                Debug.LogWarning("EndScene");
+        }
         else
-            Debug.LogWarning("EndScene");
+        {
+            if(failCurrentAction < failActivateAction.Count)
+            {
+                failActivateAction[failCurrentAction++]();
+            }
+            else
+            {
+                observer.OpenLose();
+            }
+        }
     }
 
-    private void InitAction()
+    private void InitAction(List<ActionType> inputActionType, List<DoAction> setDoAction)
     {
-        foreach(var action in typeActionList)
+        foreach(var action in inputActionType)
         {
             switch(action)
             {
                 case ActionType.playAnimation:
-                    activateAction.Add(StartAnimation);
+                    setDoAction.Add(StartAnimation);
                     break;
                 case ActionType.walk:
-                    activateAction.Add(StartWalk);
+                    setDoAction.Add(StartWalk);
                     break;
                 case ActionType.talk:
-                    activateAction.Add(StartTalk);
+                    setDoAction.Add(StartTalk);
                     break;
                 case ActionType.wait:
-                    activateAction.Add(StartWait);
+                    setDoAction.Add(StartWait);
                     break;
                 case ActionType.moveWithCamera:
-                    activateAction.Add(StartMoveWithCamera);
+                    setDoAction.Add(StartMoveWithCamera);
                     break;
                 case ActionType.cameraCrop:
-                    activateAction.Add(StartCameraCrop);
+                    setDoAction.Add(StartCameraCrop);
                     break;
                 case ActionType.activateMiniGame:
-                    activateAction.Add(StartMinigame);
+                    setDoAction.Add(StartMinigame);
                     break;
                 case ActionType.completeScene:
-                    activateAction.Add(StartCompleteScene);
+                    setDoAction.Add(StartCompleteScene);
                     break;
                 case ActionType.someAction:
-                    activateAction.Add(StartSomeAction);
+                    setDoAction.Add(StartSomeAction);
                     break;
                 case ActionType.rotate:
-                    activateAction.Add(StartRotate);
+                    setDoAction.Add(StartRotate);
                     break;
                 case ActionType.playMusic:
-                    activateAction.Add(StartAudioPlay);
+                    setDoAction.Add(StartAudioPlay);
                     break;
                 case ActionType.hideObject:
-                    activateAction.Add(HideObject);
+                    setDoAction.Add(HideObject);
                     break;
                 case ActionType.activeObject:
-                    activateAction.Add(ActiveObject);
+                    setDoAction.Add(ActiveObject);
                     break;
                 case ActionType.changeSize:
-                    activateAction.Add(StartChangeSize);
+                    setDoAction.Add(StartChangeSize);
                     break;
                 default:
                     break;
@@ -249,6 +273,7 @@ public class ActionVariant : MonoBehaviour
             if (hint.GetComponent<HelperScript>().GetShowState() || PlayerData.lvlHints)
                 hint.SetActive(true);
         }
+        PlayerData.minigameIsActive = true;
         miniGame[miniGameNumber++].SetActive(true);
     }
 

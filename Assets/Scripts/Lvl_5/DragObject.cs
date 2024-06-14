@@ -66,12 +66,16 @@ public class DragObject : MonoBehaviour//, IPointerDownHandler, IPointerUpHandle
 
     private void OnMouseDown()
     {
-        moveObject = true;
-        offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (PlayerData.minigameIsActive)
+        {
+            moveObject = true;
+            offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        }
     }
 
     private void OnMouseUp()
     {
+        PlayerData.minigameIsActive = false;
         moveObject = false;
         Vector2 dist = offset + Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if(Mathf.Abs(dist.x- endPosition.transform.position.x) <= checkRange.x && Mathf.Abs(dist.y-endPosition.transform.position.y) <= checkRange.y)

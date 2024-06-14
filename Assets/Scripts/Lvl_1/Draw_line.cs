@@ -124,9 +124,9 @@ public class Draw_line : MonoBehaviour
 
     private IEnumerator WaitForCheck()
     {
-        yield return new WaitForSeconds(1);
+        //yield return new WaitForSeconds(0.5f);
         observer.ActivateAction();
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2f);
         observer.CompleteScene();
         canDraw = false;
     }

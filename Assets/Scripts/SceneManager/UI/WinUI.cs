@@ -101,15 +101,20 @@ public class WinUI : MonoBehaviour
 
     private void GetCoinRouleteReward()
     {
-        int coin = roulete.GetComponent<RewardSlingshot>().StopArrow();
-        if(PlayerData.isFirstRullet)
+        if (canActivateRoulete)
         {
-            PlayerData.AddCoin(coin);
-            PlayerData.isFirstRullet = false;
-            PlayerData.UpdateCoinCount();
+            int coin = roulete.GetComponent<RewardSlingshot>().StopArrow();
+            if (PlayerData.isFirstRullet)
+            {
+                PlayerData.AddCoin(coin);
+                PlayerData.isFirstRullet = false;
+                PlayerData.UpdateCoinCount();
+                PlayerData.LoadNextLevel();
+            }
+            else
+                observer.GetComponent<YdLoader>().LoadAdsWithReward(() => { PlayerData.AddCoin(coin); PlayerData.UpdateCoinCount();PlayerData.LoadNextLevel(); });
+            canActivateRoulete = false;
         }
-        else
-            observer.GetComponent<YdLoader>().LoadAdsWithReward(() => { PlayerData.AddCoin(coin); PlayerData.UpdateCoinCount(); });
     }
 
     public void SkipDress()
@@ -133,7 +138,12 @@ public class WinUI : MonoBehaviour
     {
         PlayerData.dressProgress = 0;
         unlockDressScreen.SetActive(true);
-        
+        Invoke("ShowLoseButton",2f);
+    }
+
+    private void ShowLoseButton()
+    {
+        skipDressButton.gameObject.SetActive(true);
     }
 
     public void ShowBottomButtons()

@@ -1497,6 +1497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hand
       objectReference: {fileID: 0}
+    - target: {fileID: 7511273759811945566, guid: ad7cf80dcf1e93146b375706b061d783, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2197,9 +2201,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text:
-    ruText: " \u0421\u0422\u0415\u0420\u0415\u0422\u042C \u0421\u0422\u0415\u041D\u0423"
+    ruText: "\u0421\u041E\u0422\u0420\u0418 \u0421\u0422\u0415\u041D\u0423"
     enText: ERASE THE WALL
   textField: {fileID: 1073442426}
+  tmpTxt: {fileID: 0}
 --- !u!1 &1489651904
 GameObject:
   m_ObjectHideFlags: 0

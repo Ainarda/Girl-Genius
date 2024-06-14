@@ -339,6 +339,7 @@ GameObject:
   - component: {fileID: 256162203}
   - component: {fileID: 256162202}
   - component: {fileID: 256162201}
+  - component: {fileID: 256162205}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -403,7 +404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8faf5d1fc5c35df478e8929930f9e79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endPoint: {fileID: 1014028671}
+  endPoint:
+  - {fileID: 1014028671}
   failEndPoint: []
   isWrong: 0
 --- !u!212 &256162203
@@ -479,6 +481,18 @@ Transform:
   - {fileID: 1006475260}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &256162205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256162200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde23e6d5dbbb9c4784a83c18289cc51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &326796793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1179,6 +1193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1014028673}
   - component: {fileID: 1014028672}
+  - component: {fileID: 1014028674}
   m_Layer: 0
   m_Name: Square (1)
   m_TagString: Untagged
@@ -1253,6 +1268,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1014028674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014028671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c24daf63d407e114bb9c4fce63c5e855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  miniObs: {fileID: 256162205}
 --- !u!1 &1402403990
 GameObject:
   m_ObjectHideFlags: 0
@@ -2447,7 +2475,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.20000002
         inSlope: 0
         outSlope: 0
         tangentMode: 0

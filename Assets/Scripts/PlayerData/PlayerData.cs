@@ -49,11 +49,13 @@ public class PlayerData : MonoBehaviour
     public static string localText = "ru";//TMP next load local text "ru" "eng"
 
     
+    public static bool minigameIsActive = false;
 
     public static bool mansionScene = true;
 
     public static int currentRenterSelected = 0;
 
+    public static bool isLvlFail = false;
     //TODO add win UI and load dressUnlocker after complete all dress unlocking stages
     public static void LoadNextLevel()
     {
@@ -192,11 +194,13 @@ public class PlayerData : MonoBehaviour
                 break;
         }
         dress[i] = true;
+        currentDressId = i;
     }
 
     public static void UnlockCustom(int id)
     {
         dress[id] = true;
+        currentDressId = id;
     }
 
     public static void SetCurrentDress(DressSlot slot)

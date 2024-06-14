@@ -7,7 +7,7 @@ public class ConnectLine : MonoBehaviour
     private LineRenderer lineRenderer;
     private bool canDrag = false;
     [SerializeField]
-    private GameObject endPoint;
+    private List<GameObject> endPoint;
     [SerializeField]
     private List<GameObject> failEndPoint;
     [SerializeField]
@@ -18,12 +18,11 @@ public class ConnectLine : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
+        
         lineRenderer = transform.GetChild(0).GetComponent<LineRenderer>();
         lineRenderer.SetPosition(0, transform.position);
         lineRenderer.SetPosition(1, transform.position);
         observer = GameObject.FindGameObjectWithTag("Observer").GetComponent<Observer>();
-        if(!isWrong)
-            observer.AddElement(gameObject);
     }
 
     void Start()
@@ -53,29 +52,67 @@ public class ConnectLine : MonoBehaviour
     private void OnMouseUp()
     {
         canDrag = false;
-        if(Vector2.Distance(offset + Camera.main.ScreenToWorldPoint(Input.mousePosition), endPoint.transform.position) > 0.5f)
+       /* bool findEndPoint = false;
+        foreach (var point in endPoint)
         {
-            bool findEndPoint = false;
-            foreach (var elem in failEndPoint)
+            if (Vector2.Distance(offset + Camera.main.ScreenToWorldPoint(Input.mousePosition), point.transform.position) > 0.5f)
             {
-                if (Vector2.Distance(offset + Camera.main.ScreenToWorldPoint(Input.mousePosition), elem.transform.position) < 0.5f)
+                
+                foreach (var elem in failEndPoint)
                 {
-                    findEndPoint = true;
-                    lineRenderer.SetPosition(1, elem.transform.position);
+                    if (Vector2.Distance(offset + Camera.main.ScreenToWorldPoint(Input.mousePosition), elem.transform.position) < 0.5f)
+                    {
+                        findEndPoint = true;
+                        lineRenderer.SetPosition(1, elem.transform.position);
+                        break;
+                    }
+                }
+                if (!findEndPoint)
+                    lineRenderer.SetPosition(1, lineRenderer.GetPosition(0));
+                else
+                    //foreach (var elem in failEndPoint)
+                    miniObs.RemoveElement(gameObject, false);//observer.OpenLoseScreen();
+            }
+            else
+            {
+                lineRenderer.SetPosition(1, point.transform.position);
+                if (!isWrong)
+                {
+                    miniObs.RemoveElement(gameObject, true);
                     break;
                 }
+                //observer.RemoveElement(gameObject);
             }
-            if (!findEndPoint)
-                lineRenderer.SetPosition(1, lineRenderer.GetPosition(0));
-            else
-                foreach (var elem in failEndPoint)
-                    observer.OpenLoseScreen();
-        }
-        else
+        }*/
+
+        bool findFinalPoint = CheckConnection(endPoint, true);
+        if(!findFinalPoint)
         {
-            lineRenderer.SetPosition(1, endPoint.transform.position);
-            if(!isWrong)
-                observer.RemoveElement(gameObject);
+            findFinalPoint = CheckConnection(failEndPoint, false);
         }
+        if(!findFinalPoint)
+        {
+            lineRenderer.SetPosition(1, lineRenderer.GetPosition(0));
+        }
+    }
+
+    private bool CheckConnection(List<GameObject> checkPoints, bool isTrueConnection)
+    {
+        bool retValue = false;
+        foreach (var point in checkPoints)
+        {
+            if (Vector2.Distance(offset + Camera.main.ScreenToWorldPoint(Input.mousePosition), point.transform.position) < 0.5f)
+            {
+                if (!point.GetComponent<ConnectorPoint>().LineIsConnected())
+                {
+                    lineRenderer.SetPosition(1, point.transform.position);
+                    point.GetComponent<ConnectorPoint>().ConnectLine(isTrueConnection);
+                    retValue = true;
+                    break;
+                }
+
+            }
+        }
+        return retValue;
     }
 }

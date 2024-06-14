@@ -39,7 +39,6 @@ public class RenterUI : MonoBehaviour
         }
     }
 
-
     private void LoadRenterCanvas()
     {
         gameObject.SetActive(true);
@@ -125,7 +124,7 @@ public class RenterUI : MonoBehaviour
 
     public void ActivateButton()
     {
-        Invoke("ActivateButtonWithDelay", 2f);
+        //Invoke("ActivateButtonWithDelay", 2f);
     }    
 
     // Update is called once per frame

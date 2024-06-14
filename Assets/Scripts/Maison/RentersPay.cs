@@ -30,10 +30,16 @@ public class RentersPay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Invoke("ShowLoseButton",2f);
         payments[PlayerData.currentRenterSelected / 2].camera.SetActive(true);
         payments[PlayerData.currentRenterSelected / 2].ActivateRentman(PlayerData.currentRenterSelected);
     }
 
+
+    private void ShowLoseButton()
+    {
+        noThanks.gameObject.SetActive(true);
+    }
     // Update is called once per frame
     void Update()
     {

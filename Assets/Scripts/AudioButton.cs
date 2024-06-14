@@ -38,6 +38,7 @@ public class AudioButton : MonoBehaviour
     private void Switch()
     {
         PlayerData.musicPlay = !PlayerData.musicPlay;
+        AudioListener.pause = !PlayerData.musicPlay;
         ChangeGraphics(PlayerData.musicPlay);
         ChangeSound(PlayerData.musicPlay);
     }
