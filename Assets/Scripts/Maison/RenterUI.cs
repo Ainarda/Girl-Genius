@@ -80,7 +80,7 @@ public class RenterUI : MonoBehaviour
     {
         Debug.Log("Init Renter Page");
         page.AdsButton.GetComponent<Button>().onClick.AddListener(delegate { SelectRenterWithAds(id); });
-        page.FreeButton.GetComponent<Button>().onClick.AddListener(delegate { SelectRenterWithAds(id); });
+        page.FreeButton.GetComponent<Button>().onClick.AddListener(delegate { SelectRenter(id); });
         if (renter.WithAds)
         {
             page.Background.sprite = gold;
@@ -153,9 +153,10 @@ public class RenterUI : MonoBehaviour
 
     private void SelectRenterWithAds(int id)
     {
-        //
-        observer.GetComponent<YdLoader>().LoadAdsWithReward(() => { Debug.Log("VideoReward"); });
-        SelectRenter(id);
+        observer.GetComponent<YdLoader>().LoadAdsWithReward(() =>
+        {
+            SelectRenter(id);
+        });
     }
 
     private void SelectRenter(int id)
