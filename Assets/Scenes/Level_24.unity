@@ -655,6 +655,7 @@ GameObject:
   m_Component:
   - component: {fileID: 113316042}
   - component: {fileID: 113316041}
+  - component: {fileID: 113316043}
   m_Layer: 0
   m_Name: gO
   m_TagString: Untagged
@@ -729,6 +730,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1632868222}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &113316043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113316040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c24daf63d407e114bb9c4fce63c5e855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  miniObs: {fileID: 1632868223}
 --- !u!1 &118341462
 GameObject:
   m_ObjectHideFlags: 0
@@ -3118,7 +3132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8faf5d1fc5c35df478e8929930f9e79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endPoint: {fileID: 1040306753}
+  endPoint:
+  - {fileID: 1040306753}
   failEndPoint:
   - {fileID: 1397065089}
   - {fileID: 113316040}
@@ -3781,7 +3796,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8faf5d1fc5c35df478e8929930f9e79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endPoint: {fileID: 1397065089}
+  endPoint:
+  - {fileID: 1397065089}
   failEndPoint:
   - {fileID: 1040306753}
   - {fileID: 113316040}
@@ -4408,6 +4424,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1040306755}
   - component: {fileID: 1040306754}
+  - component: {fileID: 1040306756}
   m_Layer: 0
   m_Name: rO
   m_TagString: Untagged
@@ -4482,6 +4499,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1632868222}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1040306756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040306753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c24daf63d407e114bb9c4fce63c5e855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  miniObs: {fileID: 1632868223}
 --- !u!1 &1045385941
 GameObject:
   m_ObjectHideFlags: 0
@@ -5536,7 +5566,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8faf5d1fc5c35df478e8929930f9e79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endPoint: {fileID: 113316040}
+  endPoint:
+  - {fileID: 1194761281}
   failEndPoint:
   - {fileID: 1040306753}
   - {fileID: 1397065089}
@@ -5955,6 +5986,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1397065091}
   - component: {fileID: 1397065090}
+  - component: {fileID: 1397065092}
   m_Layer: 0
   m_Name: bO
   m_TagString: Untagged
@@ -6029,6 +6061,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1632868222}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1397065092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397065089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c24daf63d407e114bb9c4fce63c5e855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  miniObs: {fileID: 1632868223}
 --- !u!1 &1416750320
 GameObject:
   m_ObjectHideFlags: 0
@@ -6826,6 +6871,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1632868222}
+  - component: {fileID: 1632868223}
   m_Layer: 0
   m_Name: Minigame2
   m_TagString: Untagged
@@ -6854,6 +6900,18 @@ Transform:
   - {fileID: 113316042}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1632868223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632868221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde23e6d5dbbb9c4784a83c18289cc51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1705202056
 GameObject:
   m_ObjectHideFlags: 0

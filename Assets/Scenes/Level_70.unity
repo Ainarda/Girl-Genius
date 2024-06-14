@@ -356,7 +356,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.21304321
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -810,8 +810,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8faf5d1fc5c35df478e8929930f9e79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endPoint: {fileID: 986067412}
-  failEndPoint: []
+  endPoint:
+  - {fileID: 986067412}
+  failEndPoint:
+  - {fileID: 915335445}
+  - {fileID: 1182202590}
+  isWrong: 0
 --- !u!212 &372199046
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1745,6 +1749,7 @@ GameObject:
   m_Component:
   - component: {fileID: 915335447}
   - component: {fileID: 915335446}
+  - component: {fileID: 915335448}
   m_Layer: 0
   m_Name: CowF
   m_TagString: Untagged
@@ -1819,6 +1824,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 184163202}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &915335448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915335445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c24daf63d407e114bb9c4fce63c5e855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  miniObs: {fileID: 1270362527}
 --- !u!1 &986067412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1829,6 +1847,7 @@ GameObject:
   m_Component:
   - component: {fileID: 986067414}
   - component: {fileID: 986067413}
+  - component: {fileID: 986067415}
   m_Layer: 0
   m_Name: BirdF
   m_TagString: Untagged
@@ -1903,6 +1922,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 184163202}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &986067415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986067412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c24daf63d407e114bb9c4fce63c5e855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  miniObs: {fileID: 1270362527}
 --- !u!1 &1028470401
 GameObject:
   m_ObjectHideFlags: 0
@@ -1979,8 +2011,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8faf5d1fc5c35df478e8929930f9e79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endPoint: {fileID: 915335445}
-  failEndPoint: []
+  endPoint:
+  - {fileID: 915335445}
+  failEndPoint:
+  - {fileID: 1182202590}
+  - {fileID: 986067412}
+  isWrong: 0
 --- !u!212 &1028470404
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2213,6 +2249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1182202592}
   - component: {fileID: 1182202591}
+  - component: {fileID: 1182202593}
   m_Layer: 0
   m_Name: FishF
   m_TagString: Untagged
@@ -2287,6 +2324,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 184163202}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1182202593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182202590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c24daf63d407e114bb9c4fce63c5e855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  miniObs: {fileID: 1270362527}
 --- !u!1 &1266523530
 GameObject:
   m_ObjectHideFlags: 0
@@ -2381,6 +2431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1270362526}
   - component: {fileID: 1270362525}
+  - component: {fileID: 1270362527}
   m_Layer: 0
   m_Name: Minigame
   m_TagString: Untagged
@@ -2457,6 +2508,18 @@ Transform:
   - {fileID: 110538586}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1270362527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270362524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde23e6d5dbbb9c4784a83c18289cc51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1356079700
 GameObject:
   m_ObjectHideFlags: 0
@@ -2588,7 +2651,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.21304321
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -3022,7 +3085,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.21304321
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -3383,8 +3446,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8faf5d1fc5c35df478e8929930f9e79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endPoint: {fileID: 1182202590}
-  failEndPoint: []
+  endPoint:
+  - {fileID: 1182202590}
+  failEndPoint:
+  - {fileID: 915335445}
+  - {fileID: 986067412}
+  isWrong: 0
 --- !u!212 &1523769883
 SpriteRenderer:
   m_ObjectHideFlags: 0

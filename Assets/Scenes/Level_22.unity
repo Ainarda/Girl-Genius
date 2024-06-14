@@ -397,6 +397,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1277680115}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: objectAnimationName.Array.data[1].isLoop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: objectAnimationName.Array.data[0].isGroup
       value: 1
       objectReference: {fileID: 0}
@@ -916,6 +920,7 @@ MonoBehaviour:
     ruText: "\u041D\u0410\u0420\u0418\u0421\u0423\u0419 \u041B\u0418\u041D\u0418\u042E"
     enText: DRAW A LEASH
   textField: {fileID: 1804801955}
+  tmpTxt: {fileID: 0}
 --- !u!114 &780099297
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -86,7 +86,7 @@ public class EntityAI : MonoBehaviour
             default:
                 StartCoroutine(Stay());
                 break;
-        }*/
+        }*/ 
     }
 
     private void SetNextTargetPoint()

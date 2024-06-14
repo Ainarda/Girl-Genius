@@ -30,8 +30,8 @@ public class PlayerData : MonoBehaviour
     public static bool musicPlay = true;
     public static int currentRenter = 0;
 
-    public static bool openRenterCanvas = true;
-    public static bool canSelectRenter = true;
+    public static bool openRenterCanvas = false;
+    public static bool canSelectRenter = false;
 
     public static bool[] pet = new bool[] { true, false, false, false, false, false, false, false, false };
 
@@ -55,6 +55,7 @@ public class PlayerData : MonoBehaviour
 
     public static int currentRenterSelected = 0;
 
+    public static bool isLvlFail = false;
     //TODO add win UI and load dressUnlocker after complete all dress unlocking stages
     public static void LoadNextLevel()
     {

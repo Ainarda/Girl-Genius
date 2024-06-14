@@ -140,6 +140,11 @@ public class Observer : MonoBehaviour
 
     public void OpenLoseScreen()
     {
+        PlayerData.isLvlFail = true;
+    }
+
+    public void OpenLose()
+    {
         loseScreen.SetActive(true);
         loseScreen.GetComponent<LoseUI>().ActivateTimer();
         mainScreen.GetComponent<MainUI>().HideLvlObject();
