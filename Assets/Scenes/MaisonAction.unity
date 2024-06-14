@@ -11639,6 +11639,7 @@ MonoBehaviour:
   coinUI: {fileID: 0}
   manisonUI: {fileID: 0}
   renterCanvas: {fileID: 0}
+  mainMenuUI: {fileID: 0}
   hideMineMenu: 0
 --- !u!1 &235885485
 GameObject:
@@ -24355,13 +24356,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3272470703031157303, guid: aa85859e75f906d429e8b25fd72bb0a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3819422861476742226, guid: aa85859e75f906d429e8b25fd72bb0a7, type: 3}
       propertyPath: m_Name
       value: MessageCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 4886575433406492562, guid: aa85859e75f906d429e8b25fd72bb0a7, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 24.984226
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600574990956580069, guid: aa85859e75f906d429e8b25fd72bb0a7, type: 3}
+      propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222586303090535348, guid: aa85859e75f906d429e8b25fd72bb0a7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 24.984226
       objectReference: {fileID: 0}
     - target: {fileID: 7297754914292466862, guid: aa85859e75f906d429e8b25fd72bb0a7, type: 3}
       propertyPath: m_Pivot.x
