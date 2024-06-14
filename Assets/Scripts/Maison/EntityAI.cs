@@ -34,42 +34,47 @@ public class EntityAI : MonoBehaviour
 
     private IEnumerator Walk()
     {
+        Debug.LogWarning("Start walk!");
         SetNextTargetPoint();
         float speed = targetPoint.position.x - transform.position.x;
-        Vector2 translateVector = new Vector2(speed, 0).normalized*0.05f;
+        Vector3 translateVector = new Vector3(speed, 0) * Time.deltaTime;
         if(speed < 0)
         {
-            skeletonAnimation.AnimationState.SetAnimation(1, entityAnimation[0], true);
+            skeletonAnimation.AnimationState.SetAnimation(0, entityAnimation[1], true);
         }
         else
         {
-            skeletonAnimation.AnimationState.SetAnimation(1, entityAnimation[1], true);
+            skeletonAnimation.AnimationState.SetAnimation(0, entityAnimation[0], true);
         }
         while(Vector2.Distance(transform.position,targetPoint.position) > 0.5f)
         {
-            transform.Translate(translateVector);
-            yield return new WaitForSeconds(0.25f);
+            transform.position+= translateVector;
+            yield return new WaitForSeconds(0.01f);
         }
+        Debug.LogWarning("End walk!");
         SelectNextAction();
     }
 
     private IEnumerator Stay()
     {
-        skeletonAnimation.AnimationState.SetAnimation(1, entityAnimation[2], true);
-        yield return new WaitForSeconds(1);
+        Debug.LogWarning("Start Stay!");
+        skeletonAnimation.AnimationState.SetAnimation(0, entityAnimation[2], true);
+        yield return new WaitForSeconds(3);
         SelectNextAction();
     }
 
     private IEnumerator Sit()
     {
-        skeletonAnimation.AnimationState.SetAnimation(1, entityAnimation[3], true);
-        yield return new WaitForSeconds(1);
+        Debug.LogWarning("Start sit!");
+        skeletonAnimation.AnimationState.SetAnimation(0, entityAnimation[3], true);
+        yield return new WaitForSeconds(3);
         SelectNextAction();
     }
 
     public void SelectNextAction()
     {
-        int randomAction = Random.Range(0, 3);
+        Debug.LogError("Action");
+        /*int randomAction = Random.Range(0, 3);
         switch (randomAction)
         {
             case 0:
@@ -81,7 +86,7 @@ public class EntityAI : MonoBehaviour
             default:
                 StartCoroutine(Stay());
                 break;
-        }
+        }*/
     }
 
     private void SetNextTargetPoint()

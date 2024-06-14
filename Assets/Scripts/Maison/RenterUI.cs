@@ -79,7 +79,7 @@ public class RenterUI : MonoBehaviour
     {
         Debug.Log("Init Renter Page");
         page.AdsButton.GetComponent<Button>().onClick.AddListener(delegate { SelectRenterWithAds(id); });
-        page.FreeButton.GetComponent<Button>().onClick.AddListener(delegate { SelectRenterWithAds(id); });
+        page.FreeButton.GetComponent<Button>().onClick.AddListener(delegate { SelectRenter(id); });
         if (renter.WithAds)
         {
             page.Background.sprite = gold;
@@ -127,7 +127,7 @@ public class RenterUI : MonoBehaviour
 
     public void ActivateButton()
     {
-        Invoke("ActivateButtonWithDelay", 2f);
+        //Invoke("ActivateButtonWithDelay", 2f);
     }    
 
     // Update is called once per frame
