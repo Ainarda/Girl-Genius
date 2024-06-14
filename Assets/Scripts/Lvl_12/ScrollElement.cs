@@ -59,14 +59,12 @@ public class ScrollElement : MonoBehaviour
                 if (moveVector.y - startPos.y < scrollRange)
                 {
                     transform.localPosition = new Vector3(transform.localPosition.x, 0.64f);
-                    canDrag = false;
                     offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     Debug.Log("+");
                 }
                 else if (moveVector.y - startPos.y > scrollRange)
                 {
                     transform.localPosition = new Vector3(transform.localPosition.x, -0.61f);
-                    canDrag = false;
                     offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     Debug.Log("-");
                 }

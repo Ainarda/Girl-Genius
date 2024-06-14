@@ -8,6 +8,7 @@ public class ClickObject : MonoBehaviour, IPointerClickHandler
 {
     [Header("Скорость в процентах высоты экрана в секунду")]
     [SerializeField] private float moveSpeed;
+    [SerializeField] private GameObject particlesPrefab;
     
     private RectTransform rt;
     private RectTransform parentRt;
@@ -26,6 +27,7 @@ public class ClickObject : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         PreAdClicker.AddScore.Invoke();
+        Instantiate(particlesPrefab, transform.position, Quaternion.identity, transform.parent);
         Destroy(gameObject);
     }
 }

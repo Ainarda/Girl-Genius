@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,7 +18,7 @@ public class RewardSlingshot : MonoBehaviour
     private bool Click = true;
 
     [SerializeField]
-    private Text coinText;
+    private TMP_Text coinText;
     [SerializeField]
     private int coins = 200;
 
@@ -55,16 +56,21 @@ public class RewardSlingshot : MonoBehaviour
 
         if (Mathf.Abs(currentAngle) < 25)
         {
-            coinText.text = (200 * 4).ToString();
+            SetCoinText(200 * 4);
         }
         else if (Mathf.Abs(currentAngle) < 55)
         {
-            coinText.text = (200 * 3).ToString();
+            SetCoinText(200 * 3);
         }
         else
         {
-            coinText.text = (200 * 2).ToString();
+            SetCoinText(200 * 2);
         }
+    }
+
+    private void SetCoinText(int money)
+    {
+        coinText.text = $"<sprite index=0> <size=1.2em>{money}";
     }
 
     public int StopArrow()
