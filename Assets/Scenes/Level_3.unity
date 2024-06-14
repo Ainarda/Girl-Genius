@@ -1122,7 +1122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &749741659
 Transform:
   m_ObjectHideFlags: 0
@@ -1496,6 +1496,10 @@ PrefabInstance:
     - target: {fileID: 7511273759811945566, guid: ad7cf80dcf1e93146b375706b061d783, type: 3}
       propertyPath: m_Name
       value: Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511273759811945566, guid: ad7cf80dcf1e93146b375706b061d783, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

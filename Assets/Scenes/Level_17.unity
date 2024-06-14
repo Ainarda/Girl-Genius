@@ -699,6 +699,10 @@ PrefabInstance:
       value: Why are you wearing man's underwear?!
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: walkPosition.Array.data[0].speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: walkPosition.Array.data[1].groupId
       value: 1
       objectReference: {fileID: 0}
@@ -824,7 +828,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: objectAnimationName.Array.data[4].animationName
-      value: luo2
+      value: 1062_03_idle
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: objectAnimationName.Array.data[5].animationName
@@ -924,10 +928,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 516984161}
   - {fileID: 681633308}
   - {fileID: 302467989}
   - {fileID: 1667341802}
-  - {fileID: 516984161}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &213784687
@@ -1228,11 +1232,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3404416768446653362, guid: aaee57fd14b08144dbd7f0a148d1b07d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.8000001
+      value: 0.80000037
       objectReference: {fileID: 0}
     - target: {fileID: 3404416768446653362, guid: aaee57fd14b08144dbd7f0a148d1b07d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.8500001
+      value: 0.8500004
       objectReference: {fileID: 0}
     - target: {fileID: 3404416768446653362, guid: aaee57fd14b08144dbd7f0a148d1b07d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1520,13 +1524,13 @@ MonoBehaviour:
   fixDrawOrder: 0
   addNormals: 0
   calculateTangents: 0
-  maskInteraction: 2
+  maskInteraction: 1
   maskMaterials:
     materialsMaskDisabled: []
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
-  _animationName: 1062_01_idle
+  _animationName: 1062_03_idle_luo
   loop: 1
   timeScale: 1
 --- !u!23 &549387153
@@ -1569,7 +1573,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 603376949
   m_SortingLayer: 2
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &549387154
 MeshFilter:
@@ -1924,8 +1928,8 @@ Transform:
   m_GameObject: {fileID: 1043608839}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.48435166, z: -0, w: 0.87487346}
-  m_LocalPosition: {x: -0.36068058, y: -2.6335328, z: -0.60257447}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.54, y: -2.59, z: -0.77}
+  m_LocalScale: {x: 1.9, y: 1.09, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 213784688}
@@ -2114,11 +2118,13 @@ MonoBehaviour:
   fixDrawOrder: 0
   addNormals: 0
   calculateTangents: 0
-  maskInteraction: 0
+  maskInteraction: 2
   maskMaterials:
-    materialsMaskDisabled: []
+    materialsMaskDisabled:
+    - {fileID: 2100000, guid: bc78ba7737e33d041a968d7494f5f278, type: 2}
     materialsInsideMask: []
-    materialsOutsideMask: []
+    materialsOutsideMask:
+    - {fileID: 2100000, guid: c4591e2f5e6a26447b79dfdf8dc63ca5, type: 2}
   disableRenderingOnOverride: 1
   _animationName: 1062_01_idle
   loop: 1
@@ -2143,7 +2149,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bc78ba7737e33d041a968d7494f5f278, type: 2}
+  - {fileID: 2100000, guid: c4591e2f5e6a26447b79dfdf8dc63ca5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2161,9 +2167,9 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: 603376949
+  m_SortingLayer: 2
+  m_SortingOrder: 2
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1201216654
 MeshFilter:
@@ -2182,7 +2188,7 @@ Transform:
   m_GameObject: {fileID: 1201216651}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.88, y: -3.35, z: 0}
+  m_LocalPosition: {x: -7.61, y: -3.06, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

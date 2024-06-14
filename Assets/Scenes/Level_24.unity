@@ -342,7 +342,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.20000076
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -2876,7 +2876,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.20000076
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -3119,7 +3119,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endPoint: {fileID: 1040306753}
-  failEndPoint: []
+  failEndPoint:
+  - {fileID: 1397065089}
+  - {fileID: 113316040}
   isWrong: 0
 --- !u!212 &618513841
 SpriteRenderer:
@@ -3780,7 +3782,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endPoint: {fileID: 1397065089}
-  failEndPoint: []
+  failEndPoint:
+  - {fileID: 1040306753}
+  - {fileID: 113316040}
   isWrong: 0
 --- !u!212 &774619928
 SpriteRenderer:
@@ -5321,7 +5325,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.20000076
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -5533,7 +5537,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endPoint: {fileID: 113316040}
-  failEndPoint: []
+  failEndPoint:
+  - {fileID: 1040306753}
+  - {fileID: 1397065089}
   isWrong: 0
 --- !u!212 &1194761284
 SpriteRenderer:

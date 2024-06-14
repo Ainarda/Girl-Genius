@@ -249,6 +249,7 @@ public class ActionVariant : MonoBehaviour
             if (hint.GetComponent<HelperScript>().GetShowState() || PlayerData.lvlHints)
                 hint.SetActive(true);
         }
+        PlayerData.minigameIsActive = true;
         miniGame[miniGameNumber++].SetActive(true);
     }
 

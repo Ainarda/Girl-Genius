@@ -548,7 +548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &156695834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1622,6 +1622,7 @@ MonoBehaviour:
     ruText: "\u042D\u0442\u043E\u0439 \u043D\u043E\u0447\u044C\u044E"
     enText: That night
   textField: {fileID: 287223391}
+  tmpTxt: {fileID: 0}
 --- !u!1001 &734866411
 PrefabInstance:
   m_ObjectHideFlags: 0

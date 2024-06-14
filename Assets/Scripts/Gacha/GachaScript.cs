@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GachaScript : MonoBehaviour
 {
@@ -8,6 +9,11 @@ public class GachaScript : MonoBehaviour
     private GameObject openedCap;
     [SerializeField]
     private GameObject closedCap;
+    [SerializeField]
+    private Image petImage;
+
+    [SerializeField]
+    private Sprite[] petImageList;
 
     private int petId;
     private GachaCreater _creator;
@@ -27,12 +33,14 @@ public class GachaScript : MonoBehaviour
     {
         petId = inputPetId;
         _creator = creator;
+        petImage.sprite = petImageList[petId];
     }
 
     public void OpenReward()
     {
         openedCap.SetActive(true);
         closedCap.SetActive(false);
+        petImage.gameObject.SetActive(true);
         Invoke("ShowReward",0.1f);
     }
 

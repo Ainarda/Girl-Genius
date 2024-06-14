@@ -49,6 +49,7 @@ public class PlayerData : MonoBehaviour
     public static string localText = "ru";//TMP next load local text "ru" "eng"
 
     
+    public static bool minigameIsActive = false;
 
     public static bool mansionScene = true;
 
