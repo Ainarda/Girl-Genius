@@ -28,6 +28,19 @@ public class RotateClock : MonoBehaviour
             Vector3 direction = mousePos - transform.position;
             angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            
+            CheckAngle(angle);
+            Debug.Log($"Angle: {angle}");
+        }
+    }
+
+    private void CheckAngle(float angle)
+    {
+        if(Mathf.Abs(angle - rightAngle) <= 2.5f)
+        {
+            observer.RemoveElement(this.gameObject);
+            Debug.Log("Complete");
+            canRotate = false;
         }
     }
 
@@ -40,10 +53,5 @@ public class RotateClock : MonoBehaviour
     {
         canRotate = false;
         Debug.Log(angle);
-        if(Mathf.Abs(transform.rotation.z - Quaternion.AngleAxis(rightAngle, Vector3.forward).z) <= 2.5f)
-        {
-            observer.RemoveElement(this.gameObject);
-            Debug.Log("Complete");
-        }
     }
 }
