@@ -2078,6 +2078,7 @@ GameObject:
   - component: {fileID: 1900992258152954449}
   - component: {fileID: 4361186074320695749}
   - component: {fileID: 8405049047601739142}
+  - component: {fileID: 9219342201710138134}
   m_Layer: 5
   m_Name: VideoRewardButton
   m_TagString: Untagged
@@ -2205,6 +2206,19 @@ MonoBehaviour:
   angles: {x: -15, y: 15}
   angleGrow: 65
   waitTime: 1.5
+--- !u!114 &9219342201710138134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3744727526702367136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a67029de236efe45ae097f89ea69ba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoIcon: {fileID: 2465162335877924790}
 --- !u!1 &3945912773674710249
 GameObject:
   m_ObjectHideFlags: 0

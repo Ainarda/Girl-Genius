@@ -1217,6 +1217,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: objectSize.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: cropSize.Array.data[0]
       value: 4
       objectReference: {fileID: 0}
@@ -1248,6 +1252,10 @@ PrefabInstance:
       propertyPath: hideObject.Array.data[0]
       value: 
       objectReference: {fileID: 7239769478790092430}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: sizebleObject.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: typeActionList.Array.size
       value: 26

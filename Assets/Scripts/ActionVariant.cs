@@ -53,11 +53,30 @@ public class ActionVariant : MonoBehaviour
 
     [SerializeField]
     private List<ActionType> failTypeActionList;
+    [SerializeField]
+    private List<Group> failGroup;
+    [SerializeField]
+    private List<NPC_Animation> failObjectAnimationName;
+    [SerializeField]
+    private List<WalkPosition> failWalkPosition;
+    [SerializeField]
+    private List<TalkText> failTalkText;
+    [SerializeField]
+    private List<float> failWaitTime;
+    [SerializeField]
+    private List<float> failCropSize;
+    [SerializeField]
+    private List<GameObject> failHideObject;
+    [SerializeField]
+    private List<GameObject> failActiveObject;  
+
+
+
 
     private int animationNameNumber, walkPositionNumber, talkTextNumber, waitTimeNumber, cropSizeNumber, audioClipNumber,
         rotationObjectNumber, animationObjectNumber, groupNumber, miniGameNumber, hideObjectNumber, activeObjectNumber, sizeChangeNumber;
 
-    private int failAnimationNameNumber, failWalkPositionNumber, failTextNumber, failWaitTimeNumber, failCropSizeNumber, failAudioClipNumber,
+    private int failAnimationNameNumber, failWalkPositionNumber, failTalkTextNumber, failWaitTimeNumber, failCropSizeNumber, failAudioClipNumber,
         failRotationObjectNumber, failAnimationObjectNumber, failGroupNumber, failMiniGameNumber, failHideObjectNumber, failActiveObjectNumber, failSizeChangeNumber;
 
     private bool stageIsActive = false;
@@ -195,19 +214,30 @@ public class ActionVariant : MonoBehaviour
     #region Start some action region
     private void StartAnimation()
     {
-        Debug.Log("Start animation " + objectAnimationName[animationNameNumber].animationName);
-        if (objectAnimationName[animationNameNumber].isGroup)
+        if (!PlayerData.isLvlFail)
         {
-            foreach(GameObject elem in group[objectAnimationName[animationNameNumber].groupId].group)
+            Debug.Log("Start animation " + objectAnimationName[animationNameNumber].animationName);
+            if (objectAnimationName[animationNameNumber].isGroup)
             {
-                TrackEntry entry = elem.GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0, objectAnimationName[animationNameNumber].animationName, !objectAnimationName[animationNameNumber].isLoop);
+                foreach (GameObject elem in group[objectAnimationName[animationNameNumber].groupId].group)
+                {
+                    TrackEntry entry = elem.GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0, objectAnimationName[animationNameNumber].animationName, !objectAnimationName[animationNameNumber].isLoop);
+                }
+                animationNameNumber++;
             }
-            animationNameNumber++;
+            else
+            {
+                //Add true or false loop animation
+                TrackEntry entry = animationObject[animationObjectNumber++].GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0, objectAnimationName[animationNameNumber++].animationName, !objectAnimationName[animationNameNumber].isLoop);
+            }
         }
         else
         {
-            //Add true or false loop animation
-            TrackEntry entry = animationObject[animationObjectNumber++].GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0, objectAnimationName[animationNameNumber++].animationName, !objectAnimationName[animationNameNumber].isLoop);
+            foreach(GameObject elem in failGroup[failObjectAnimationName[failAnimationNameNumber].groupId].group)
+            {
+                TrackEntry entry = elem.GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0, failObjectAnimationName[failAnimationNameNumber].animationName, !failObjectAnimationName[failAnimationNameNumber].isLoop);
+            }
+            failAnimationNameNumber++;
         }
         ActivateAction();
     }
@@ -219,32 +249,68 @@ public class ActionVariant : MonoBehaviour
         {
             elem.transform.position = walkPosition[walkPositionNumber].position;
         }*/
-        Debug.Log("+");
-        StartCoroutine(Walk(walkPosition[walkPositionNumber].position.position, group[walkPosition[walkPositionNumber].groupId].group, walkPosition[walkPositionNumber].speed));
-        walkPositionNumber++;
+        if (!PlayerData.isLvlFail)
+        {
+            Debug.Log("+");
+            StartCoroutine(Walk(walkPosition[walkPositionNumber].position.position, group[walkPosition[walkPositionNumber].groupId].group, walkPosition[walkPositionNumber].speed));
+            walkPositionNumber++;
+        }
+        else
+        {
+            StartCoroutine(Walk(failWalkPosition[failWalkPositionNumber].position.position, failGroup[failWalkPosition[failWalkPositionNumber].groupId].group, failWalkPosition[failWalkPositionNumber].speed));
+            failWalkPositionNumber++;
+        }
     }
 
     private void StartTalk()
     {
         stageIsActive = false;
-        //TODO show current message
-        StartCoroutine(Talk(talkText[talkTextNumber++]));
+        if (!PlayerData.isLvlFail)
+        {
+            
+            //TODO show current message
+            StartCoroutine(Talk(talkText[talkTextNumber++]));
+        }
+        else
+        {
+            StartCoroutine(Talk(failTalkText[failTalkTextNumber]));
+        }
     }
     
     private void StartWait()
     {
-        StartCoroutine(Wait());
+        if (!PlayerData.isLvlFail)
+        {
+            StartCoroutine(Wait(waitTime[waitTimeNumber++]));
+        }
+        else
+        {
+            StartCoroutine(Wait(failWaitTime[failWaitTimeNumber++]));
+        }
     }
 
     private void StartMoveWithCamera()
     {
-        StartCoroutine(MoveWithCamera(walkPosition[walkPositionNumber].position.position, group[walkPosition[walkPositionNumber].groupId].group, walkPosition[walkPositionNumber].speed));
-        walkPositionNumber++;
+        if (!PlayerData.isLvlFail)
+        {
+            StartCoroutine(MoveWithCamera(walkPosition[walkPositionNumber].position.position, group[walkPosition[walkPositionNumber].groupId].group, walkPosition[walkPositionNumber].speed));
+            walkPositionNumber++;
+        }
+        else
+        {
+            StartCoroutine(MoveWithCamera(failWalkPosition[failWalkPositionNumber].position.position, failGroup[failWalkPosition[failWalkPositionNumber].groupId].group, failWalkPosition[failWalkPositionNumber].speed));
+            failWalkPositionNumber++;
+        }
     }
 
     private void StartCameraCrop()
     {
-        StartCoroutine(CameraCrop(cropSize[cropSizeNumber++]));
+        if (!PlayerData.isLvlFail)
+            StartCoroutine(CameraCrop(cropSize[cropSizeNumber++]));
+        else
+        {
+            StartCoroutine(CameraCrop(failCropSize[failCropSizeNumber++]));
+        }
     }
 
     private void StartAudioPlay()
@@ -284,13 +350,23 @@ public class ActionVariant : MonoBehaviour
 
     private void HideObject()
     {
-        hideObject[hideObjectNumber++].SetActive(false);
+        if(!PlayerData.isLvlFail)
+            hideObject[hideObjectNumber++].SetActive(false);
+        else
+        {
+            failHideObject[failHideObjectNumber++].SetActive(false);
+        }
         ActivateAction();
     }
 
     private void ActiveObject()
     {
-        activeObject[activeObjectNumber++].SetActive(true);
+        if(!PlayerData.isLvlFail)
+            activeObject[activeObjectNumber++].SetActive(true);
+        else
+        {
+            failActiveObject[failActiveObjectNumber++].SetActive(true);
+        }
         ActivateAction();
     }
 
@@ -303,10 +379,10 @@ public class ActionVariant : MonoBehaviour
     #endregion
 
     #region IEnumerator action region
-    private IEnumerator Wait()
+    private IEnumerator Wait(float time)
     {
         Debug.Log("Start wait");
-        yield return new WaitForSeconds(waitTime[waitTimeNumber++]);
+        yield return new WaitForSeconds(time);
         Debug.Log("End wait");
         ActivateAction();
     }
