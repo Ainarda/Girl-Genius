@@ -19,7 +19,7 @@ public class PlayerData : MonoBehaviour
     private static int currentUnclokNumber = 0;
     //TODO add unlocking room interier on 13 and after each 10 lvl, animal after 10 and each 10, rent after 16 and each 10
     public static int lvlInterier = 13, lvlAnimal = 10, lvlRent = 16, lvlGetRent = 22;
-    public static bool[] unlockingRoom = new bool[] { true, false, false, false, false, false, false, false, false, false, false };
+    public static bool[] unlockingRoom = new bool[] { false, false, false, false, false, false, false, false, false, false, false };
     public static int[] lvlUnlockedRoom = new int[] {6, 10, 8, 13, 23, 28, 43, 38, 43, 48 };
     public static bool[] renterState = new bool[] { false, false, false, false, false, false, false, false };
 
@@ -33,7 +33,7 @@ public class PlayerData : MonoBehaviour
     public static bool openRenterCanvas = false;
     public static bool canSelectRenter = false;
 
-    public static bool[] pet = new bool[] { true, false, false, false, false, false, false, false, false };
+    public static bool[] pet = new bool[] { false, false, false, false, false, false, false, false, false };
 
     private static PetSlot currentPet;
     public static int currentPetId = -1;
