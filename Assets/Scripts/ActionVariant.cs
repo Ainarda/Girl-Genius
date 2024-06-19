@@ -273,7 +273,7 @@ public class ActionVariant : MonoBehaviour
         }
         else
         {
-            StartCoroutine(Talk(failTalkText[failTalkTextNumber]));
+            StartCoroutine(Talk(failTalkText[failTalkTextNumber++]));
         }
     }
     

@@ -1023,6 +1023,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: failGroup.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: hideObject.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -1041,6 +1045,10 @@ PrefabInstance:
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: activeObject.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: failWaitTime.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: walkPosition.Array.size
@@ -1070,6 +1078,10 @@ PrefabInstance:
       propertyPath: activeObject.Array.data[2]
       value: 
       objectReference: {fileID: 169453828}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: failWaitTime.Array.data[0]
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: typeActionList.Array.data[0]
       value: 4
@@ -1109,6 +1121,10 @@ PrefabInstance:
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: typeActionList.Array.data[9]
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: failTypeActionList.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[0].textRu
@@ -1194,6 +1210,10 @@ PrefabInstance:
       value: He caught up! What do we do?
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: failTypeActionList.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: walkPosition.Array.data[0].speed
       value: 1.5
       objectReference: {fileID: 0}
@@ -1212,6 +1232,10 @@ PrefabInstance:
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: walkPosition.Array.data[4].speed
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: failObjectAnimationName.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: walkPosition.Array.data[1].groupId
@@ -1322,6 +1346,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1321205204}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: failGroup.Array.data[0].group.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: failGroup.Array.data[1].group.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: objectAnimationName.Array.data[1].isLoop
       value: 1
       objectReference: {fileID: 0}
@@ -1414,6 +1446,26 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: failGroup.Array.data[0].group.Array.data[0]
+      value: 
+      objectReference: {fileID: 1321205204}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: failGroup.Array.data[1].group.Array.data[0]
+      value: 
+      objectReference: {fileID: 1339412721}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: failObjectAnimationName.Array.data[0].isGroup
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: failObjectAnimationName.Array.data[1].groupId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: failObjectAnimationName.Array.data[1].isGroup
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: objectAnimationName.Array.data[0].animationName
       value: 118_03_x
       objectReference: {fileID: 0}
@@ -1448,6 +1500,14 @@ PrefabInstance:
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: objectAnimationName.Array.data[8].animationName
       value: 118_05_run
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: failObjectAnimationName.Array.data[0].animationName
+      value: 1118_03_jingya_idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: failObjectAnimationName.Array.data[1].animationName
+      value: 118_04_x
       objectReference: {fileID: 0}
     - target: {fileID: 6996247099635991863, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2102,9 +2162,11 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 2
   maskMaterials:
-    materialsMaskDisabled: []
+    materialsMaskDisabled:
+    - {fileID: 2100000, guid: d7f1c75e601a7704aa4ceee994585575, type: 2}
     materialsInsideMask: []
-    materialsOutsideMask: []
+    materialsOutsideMask:
+    - {fileID: 2100000, guid: 53c149f1f4ed6774884ad4df0cebb97b, type: 2}
   disableRenderingOnOverride: 1
   _animationName: 1118_07_run
   loop: 1
@@ -2129,7 +2191,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d7f1c75e601a7704aa4ceee994585575, type: 2}
+  - {fileID: 2100000, guid: 53c149f1f4ed6774884ad4df0cebb97b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

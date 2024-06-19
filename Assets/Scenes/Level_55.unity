@@ -166,6 +166,7 @@ MonoBehaviour:
   strictHeight: 0
   hideHelper: 0
   helperObject: {fileID: 0}
+  waitTime: 2
 --- !u!4 &66977771
 Transform:
   m_ObjectHideFlags: 0
@@ -509,6 +510,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: failGroup.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: hideObject.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -539,6 +544,10 @@ PrefabInstance:
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: typeActionList.Array.size
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: failWalkPosition.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: typeActionList.Array.data[0]
@@ -581,6 +590,10 @@ PrefabInstance:
       value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: failTypeActionList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[0].textRu
       value: "\u041F\u043E\u0445\u043E\u0434\u0443 \u044F \u0435\u0433\u043E \u0440\u0430\u0437\u043E\u0437\u043B\u0438\u043B\u0430.
         \u0427\u0442\u043E \u0436\u0435 \u0434\u0435\u043B\u0430\u0442\u044C?"
@@ -614,6 +627,14 @@ PrefabInstance:
       value: I think I pissed him off. What should I do?
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: failTypeActionList.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: failWalkPosition.Array.data[0].speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: group.Array.data[0].group.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -625,6 +646,10 @@ PrefabInstance:
       propertyPath: group.Array.data[2].group.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: failWalkPosition.Array.data[0].position
+      value: 
+      objectReference: {fileID: 726783297}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: group.Array.data[0].group.Array.data[0]
       value: 
@@ -641,6 +666,10 @@ PrefabInstance:
       propertyPath: group.Array.data[2].group.Array.data[0]
       value: 
       objectReference: {fileID: 1350321726}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: failGroup.Array.data[0].group.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: objectAnimationName.Array.data[0].isGroup
       value: 1
@@ -689,6 +718,10 @@ PrefabInstance:
       propertyPath: objectAnimationName.Array.data[6].isGroup
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: failGroup.Array.data[0].group.Array.data[0]
+      value: 
+      objectReference: {fileID: 481235713}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: objectAnimationName.Array.data[0].animationName
       value: 1100_shengqi2
@@ -1238,6 +1271,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &726783296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 726783297}
+  m_Layer: 0
+  m_Name: Point1
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &726783297
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726783296}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.11, y: -3.3, z: 3.6836755}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &898945944
 GameObject:
   m_ObjectHideFlags: 0
@@ -2307,3 +2371,4 @@ SceneRoots:
   - {fileID: 1709534793}
   - {fileID: 481235717}
   - {fileID: 1350321725}
+  - {fileID: 726783297}

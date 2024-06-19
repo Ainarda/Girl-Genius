@@ -77,12 +77,13 @@ public class DragObject : MonoBehaviour//, IPointerDownHandler, IPointerUpHandle
     {
         if (PlayerData.minigameIsActive)
         {
-            PlayerData.minigameIsActive = false;
+            
             moveObject = false;
             Vector2 dist = offset + Camera.main.ScreenToWorldPoint(Input.mousePosition);
             if (Mathf.Abs(dist.x - endPosition.transform.position.x) <= checkRange.x && Mathf.Abs(dist.y - endPosition.transform.position.y) <= checkRange.y)
             {
                 transform.position = endPosition.transform.position;
+                PlayerData.minigameIsActive = false;
                 observer.RemoveElement(this.gameObject);
                 this.enabled = false;
                 if (someAction)
@@ -92,6 +93,7 @@ public class DragObject : MonoBehaviour//, IPointerDownHandler, IPointerUpHandle
             else if (losePosition != null && Vector2.Distance(offset + Camera.main.ScreenToWorldPoint(Input.mousePosition), losePosition.transform.position) < 0.5f)
             {
                 transform.position = losePosition.transform.position;
+                PlayerData.minigameIsActive = false;
                 observer.OpenLoseScreen();
                 this.enabled = false;
             }

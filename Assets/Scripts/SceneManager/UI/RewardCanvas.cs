@@ -12,12 +12,17 @@ public class RewardCanvas : MonoBehaviour
     private Button getRewardButton;
     [SerializeField]
     private Button loseReward;
+    [SerializeField]
+    private GameObject congratWindow;
+    [SerializeField]
+    private Button continueButton;
 
     private GameObject observer;
     private void Awake()
     {
         loseReward.onClick.AddListener(CloseWindow);
         getRewardButton.onClick.AddListener(GetReward);
+        continueButton.onClick.AddListener(Continue);
         observer = GameObject.FindGameObjectWithTag("Observer");
     }
     // Start is called before the first frame update
@@ -49,20 +54,32 @@ public class RewardCanvas : MonoBehaviour
         switch (rewardType)
         {
             case RewardType.pet:
-                action = () => { PlayerData.pet[GetComponent<GachaCreater>().GetSelectedPetId()] = true; CloseWindow(); };
+                action = () => { PlayerData.pet[GetComponent<GachaCreater>().GetSelectedPetId()] = true; OpenCongratWindow(); };
                 break;
             case RewardType.room:
-                action = () => { GetComponent<RoomReward>().UnlockEnvironment(); CloseWindow(); };
+                action = () => { GetComponent<RoomReward>().UnlockEnvironment(); OpenCongratWindow(); };
                 break;
             case RewardType.dress:
-                action = () => { PlayerData.dress[0] = true; CloseWindow(); };
+                action = () => { PlayerData.dress[0] = true; OpenCongratWindow(); };
                     break;
             default:
                 action = () => Debug.Log("Nothing!");
                 break;
         }
         observer.GetComponent<YdLoader>().LoadAdsWithReward(action);
-        observer.GetComponent<Observer>().OpenMainUI();
+        //observer.GetComponent<Observer>().OpenMainUI();
+    }
+
+    public void OpenCongratWindow()
+    {
+        loseReward.gameObject.SetActive(false);
+        getRewardButton.gameObject.SetActive(false);
+        congratWindow.SetActive(true);
+    }
+
+    private void Continue()
+    {
+        PlayerData.LoadNextLevel();
     }
 
 }

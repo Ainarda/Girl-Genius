@@ -39,6 +39,8 @@ public class Draw_line : MonoBehaviour
     private bool hideHelper = false;
     [SerializeField]
     private GameObject helperObject;
+    [SerializeField]
+    private float waitTime = 2f;
 
     private bool canDraw = true;
     // Start is called before the first frame update
@@ -126,7 +128,7 @@ public class Draw_line : MonoBehaviour
     {
         //yield return new WaitForSeconds(0.5f);
         observer.ActivateAction();
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(waitTime);
         observer.CompleteScene();
         canDraw = false;
     }

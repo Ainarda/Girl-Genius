@@ -120,11 +120,13 @@ public class Observer : MonoBehaviour
         {
             GetComponent<ActionVariant>().CloseHint();
             GetComponent<ActionVariant>().NextAction();//OpenWinScreen();
-            
+
         }
         //PlayerData.LoadNextLevel();
         else
+        {
             OpenLoseScreen();
+        }
             //ReloadScene();
     }
 
@@ -140,7 +142,10 @@ public class Observer : MonoBehaviour
 
     public void OpenLoseScreen()
     {
+        Debug.Log("Lose");
+        GetComponent<ActionVariant>().CloseHint();
         PlayerData.isLvlFail = true;
+        GetComponent<ActionVariant>().NextAction();
     }
 
     public void OpenLose()
