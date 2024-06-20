@@ -10,7 +10,7 @@ public class CharacterSkin : MonoBehaviour
     {
         skeletonAnimation = GetComponent<SkeletonAnimation>();
         string dressId = (PlayerData.currentDressId+1).ToString();
-        if (dressId.Length < 2)
+            if (dressId.Length < 2)
             dressId = "0" + dressId;
         skeletonAnimation.Skeleton.SetSkin("Skin"+dressId);
         skeletonAnimation.Skeleton.SetSlotsToSetupPose();

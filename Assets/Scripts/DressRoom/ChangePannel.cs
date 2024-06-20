@@ -19,6 +19,8 @@ public class ChangePannel : MonoBehaviour
     [SerializeField]
     private GameObject petScroll;
     [SerializeField] private Button closeButton;
+    [SerializeField]
+    private GameObject player;
 
     private bool stage = true; //true - dress || false - pet
     // Start is called before the first frame update

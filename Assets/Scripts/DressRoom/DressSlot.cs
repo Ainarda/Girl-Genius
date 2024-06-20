@@ -1,3 +1,4 @@
+using Spine.Unity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -32,10 +33,13 @@ public class DressSlot : MonoBehaviour
     [SerializeField]
     private TMP_Text costText;
     // Start is called before the first frame update
-
+    private GameObject player;
+    private SkeletonGraphic skeletGraph;
     //TODO fix particle system
     private void Awake()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        skeletGraph = player.GetComponent<SkeletonGraphic>();
         costText.text = cost.ToString();
         buyButton.onClick.AddListener(BuyDress);
         dressImage.sprite = dressSprite;
@@ -48,7 +52,7 @@ public class DressSlot : MonoBehaviour
         {
             DeselectCurrentDress();
         }
-        if(PlayerData.DressIsUnlocked(id))
+        if(PlayerData.DressIsUnlocked(id-1))
         {
             buyMenu.SetActive(false);
         }
@@ -72,6 +76,11 @@ public class DressSlot : MonoBehaviour
 
     public void SelectCurrentDress()
     {
+        string dressId = id.ToString();
+        if (dressId.Length < 2)
+            dressId = "0" + dressId;
+        skeletGraph.Skeleton.SetSkin("Skin" + dressId);
+        skeletGraph.Skeleton.SetSlotsToSetupPose();
         particle.SetActive(true);
         greenLight.SetActive(true);
         offStand.SetActive(false);
@@ -92,6 +101,7 @@ public class DressSlot : MonoBehaviour
         {
             PlayerData.AddCoin(-cost);
             PlayerData.UnlockCustom(id);
+            buyMenu .SetActive(false);
         }
     }
 

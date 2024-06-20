@@ -12,7 +12,7 @@ public class PlayerData : MonoBehaviour
     public static string PlayerName;
     public static int PlayerCoin = 0;
     public static int CurrentLvl = 1;
-    public static bool[] dress = new bool[] { false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false };
+    public static bool[] dress = new bool[] { false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false };
     public static List<int> unlockId;
     public static int dressProgress = 0;
     public static TMP_Text CoinUI;
@@ -40,7 +40,7 @@ public class PlayerData : MonoBehaviour
 
     public static Observer currentObserver;
     private static DressSlot currentDress;
-    public static int currentDressId = 12;
+    public static int currentDressId = 13;
 
     public static bool firstInit = true;
     
