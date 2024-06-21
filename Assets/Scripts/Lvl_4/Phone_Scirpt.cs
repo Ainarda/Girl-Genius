@@ -118,7 +118,7 @@ public class Phone_Scirpt : MonoBehaviour
         agree.gameObject.SetActive(false);
         degree.gameObject.SetActive(false);
         GameObject newMessage = Instantiate(senderBlock, messageScroll);
-        newMessage.transform.localPosition = new Vector3(-step.x, allText[allText.Count - 1].transform.localPosition.y - step.y, 0);
+        newMessage.GetComponent<RectTransform>().anchoredPosition = new Vector3(-step.x, allText[allText.Count - 1].transform.localPosition.y - step.y, 0);
         newMessage.GetComponent<SenderImage>().SetImage(senderSprite);
         allText.Add(newMessage);
         currentMessageNumber++;
@@ -178,7 +178,7 @@ public class Phone_Scirpt : MonoBehaviour
     private void ScrollText()
     {
         currentMessageNumber -= 2;
-        messageScroll.position += new Vector3   (0, step.y * 2);
+        messageScroll.GetComponent<RectTransform>().anchoredPosition += new Vector2(0, step.y * 2);
     }
 }
 
