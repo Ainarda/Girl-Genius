@@ -122,6 +122,8 @@ public class PlayerData : MonoBehaviour
 
     public static void ReloadScene()
     {
+        minigameIsActive = false;
+        isLvlFail = false;
         string sceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(sceneName);
     }

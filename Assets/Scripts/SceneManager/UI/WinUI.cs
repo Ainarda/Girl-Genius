@@ -152,14 +152,18 @@ public class WinUI : MonoBehaviour
 
     public void ShowBottomButtons()
     {
-        Invoke("ShowButtons", 2f);
+        if (!PlayerData.isFirstRullet)
+        {
+            retryButton.gameObject.SetActive(true);
+            Invoke("ShowButtons", 2f);
+        }
     }
 
     private void ShowButtons()
     {
         if (!dressScreenIsOpen)
         {
-            retryButton.gameObject.SetActive(true);
+            
             nextButton.gameObject.SetActive(true);
             /*if (!Advertisement.AdvertisementIsAvailable)
             {

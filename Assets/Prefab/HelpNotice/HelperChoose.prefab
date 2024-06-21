@@ -94,6 +94,7 @@ MonoBehaviour:
     ruText: "\u0412\u042B\u0411\u0415\u0420\u0418 \u041E\u0422\u0412\u0415\u0422"
     enText: TAP TO CHOOSE
   textField: {fileID: 8860110972740985276}
+  tmpTxt: {fileID: 0}
 --- !u!114 &1806934646664582839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,10 +355,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 360, y: 640}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3

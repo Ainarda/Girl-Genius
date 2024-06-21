@@ -110,6 +110,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8163295783892106435}
     m_Modifications:
+    - target: {fileID: 304922070788722616, guid: 3d3fe20de1c42ea42bb1d6928328619d, type: 3}
+      propertyPath: m_text
+      value: "\u0421\u043E\u0431\u0440\u0430\u043B 0"
+      objectReference: {fileID: 0}
     - target: {fileID: 1470456209635188268, guid: 3d3fe20de1c42ea42bb1d6928328619d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -193,6 +197,10 @@ PrefabInstance:
     - target: {fileID: 3712238157709235063, guid: 3d3fe20de1c42ea42bb1d6928328619d, type: 3}
       propertyPath: m_Name
       value: PreAdScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037492563396112744, guid: 3d3fe20de1c42ea42bb1d6928328619d, type: 3}
+      propertyPath: ru
+      value: "\u0421\u043E\u0431\u0440\u0430\u043B"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
