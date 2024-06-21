@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ClickObject : MonoBehaviour, IPointerClickHandler
+public class ClickObject : MonoBehaviour, IPointerDownHandler
 {
     [Header("Скорость в процентах высоты экрана в секунду")]
     [SerializeField] private float moveSpeed;
@@ -24,7 +24,7 @@ public class ClickObject : MonoBehaviour, IPointerClickHandler
         rt.anchoredPosition += Vector2.up * (parentRt.rect.height * (moveSpeed / 100) * Time.unscaledDeltaTime);
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnPointerDown(PointerEventData eventData)
     {
         PreAdClicker.AddScore.Invoke();
         Instantiate(particlesPrefab, transform.position, Quaternion.identity, transform.parent);
