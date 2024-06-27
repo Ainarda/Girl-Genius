@@ -8,6 +8,8 @@ public class LoseUI : MonoBehaviour
     [SerializeField]
     private Button retryButton;
     [SerializeField]
+    private Button hintButton;
+    [SerializeField]
     private LoseTimeField timerObject;
 
     private Observer observer;
@@ -16,6 +18,7 @@ public class LoseUI : MonoBehaviour
     void Awake()
     {
         observer = GameObject.FindGameObjectWithTag("Observer").GetComponent<Observer>();
+        hintButton.onClick.AddListener(delegate { observer.GetComponent<YdLoader>().LoadAdsWithReward(ActivateHint); });
     }
 
     public void ActivateTimer()
@@ -26,11 +29,14 @@ public class LoseUI : MonoBehaviour
     public void SetRetryButton(DoAction action)
     {
         retryAction = action;
+        retryButton.gameObject.SetActive(true);
         retryButton.onClick.AddListener(retryAction.Invoke);
     }
 
     public void ActivateHint()
     {
+        PlayerData.lvlHints = true;
+        observer.GetComponent<Observer>().ReloadScene();
         //TODO Hint activation
     }
 

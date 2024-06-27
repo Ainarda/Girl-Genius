@@ -15,6 +15,7 @@ public class PreAdClicker : MonoBehaviour
     [SerializeField] private GameObject tutorialText;
 
     private List<GameObject> instantiatedObjects = new List<GameObject>();
+    public static List<GameObject> instantiatedEffects = new List<GameObject>();
     
     private int score;
 
@@ -62,6 +63,15 @@ public class PreAdClicker : MonoBehaviour
             if (go)
                 Destroy(go);
         }
+
+        foreach(var go in instantiatedEffects)
+        {
+            if(go)
+                Destroy(go);
+        }
+
+        instantiatedEffects.Clear();
+        instantiatedObjects.Clear();
     }
 
     public void StartField()

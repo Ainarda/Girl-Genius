@@ -32,10 +32,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1794846919962473910}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.31401384, y: 9.9921875}
-  m_SizeDelta: {x: 320, y: 80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.31401062, y: 9.9921875}
+  m_SizeDelta: {x: 28, y: 54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &311458891937329031
 CanvasRenderer:
@@ -173,7 +173,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8272594326351253878
 RectTransform:
   m_ObjectHideFlags: 0
@@ -383,7 +383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text:
-    ruText: "\u041F\u0420\u041E\u0412\u0410\u041B\u0415\u041D\u042B"
+    ruText: "\u041F\u0420\u041E\u0412\u0410\u041B\u0415\u041D\u041E"
     enText: GAME OVER
   textField: {fileID: 7770805602026561060}
   tmpTxt: {fileID: 0}
@@ -657,6 +657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   retryButton: {fileID: 2292199556309162558}
+  hintButton: {fileID: 6448916645492861910}
   timerObject: {fileID: 5869297239736409766}
 --- !u!1 &6696467458002596626
 GameObject:
@@ -772,7 +773,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -30, y: -30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4100029547521650803
 CanvasRenderer:
@@ -806,7 +807,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: f72ec9f95adbf3a44ac7297cda2446b1, type: 3}
     m_FontSize: 30
     m_FontStyle: 1
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 4

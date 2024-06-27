@@ -27,7 +27,7 @@ public class ClickObject : MonoBehaviour, IPointerDownHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         PreAdClicker.AddScore.Invoke();
-        Instantiate(particlesPrefab, transform.position, Quaternion.identity, transform.parent);
+        PreAdClicker.instantiatedEffects.Add(Instantiate(particlesPrefab, transform.position, Quaternion.identity, transform.parent));
         Destroy(gameObject);
     }
 }
