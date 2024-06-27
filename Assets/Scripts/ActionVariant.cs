@@ -555,6 +555,14 @@ public enum ActionType
     changeSize,
 }
 
+public enum MessageSide
+{
+    leftLeft,
+    leftRight,
+    rightLeft,
+    rightRight,
+}
+
 [Serializable]
 public struct TalkText
 {

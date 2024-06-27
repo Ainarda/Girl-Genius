@@ -5,9 +5,13 @@ using UnityEngine;
 public class TextMessageUI : MonoBehaviour
 {
     [SerializeField]
-    private GameObject playerMessage;
+    private GameObject rightRightMessage;
     [SerializeField]
-    private GameObject otherMessage;
+    private GameObject rightLeftMessage;
+    [SerializeField]
+    private GameObject leftLeftMessage;
+    [SerializeField]
+    private GameObject leftRightMessage;
 
     [SerializeField]
     private Transform firstMessage;
@@ -19,7 +23,7 @@ public class TextMessageUI : MonoBehaviour
     private void Awake()
     {
         observer = GameObject.FindGameObjectWithTag("Observer");
-        observer.GetComponent<ActionVariant>().SetTextField(playerMessage, otherMessage);
+        observer.GetComponent<ActionVariant>().SetTextField(rightRightMessage, leftLeftMessage);
     }
     // Start is called before the first frame update
     void Start()
