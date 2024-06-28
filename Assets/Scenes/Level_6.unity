@@ -667,6 +667,15 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   activateStage: 0
   hint: {fileID: 0}
+  failTypeActionList: 
+  failGroup: []
+  failObjectAnimationName: []
+  failWalkPosition: []
+  failTalkText: []
+  failWaitTime: []
+  failCropSize: []
+  failHideObject: []
+  failActiveObject: []
 --- !u!4 &391110227
 Transform:
   m_ObjectHideFlags: 0
@@ -840,7 +849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[0].side
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: typeActionList.Array.data[0]

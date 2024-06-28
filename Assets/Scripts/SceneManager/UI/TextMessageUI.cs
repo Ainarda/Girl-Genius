@@ -23,7 +23,7 @@ public class TextMessageUI : MonoBehaviour
     private void Awake()
     {
         observer = GameObject.FindGameObjectWithTag("Observer");
-        observer.GetComponent<ActionVariant>().SetTextField(rightRightMessage, leftLeftMessage);
+        observer.GetComponent<ActionVariant>().SetTextField(leftLeftMessage, leftRightMessage, rightLeftMessage, rightRightMessage);
     }
     // Start is called before the first frame update
     void Start()

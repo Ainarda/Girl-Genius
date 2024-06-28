@@ -81,8 +81,8 @@ public class ActionVariant : MonoBehaviour
 
     private bool stageIsActive = false;
 
-    private GameObject playerMessage, otherMessage;
-    private Text playerField, otherField;
+    private GameObject leftLeftMessage,leftRightMessage, rightLeftMessage, rightRightMessage;
+    private Text leftLeftField,leftRightField, rightLeftField, rightRightField;
 
     private Observer observer;
     private List<DoAction> activateAction;
@@ -112,12 +112,16 @@ public class ActionVariant : MonoBehaviour
         } */  
     }
 
-    public void SetTextField(GameObject playerM, GameObject otherM)
+    public void SetTextField(GameObject lLM, GameObject lRM, GameObject rLM, GameObject rRM)
     {
-        playerMessage = playerM;
-        otherMessage = otherM;
-        playerField = playerMessage.transform.GetChild(0).GetComponent<Text>();
-        otherField = otherMessage.transform.GetChild(0).GetComponent<Text>();
+        leftLeftMessage = lLM;
+        leftRightMessage = lRM;
+        rightLeftMessage = rLM;
+        rightRightMessage = rRM;
+        leftLeftField = leftLeftMessage.transform.GetChild(0).GetComponent<Text>();
+        leftRightField = leftRightMessage.transform.GetChild(0).GetComponent<Text>();
+        rightLeftField = rightLeftMessage.transform.GetChild(0).GetComponent<Text>();
+        rightRightField = rightRightMessage.transform.GetChild(0).GetComponent<Text>();
     }
 
     public void GetAudioSource()
@@ -402,18 +406,57 @@ public class ActionVariant : MonoBehaviour
         Text textCloud;
         RectTransform cloudImage;
         float cloudTextSize = 80.25f;
+        switch(currentTalkText.side)
+        {
+            case MessageSide.leftLeft:
+                {
+                    textCloud = leftLeftField;
+                    leftLeftMessage.SetActive(true);
+                    cloudImage = leftLeftMessage.GetComponent<RectTransform>();
+                    break;
+                }
+            case MessageSide.leftRight:
+                {
+                    textCloud = leftRightField;
+                    leftRightMessage.SetActive(true);
+                    cloudImage = leftRightMessage.GetComponent<RectTransform>();
+                    break;
+                }
+            case MessageSide.rightLeft:
+                {
+                    textCloud = rightLeftField;
+                    rightLeftMessage.SetActive(true);
+                    cloudImage = rightLeftMessage.GetComponent<RectTransform>();
+                    break;
+                }
+            case MessageSide.rightRight:
+                {
+                    textCloud = rightRightField;
+                    rightRightMessage.SetActive(true);
+                    cloudImage = rightRightMessage.GetComponent<RectTransform>();
+                    break;
+                }
+            default:
+                {
+                    textCloud = rightRightField;
+                    rightRightMessage.SetActive(true);
+                    cloudImage = rightRightMessage.GetComponent<RectTransform>();
+                    break;
+                }
+        }
+        /*
         if(!currentTalkText.side)
         {
-            textCloud = playerField;
-            playerMessage.SetActive(true);
-            cloudImage = playerMessage.GetComponent<RectTransform>();
+            textCloud = leftLeftField;
+            leftLeftMessage.SetActive(true);
+            cloudImage = leftLeftMessage.GetComponent<RectTransform>();
         }
         else
         {
-            textCloud = otherField;
-            otherMessage.SetActive(true);
-            cloudImage = otherMessage.GetComponent<RectTransform>();
-        }
+            textCloud = rightRightField;
+            rightRightMessage.SetActive(true);
+            cloudImage = rightRightMessage.GetComponent<RectTransform>();
+        }*/
 
         #region text size
         // Getting best font size
@@ -452,8 +495,10 @@ public class ActionVariant : MonoBehaviour
             }
         }
         yield return new WaitForSeconds(2.5f);
-        otherMessage.SetActive(false);
-        playerMessage.SetActive(false);
+        rightRightMessage.SetActive(false);
+        leftLeftMessage.SetActive(false);
+        rightLeftMessage.SetActive(false);
+        leftRightMessage.SetActive(false);
         ActivateAction();
     }
 
@@ -566,7 +611,7 @@ public enum MessageSide
 [Serializable]
 public struct TalkText
 {
-    public bool side; //left = true, right = false
+    public MessageSide side; //left = true, right = false
     public string textRu;
     public string textEng;
 }
