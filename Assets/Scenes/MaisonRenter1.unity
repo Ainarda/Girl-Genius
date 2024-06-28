@@ -1902,7 +1902,7 @@ MonoBehaviour:
   rotationObject: []
   walkPosition: []
   talkText:
-  - side: 0
+  - side: 2
     textRu: RENT IS DUE. HERE ARE THE PAYMENTS.
     textEng: "\u041E\u041F\u041B\u0410\u0422\u0410 \u0410\u0420\u0415\u041D\u0414\u042B.
       \u0412\u041E\u0422 \u0414\u0415\u041D\u042C\u0413\u0418."
@@ -1919,6 +1919,15 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   activateStage: 0
   hint: {fileID: 0}
+  failTypeActionList: 
+  failGroup: []
+  failObjectAnimationName: []
+  failWalkPosition: []
+  failTalkText: []
+  failWaitTime: []
+  failCropSize: []
+  failHideObject: []
+  failActiveObject: []
 --- !u!1 &51806540
 GameObject:
   m_ObjectHideFlags: 0

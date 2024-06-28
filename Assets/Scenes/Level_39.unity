@@ -467,6 +467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 940b4451e7cde1049993df1bce20a0e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canDrag: 0
 --- !u!61 &133665656
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4865,6 +4866,10 @@ PrefabInstance:
       propertyPath: activeObject.Array.data[0]
       value: 
       objectReference: {fileID: 1370733092}
+    - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
+      propertyPath: talkText.Array.data[0].side
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5242350859111839686, guid: c2a34ed2a6853fa4a9309167a20f7b34, type: 3}
       propertyPath: talkText.Array.data[0].text
       value: 4564
