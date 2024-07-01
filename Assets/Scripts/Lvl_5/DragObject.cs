@@ -20,11 +20,15 @@ public class DragObject : MonoBehaviour//, IPointerDownHandler, IPointerUpHandle
     private bool someAction;
     [SerializeField]
     private bool isWorng = false;
+    [SerializeField]
+    private Vector2 checkRange = new Vector2(0.5f, 0.5f);
+    [SerializeField]
+    private bool isScaner = false;
+
     private Vector3 offset;
     private bool moveObject = false;
 
-    [SerializeField]
-    private Vector2 checkRange = new Vector2(0.5f,0.5f);
+    
     Observer observer;
     private void Awake()
     {
@@ -61,6 +65,16 @@ public class DragObject : MonoBehaviour//, IPointerDownHandler, IPointerUpHandle
             else
             { offset.y = 0;}
             transform.position = offset + new Vector3(oX, oY);
+
+            if (isScaner)
+            {
+                Vector2 dist = offset + Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                if ((Mathf.Abs(dist.x - endPosition.transform.position.x) <= checkRange.x && Mathf.Abs(dist.y - endPosition.transform.position.y) <= checkRange.y) ||
+                    (losePosition != null && Vector2.Distance(offset + Camera.main.ScreenToWorldPoint(Input.mousePosition), losePosition.transform.position) < 0.5f))
+                {
+                    CheckPosition();
+                }
+            }
         }
     }
 
@@ -75,9 +89,14 @@ public class DragObject : MonoBehaviour//, IPointerDownHandler, IPointerUpHandle
 
     private void OnMouseUp()
     {
+        CheckPosition();
+    }
+
+    private void CheckPosition()
+    {
         if (PlayerData.minigameIsActive)
         {
-            
+
             moveObject = false;
             Vector2 dist = offset + Camera.main.ScreenToWorldPoint(Input.mousePosition);
             if (Mathf.Abs(dist.x - endPosition.transform.position.x) <= checkRange.x && Mathf.Abs(dist.y - endPosition.transform.position.y) <= checkRange.y)

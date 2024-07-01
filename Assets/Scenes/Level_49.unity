@@ -667,9 +667,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2113761661821181923, guid: aaee57fd14b08144dbd7f0a148d1b07d, type: 3}
+      propertyPath: isScaner
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113761661821181923, guid: aaee57fd14b08144dbd7f0a148d1b07d, type: 3}
       propertyPath: endPosition
       value: 
       objectReference: {fileID: 2019906099}
+    - target: {fileID: 2113761661821181923, guid: aaee57fd14b08144dbd7f0a148d1b07d, type: 3}
+      propertyPath: checkRange.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113761661821181923, guid: aaee57fd14b08144dbd7f0a148d1b07d, type: 3}
+      propertyPath: checkRange.y
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 3404416768446653362, guid: aaee57fd14b08144dbd7f0a148d1b07d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.62
