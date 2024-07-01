@@ -39,7 +39,7 @@ public class ConnectLine : MonoBehaviour
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             lineRenderer.SetPosition(1, mousePos+offset);
         }
-    }
+    }   
 
     private void OnMouseDown()
     {

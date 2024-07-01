@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LoseUI : MonoBehaviour
@@ -29,8 +30,16 @@ public class LoseUI : MonoBehaviour
     public void SetRetryButton(DoAction action)
     {
         retryAction = action;
+        //retryButton.gameObject.SetActive(true);
+        //retryAction.Invoke);
+        Invoke("ActivateMainsonButton", 2);
+    }
+
+
+    public void ActivateMainsonButton()
+    {
         retryButton.gameObject.SetActive(true);
-        retryButton.onClick.AddListener(retryAction.Invoke);
+        retryButton.onClick.AddListener(delegate { SceneManager.LoadScene("Maison"); });
     }
 
     public void ActivateHint()
